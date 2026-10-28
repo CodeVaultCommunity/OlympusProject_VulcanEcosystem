@@ -1,47 +1,16 @@
-#!/usr/bin/env python3
-"""Edition-local entry point: paths are resolved from this file, never the cwd."""
-
+"""Edition-local checks and launch commands. Integration validation requires an explicit Minerva edition."""
 import argparse
 from datetime import datetime, timezone
+import hashlib
 import importlib.util
 import json
 from pathlib import Path
-import platform
 import subprocess
 import sys
-import time
-import unittest
-
+import uuid
 
 EDITION = Path(__file__).resolve().parent
-ECOSYSTEM = EDITION / "examples/task-board-ecosystem"
-
-
-class RecordingResult(unittest.TextTestResult):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.records = []
-
-    def addSuccess(self, test):
-        super().addSuccess(test)
-        self.records.append({"test": test.id(), "status": "passed"})
-
-    def addFailure(self, test, error):
-        super().addFailure(test, error)
-        self.records.append({"test": test.id(), "status": "failed"})
-
-    def addError(self, test, error):
-        super().addError(test, error)
-        self.records.append({"test": test.id(), "status": "error"})
-
-    def addSkip(self, test, reason):
-        super().addSkip(test, reason)
-        self.records.append({"test": test.id(), "status": "skipped", "reason": reason})
-
-    def addSubTest(self, test, subtest, error):
-        super().addSubTest(test, subtest, error)
-        if error is not None:
-            self.records.append({"test": subtest.id(), "status": "failed_subtest"})
+EXAMPLES = {"minimal": "RequestRegister", "composition": "BookingDesk", "task-board": "TaskBoard"}
 
 
 def writeReport(path, report):
@@ -49,78 +18,92 @@ def writeReport(path, report):
     path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def evaluate(report_dir):
-    specification = importlib.util.spec_from_file_location("vulcan_structure", EDITION / "scripts/evaluate_structure.py")
-    module = importlib.util.module_from_spec(specification)
-    specification.loader.exec_module(module)
-    report = module.assess(ECOSYSTEM, ["TaskBoard"], ["LegacyReports"], technical_files=["apps/TaskBoard/main.py"])
-    writeReport(report_dir / "structure.json", report)
-    print(f"Structure: {report['status']}; {report['scope']['python_files_parsed']} Python files", flush=True)
+def evaluate(name, reports):
+    spec = importlib.util.spec_from_file_location("vulcan_structure", EDITION / "scripts/evaluate_structure.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    report = module.assess(EDITION / "examples" / name, [EXAMPLES[name]])
+    writeReport(reports / name / "structure.json", report)
+    print(f"{name} structure: {report['status']}", flush=True)
     return report["status"] != "failed"
 
 
-def test(report_dir):
-    sys.path.insert(0, str(ECOSYSTEM))
-    suite = unittest.TestSuite()
-    for location in [ECOSYSTEM / "apps/TaskBoard/tests", EDITION / "tests"]:
-        suite.addTests(unittest.TestLoader().discover(str(location), pattern="Test_*.py"))
-    start = time.monotonic()
-    timestamp = datetime.now(timezone.utc).isoformat()
-    result = unittest.TextTestRunner(verbosity=2, resultclass=RecordingResult).run(suite)
-    report = {
-        "model": "Vulcan Ecosystem", "edition": "Alpha-v0.1.0", "executed_at_utc": timestamp,
-        "command": [sys.executable, *sys.argv], "python": platform.python_version(), "platform": platform.platform(),
-        "status": "passed" if result.wasSuccessful() else "failed", "tests_run": result.testsRun,
-        "failures": len(result.failures), "errors": len(result.errors), "skipped": len(result.skipped),
-        "duration_seconds": round(time.monotonic() - start, 3), "tests": result.records,
-        "limits": ["Python standard-library implementation only; recorded host only",
-                   "HTTP requests and HTML response checks do not demonstrate browser interaction",
-                   "Test counts are unittest methods, not counts of every subcase or assertion",
-                   "C/Go, Docker, production identity, load, distributed failure and deployment were not tested",
-                   "CI configuration alone is not a hosted CI run"],
-    }
-    writeReport(report_dir / "execution.json", report)
-    return result.wasSuccessful()
+def runTests(root, tests, report, expectations=None):
+    command = [sys.executable, str(EDITION / "scripts/record_tests.py"), "--root", str(root),
+               "--tests", str(tests), "--report", str(report)]
+    if expectations:
+        command += ["--expectations", str(expectations)]
+    return subprocess.call(command, cwd=root) == 0
 
 
-def validateMinerva(report_dir):
-    validator = EDITION / "vendor/minerva/validator/minerva_validate.py"
-    blueprint = ECOSYSTEM / "docs/L2_MinervaBlueprints/blueprint.yaml"
-    if not validator.is_file() or not blueprint.is_file():
-        writeReport(report_dir / "minerva.json", {"status": "not_run", "reason": "Required edition-local Minerva resources are missing."})
-        print("Minerva: required edition-local resources missing", file=sys.stderr)
+def validateMinerva(name, reports, selected):
+    target = reports / name / "minerva.json"
+    if selected is None:
+        writeReport(target, {"status": "inconclusive", "reason": "Select the external Minerva Alpha-v0.1.0 with --minerva-edition; no validator is vendored."})
         return False
-    result = subprocess.run([sys.executable, str(validator), str(blueprint), "--root", str(ECOSYSTEM), "--verify-code", "--json"],
-                            cwd=EDITION, capture_output=True, text=True)
+    selected = selected.resolve()
+    validator = selected / "validator/minerva_validate.py"
+    if not validator.is_file() or selected.name != "Alpha-v0.1.0":
+        writeReport(target, {"status": "inconclusive", "reason": "Selected edition/validator is missing or does not match Alpha-v0.1.0."})
+        return False
+    sources = {p.relative_to(selected).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+               for p in sorted((selected / "minerva_blueprints").rglob("*")) if p.is_file() and p.suffix in {".py", ".json"}}
+    sources[validator.relative_to(selected).as_posix()] = hashlib.sha256(validator.read_bytes()).hexdigest()
+    version = subprocess.run([sys.executable, str(validator), "--version"], capture_output=True, text=True, timeout=30)
+    if version.returncode or "Minerva Blueprints Alpha-v0.1.0 | YAML 0.1.0" not in version.stdout:
+        writeReport(target, {"status": "inconclusive", "reason": "Selected tool does not declare the required model and profile.", "stdout": version.stdout, "stderr": version.stderr})
+        return False
+    root = EDITION / "examples" / name
+    process = subprocess.run([sys.executable, str(validator), str(root / "docs/L2_MinervaBlueprints/blueprint.yaml"),
+                              "--root", str(root), "--verify-code", "--json"], capture_output=True, text=True, encoding="utf-8", timeout=60)
     try:
-        report = json.loads(result.stdout)
+        result = json.loads(process.stdout)
     except ValueError:
-        report = {"status": "failed", "stdout": result.stdout, "stderr": result.stderr}
-    writeReport(report_dir / "minerva.json", report)
-    print(f"Minerva: exit {result.returncode}", flush=True)
-    if result.returncode:
-        print(result.stderr or result.stdout, file=sys.stderr)
-    return result.returncode == 0
+        result = {"status": "operational_error", "stdout": process.stdout, "stderr": process.stderr}
+    report = {"status": "passed" if process.returncode == 0 else "inconclusive" if process.returncode == 3 else "failed",
+              "external_tool": str(selected), "tool_version": version.stdout.strip(), "tool_sources": sources,
+              "exit_code": process.returncode, "result": result,
+              "limit": "Structural and consistency validation plus declared source observations; not behavioral proof or translation."}
+    writeReport(target, report)
+    print(f"{name} Minerva: {report['status']}", flush=True)
+    return report["status"] == "passed"
 
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=["verify", "test", "evaluate", "list", "start"])
-    parser.add_argument("--report-dir", type=Path, default=EDITION / "verification")
+    parser.add_argument("--example", choices=[*EXAMPLES, "all"], default="all")
+    parser.add_argument("--report-dir", type=Path)
+    parser.add_argument("--minerva-edition", type=Path)
     args, remaining = parser.parse_known_args(argv)
+    selected = list(EXAMPLES) if args.example == "all" else [args.example]
     if args.command in {"list", "start"}:
-        return subprocess.call([sys.executable, str(ECOSYSTEM / "launch.py"), args.command, *remaining], cwd=ECOSYSTEM)
+        if args.command == "start" and len(selected) != 1:
+            parser.error("start selects one independent ecosystem using --example")
+        return max(subprocess.call([sys.executable, str(EDITION / "examples" / name / "launch.py"), args.command, *remaining]) for name in selected)
     if remaining:
         parser.error("unrecognized arguments: " + " ".join(remaining))
-    reports = args.report_dir.resolve()
-    results = []
-    if args.command in {"evaluate", "verify"}:
-        results.append(evaluate(reports))
+    reports = (args.report_dir or EDITION / "verification/runs" / (datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ-") + uuid.uuid4().hex[:8])).resolve()
+    if reports.exists() and any(reports.iterdir()):
+        parser.error("report directory must be absent or empty")
+    outcomes = {}
+    for name in selected:
+        root = EDITION / "examples" / name
+        if args.command in {"evaluate", "verify"}:
+            outcomes[name + ":structure"] = evaluate(name, reports)
+        if args.command in {"test", "verify"}:
+            outcomes[name + ":tests"] = runTests(root, root / f"apps/{EXAMPLES[name]}/tests", reports / name / "execution.json", root / "docs/L3_Vulcan/test-bindings.json")
+        if args.command == "verify":
+            outcomes[name + ":minerva"] = validateMinerva(name, reports, args.minerva_edition)
     if args.command in {"test", "verify"}:
-        results.append(test(reports))
-    if args.command == "verify":
-        results.append(validateMinerva(reports))
-    return 0 if all(results) else 1
+        outcomes["tooling:tests"] = runTests(EDITION, EDITION / "tests", reports / "tooling.json")
+        legacy = EDITION / "tests/fixtures/legacy-ecosystem"
+        outcomes["legacy-fixture:tests"] = runTests(legacy, legacy / "apps/TaskBoard/tests", reports / "legacy-fixture.json")
+    summary = {"edition": "Alpha-v0.1.0", "command": args.command, "examples": selected,
+               "executed_at_utc": datetime.now(timezone.utc).isoformat(), "status": "passed" if all(outcomes.values()) else "incomplete_or_failed", "checks": outcomes}
+    writeReport(reports / "summary.json", summary)
+    print(f"Report: {reports}; {summary['status']}")
+    return 0 if all(outcomes.values()) else 1
 
 
 if __name__ == "__main__":

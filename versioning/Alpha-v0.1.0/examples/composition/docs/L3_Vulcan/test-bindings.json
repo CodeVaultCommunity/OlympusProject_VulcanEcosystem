@@ -1,0 +1,197 @@
+{
+  "model_baseline": {
+    "document_id": "MINERVA-COMPOSITION",
+    "revision": "2",
+    "sha256": "89f0703fc85e995c1a4c4ce65a90351861f590dca56c2d359d117a668ccc94d5",
+    "binding_revision": "2-vulcan-1",
+    "binding_sha256": "4781c57963bbbc83f99c83809ab6427e7bbb15a407b375b6ed6ef75b815ddfe1",
+    "atlas_sha256": "63a65c44f9fb4151c00389a954e9ce87531754c7c19076743b6dd6693ff62f96"
+  },
+  "scenario_ids": [
+    "SC-BOOKING-LOOKUP-AUTH-ABSENT",
+    "SC-BOOKING-LOOKUP-AUTH-UNRESOLVED",
+    "SC-BOOKING-LOOKUP-AUTH-UNKNOWN",
+    "SC-BOOKING-LOOKUP-AUTH-INSUFFICIENT",
+    "SC-BOOKING-LOOKUP-AUTH-EXPIRED",
+    "SC-BOOKING-LOOKUP-AUTH-ANONYMOUS",
+    "SC-BOOKING-LOOKUP-01",
+    "SC-BOOKING-LOOKUP-02",
+    "SC-BOOKING-LOOKUP-03",
+    "SC-BOOKING-LOOKUP-INVALID",
+    "SC-BOOKING-CREATE-AUTH-ABSENT",
+    "SC-BOOKING-CREATE-AUTH-UNRESOLVED",
+    "SC-BOOKING-CREATE-AUTH-UNKNOWN",
+    "SC-BOOKING-CREATE-AUTH-INSUFFICIENT",
+    "SC-BOOKING-CREATE-AUTH-EXPIRED",
+    "SC-BOOKING-CREATE-AUTH-ANONYMOUS",
+    "SC-BOOKING-CREATE-01",
+    "SC-BOOKING-CREATE-02",
+    "SC-BOOKING-CREATE-03",
+    "SC-BOOKING-CREATE-TITLE",
+    "SC-BOOKING-CREATE-QUALITY",
+    "SC-BOOKING-CANCEL-AUTH-ABSENT",
+    "SC-BOOKING-CANCEL-AUTH-UNRESOLVED",
+    "SC-BOOKING-CANCEL-AUTH-UNKNOWN",
+    "SC-BOOKING-CANCEL-AUTH-INSUFFICIENT",
+    "SC-BOOKING-CANCEL-AUTH-EXPIRED",
+    "SC-BOOKING-CANCEL-AUTH-ANONYMOUS",
+    "SC-BOOKING-CANCEL-01",
+    "SC-BOOKING-CANCEL-02",
+    "SC-BOOKING-CANCEL-03",
+    "SC-BOOKING-CANCEL-FAILURE",
+    "SC-BOOKING-CANCEL-CONTEXT",
+    "SC-BOOKING-CANCEL-QUALITY"
+  ],
+  "supporting_check_ids": [
+    "CHK-RNF-BOOKING-CREATE-RESPONSE",
+    "CHK-OP-BOOKING-LOAD",
+    "CHK-OP-BOOKING-SAVE"
+  ],
+  "bindings": {
+    "SC-BOOKING-LOOKUP-AUTH-ABSENT": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testLookupAuthorization"
+    },
+    "SC-BOOKING-LOOKUP-AUTH-UNRESOLVED": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testLookupAuthorization"
+    },
+    "SC-BOOKING-LOOKUP-AUTH-UNKNOWN": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testLookupAuthorization"
+    },
+    "SC-BOOKING-LOOKUP-AUTH-INSUFFICIENT": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testLookupAuthorization"
+    },
+    "SC-BOOKING-LOOKUP-AUTH-EXPIRED": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testLookupAuthorization"
+    },
+    "SC-BOOKING-LOOKUP-AUTH-ANONYMOUS": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testLookupAuthorization"
+    },
+    "SC-BOOKING-CREATE-AUTH-ABSENT": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCreateAuthorization"
+    },
+    "SC-BOOKING-CREATE-AUTH-UNRESOLVED": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCreateAuthorization"
+    },
+    "SC-BOOKING-CREATE-AUTH-UNKNOWN": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCreateAuthorization"
+    },
+    "SC-BOOKING-CREATE-AUTH-INSUFFICIENT": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCreateAuthorization"
+    },
+    "SC-BOOKING-CREATE-AUTH-EXPIRED": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCreateAuthorization"
+    },
+    "SC-BOOKING-CREATE-AUTH-ANONYMOUS": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCreateAuthorization"
+    },
+    "SC-BOOKING-CANCEL-AUTH-ABSENT": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCancelAuthorization"
+    },
+    "SC-BOOKING-CANCEL-AUTH-UNRESOLVED": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCancelAuthorization"
+    },
+    "SC-BOOKING-CANCEL-AUTH-UNKNOWN": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCancelAuthorization"
+    },
+    "SC-BOOKING-CANCEL-AUTH-INSUFFICIENT": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCancelAuthorization"
+    },
+    "SC-BOOKING-CANCEL-AUTH-EXPIRED": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCancelAuthorization"
+    },
+    "SC-BOOKING-CANCEL-AUTH-ANONYMOUS": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCancelAuthorization"
+    },
+    "SC-BOOKING-LOOKUP-01": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testLookupSuccess"
+    },
+    "CHK-OP-BOOKING-LOAD": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testLookupSuccess"
+    },
+    "SC-BOOKING-LOOKUP-02": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testLookupMissing"
+    },
+    "SC-BOOKING-LOOKUP-03": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testLookupFailure"
+    },
+    "SC-BOOKING-LOOKUP-INVALID": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testLookupInvalid"
+    },
+    "SC-BOOKING-CREATE-01": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCreateSuccess"
+    },
+    "CHK-OP-BOOKING-SAVE": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCreateSuccess"
+    },
+    "SC-BOOKING-CREATE-02": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCreateInvalid"
+    },
+    "SC-BOOKING-CREATE-TITLE": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCreateInvalid"
+    },
+    "SC-BOOKING-CREATE-03": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCreateConflict"
+    },
+    "SC-BOOKING-CANCEL-01": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCancelSuccess"
+    },
+    "SC-BOOKING-CANCEL-02": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCancelRefusals"
+    },
+    "SC-BOOKING-CANCEL-03": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCancelRefusals"
+    },
+    "SC-BOOKING-CANCEL-FAILURE": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCancelFailures"
+    },
+    "SC-BOOKING-CANCEL-CONTEXT": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testCancelPreservesContext"
+    },
+    "SC-BOOKING-CREATE-QUALITY": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSharedCreationQuality"
+    },
+    "SC-BOOKING-CANCEL-QUALITY": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSharedCreationQuality"
+    },
+    "CHK-RNF-BOOKING-CREATE-RESPONSE": {
+      "path": "apps/BookingDesk/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSharedCreationQuality"
+    }
+  },
+  "meaning": "Authored test-to-model mapping. Observed outcomes belong to immutable verification runs, not this planned mapping."
+}

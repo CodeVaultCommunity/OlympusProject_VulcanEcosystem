@@ -1,0 +1,574 @@
+{
+  "edition": "Alpha-v0.1.0",
+  "executed_at_utc": "2026-10-28T13:14:45.247920+00:00",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "command": [
+    "C:\\Users\\Douglas\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\scripts\\record_tests.py",
+    "--root",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\examples\\composition",
+    "--tests",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\examples\\composition\\apps\\BookingDesk\\tests",
+    "--report",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\verification\\runs\\20261028-windows-alpha-revision\\composition\\execution.json",
+    "--expectations",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\examples\\composition\\docs\\L3_Vulcan\\test-bindings.json"
+  ],
+  "status": "passed",
+  "tests_run": 19,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "duration_seconds": 5.0,
+  "records": [
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelAuthorization (scenario_id='SC-BOOKING-CANCEL-AUTH-ABSENT')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CANCEL-AUTH-ABSENT"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelAuthorization (scenario_id='SC-BOOKING-CANCEL-AUTH-UNRESOLVED')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CANCEL-AUTH-UNRESOLVED"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelAuthorization (scenario_id='SC-BOOKING-CANCEL-AUTH-UNKNOWN')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CANCEL-AUTH-UNKNOWN"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelAuthorization (scenario_id='SC-BOOKING-CANCEL-AUTH-INSUFFICIENT')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CANCEL-AUTH-INSUFFICIENT"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelAuthorization (scenario_id='SC-BOOKING-CANCEL-AUTH-EXPIRED')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CANCEL-AUTH-EXPIRED"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelAuthorization (scenario_id='SC-BOOKING-CANCEL-AUTH-ANONYMOUS')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CANCEL-AUTH-ANONYMOUS"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelAuthorization",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelFailures (scenario_id='SC-BOOKING-CANCEL-FAILURE')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CANCEL-FAILURE"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelFailures",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelPreservesContext (scenario_id='SC-BOOKING-CANCEL-CONTEXT')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CANCEL-CONTEXT"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelPreservesContext",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelRefusals (scenario_id='SC-BOOKING-CANCEL-02')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CANCEL-02"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelRefusals (scenario_id='SC-BOOKING-CANCEL-03')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CANCEL-03"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelRefusals",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelSuccess (scenario_id='SC-BOOKING-CANCEL-01')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CANCEL-01"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCancelSuccess",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testChannelCannotForgeTrustedContext",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCommitUncertaintyIsPreserved",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testConcurrentSaveIsConditional",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateAuthorization (scenario_id='SC-BOOKING-CREATE-AUTH-ABSENT')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CREATE-AUTH-ABSENT"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateAuthorization (scenario_id='SC-BOOKING-CREATE-AUTH-UNRESOLVED')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CREATE-AUTH-UNRESOLVED"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateAuthorization (scenario_id='SC-BOOKING-CREATE-AUTH-UNKNOWN')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CREATE-AUTH-UNKNOWN"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateAuthorization (scenario_id='SC-BOOKING-CREATE-AUTH-INSUFFICIENT')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CREATE-AUTH-INSUFFICIENT"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateAuthorization (scenario_id='SC-BOOKING-CREATE-AUTH-EXPIRED')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CREATE-AUTH-EXPIRED"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateAuthorization (scenario_id='SC-BOOKING-CREATE-AUTH-ANONYMOUS')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CREATE-AUTH-ANONYMOUS"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateAuthorization",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateConflict (scenario_id='SC-BOOKING-CREATE-03')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CREATE-03"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateConflict",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateInvalid (scenario_id='SC-BOOKING-CREATE-02')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CREATE-02"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateInvalid (scenario_id='SC-BOOKING-CREATE-TITLE')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CREATE-TITLE"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateInvalid",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateSuccess (scenario_id='SC-BOOKING-CREATE-01', check_id='CHK-OP-BOOKING-SAVE')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-CREATE-01",
+        "check_id": "CHK-OP-BOOKING-SAVE"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCreateSuccess",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupAuthorization (scenario_id='SC-BOOKING-LOOKUP-AUTH-ABSENT')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-LOOKUP-AUTH-ABSENT"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupAuthorization (scenario_id='SC-BOOKING-LOOKUP-AUTH-UNRESOLVED')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-LOOKUP-AUTH-UNRESOLVED"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupAuthorization (scenario_id='SC-BOOKING-LOOKUP-AUTH-UNKNOWN')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-LOOKUP-AUTH-UNKNOWN"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupAuthorization (scenario_id='SC-BOOKING-LOOKUP-AUTH-INSUFFICIENT')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-LOOKUP-AUTH-INSUFFICIENT"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupAuthorization (scenario_id='SC-BOOKING-LOOKUP-AUTH-EXPIRED')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-LOOKUP-AUTH-EXPIRED"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupAuthorization (scenario_id='SC-BOOKING-LOOKUP-AUTH-ANONYMOUS')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-LOOKUP-AUTH-ANONYMOUS"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupAuthorization",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupFailure (scenario_id='SC-BOOKING-LOOKUP-03')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-LOOKUP-03"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupFailure",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupInvalid (scenario_id='SC-BOOKING-LOOKUP-INVALID')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-LOOKUP-INVALID"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupInvalid",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupMissing (scenario_id='SC-BOOKING-LOOKUP-02')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-LOOKUP-02"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupMissing",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupSuccess (scenario_id='SC-BOOKING-LOOKUP-01', check_id='CHK-OP-BOOKING-LOAD')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-BOOKING-LOOKUP-01",
+        "check_id": "CHK-OP-BOOKING-LOAD"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testLookupSuccess",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testRealStoreFailureIsNotApplied",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSharedCreationQuality (scenario_ids=['SC-BOOKING-CREATE-QUALITY', 'SC-BOOKING-CANCEL-QUALITY'], check_id='CHK-RNF-BOOKING-CREATE-RESPONSE')",
+      "status": "passed",
+      "parameters": {
+        "scenario_ids": [
+          "SC-BOOKING-CREATE-QUALITY",
+          "SC-BOOKING-CANCEL-QUALITY"
+        ],
+        "check_id": "CHK-RNF-BOOKING-CREATE-RESPONSE"
+      },
+      "detail": null,
+      "observations": {
+        "boundary": "CLI subprocess start through captured complete JSON stdout",
+        "samples": 30,
+        "elapsed_seconds": [
+          0.15599999998812564,
+          0.14100000000325963,
+          0.14100000000325963,
+          0.14000000001396984,
+          0.1409999999741558,
+          0.15600000001722947,
+          0.14100000000325963,
+          0.15599999998812564,
+          0.14100000000325963,
+          0.15599999998812564,
+          0.15600000001722947,
+          0.20300000000861473,
+          0.2029999999795109,
+          0.15700000000651926,
+          0.2960000000020955,
+          0.21900000001187436,
+          0.1409999999741558,
+          0.14000000001396984,
+          0.125,
+          0.14100000000325963,
+          0.14100000000325963,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.15599999998812564,
+          0.14100000000325963,
+          0.15599999998812564,
+          0.14000000001396984,
+          0.14100000000325963
+        ],
+        "production_sla": false
+      }
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSharedCreationQuality",
+      "status": "passed",
+      "observations": {
+        "boundary": "CLI subprocess start through captured complete JSON stdout",
+        "samples": 30,
+        "elapsed_seconds": [
+          0.15599999998812564,
+          0.14100000000325963,
+          0.14100000000325963,
+          0.14000000001396984,
+          0.1409999999741558,
+          0.15600000001722947,
+          0.14100000000325963,
+          0.15599999998812564,
+          0.14100000000325963,
+          0.15599999998812564,
+          0.15600000001722947,
+          0.20300000000861473,
+          0.2029999999795109,
+          0.15700000000651926,
+          0.2960000000020955,
+          0.21900000001187436,
+          0.1409999999741558,
+          0.14000000001396984,
+          0.125,
+          0.14100000000325963,
+          0.14100000000325963,
+          0.125,
+          0.125,
+          0.125,
+          0.125,
+          0.15599999998812564,
+          0.14100000000325963,
+          0.15599999998812564,
+          0.14000000001396984,
+          0.14100000000325963
+        ],
+        "production_sla": false
+      }
+    }
+  ],
+  "coverage": {
+    "SC-BOOKING-LOOKUP-AUTH-ABSENT": "passed",
+    "SC-BOOKING-LOOKUP-AUTH-UNRESOLVED": "passed",
+    "SC-BOOKING-LOOKUP-AUTH-UNKNOWN": "passed",
+    "SC-BOOKING-LOOKUP-AUTH-INSUFFICIENT": "passed",
+    "SC-BOOKING-LOOKUP-AUTH-EXPIRED": "passed",
+    "SC-BOOKING-LOOKUP-AUTH-ANONYMOUS": "passed",
+    "SC-BOOKING-LOOKUP-01": "passed",
+    "SC-BOOKING-LOOKUP-02": "passed",
+    "SC-BOOKING-LOOKUP-03": "passed",
+    "SC-BOOKING-LOOKUP-INVALID": "passed",
+    "SC-BOOKING-CREATE-AUTH-ABSENT": "passed",
+    "SC-BOOKING-CREATE-AUTH-UNRESOLVED": "passed",
+    "SC-BOOKING-CREATE-AUTH-UNKNOWN": "passed",
+    "SC-BOOKING-CREATE-AUTH-INSUFFICIENT": "passed",
+    "SC-BOOKING-CREATE-AUTH-EXPIRED": "passed",
+    "SC-BOOKING-CREATE-AUTH-ANONYMOUS": "passed",
+    "SC-BOOKING-CREATE-01": "passed",
+    "SC-BOOKING-CREATE-02": "passed",
+    "SC-BOOKING-CREATE-03": "passed",
+    "SC-BOOKING-CREATE-TITLE": "passed",
+    "SC-BOOKING-CREATE-QUALITY": "passed",
+    "SC-BOOKING-CANCEL-AUTH-ABSENT": "passed",
+    "SC-BOOKING-CANCEL-AUTH-UNRESOLVED": "passed",
+    "SC-BOOKING-CANCEL-AUTH-UNKNOWN": "passed",
+    "SC-BOOKING-CANCEL-AUTH-INSUFFICIENT": "passed",
+    "SC-BOOKING-CANCEL-AUTH-EXPIRED": "passed",
+    "SC-BOOKING-CANCEL-AUTH-ANONYMOUS": "passed",
+    "SC-BOOKING-CANCEL-01": "passed",
+    "SC-BOOKING-CANCEL-02": "passed",
+    "SC-BOOKING-CANCEL-03": "passed",
+    "SC-BOOKING-CANCEL-FAILURE": "passed",
+    "SC-BOOKING-CANCEL-CONTEXT": "passed",
+    "SC-BOOKING-CANCEL-QUALITY": "passed",
+    "CHK-RNF-BOOKING-CREATE-RESPONSE": "passed",
+    "CHK-OP-BOOKING-LOAD": "passed",
+    "CHK-OP-BOOKING-SAVE": "passed"
+  },
+  "sources": {
+    "apps/BookingDesk/boundaries/Boundary_Http.py": "210e1771c13311b54db843da00167f9c6f292c8112bcf957f25f16d6cc428c61",
+    "apps/BookingDesk/boundaries/Boundary_Json.py": "f3e173ca605f13663f4b3c21f80de02ef7f81cadf2b4b39d153652a2eee73a45",
+    "apps/BookingDesk/composition/AppComposition.py": "29229d62060d47ca5712a5421913ec8d233b3d188404447e3c96fad9afbab86b",
+    "apps/BookingDesk/entities/Entity_ActorContext.py": "ed5b2b30c36f34ea140104e46d6001bc8df56551cc5df0a36608c98c0fcde35a",
+    "apps/BookingDesk/entities/Entity_Booking.py": "c0f0fbcbbb39eb0a6a85928470d4c2f4d64a28d542eeb44d5838fb5f6f8e8383",
+    "apps/BookingDesk/support/OperationFailure.py": "6d4cb8901c2230d246f43ee47c302055f801b48c84ca10503aa80291fd04a213",
+    "apps/BookingDesk/support/SqliteResource.py": "2f5c5a2d185846c41e4159e79eff84d3ec3226b10fe97228e3c4302aa10b33f5",
+    "apps/BookingDesk/tests/Test_Contracts.py": "18b04f607e6cbe97342a24ec5fb710d66fea8151d48b3738e975820b1d50287f",
+    "apps/BookingDesk/tools/Tool_SqliteBookingStore.py": "772444d3723a98498891f3474a8efa18ea4012bd64cf6c8260b4ffc1b61c9afc",
+    "apps/BookingDesk/usecases/Main/UseCase_CancelBooking.py": "c909bb57f86bbf0d9d5559312ae82b0042a66962d68ffc1ad93f0e2d09c8e745",
+    "apps/BookingDesk/usecases/Main/UseCase_CreateBooking.py": "39c2322ab95fd9b6a4c52d4adf00978cf0d9c65e032f5e2a8df450bc383c038a",
+    "apps/BookingDesk/usecases/Main/UseCase_LookupBooking.py": "1765f4f12999cda740956ad330b1c80d8228b5975f6a0c82cafaae64f0356ba4",
+    "apps/BookingDesk/value_objects/ValueObject_BookingIdentity.py": "ee74211b02a4b16ce3c538e22b512b891f9b70b48fcf3d98b66577f01e11ce5f",
+    "docs/L1_AtlasSpecifications/example.atlas.json": "63a65c44f9fb4151c00389a954e9ce87531754c7c19076743b6dd6693ff62f96",
+    "docs/L2_MinervaBlueprints/apps/BookingDesk/boundaries/Boundary_Http.py.yaml": "01e7b7bebb56d99b21f526866295b79262d3d5c52afdb57ff30d60abaa2b96ce",
+    "docs/L2_MinervaBlueprints/apps/BookingDesk/boundaries/Boundary_Json.py.yaml": "9386b8539c93f0dd959d7ff6d0d12c18f3950ca08570545a7c641ea19568450d",
+    "docs/L2_MinervaBlueprints/apps/BookingDesk/composition/AppComposition.py.yaml": "0eb2a3dc88f2a27338ea57e8243d3aeb92d8c83d37e99921b8f87d9eeb2ffa06",
+    "docs/L2_MinervaBlueprints/apps/BookingDesk/entities/Entity_ActorContext.py.yaml": "d370c93acf2153377b6ff993496f9790bff0285a1f0d4b840d7fd7a4f6adbfe2",
+    "docs/L2_MinervaBlueprints/apps/BookingDesk/entities/Entity_Booking.py.yaml": "4c062ad0c84d52acaae0e61532ce55e48c90cdc20a623af359b03d8d1556e110",
+    "docs/L2_MinervaBlueprints/apps/BookingDesk/support/OperationFailure.py.yaml": "11fb46c60e3ff183e9e681f030d0d14d92680cea86e04e8bd172504e6c36e1d0",
+    "docs/L2_MinervaBlueprints/apps/BookingDesk/support/SqliteResource.py.yaml": "a19c394ff8a69ad5f957e331b81855c7fa1bf51b562a0d6f3fbcace8caacac4b",
+    "docs/L2_MinervaBlueprints/apps/BookingDesk/tests/Test_Contracts.py.yaml": "9af9dd0d75053ad4baaf91396edec9604de114f8354baa2cf3a43d2011a92e71",
+    "docs/L2_MinervaBlueprints/apps/BookingDesk/tools/Tool_SqliteBookingStore.py.yaml": "429933decd05d0081656bb79b88147f4a2b1540b58993c73e88375eee2ecae59",
+    "docs/L2_MinervaBlueprints/apps/BookingDesk/usecases/Main/UseCase_CancelBooking.py.yaml": "88b17dba3e47339b32452d63e1fafde7e3cda9ae87a09a6d6ca7f2e858c7b902",
+    "docs/L2_MinervaBlueprints/apps/BookingDesk/usecases/Main/UseCase_CreateBooking.py.yaml": "52573a2d844bea8a8e85c94d4f544f98352235590c9efd700aad481ffa98eb9f",
+    "docs/L2_MinervaBlueprints/apps/BookingDesk/usecases/Main/UseCase_LookupBooking.py.yaml": "6c76c063f18f6b3c4d9740e82288305b3b46b5e1204276ddaddc782c9ab7cbc4",
+    "docs/L2_MinervaBlueprints/apps/BookingDesk/value_objects/ValueObject_BookingIdentity.py.yaml": "326e3f0a4b6ba4db612d6daecd581685ffcd1555ab816e8e3e42a7e3728c2a2b",
+    "docs/L2_MinervaBlueprints/blueprint.yaml": "4781c57963bbbc83f99c83809ab6427e7bbb15a407b375b6ed6ef75b815ddfe1",
+    "docs/L2_MinervaBlueprints/launch.py.yaml": "413fcabf1c3a7dda0fbd7588e0c607a69f2aca21fdb73dfd60bdca895228ff29",
+    "docs/L3_Vulcan/realization.json": "43a6456dfe1d92e2684d94511e2b8c5e6acfcd498fafab8da41d3272d2bdfb26",
+    "docs/L3_Vulcan/test-bindings.json": "7b049cfd78f5f3cfffd898fe907ad24007f41935a71805e8284afd85216d9aa0",
+    "launch.py": "24dd02c5887c2f55e54ab413b704fcceffe28a59811ef4756d10e86f4ffdbd0b"
+  },
+  "sources_changed_during_run": false,
+  "model_baseline": {
+    "document_id": "MINERVA-COMPOSITION",
+    "revision": "2",
+    "sha256": "89f0703fc85e995c1a4c4ce65a90351861f590dca56c2d359d117a668ccc94d5",
+    "binding_revision": "2-vulcan-1",
+    "binding_sha256": "4781c57963bbbc83f99c83809ab6427e7bbb15a407b375b6ed6ef75b815ddfe1",
+    "atlas_sha256": "63a65c44f9fb4151c00389a954e9ce87531754c7c19076743b6dd6693ff62f96"
+  },
+  "limits": [
+    "Observations on the recorded host and selected Python/SQLite realization only.",
+    "Fault doubles verify handling of uncertainty, not physical disk-failure tolerance.",
+    "Skipped checks remain unverified. Passing scenarios do not imply stakeholder approval.",
+    "No production identity provider, distributed deployment, browser interaction or production SLA assessed."
+  ]
+}

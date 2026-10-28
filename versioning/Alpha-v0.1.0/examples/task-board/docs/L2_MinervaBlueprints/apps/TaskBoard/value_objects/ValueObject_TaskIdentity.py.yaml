@@ -1,0 +1,54 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-013
+source:
+  path: apps/TaskBoard/value_objects/ValueObject_TaskIdentity.py
+  app: TaskBoard
+  language: python
+  state: observed
+  sha256: 7fb99e3efe15f0a3e181d714b1181f80274fd374de11f4d698f0ef74d46b1654
+  purpose: Realization source.
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-013-01
+  code_name: ValueObject_TaskIdentity
+  kind: class
+  role: value_object
+  model_refs: []
+  description: Observed realization source.
+  attributes:
+  - name: value
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: str
+  operations:
+  - id: OP-SOURCE-013-01-01
+    code_name: __post_init__
+    contract_scope: technical
+    native_signature: __post_init__(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "if not isinstance(self.value, str) or not self.value.strip():\n    raise ValueError('invalid_identifier')"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-013-01
+  target: dataclasses
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

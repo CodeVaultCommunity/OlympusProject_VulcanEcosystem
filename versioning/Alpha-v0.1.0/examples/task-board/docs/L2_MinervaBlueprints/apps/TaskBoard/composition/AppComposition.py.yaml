@@ -1,0 +1,129 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-003
+source:
+  path: apps/TaskBoard/composition/AppComposition.py
+  app: TaskBoard
+  language: python
+  state: observed
+  sha256: 3c8d4a0fdae58e7cf595a8b6527b597fc9ad28cabcc4138935548fe932016639
+  purpose: Select concrete collaborators. Local demo tokens are not production authentication.
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-003-01
+  code_name: AppComposition
+  kind: class
+  role: composition
+  model_refs: []
+  description: Select concrete collaborators. Local demo tokens are not production authentication.
+  attributes:
+  - name: token
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: board_id
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: store
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: create
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: complete
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: list
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  operations:
+  - id: OP-SOURCE-003-01-01
+    code_name: __init__
+    contract_scope: technical
+    native_signature: '__init__(self, db_path: str, board_id: str=''board-A'', token: str=''demo-editor'')'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: db_path
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: board_id
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: token
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "if not isinstance(token, str) or not token or (not isinstance(board_id, str)) or (not board_id.strip()):\n\
+        \    raise ValueError('invalid_composition_configuration')"
+      - self.token = token
+      - self.board_id = board_id
+      - self.store = Tool_SqliteTaskStore(db_path, board_id)
+      - self.create = UseCase_CreateTask(self.store, board_id)
+      - self.complete = UseCase_CompleteTask(self.store, board_id)
+      - self.list = UseCase_ListTasks(self.store, board_id)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-003-01-02
+    code_name: resolveActor
+    contract_scope: technical
+    native_signature: 'resolveActor(self, token: str | None)'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: token
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "if not isinstance(token, str) or not hmac.compare_digest(token.encode(), self.token.encode()):\n    return\
+        \ None"
+      - return Entity_ActorContext('local-operator', 'ACT-BOARD-MEMBER', ('task.create', 'task.complete', 'task.list'),
+        self.board_id)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-003-01
+  target: hmac
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-003-01
+  target: apps.TaskBoard.entities.Entity_ActorContext
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-003-01
+  target: apps.TaskBoard.tools.Tool_SqliteTaskStore
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-003-01
+  target: apps.TaskBoard.usecases.Main.UseCase_CreateTask
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-003-01
+  target: apps.TaskBoard.usecases.Main.UseCase_CompleteTask
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-003-01
+  target: apps.TaskBoard.usecases.Main.UseCase_ListTasks
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

@@ -1,58 +1,25 @@
-# Relatório da entrega — Vulcan Ecosystem Alpha-v0.1.0
+# Recibo de verificação — Alpha-v0.1.0
 
-[English](RELEASE.md) · [Manual](../README.md) · [Requirements](REQUIREMENTS.md) · [Contract review](CONTRACT-REVIEW.md) · [Migration](MIGRATION.md)
+[English](RELEASE.md) · [JSON](current.json) · [Summary / resumo](runs/20261028-windows-final/summary.json)
 
-**As verificações listadas abaixo passaram no ambiente registrado.** Esta é uma entrega Alpha para revisão do modelo, dos formatos e dos exemplos. Ela distingue validação documental, avaliação estrutural, revisão semântica assistida por IA e execução observada. Não afirma aprovação do responsável pelo projeto ou certificação geral de conformidade OAL.
+Mesma Alpha não publicada, revisada no lugar. A execução atual passou no Windows com Python 3.12.14. Não se afirma publicação remota, execução hospedada de CI ou aceite do responsável.
 
-## Resultados observados
-
-| Verificação | Resultado e escopo |
+| Scope / escopo | Result / resultado |
 | --- | --- |
-| Realização e avaliador | 26 testes passaram: 19 de aplicativo/ciclo de vida e 7 do avaliador; zero falhas, erros ou ignorados. |
-| Estrutura Python | 14 fontes TaskBoard no perfil avaliadas, sem diagnóstico; LegacyReports permanece fora do perfil interno. |
-| Minerva integrado | 16 documentos; 3 casos; 3 testes comportamentais; 11 critérios; 28 cenários; 4 grafos; 15 fontes conferidas. |
-| Canais e ciclo de vida | Chamadas diretas, HTTP/CLI, integração pública com legado, inicialização total/seletiva, identidade de prontidão, falha parcial e limpeza dos filhos próprios exercitadas. |
-| Ferramentas de distribuição | 33 testes passaram para inventário, conteúdo exato e verificação dos pacotes. |
-| Isolamento da edição | Passou: somente a pasta da edição foi copiada; comandos foram invocados de fora dela com ambiente Python externo. |
-| Fonte Atlas | Instância própria validada pelo tradutor oficial Atlas Stable-v1.0.0 fixado por commit. |
-| Arte e integridade visual | Oito renders e oito SVGs por projeto; ícones preservados byte a byte; todas as imagens revisadas visualmente e metadados/hashes conferidos. |
+| [minimal](runs/20261028-windows-final/minimal/execution.json) | 10 métodos; 12 cenários; 2 apoios; todos passaram |
+| [composition](runs/20261028-windows-final/composition/execution.json) | 19 métodos; 33 cenários; 3 apoios; todos passaram |
+| [task-board](runs/20261028-windows-final/task-board/execution.json) | 21 métodos; 31 cenários; 7 apoios; todos passaram |
+| [L3 tooling / ferramentas](runs/20261028-windows-final/tooling.json) | 13 métodos, 1 ignorado (privilégio de symlink de diretório indisponível) |
+| [Legacy technical fixture / fixture legada](runs/20261028-windows-final/legacy-fixture.json) | 19 métodos, 1 ignorado (asserção SIGTERM POSIX) |
+| [Repository tools / ferramentas da raiz](runs/20261028-windows-final/repository-tests.json) | 33 testes passaram |
+| [Source preservation / preservação das fontes](runs/20261028-windows-final/source-preservation.json) | 3 entradas Atlas canônicas exatas; ADPM/cenários Minerva herdados sem alteração; hashes observados correspondem aos bytes atuais. |
 
-A contagem é de métodos de teste, não de cada subcaso ou asserção. As 33 verificações da distribuição são a suíte de manutenção de cada repositório; não são casos de domínio adicionais.
+A edição executou 82 métodos unittest: 80 passaram e 2 foram ignorados. Cobertura de cenários/apoios é uma contagem distinta: os 76 cenários e 12 apoios passaram. Cada exemplo também passou na avaliação estrutural e no validador Minerva externo explicitamente selecionado, sem diagnósticos. Hashes/versão da ferramenta ficam no respectivo relatório.
 
-## Ambiente e reprodução
+[minimal Minerva](runs/20261028-windows-final/minimal/minerva.json) · [composition Minerva](runs/20261028-windows-final/composition/minerva.json) · [task-board Minerva](runs/20261028-windows-final/task-board/minerva.json)
 
-- Python: **3.12.14** (CPython).
-- Platform: `Linux-6.18.55-x86_64-with-glibc2.39`.
-- PyYAML: `6.0.3`; jsonschema: `4.25.1`; pytest: `8.4.2`.
-- Comandos, horários, saídas e hashes das fontes Python: [observed/checks.json](observed/checks.json).
-- Isolamento: [observed/isolation.json](observed/isolation.json).
-- Última conferência documental: [observed/final-document-check.json](observed/final-document-check.json).
-- Validador Atlas: [observed/atlas-validation.json](observed/atlas-validation.json).
-- Imagens: [observed/artwork.json](observed/artwork.json).
-- Links e fontes fixadas: [observed/repository-check.json](observed/repository-check.json).
+As entradas Minerva foram lidas da árvore local não publicada baseada no commit `5e4da7d`; os hashes identificam o conteúdo selecionado, não os bytes do commit anterior. A conferência confirmou igualdade com essa árvore no momento registrado. Snapshots originais e revisões finais dos vínculos ficam separados.
 
-A edição declara Python 3.11+, mas o ambiente efetivamente observado nesta entrega é o acima. Não se apresenta a matriz Linux/Windows e Python 3.11/3.12 configurada no GitHub Actions como se ela já tivesse sido executada.
+Limites: SQLite local e identidade didática; doubles não estabelecem durabilidade física diante de desastre. Tempos cobrem 30 chamadas CLI por procedimento aplicável da fonte, não SLA de produção. Cancelamento de reserva reutiliza a verificação temporal da criação; latência do cancelamento permanece questão aberta da fonte. Não houve execução de UI de navegador, C/Go, Docker, implantação distribuída ou CI hospedada. Os dois testes ignorados não são considerados verificados. As imagens não foram alteradas nesta revisão. Relatórios históricos ficam em `reviews/` e execuções anteriores, sem serem reutilizados como evidência atual.
 
-## Preservação do contrato
-
-A [matriz de revisão](contract-review.json) liga os três casos e onze critérios do Atlas próprio ao ADPM, à ADVS e à realização. Ela registra identificador gerado pela aplicação, título normalizado, conclusão idempotente, ordem de inserção, autorização e semântica de falhas. A origem foi reconstruída para este demo; não é o exemplo diferente publicado no Atlas.
-
-A revisão cruzada corrigiu referências Python qualificadas aceitas na classe errada, escopo de app excluído silenciosamente, duas divergências entre cenário e teste e a observação de falha de listagem. O validador também recebeu uma regressão para grafos locais de fichas de fonte. A conferência documental final acrescentou o atributo interno de título ausente na ficha da entidade e registrou corretamente o argumento opcional de conclusão. Essas últimas alterações não mudaram o contrato de negócio ou o código dos apps.
-
-## Limites da evidência
-
-A automação não prova suficiência de todo cenário, equivalência de qualquer algoritmo ou confiança de autenticação em produção. As falhas de conexão simuladas não estabelecem garantias de recuperação após commit ambíguo. HTTP e conteúdo HTML foram verificados sem navegação em browser ponta a ponta. Adaptações C/Go são descritivas; não houve execução dessas linguagens, Docker, carga, recuperação distribuída ou implantação remota.
-
-No Minerva, modelo e espelho são documentos; o validador nunca importa ou executa o programa descrito. No Vulcan, a execução é um comando explícito separado e a validação L2 usa a cópia versionada do Minerva. A disposição dos arquivos não apaga a responsabilidade L4 dos canais.
-
-## Integridade da distribuição
-
-O inventário único `CONTENT-SHA256.json`, na raiz do repositório, é gerado depois dos documentos e das evidências finais. Ele registra caminho, tamanho em bytes e SHA-256 de cada arquivo distribuído, exceto o próprio inventário. O builder empacota apenas o commit verificado e recusa conteúdo rastreado sujo, inventário antigo ou artefatos temporários.
-
-O arquivo ZIP efetivo e sua extração são auditados depois do empacotamento. O commit final e o SHA-256 do próprio ZIP ficam no recibo externo de entrega, evitando uma referência circular dentro do arquivo que identificam. Confira a cópia extraída antes de instalar dependências ou gerar novos arquivos:
-
-```bash
-python scripts/check_archive.py .
-```
-
-Esta entrega local não implica criação de repositório remoto, push, tag ou release no GitHub. Os arquivos estão organizados para revisão e publicação posterior a partir do conteúdo conferido.
+O inventário da raiz é gerado após este recibo e conferido separadamente; o ID do commit final fica em recibo externo para evitar hashes circulares.

@@ -1,0 +1,213 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-009
+source:
+  path: apps/TaskBoard/tools/Tool_SqliteTaskStore.py
+  app: TaskBoard
+  language: python
+  state: observed
+  sha256: 970fad1695fe8416f563ee96b3b95c21bc0dca41d4a9ceb40e4aa4f627a492a7
+  purpose: Board-scoped atomic persistence; data validity belongs to the canonical entity.
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-009-01
+  code_name: Tool_SqliteTaskStore
+  kind: class
+  role: tool
+  model_refs:
+  - TOL-TASK-STORE
+  description: Board-scoped atomic persistence; data validity belongs to the canonical entity.
+  attributes:
+  - name: board_id
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: resource
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  operations:
+  - id: OP-SOURCE-009-01-01
+    code_name: __init__
+    contract_scope: technical
+    native_signature: '__init__(self, db_path: str, board_id: str)'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: db_path
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: board_id
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.board_id = board_id
+      - self.resource = SqliteResource(db_path)
+      - self.resource.initialize('CREATE TABLE IF NOT EXISTS tasks (board TEXT NOT NULL, task_id TEXT NOT NULL COLLATE
+        BINARY, title TEXT NOT NULL, status TEXT NOT NULL, revision INTEGER NOT NULL, PRIMARY KEY(board, task_id))')
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-009-01-02
+    code_name: createTask
+    contract_scope: operational
+    native_signature: 'createTask(self, task: Entity_Task)'
+    description: Observed realization binding for OP-TASK-CREATE. Operational types are inherited from ADPM; task_identifier
+      is named task_id natively, and authorized board is bound to the store instance by composition. No semantic
+      contract is redefined.
+    inputs:
+    - name: task
+      description: Ready Task after VLD-TASK-NEW; revision zero.
+      type:
+        kind: entity
+        ref: ENT-TASK
+      required: true
+    outputs:
+    - name: created_task
+      description: The retained Task, with its exact title and identifier.
+      type:
+        kind: entity
+        ref: ENT-TASK
+      required: true
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.resource.open(write=True) as connection:\n    result = connection.execute('INSERT INTO tasks\
+        \ VALUES (?, ?, ?, ?, ?) ON CONFLICT(board, task_id) DO NOTHING', (self.board_id, task.task_id, task.title,\
+        \ task.status, task.revision))\n    if result.rowcount != 1:\n        raise OperationFailure('DUPLICATE_ID')"
+      - return task
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-009-01-03
+    code_name: loadTask
+    contract_scope: operational
+    native_signature: 'loadTask(self, task_id: str)'
+    description: Observed realization binding for OP-TASK-LOAD. Operational types are inherited from ADPM; task_identifier
+      is named task_id natively, and authorized board is bound to the store instance by composition. No semantic
+      contract is redefined.
+    inputs:
+    - name: task_id
+      description: Identifier already checked against VLD-TASK-ID.
+      type:
+        kind: primitive
+        name: string
+      required: true
+    outputs:
+    - name: task
+      description: A ready Task hydrated from one retained record.
+      type:
+        kind: entity
+        ref: ENT-TASK
+      required: true
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.resource.open() as connection:\n    row = connection.execute('SELECT task_id, title, status,\
+        \ revision FROM tasks WHERE board = ? AND task_id = ?', (self.board_id, task_id)).fetchone()"
+      - "if row is None:\n    raise OperationFailure('NOT_FOUND')"
+      - "try:\n    return Entity_Task(*row)\nexcept ValueError as error:\n    raise OperationFailure('STORE_INVALID_STATE')\
+        \ from error"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-009-01-04
+    code_name: completeTask
+    contract_scope: operational
+    native_signature: 'completeTask(self, task: Entity_Task, expected_revision: int)'
+    description: Observed realization binding for OP-TASK-COMPLETE. Operational types are inherited from ADPM; task_identifier
+      is named task_id natively, and authorized board is bound to the store instance by composition. No semantic
+      contract is redefined.
+    inputs:
+    - name: task
+      description: Ready Task after the entity's open-to-completed transition; identity/title unchanged.
+      type:
+        kind: entity
+        ref: ENT-TASK
+      required: true
+    - name: expected_revision
+      description: Revision returned by OP-TASK-LOAD.
+      type:
+        kind: primitive
+        name: integer
+      required: true
+    outputs:
+    - name: completed_task
+      description: The retained completed Task.
+      type:
+        kind: entity
+        ref: ENT-TASK
+      required: true
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.resource.open(write=True) as connection:\n    row = connection.execute('SELECT revision FROM\
+        \ tasks WHERE board = ? AND task_id = ?', (self.board_id, task.task_id)).fetchone()\n    if row is None:\n\
+        \        raise OperationFailure('NOT_FOUND')\n    if row[0] != expected_revision:\n        raise OperationFailure('VERSION_CONFLICT')\n\
+        \    connection.execute('UPDATE tasks SET status = ?, revision = ? WHERE board = ? AND task_id = ? AND revision\
+        \ = ?', (task.status, expected_revision + 1, self.board_id, task.task_id, expected_revision))"
+      - return task
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-009-01-05
+    code_name: listTasks
+    contract_scope: operational
+    native_signature: listTasks(self)
+    description: Observed realization binding for OP-TASK-LIST. Operational types are inherited from ADPM; task_identifier
+      is named task_id natively, and authorized board is bound to the store instance by composition. No semantic
+      contract is redefined.
+    inputs: []
+    outputs:
+    - name: tasks
+      description: Ready Tasks ordered by exact identifier using Unicode code-point order.
+      type:
+        kind: array
+        items:
+          kind: entity
+          ref: ENT-TASK
+      required: true
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.resource.open() as connection:\n    rows = connection.execute('SELECT task_id, title, status,\
+        \ revision FROM tasks WHERE board = ? ORDER BY task_id COLLATE BINARY', (self.board_id,)).fetchall()\n \
+        \   try:\n        tasks = [Entity_Task(*row) for row in rows]\n    except ValueError as error:\n       \
+        \ raise OperationFailure('STORE_INVALID_STATE') from error"
+      - return tasks
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-009-01
+  target: apps.TaskBoard.entities.Entity_Task
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-009-01
+  target: apps.TaskBoard.support.OperationFailure
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-009-01
+  target: apps.TaskBoard.support.SqliteResource
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

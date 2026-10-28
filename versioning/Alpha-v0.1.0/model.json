@@ -15,12 +15,19 @@
     "edition": "Alpha-v0.1.0"
   },
   "metadata_scope": "Editorial declaration, not a required runtime manifest or universal L3 serialization schema",
-  "example": "examples/task-board-ecosystem",
   "verification_entry": [
     "python",
     "run_examples.py",
-    "verify"
+    "verify",
+    "--minerva-edition",
+    "<explicit Minerva Alpha-v0.1.0 path>"
   ],
   "assessment_limits": "guides/assessment.md",
-  "sources": "verification/source-baselines.json"
+  "sources": "verification/source-baselines.json",
+  "examples": [
+    "examples/minimal",
+    "examples/composition",
+    "examples/task-board"
+  ],
+  "integration_guide": "integrations/minerva/README.md"
 }

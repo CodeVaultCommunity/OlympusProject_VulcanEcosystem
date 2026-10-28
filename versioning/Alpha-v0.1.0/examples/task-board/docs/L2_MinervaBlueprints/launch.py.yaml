@@ -1,0 +1,94 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-014
+source:
+  path: launch.py
+  app: TaskBoard
+  language: python
+  state: observed
+  sha256: 47dfa12b8ffbfa08bdc6219bd4189c3dc75e409f54132f73a4171eb175eb6e30
+  purpose: Concrete single-app ecosystem entry; registration is explicit, not folder discovery.
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-014-01
+  code_name: main
+  kind: function
+  role: support
+  model_refs: []
+  description: Concrete single-app ecosystem entry; registration is explicit, not folder discovery.
+  attributes: []
+  operations: []
+graphs: []
+dependencies:
+- from_unit: UNIT-014-01
+  target: argparse
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-014-01
+  target: http.server
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-014-01
+  target: json
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-014-01
+  target: math
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-014-01
+  target: os
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-014-01
+  target: pathlib
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-014-01
+  target: socket
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-014-01
+  target: sys
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-014-01
+  target: time
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-014-01
+  target: uuid
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-014-01
+  target: apps.TaskBoard.composition.AppComposition
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-014-01
+  target: apps.TaskBoard.boundaries.Boundary_Json
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-014-01
+  target: apps.TaskBoard.boundaries.Boundary_Http
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

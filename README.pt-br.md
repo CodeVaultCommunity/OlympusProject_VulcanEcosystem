@@ -1,129 +1,68 @@
 <p align="center"><img src="assets/vulcan-banner-pt-br.png" alt="Vulcan Ecosystem · Olympus Project · Alpha-v0.1.0" width="100%"></p>
 
-<p align="center"><strong>Vulcan Ecosystem Alpha-v0.1.0 · OAL L3 / ADI</strong></p>
-
-Português brasileiro · [English](README.md)
-
 # Vulcan Ecosystem
 
-**Vulcan Ecosystem é um modelo de L3 do OAL para organizar e realizar aplicativos em código.** Oferece o perfil Vulcan Architecture, admite aplicativos de outras arquiteturas e define composição explícita, execução completa ou seletiva e vínculo com a modelagem e a verificação.
+[English](README.md) · [Manual da edição](versioning/Alpha-v0.1.0/README.pt-br.md) · [Verificação](versioning/Alpha-v0.1.0/verification/RELEASE.pt-br.md)
 
-Integra o **Olympus Project**, junto do Atlas Specifications (L1) e do Minerva Blueprints (L2).
+**Um modelo reutilizável OAL L3 / ADI para organizar e realizar aplicações em código.** Parte do Olympus Project, junto ao Atlas Specifications (L1) e Minerva Blueprints (L2). Esta introdução ilustrada aponta para o manual normativo inglês da edição e sua tradução portuguesa.
 
-Este README é a apresentação ilustrada. O [manual da edição](versioning/Alpha-v0.1.0/README.pt-br.md) contém as regras textuais. Inglês é normativo; português é sua tradução. A Alpha está pronta para experimentação e revisão; o [relatório de verificação](versioning/Alpha-v0.1.0/verification/RELEASE.md) delimita os resultados observados.
+<img src="assets/vulcan-oal-position-pt-br.png" alt="Vulcan nas camadas OAL" width="900">
 
-## Conteúdo
+Atlas especifica comportamento requerido; Minerva modela o programa e sua verificação; Vulcan organiza implementação, composição, execução e evidências concretas. L4 define escolhas de interação. Referência: [OAL Stable-v1.0.0](https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers), com [fontes exatas fixadas](versioning/Alpha-v0.1.0/verification/source-baselines.json).
 
-- [Posicionamento no Olympus](#position)
-- [Ecossistema e arquitetura](#content)
-- [Fluxo de trabalho](#workflow)
-- [Início rápido](#quick-start)
-- [Documentação por camada](#documentation)
-- [Exemplos](#examples)
-- [Versões](#versions)
-- [Organização do repositório](#repository-organization)
-- [Verificação e integridade](#verification)
-- [Autoria e licença](#authorship)
+<img src="assets/vulcan-model-pt-br.png" alt="Ecossistema e perfil arquitetural opcional" width="900">
 
-<a id="position"></a>
-## Posicionamento no Olympus
+Aplicativos declaram sua arquitetura. O perfil opcional Vulcan Architecture organiza casos de uso, ferramentas, entidades e value objects; outras arquiteturas participam por contratos públicos. Nenhuma biblioteca de apoio, classe-base ou container é exigido.
 
-<p align="center"><img src="assets/vulcan-oal-position-pt-br.png" alt="Vulcan Ecosystem and the OAL layers" width="900"></p>
+## Comece pelos mesmos exemplos do Atlas e Minerva
 
-A referência é [OAL Stable-v1.0.0](https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers). O Atlas fornece especificações L1; Minerva reúne ADPM e ADVS em L2; Vulcan organiza a realização em L3. As fontes estão fixadas por revisão e bytes em [source-baselines.json](versioning/Alpha-v0.1.0/verification/source-baselines.json).
+| Exemplo | Foco |
+| --- | --- |
+| [minimal](versioning/Alpha-v0.1.0/examples/minimal/README.pt-br.md) | Submissão de requisição, identidade exata, validação e persistência. |
+| [composition](versioning/Alpha-v0.1.0/examples/composition/README.pt-br.md) | Consulta/criação/cancelamento de reserva e composição preservando contexto. |
+| [task-board](versioning/Alpha-v0.1.0/examples/task-board/README.pt-br.md) | IDs informados pelo chamador, isolamento por quadro, conflitos de revisão e listagem consistente. |
 
-<a id="content"></a>
-## Ecossistema e arquitetura
+O antigo TaskBoard divergente permanece apenas como fixture técnica de integração legada e inicialização. Os exemplos principais preservam os bytes canônicos do Atlas e as identidades correspondentes do Minerva.
 
-<p align="center"><img src="assets/vulcan-model-pt-br.png" alt="Vulcan Ecosystem: responsibilities and artifacts" width="900"></p>
-
-Um ecossistema contém aplicativos identificados em apps/. Cada aplicativo declara seu perfil. Vulcan Architecture organiza casos, ferramentas, entidades e value objects; aplicativos legados mantêm sua arquitetura e expõem operações públicas documentadas.
-
-Consulte as [regras identificadas](versioning/Alpha-v0.1.0/README.pt-br.md#reference-rules) e o [mapeamento dos requisitos](versioning/Alpha-v0.1.0/verification/REQUIREMENTS.pt-br.md). Identidade do modelo, versão do perfil e revisão de um documento permanecem distinguíveis.
-
-<a id="workflow"></a>
-## Fluxo de trabalho
-
-<p align="center"><img src="assets/vulcan-workflow-pt-br.png" alt="Vulcan Ecosystem: authoring, verification and feedback" width="900"></p>
-
-Selecione o modelo de programa, componha as ferramentas concretas e os casos, prepare os canais e execute os modos declarados. Registre os resultados dos testes e compare-os aos cenários especificados. Bibliotecas, classes abstratas e frameworks de injeção são opcionais.
-
-<a id="quick-start"></a>
-## Início rápido
-
-Use Python 3.11 ou superior. Na raiz extraída, execute:
-
-```bash
+```sh
 cd versioning/Alpha-v0.1.0
-python -m venv .venv
-# POSIX: source .venv/bin/activate
-# PowerShell: .venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-python run_examples.py verify
-python run_examples.py list
-python run_examples.py start --all --duration 10
+python run_examples.py evaluate
+python run_examples.py test
+python run_examples.py start --example task-board --all --duration 10
 ```
 
-A edição contém suas ferramentas e recursos. Consulte os comandos e pré-requisitos completos no [manual](versioning/Alpha-v0.1.0/README.pt-br.md#quick-start). O projeto distribui um modelo e ferramentas de referência; a biblioteca de conveniência permanece opcional.
+Python 3.11+. Esses comandos L3 usam a biblioteca padrão. Integração completa exige também `requirements.txt` e uma edição Minerva externa explícita: veja o [manual](versioning/Alpha-v0.1.0/README.pt-br.md#início-rápido). Cada verificação registra ambiente, hashes das fontes e cenários executados.
 
-<a id="documentation"></a>
-## Documentação por camada
+<img src="assets/vulcan-workflow-pt-br.png" alt="Modelo selecionado, realização concreta e evidência observada" width="900">
 
-| Local recomendado | Conteúdo |
-| --- | --- |
-| `docs/L1_AtlasSpecifications/` | Casos e contratos de origem. |
-| `docs/L2_MinervaBlueprints/` | ADPM, ADVS e espelho YAML por arquivo. |
-| `docs/L3_Vulcan/` | Organização, composição, operação, integrações e evidências. |
-| `docs/Shared/` | Apoio e assuntos transversais, com referências canônicas. |
+[integrations/](versioning/Alpha-v0.1.0/integrations/README.pt-br.md) explica a derivação manual Minerva–Vulcan. Contém apenas documentação; nenhum tradutor ou gerador foi implementado. YAML por arquivo pertence a L2; L3 registra organização, recursos, execução e evidência.
 
-Docs/ na raiz é recomendado. Uma alternativa declarada pode preservar as informações e os vínculos exigidos. As fichas por arquivo pertencem ao Minerva: apps/TaskBoard/entities/Entity_Task.py corresponde a docs/L2_MinervaBlueprints/apps/TaskBoard/entities/Entity_Task.py.yaml. O repositório de especificação mantém sua própria organização editorial.
-
-<a id="examples"></a>
-## Exemplos
-
-| Exemplo | O que demonstra |
-| --- | --- |
-| [TaskBoard + LegacyReports](versioning/Alpha-v0.1.0/examples/task-board-ecosystem/README.pt-br.md) | Aplicativo Vulcan, legado, HTTP, CLI, persistência e inicialização coordenada. |
-| [Structural counterexamples](versioning/Alpha-v0.1.0/tests/) | Violações de nomes, estrutura e dependências. |
-
-O TaskBoard usa uma instância Atlas própria, reconstruída e didática. Seu contrato difere do Task Board publicado pelo Atlas. Origem, diferenças e limites estão identificados nos documentos do exemplo; não se afirma geração automática nem aprovação independente de stakeholders.
-
-<a id="versions"></a>
-## Versões
-
-| Edição | Status | Manual e notas | Verificação |
-| --- | --- | --- | --- |
-| Alpha-v0.1.0 | Alpha | [English](versioning/Alpha-v0.1.0/README.md#release-notes) · [Português](versioning/Alpha-v0.1.0/README.pt-br.md#release-notes) | [Report](versioning/Alpha-v0.1.0/verification/RELEASE.md) |
-
-Cada edição contém suas dependências, ferramentas, exemplos e testes. Esta distribuição inclui somente Alpha-v0.1.0; revisões futuras deverão preservar os snapshots publicados e declarar migrações.
-
-<a id="repository-organization"></a>
 ## Organização do repositório
 
-| Local | Finalidade |
-| --- | --- |
-| `README.md`, `README.pt-br.md` | Apresentação ilustrada e navegação. |
-| [`assets/`](assets/README.pt-br.md) | Ícones fornecidos, headers, diagramas e fontes editáveis. |
-| [`versioning/Alpha-v0.1.0/`](versioning/Alpha-v0.1.0/README.pt-br.md) | Manual textual e edição autossuficiente. |
-| [`CONTENT-SHA256.json`](CONTENT-SHA256.json) | Inventário único de bytes e hashes de distribuição. |
-| [`scripts/`](scripts/) | Verificação de links, inventário e empacotamento. |
-| [`docs/releasing.pt-br.md`](docs/releasing.pt-br.md) | Procedimento reproduzível de distribuição. |
-| [`AGENTS.md`](AGENTS.md), [`CLAUDE.md`](CLAUDE.md) | Navegação e manutenção assistida. |
-
-<a id="verification"></a>
-## Verificação e integridade
-
-```bash
-python scripts/check_archive.py .
-python scripts/check_repository.py
+```text
+L3-VulcanEcosystem/
+├── README.md / README.pt-br.md
+├── AGENTS.md / CLAUDE.md
+├── CHANGELOG.md / VERSION / CONTENT-SHA256.json
+├── LICENSE / CITATION.cff / CONTRIBUTING.md
+├── assets/                 # illustrated introductions
+├── docs/                   # repository maintenance/release procedure
+├── scripts/                # repository and distribution checks
+└── versioning/Alpha-v0.1.0/
+    ├── README.md / README.pt-br.md
+    ├── specification/      # identified rules and OAL alignment
+    ├── profiles/           # optional Vulcan Architecture profile
+    ├── integrations/       # explanation only: Minerva → Vulcan
+    ├── guides/ / templates/
+    ├── examples/           # minimal, composition, task-board
+    ├── scripts/ / tests/   # assessor, evidence runner, technical fixtures
+    └── verification/       # requirements, source baselines, reviews, runs
 ```
 
-Execute a auditoria do diretório logo após extrair, antes de criar ambientes ou caches dentro dele. O inventário cobre todos os arquivos distribuídos, exceto ele próprio. Detecta ausências, acréscimos e alterações. O [guia de release](docs/releasing.pt-br.md) distingue verificações locais, CI configurada e publicação remota.
+A edição permanece **Alpha-v0.1.0**, melhorada no lugar antes da publicação. [Regras](versioning/Alpha-v0.1.0/specification/README.pt-br.md), [alinhamento OAL](versioning/Alpha-v0.1.0/specification/OAL-ALIGNMENT.pt-br.md), [requisitos](versioning/Alpha-v0.1.0/verification/REQUIREMENTS.pt-br.md) e [histórico](CHANGELOG.md) separam obrigações das fontes, decisões de projeto e verificações observadas.
 
-<a id="authorship"></a>
-## Autoria e licença
+## Integridade e contribuição
 
-Conceito e autoria do projeto: **Douglas de Oliveira Alkimim**. Preparação desta Alpha com assistência de IA, para revisão. Distribuído sob a [licença MIT](LICENSE). Créditos das fontes e dos recursos em [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md); metadados em [CITATION.cff](CITATION.cff).
+`CONTENT-SHA256.json` na raiz inventaria os bytes exatos da entrega. O [procedimento de entrega](docs/releasing.pt-br.md) explica preparação, verificação e commits locais. Testes são observações delimitadas, sem representar aceite dos interessados ou certificação de projetos futuros. Configuração de CI hospedada não demonstra que houve execução hospedada.
 
-<p><img src="https://avatars.githubusercontent.com/u/65194413?v=4" alt="Douglas de Oliveira Alkimim" width="88" height="88" align="left" hspace="12"><strong>Douglas de Oliveira Alkimim</strong><br><a href="https://github.com/douglas-alkimim">GitHub</a> · <a href="https://www.linkedin.com/in/douglas-alkimim/">LinkedIn</a></p>
-<br clear="all">
+Concepção e autoria: Douglas de Oliveira Alkimim. Preparação e revisão técnica assistidas por IA. Veja [licença MIT](LICENSE), [citação](CITATION.cff), [proveniência das imagens](assets/README.pt-br.md) e [contribuição](CONTRIBUTING.md).

@@ -1,0 +1,122 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-011
+source:
+  path: apps/BookingDesk/usecases/Main/UseCase_CreateBooking.py
+  app: BookingDesk
+  language: python
+  state: observed
+  sha256: 39c2322ab95fd9b6a4c52d4adf00978cf0d9c65e032f5e2a8df450bc383c038a
+  purpose: 'UC-BOOKING-CREATE: independently authorized, including composed lookup.'
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-011-01
+  code_name: UseCase_CreateBooking
+  kind: class
+  role: use_case
+  model_refs:
+  - UC-BOOKING-CREATE
+  description: 'UC-BOOKING-CREATE: independently authorized, including composed lookup.'
+  attributes:
+  - name: store
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  operations:
+  - id: OP-SOURCE-011-01-01
+    code_name: __init__
+    contract_scope: technical
+    native_signature: __init__(self, store)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: store
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.store = store
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-011-01-02
+    code_name: createBooking
+    contract_scope: operational
+    native_signature: 'createBooking(self, actor_context: Entity_ActorContext | None, booking_code: str, title:
+      str)'
+    description: Observed realization binding for UC-BOOKING-CREATE. Operational types are inherited from ADPM;
+      task_identifier is named task_id natively, and authorized board is bound to the store instance by composition.
+      No semantic contract is redefined.
+    inputs:
+    - name: actor_context
+      description: 'The desk creates a booking in the shared store.
+
+        Caller context must contain a resolved authenticated principal, the relevant case permissions, and a validity
+        status. Its origin is the application''s trusted identity-and-permission authority; request fields and caller-supplied
+        role strings are not trusted authorization evidence. Anonymous execution is not permitted. Missing, unresolved,
+        expired or insufficient context is denied before any validation, tool access or effect.
+
+        The initiating actor is ACT-BOOKING-CLERK. The actor is a role; the caller is the concrete principal. The
+        identity/authentication mechanism and channel encoding remain later design decisions.'
+      type:
+        kind: entity
+        ref: ENT-CALLER-CONTEXT
+        nullable: true
+      required: true
+    - name: booking_code
+      description: The code to create.
+      type:
+        kind: primitive
+        name: string
+      required: true
+    - name: title
+      description: The booking title.
+      type:
+        kind: primitive
+        name: string
+      required: true
+    outputs:
+    - name: result
+      description: The active booking is created.
+      type:
+        kind: entity
+        ref: ENT-BOOKING
+      required: true
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "if not isinstance(actor_context, Entity_ActorContext) or not actor_context.permits('booking.create', 'ACT-BOOKING-CLERK'):\n\
+        \    raise OperationFailure('DENIED')"
+      - booking = Entity_Booking(booking_code, title)
+      - return self.store.saveBooking(booking, 0)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-011-01
+  target: apps.BookingDesk.entities.Entity_ActorContext
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-011-01
+  target: apps.BookingDesk.entities.Entity_Booking
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-011-01
+  target: apps.BookingDesk.support.OperationFailure
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

@@ -1,0 +1,109 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-005
+source:
+  path: apps/BookingDesk/entities/Entity_Booking.py
+  app: BookingDesk
+  language: python
+  state: observed
+  sha256: c0f0fbcbbb39eb0a6a85928470d4c2f4d64a28d542eeb44d5838fb5f6f8e8383
+  purpose: 'ENT-BOOKING: exact data and canonical state; immutable public objects.'
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-005-01
+  code_name: Entity_Booking
+  kind: class
+  role: entity
+  model_refs:
+  - ENT-BOOKING
+  description: 'ENT-BOOKING: exact data and canonical state; immutable public objects.'
+  attributes:
+  - name: booking_code
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: str
+  - name: title
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: str
+  - name: status
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: str
+  - name: version
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: int
+  operations:
+  - id: OP-SOURCE-005-01-01
+    code_name: __post_init__
+    contract_scope: technical
+    native_signature: __post_init__(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.validateIdentity(self.booking_code)
+      - "if not isinstance(self.title, str) or not self.title.strip():\n    raise ValueError('invalid_title')"
+      - "if self.status not in ('active', 'cancelled') or type(self.version) is not int or self.version < 0:\n \
+        \   raise ValueError('invalid_stored_state')"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-005-01-02
+    code_name: validateIdentity
+    contract_scope: technical
+    native_signature: validateIdentity(value)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: value
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - ValueObject_BookingIdentity(value)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-005-01-03
+    code_name: cancel
+    contract_scope: technical
+    native_signature: cancel(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "if self.status != 'active':\n    raise ValueError('already_cancelled')"
+      - return Entity_Booking(self.booking_code, self.title, 'cancelled', self.version)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-005-01
+  target: dataclasses
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-005-01
+  target: apps.BookingDesk.value_objects.ValueObject_BookingIdentity
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

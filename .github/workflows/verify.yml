@@ -15,5 +15,8 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt
       - run: python scripts/check_repository.py
       - run: python -m pytest scripts/tests
-      - run: python versioning/Alpha-v0.1.0/run_examples.py verify --report-dir "${{ runner.temp }}/vulcan-verification"
+      - run: python versioning/Alpha-v0.1.0/run_examples.py evaluate --report-dir "${{ runner.temp }}/vulcan-structure"
+      - run: python versioning/Alpha-v0.1.0/run_examples.py test --report-dir "${{ runner.temp }}/vulcan-tests"
+      # Full L2 integration is run separately with an explicitly selected, recorded Minerva edition.
+      # This job does not claim Minerva validation or a hosted run merely by being configured.
       - run: python scripts/content_inventory.py --check

@@ -1,0 +1,122 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-010
+source:
+  path: apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.py
+  app: RequestRegister
+  language: python
+  state: observed
+  sha256: 2b38ab80fae19ae7707741deecdb10b5495c72bb9b2deee5f9a33cfcaa20e83f
+  purpose: UC-REQUEST-SUBMIT; authorization precedes canonical construction and tool access.
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-010-01
+  code_name: UseCase_SubmitRequest
+  kind: class
+  role: use_case
+  model_refs:
+  - UC-REQUEST-SUBMIT
+  description: UC-REQUEST-SUBMIT; authorization precedes canonical construction and tool access.
+  attributes:
+  - name: store
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  operations:
+  - id: OP-SOURCE-010-01-01
+    code_name: __init__
+    contract_scope: technical
+    native_signature: __init__(self, store)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: store
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.store = store
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-010-01-02
+    code_name: submitRequest
+    contract_scope: operational
+    native_signature: 'submitRequest(self, actor_context: Entity_ActorContext | None, request_code: str, quantity:
+      int)'
+    description: Observed realization binding for UC-REQUEST-SUBMIT. Operational types are inherited from ADPM;
+      task_identifier is named task_id natively, and authorized board is bound to the store instance by composition.
+      No semantic contract is redefined.
+    inputs:
+    - name: actor_context
+      description: 'One request is submitted against the single request register.
+
+        Caller context must contain a resolved authenticated principal, the relevant case permissions, and a validity
+        status. Its origin is the application''s trusted identity-and-permission authority; request fields and caller-supplied
+        role strings are not trusted authorization evidence. Anonymous execution is not permitted. Missing, unresolved,
+        expired or insufficient context is denied before any validation, tool access or effect.
+
+        The initiating actor is ACT-REQUESTER. The actor is a role; the caller is the concrete principal. The identity/authentication
+        mechanism and channel encoding remain later design decisions.'
+      type:
+        kind: entity
+        ref: ENT-CALLER-CONTEXT
+        nullable: true
+      required: true
+    - name: request_code
+      description: The code that identifies the request.
+      type:
+        kind: primitive
+        name: string
+      required: true
+    - name: quantity
+      description: The number of units requested.
+      type:
+        kind: primitive
+        name: integer
+      required: true
+    outputs:
+    - name: result
+      description: The request is retained and confirmed.
+      type:
+        kind: entity
+        ref: ENT-REQUEST
+      required: true
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "if not isinstance(actor_context, Entity_ActorContext) or not actor_context.permits('request.submit', 'ACT-REQUESTER'):\n\
+        \    raise OperationFailure('DENIED')"
+      - request = Entity_Request(request_code, quantity)
+      - return self.store.storeRequest(request.request_code, request.quantity)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-010-01
+  target: apps.RequestRegister.entities.Entity_ActorContext
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-010-01
+  target: apps.RequestRegister.entities.Entity_Request
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-010-01
+  target: apps.RequestRegister.support.OperationFailure
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

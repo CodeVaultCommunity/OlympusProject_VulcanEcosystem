@@ -13,8 +13,8 @@
     },
     {
       "path": ".github/workflows/verify.yml",
-      "size_bytes": 679,
-      "sha256": "3514599976b1f0ba497778ad1e3f166beca5fe63a06cdc3729049599f39c9850"
+      "size_bytes": 986,
+      "sha256": "46c3019be26d4d97fe070fe676449a599ec17dba662de54f8da89a0046e38ddc"
     },
     {
       "path": ".gitignore",
@@ -23,18 +23,18 @@
     },
     {
       "path": "ACKNOWLEDGEMENTS.md",
-      "size_bytes": 1238,
-      "sha256": "5aea88a962ff94334a6a14b7430ec377e84017da758823f1f418de7d20749867"
+      "size_bytes": 1416,
+      "sha256": "bf0842f583d2e0d3074f36c100ba0d0c218be1b995abe73371dbc48c1972521e"
     },
     {
       "path": "AGENTS.md",
-      "size_bytes": 1961,
-      "sha256": "c40d84739539adffe567aa42809c1703f96983a72132170c3a85c4335b9d88be"
+      "size_bytes": 2591,
+      "sha256": "91e90faf08e81f60d2ea7939e461473b181487e3ba94bb3dd171304a905afffd"
     },
     {
       "path": "CHANGELOG.md",
-      "size_bytes": 610,
-      "sha256": "ab96c2f5961759847664a0b9261842768df0faebe0dde69cf55f382e061cc34c"
+      "size_bytes": 881,
+      "sha256": "782769df34e248c79776f987d73e222d56a2e2f6da7e50af0b446c5f86648972"
     },
     {
       "path": "CITATION.cff",
@@ -48,8 +48,8 @@
     },
     {
       "path": "CONTRIBUTING.md",
-      "size_bytes": 536,
-      "sha256": "241865230050523f0b1ebd494c4bd67a0dfacd9a69e9f0977bf57353838e8c8b"
+      "size_bytes": 596,
+      "sha256": "267f91e4ae083fd2d0bf7636bc7c039b1c12b3ff130218ebe7e700b1c0916b5a"
     },
     {
       "path": "CONTRIBUTING.pt-br.md",
@@ -63,13 +63,13 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 7441,
-      "sha256": "1787eadb80219e6b4d016379c6f60f67d29284fdc7f9c629f8aeae37c6d8b949"
+      "size_bytes": 4999,
+      "sha256": "c7cf76191123498c53a8016dbb51846015927074f3abff3874945d4d3983f915"
     },
     {
       "path": "README.pt-br.md",
-      "size_bytes": 7777,
-      "sha256": "ecd5cbd37390c27cee2e6854098efc10ec0c40ff6b28eb29f00fe15fb6e51293"
+      "size_bytes": 5233,
+      "sha256": "66b629be4304559eb33f52694e7e872b8dab38db5bc6a51e9a3b901ede77e36e"
     },
     {
       "path": "VERSION",
@@ -213,8 +213,8 @@
     },
     {
       "path": "docs/releasing.md",
-      "size_bytes": 5234,
-      "sha256": "23387fdbfa42d625825e53597bfec7fb2d4febf92bfbb48da33439368d5c4923"
+      "size_bytes": 5293,
+      "sha256": "05b554bf16ae722b86fcf64f899d4f2f4ab2f7ba3e774971341133dd60c95712"
     },
     {
       "path": "docs/releasing.pt-br.md",
@@ -243,8 +243,8 @@
     },
     {
       "path": "scripts/check_repository.py",
-      "size_bytes": 4481,
-      "sha256": "595f6b32e6a18662ac8bd4f609b43938dc6064bed0b3fab197d6d2848d12d287"
+      "size_bytes": 4499,
+      "sha256": "c57c51493c7226dd23bfa095c9e6b024e8abb7d8542e9ed44f80cb7e95eaf8cf"
     },
     {
       "path": "scripts/content_inventory.py",
@@ -263,333 +263,678 @@
     },
     {
       "path": "versioning/Alpha-v0.1.0/README.md",
-      "size_bytes": 17884,
-      "sha256": "e2cc0ea03d9a79d01b4c7d9c5224d9998d5406f55b8e8328e6c3792bde0b1847"
+      "size_bytes": 6515,
+      "sha256": "212a537ee487b59b16d82c32f09ee6dbc476a021a77b499751e07dcd501c0933"
     },
     {
       "path": "versioning/Alpha-v0.1.0/README.pt-br.md",
-      "size_bytes": 18663,
-      "sha256": "7b0af0f62fc1c008b0da43778595f58b84d8d29f28213dffd8e8d4b515a59b2d"
+      "size_bytes": 7000,
+      "sha256": "39cc9c9785f806b20bc8f582a7855d3ab1755774fe1e9ce3c4275602360fa8c5"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/README.md",
-      "size_bytes": 1127,
-      "sha256": "5da4b6292922b732bac716ff11b2ad6497dc1066d7cd7bb7b5a11891578d6b03"
+      "path": "versioning/Alpha-v0.1.0/examples/README.md",
+      "size_bytes": 705,
+      "sha256": "b871ed01a48a8cd45500f24f9fbda8477d7e197bcfd0e7b2ab8bc305abbc1ca1"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/README.pt-br.md",
-      "size_bytes": 1105,
-      "sha256": "381ee5626c987d08c5aacac10e518692523ce4a1f90b14006880277ed5ecc5dd"
+      "path": "versioning/Alpha-v0.1.0/examples/README.pt-br.md",
+      "size_bytes": 746,
+      "sha256": "e831d6b1e1247b07b9ffee8056f1a07983ccdd71aa9bf518434bf59bf368ed6a"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/expected-diagnostics.json",
-      "size_bytes": 406,
-      "sha256": "3c25df2c29b04c754a206e0eecaa3e44be3daba83e523d66bacc550a2e7fdeed"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/README.md",
+      "size_bytes": 1508,
+      "sha256": "2ddf63dacd5ea875c011280cc299611cea4d596c10ac8d16d69f93a6115441ac"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/entities/Entity_Multiple.py",
-      "size_bytes": 61,
-      "sha256": "94530677ae2fae92802866852ad56c8a8fe1efe5219747806979a4099b42ffaa"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/README.pt-br.md",
+      "size_bytes": 1563,
+      "sha256": "1f1c010b828bd8e9794090ec9cd06850c5a0bc4e3aace1905b4bb54f56f2c934"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/entities/Entity_WrongName.py",
-      "size_bytes": 47,
-      "sha256": "1c65b8735b2546c43d4abd40023f88ffd382765c2befa9199baf070331b23589"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/boundaries/Boundary_Http.py",
+      "size_bytes": 1543,
+      "sha256": "210e1771c13311b54db843da00167f9c6f292c8112bcf957f25f16d6cc428c61"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/tools/Tool_First.py",
-      "size_bytes": 231,
-      "sha256": "ce18ba750ddf289d404cacb3b67d1cb216aa71300c204e2b6165bad30bd9fac2"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/boundaries/Boundary_Json.py",
+      "size_bytes": 1709,
+      "sha256": "f3e173ca605f13663f4b3c21f80de02ef7f81cadf2b4b39d153652a2eee73a45"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/tools/Tool_Second.py",
-      "size_bytes": 84,
-      "sha256": "f8570ec9b41a04ef83c07f6ec799d080898f215a9dbd924d0b0cb27e19314792"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/composition/AppComposition.py",
+      "size_bytes": 1464,
+      "sha256": "29229d62060d47ca5712a5421913ec8d233b3d188404447e3c96fad9afbab86b"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/usecases/Domain/UseCase_First.py",
-      "size_bytes": 30,
-      "sha256": "a9380dd3e33d0fec35fb24ebd698cfc5ca2824a72a37688766fd2b406bd05eba"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/entities/Entity_ActorContext.py",
+      "size_bytes": 1415,
+      "sha256": "ed5b2b30c36f34ea140104e46d6001bc8df56551cc5df0a36608c98c0fcde35a"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/usecases/UseCase_NoDomain.py",
-      "size_bytes": 80,
-      "sha256": "c8a45e78971b9c4da1c74a2223efc638e17926eafce557336836530fbccb5c42"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/entities/Entity_Booking.py",
+      "size_bytes": 1018,
+      "sha256": "c0f0fbcbbb39eb0a6a85928470d4c2f4d64a28d542eeb44d5838fb5f6f8e8383"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/value_objects/ValueObject_Name.py",
-      "size_bytes": 33,
-      "sha256": "906f577707c404fc354392a476060f903fde94fe5caa04af8a8166a285e4d7f7"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/support/OperationFailure.py",
+      "size_bytes": 296,
+      "sha256": "6d4cb8901c2230d246f43ee47c302055f801b48c84ca10503aa80291fd04a213"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/launch.py",
-      "size_bytes": 94,
-      "sha256": "ea7a9ff6e861059eb368ab7911bce7001df1ddf71fdd279af03d583376321387"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/support/SqliteResource.py",
+      "size_bytes": 1613,
+      "sha256": "2f5c5a2d185846c41e4159e79eff84d3ec3226b10fe97228e3c4302aa10b33f5"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/README.md",
-      "size_bytes": 2951,
-      "sha256": "e3b55b65448493a806811c425bc27219efc57ba5c325b97f1eb7d2d09db00a68"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/tests/Test_Contracts.py",
+      "size_bytes": 12412,
+      "sha256": "18b04f607e6cbe97342a24ec5fb710d66fea8151d48b3738e975820b1d50287f"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/README.pt-br.md",
-      "size_bytes": 2910,
-      "sha256": "9ffc659c3b278f23040d1192e3d31fd54e61fd49f6439bff3d391e6aadbbc978"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/tools/Tool_SqliteBookingStore.py",
+      "size_bytes": 1971,
+      "sha256": "772444d3723a98498891f3474a8efa18ea4012bd64cf6c8260b4ffc1b61c9afc"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/LegacyReports/reports.py",
-      "size_bytes": 4071,
-      "sha256": "8bec86f867da59162795a8bc99546e19004c3e6e41f2023d1e4b3742043cb7d5"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/usecases/Main/UseCase_CancelBooking.py",
+      "size_bytes": 978,
+      "sha256": "c909bb57f86bbf0d9d5559312ae82b0042a66962d68ffc1ad93f0e2d09c8e745"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/boundaries/Boundary_Cli.py",
-      "size_bytes": 2411,
-      "sha256": "43fba3137ace8483b63e59fc386b7a552b875939e73fddd4143fbf5f19224978"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/usecases/Main/UseCase_CreateBooking.py",
+      "size_bytes": 793,
+      "sha256": "39c2322ab95fd9b6a4c52d4adf00978cf0d9c65e032f5e2a8df450bc383c038a"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/boundaries/Boundary_Http.py",
-      "size_bytes": 8701,
-      "sha256": "ae6b16698fb32ded4fd3502a0a5f4fc9953df4408395ceffff2cf78d5dcfd6e6"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/usecases/Main/UseCase_LookupBooking.py",
+      "size_bytes": 783,
+      "sha256": "1765f4f12999cda740956ad330b1c80d8228b5975f6a0c82cafaae64f0356ba4"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/composition/AppComposition.py",
-      "size_bytes": 1677,
-      "sha256": "578a84a9a30e9c4ef42d03b0fa89ceefdd13903cfa2be3ee3a1391b89064553d"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/value_objects/.gitkeep",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/entities/Entity_ActorContext.py",
-      "size_bytes": 1104,
-      "sha256": "baa11c6c0ea257b67618f5071c2b226780e9ec95c9e262186fe5810e9271b875"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/value_objects/ValueObject_BookingIdentity.py",
+      "size_bytes": 320,
+      "sha256": "ee74211b02a4b16ce3c538e22b512b891f9b70b48fcf3d98b66577f01e11ce5f"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/entities/Entity_Task.py",
-      "size_bytes": 925,
-      "sha256": "9528d654501ca196e4fbc5d2e3b65c0355f06e6f82491f13f2c2f9de6a46320d"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L1_AtlasSpecifications/LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/main.py",
-      "size_bytes": 2709,
-      "sha256": "da4d756a666819ce8e054710067bb0f77059affc4a95c4f61c6dbc1c73c7a3e0"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L1_AtlasSpecifications/example.atlas.json",
+      "size_bytes": 114924,
+      "sha256": "63a65c44f9fb4151c00389a954e9ce87531754c7c19076743b6dd6693ff62f96"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Boundaries.py",
-      "size_bytes": 8455,
-      "sha256": "aa4e3e1dfa5ceafc92a4a07faf20a506cbf920969d63344f78db9ab5abb8322a"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/boundaries/Boundary_Http.py.yaml",
+      "size_bytes": 5023,
+      "sha256": "75bfd15f4c524460935ff85e513092d1ae2dfeaeba1498e46f82b860abcf0a78"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Launcher.py",
-      "size_bytes": 8208,
-      "sha256": "67da68c32fdcf398047fd7c105f94e1389f70bae90e1704cfb264c6e27edf26c"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/boundaries/Boundary_Json.py.yaml",
+      "size_bytes": 4564,
+      "sha256": "2b68bd31955fd0e13e909e8637541b5f599ded6d73557ab3b2056a5f6d344b6a"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py",
-      "size_bytes": 7676,
-      "sha256": "9650121915ced060fe75c68f6bffc57c521ed8948facee04c272c77d9fa81690"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/composition/AppComposition.py.yaml",
+      "size_bytes": 5727,
+      "sha256": "2f66e26f008a3e071098a661beb210fb7936600010f6d495a37b7101f79a7e18"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tools/Tool_SqliteTaskStore.py",
-      "size_bytes": 2377,
-      "sha256": "df7471b9ebc6c237f64b433c34a5ca31174420f172980dcd94f41ccb86df364b"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/entities/Entity_ActorContext.py.yaml",
+      "size_bytes": 4974,
+      "sha256": "76d5abbd39fd4e97a729d77b3c1434ec29724338484ccc7198c326700e8b284f"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_CompleteTask.py",
-      "size_bytes": 1043,
-      "sha256": "6072fb42ad91bb39d4006e3b4e1d34c481914b30ffe98ebc8ed830f658b7fe32"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/entities/Entity_Booking.py.yaml",
+      "size_bytes": 4240,
+      "sha256": "697dd55354fb806f8ec2c7b9c3a6b6a2f3a240068152f2c468a295f35813a42a"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py",
-      "size_bytes": 729,
-      "sha256": "667b975906356660986e7958ce62b1c9f689d81217a6c9bf4b5d5a3cb525ba82"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/support/OperationFailure.py.yaml",
+      "size_bytes": 2328,
+      "sha256": "5ccea7fdcfbb59a3221bdfba4294715fb1b46897731727f6a608c9cef12b499f"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_ListTasks.py",
-      "size_bytes": 714,
-      "sha256": "6f42790f3c72f0661c7a90fe6800074ce381916abe9e0414ca6542855451fd57"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/support/SqliteResource.py.yaml",
+      "size_bytes": 5029,
+      "sha256": "633a7e06f04375b404ef8b68eebe20b726fcf2e0326a746d51ca78c50a94eb0f"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/value_objects/ValueObject_TaskTitle.py",
-      "size_bytes": 590,
-      "sha256": "b31261c7ed64413e725b045fffe5527751f8de209233bb954a316c2d9c7aa44c"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/tests/Test_Contracts.py.yaml",
+      "size_bytes": 29160,
+      "sha256": "cc3f2383b9f1de9c2ae7e09cec69b9109750fdcc35ab810403386f0e5fb1d15a"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L1_AtlasSpecifications/README.md",
-      "size_bytes": 1367,
-      "sha256": "468fea8f9625359e44de912ed90435b63fd923e5373d1b00506e8d48859ba468"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/tools/Tool_SqliteBookingStore.py.yaml",
+      "size_bytes": 6101,
+      "sha256": "8228cf459254cccb012dd1d9f765afbdcbc7a5d592e9adaa4bfcce9ab3212ec5"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L1_AtlasSpecifications/README.pt-br.md",
-      "size_bytes": 871,
-      "sha256": "615b448258db34aff2e4a69bfce3bfadf0c2b6275c6eb6be79c2bf8f3021a44f"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/usecases/Main/UseCase_CancelBooking.py.yaml",
+      "size_bytes": 5199,
+      "sha256": "6780e0d7df77e84b8a45e1aed7bc1a68b017e142c048a2d5d574b466523eff09"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L1_AtlasSpecifications/task-board.atlas.json",
-      "size_bytes": 72965,
-      "sha256": "e9a71a546814888cf0f7e577c79595a0136024c062a9187d5a457c04ba76a886"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/usecases/Main/UseCase_CreateBooking.py.yaml",
+      "size_bytes": 4830,
+      "sha256": "a51fbf37567d569cab534d0ff08eb56f5568a1ae1ca3f40375df5e7e4b89212c"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/LegacyReports/reports.py.yaml",
-      "size_bytes": 13269,
-      "sha256": "ddbe848fe650e879e1e93311e2e41629c72d5368c1fb668892130aeb06c0bf81"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/usecases/Main/UseCase_LookupBooking.py.yaml",
+      "size_bytes": 4687,
+      "sha256": "50efc001cd2d4a04bcf4f80a33d698b9f206c661dd4d01c83ddad29169c34405"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/boundaries/Boundary_Cli.py.yaml",
-      "size_bytes": 8194,
-      "sha256": "478a575ac94adab38b04dfedff30c8eb1584606c504fe627e13471f2dcf4d73c"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/value_objects/ValueObject_BookingIdentity.py.yaml",
+      "size_bytes": 2107,
+      "sha256": "54999c4ab8f4be0e5ce9bf0a40c4cf6c7c49f967ed1b41c99e45a641d7923231"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/boundaries/Boundary_Http.py.yaml",
-      "size_bytes": 12147,
-      "sha256": "8be1d2a68125f999f7c1821783013c0b59324a07546ffd9344a85a8cf2f8b2cf"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/blueprint.yaml",
+      "size_bytes": 113637,
+      "sha256": "4781c57963bbbc83f99c83809ab6427e7bbb15a407b375b6ed6ef75b815ddfe1"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/composition/AppComposition.py.yaml",
-      "size_bytes": 6212,
-      "sha256": "93670afcd283b3754ad391dd0effab6d3ab13685fd527d5d2e1c2c8194301b00"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/launch.py.yaml",
+      "size_bytes": 3247,
+      "sha256": "b187be686ce6023cb3606e03a0fd825aab10a14d2e25b4d4bba9a1f5dbbe3ff3"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/entities/Entity_ActorContext.py.yaml",
-      "size_bytes": 3793,
-      "sha256": "2a407f62befb87c8f8c5c87a9dfadd6c6e0ac857b649442e74e12293d4047441"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L3_Vulcan/README.md",
+      "size_bytes": 1811,
+      "sha256": "31c051225961586ea779d6005b0dd9375f2839e7945cfda3e89f40fd1363e506"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/entities/Entity_Task.py.yaml",
-      "size_bytes": 5729,
-      "sha256": "82fa3876a465fa70331bc30418b6e8b4e549f89f462db3a3cbdb2bccee507681"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L3_Vulcan/README.pt-br.md",
+      "size_bytes": 1806,
+      "sha256": "8f64ff9eeb41cef73d76b622a0915791a91a308329ca77418bde70d12a3b8b17"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/main.py.yaml",
-      "size_bytes": 4892,
-      "sha256": "939fc2f42f5e39bc9b78581eb9b027845e41b91adcefcca35d89cf6b908a3435"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L3_Vulcan/realization.json",
+      "size_bytes": 1796,
+      "sha256": "43a6456dfe1d92e2684d94511e2b8c5e6acfcd498fafab8da41d3272d2bdfb26"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/tests/Test_Boundaries.py.yaml",
-      "size_bytes": 14716,
-      "sha256": "4e6d45dd7ebf22cbbfb93567e1aef54076d032201db6ed7e988722dabcf19f56"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/L3_Vulcan/test-bindings.json",
+      "size_bytes": 7494,
+      "sha256": "7b049cfd78f5f3cfffd898fe907ad24007f41935a71805e8284afd85216d9aa0"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/tests/Test_Launcher.py.yaml",
-      "size_bytes": 11612,
-      "sha256": "adb60718efa48c5bfbad2d247da13477d6dcc161d5bef36f457bb54c942c19cb"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/Shared/README.md",
+      "size_bytes": 829,
+      "sha256": "d0e9c7e31d07c744c2eb9436969669c1b5c4254b9b011ce782e241da9b61e3ab"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/tests/Test_TaskCases.py.yaml",
-      "size_bytes": 10546,
-      "sha256": "943d20d5cb08d107ae23a4975c5626b487b0233f7a1c79a0ee8bba51a5e73618"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/docs/Shared/README.pt-br.md",
+      "size_bytes": 934,
+      "sha256": "f76d430b9d75dc558508eb7fec8d49d1bb6485b4aa969b23e45d9afa4c0a52ba"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/tools/Tool_SqliteTaskStore.py.yaml",
-      "size_bytes": 7784,
-      "sha256": "95af40509edbf209654a3c0da2f2a64ff4763a77214d82a09493288891368dc2"
+      "path": "versioning/Alpha-v0.1.0/examples/composition/launch.py",
+      "size_bytes": 3463,
+      "sha256": "24dd02c5887c2f55e54ab413b704fcceffe28a59811ef4756d10e86f4ffdbd0b"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/usecases/TaskManagement/UseCase_CompleteTask.py.yaml",
-      "size_bytes": 4824,
-      "sha256": "586b8ad61e62e6112679e46af77c630e2db7284981097438ac38d489cae7060a"
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/README.md",
+      "size_bytes": 1463,
+      "sha256": "eebdf1da0a184c1306269b1f163fdf1c4322f28d448d61002eea05931ded9e44"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py.yaml",
-      "size_bytes": 4744,
-      "sha256": "e51ed7a68a6ebc7b076ff4ac9134e8093a474a2cf9667fc8e6f851458f5e79d3"
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/README.pt-br.md",
+      "size_bytes": 1518,
+      "sha256": "b86b3ab45c62890c6179212dcd3f9ee4a4aeed8c3a242b23cb4a228f16c2ac55"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/usecases/TaskManagement/UseCase_ListTasks.py.yaml",
-      "size_bytes": 4430,
-      "sha256": "cbb9a100e136373a325e462b5b5bda6141cbbd1d5466f7e3303874564c734de8"
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/apps/RequestRegister/boundaries/Boundary_Http.py",
+      "size_bytes": 1543,
+      "sha256": "210e1771c13311b54db843da00167f9c6f292c8112bcf957f25f16d6cc428c61"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/value_objects/ValueObject_TaskTitle.py.yaml",
-      "size_bytes": 3178,
-      "sha256": "efb49f3d582cd8ca3f3780fe5994bb336db09fdf3970ff28e797de7755fd0d8f"
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/apps/RequestRegister/boundaries/Boundary_Json.py",
+      "size_bytes": 1434,
+      "sha256": "db561d96398cf9d2f66470a9ce72679e4c95a706a1ab57703ebfa6dc6de6da51"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml",
-      "size_bytes": 61412,
-      "sha256": "6688bcffd600b62ea8e8a950aa48137535942ee41a23a5f7fdb378435df59151"
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/apps/RequestRegister/composition/AppComposition.py",
+      "size_bytes": 1138,
+      "sha256": "f14af244ce7622232e1cf81ddada72bf99d9b4a30c447463bc6aa25f2684691b"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/README.md",
-      "size_bytes": 4709,
-      "sha256": "f739ff7572a024773880d8e98407c4190b7026d4d9e48fd678148d2e823fb8af"
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/apps/RequestRegister/entities/Entity_ActorContext.py",
+      "size_bytes": 1415,
+      "sha256": "ed5b2b30c36f34ea140104e46d6001bc8df56551cc5df0a36608c98c0fcde35a"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/README.pt-br.md",
-      "size_bytes": 4515,
-      "sha256": "4c5d11450706d5781f5ed7cde8501a24d1435b5c53a786d430c1593ab3f119d2"
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/apps/RequestRegister/entities/Entity_Request.py",
+      "size_bytes": 643,
+      "sha256": "c3a8df159a583a974bb308a551360e5dc80a2f2cb85a6c42a4134203fb40556d"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/change-impact.md",
-      "size_bytes": 2633,
-      "sha256": "6715311bb72008e77499c42f37237f864e26b91726a127f0d316a285b4954e3b"
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/apps/RequestRegister/support/OperationFailure.py",
+      "size_bytes": 296,
+      "sha256": "6d4cb8901c2230d246f43ee47c302055f801b48c84ca10503aa80291fd04a213"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/change-impact.pt-br.md",
-      "size_bytes": 2570,
-      "sha256": "dc7bdcf2045b785e8a2f36ff37c0373d52d9d5a141157bdf22578b38de9316bb"
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/apps/RequestRegister/support/SqliteResource.py",
+      "size_bytes": 1617,
+      "sha256": "01ce7e1ae358a714e16eba8e64f7115912943c8c32e6c5e65c4537ccbe5f8192"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/realization.json",
-      "size_bytes": 7230,
-      "sha256": "bec2b7f3ac639c73d9b7cb0941f4bd3e5dd5c9271df5a0d447e71a5951f016ae"
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/apps/RequestRegister/tests/Test_Contracts.py",
+      "size_bytes": 7009,
+      "sha256": "e2af4950fa324ead5e631a98c7501fa25ce8ff179234919e3335590f98a76908"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/Shared/interaction.md",
-      "size_bytes": 3433,
-      "sha256": "3e3c04c923b645b6a1bd1e2ec3eaf2ee52e0e008c468d72a9301e26140da006b"
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/apps/RequestRegister/tools/Tool_SqliteRequestStore.py",
+      "size_bytes": 1653,
+      "sha256": "7697d3d113d987f5db8449d660e121367fcb14c1c48e5e0ae04760e5ee84fd75"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/Shared/interaction.pt-br.md",
-      "size_bytes": 3387,
-      "sha256": "db2314b7c633ccdd69a975ef3cba6c2860d8398b55db4ba77b2ed1c4c8194abd"
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.py",
+      "size_bytes": 846,
+      "sha256": "2b38ab80fae19ae7707741deecdb10b5495c72bb9b2deee5f9a33cfcaa20e83f"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/launch.py",
-      "size_bytes": 6975,
-      "sha256": "1678a8bb81da8582fe5d56cf5c9b4af22b44a8f7100944bd08a4ca3c6997a231"
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/apps/RequestRegister/value_objects/.gitkeep",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L1_AtlasSpecifications/LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L1_AtlasSpecifications/assets/request-flow.png",
+      "size_bytes": 73547,
+      "sha256": "53545111afdda2bcf5b113667ef14dc2233ca3f7e5e730749d3f50473ed81f8b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L1_AtlasSpecifications/assets/request-flow.svg",
+      "size_bytes": 10124,
+      "sha256": "71f3a97b667a88041cc5812da8c8e7e1ddaced2f9c835e56c2c7d6d1b4252206"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L1_AtlasSpecifications/assets/request-form.png",
+      "size_bytes": 22242,
+      "sha256": "5dd57bf8bccc9bcd9b68e1be1ea50163777caf93d83f6fbfec1a099eb1d84347"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L1_AtlasSpecifications/assets/request-form.svg",
+      "size_bytes": 1663,
+      "sha256": "f5a97fb7cb43af9681b2083fe1deebe38bb3eda24adb947c3314317fc8a24de9"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L1_AtlasSpecifications/example.atlas.json",
+      "size_bytes": 59472,
+      "sha256": "731ef7e7f9e0dcda1b9dea1cae45a51a43bd16083948dae121d18fdd77bc746e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/boundaries/Boundary_Http.py.yaml",
+      "size_bytes": 5031,
+      "sha256": "6bc1aa3af5029fc92c2b27931e03785025d5724919b5951a66417c9932860cd8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/boundaries/Boundary_Json.py.yaml",
+      "size_bytes": 4303,
+      "sha256": "5c3fdb15034ee321f0125ad52fbd73a2aabeaeff9827afd0eb9c3625bc076ba2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/composition/AppComposition.py.yaml",
+      "size_bytes": 4805,
+      "sha256": "b702db258b2f0c4fbb1a3995b027fc3e14c5b5e4e64a94006ec385feb2080afb"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/entities/Entity_ActorContext.py.yaml",
+      "size_bytes": 4982,
+      "sha256": "736746399aa3f571bd961df22e6d20cd73b407672ab48592017627f9512df6a2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/entities/Entity_Request.py.yaml",
+      "size_bytes": 3618,
+      "sha256": "3272dc133a1a6453e7bee89a339f3d1e869f745d5ba71f35394563bbf6b48634"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/support/OperationFailure.py.yaml",
+      "size_bytes": 2336,
+      "sha256": "21e1a37e8a87f3498ab73a79e29d6f5354cd1877f6171ec2045e2b3c1e013cc4"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/support/SqliteResource.py.yaml",
+      "size_bytes": 5041,
+      "sha256": "874eeec212806211e165fb553e0e1c9dc872146155a1fe42ac99501372a80469"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/tests/Test_Contracts.py.yaml",
+      "size_bytes": 19331,
+      "sha256": "be47f60cb95d9f6e2fb6fcdc8dd37d4c854eead385c82f8a68b2117c99750501"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/tools/Tool_SqliteRequestStore.py.yaml",
+      "size_bytes": 5314,
+      "sha256": "8aead171e9303bf913c87519102d5ef5a9f1251c4f2c1096ff16ebb61f2b6181"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.py.yaml",
+      "size_bytes": 4949,
+      "sha256": "9cd3baff92915c2476d10e6c2d7e1455e1ce406a4f2986b6a46585943c90753b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L2_MinervaBlueprints/blueprint.yaml",
+      "size_bytes": 51418,
+      "sha256": "8d71b0be80129042f4862e26229b7a1b0ba465482d59b6956a8031f46840d258"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L2_MinervaBlueprints/launch.py.yaml",
+      "size_bytes": 3263,
+      "sha256": "1f98d6fca9bd65c7ef206178ef1e58e448107d14255ec5effdbbe31c2e4aaf1e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L3_Vulcan/README.md",
+      "size_bytes": 1815,
+      "sha256": "8368354f2561f2698d47b8933ac22e5f657aefe37e380d4508be635c14c2ac16"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L3_Vulcan/README.pt-br.md",
+      "size_bytes": 1810,
+      "sha256": "f2b2a3678507baafccb0bae654cfde0537714e62ab1b773f54d7727a01de0956"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L3_Vulcan/realization.json",
+      "size_bytes": 1801,
+      "sha256": "591768739a22b6d67a81d79d83148068cb546a7d91e63f65f369a88666796085"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L3_Vulcan/test-bindings.json",
+      "size_bytes": 3225,
+      "sha256": "ac7249ffd038ec9883a8e02360353d67aa18540c73ac51e8b0280242db01d6b6"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/Shared/README.md",
+      "size_bytes": 829,
+      "sha256": "d0e9c7e31d07c744c2eb9436969669c1b5c4254b9b011ce782e241da9b61e3ab"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/docs/Shared/README.pt-br.md",
+      "size_bytes": 934,
+      "sha256": "f76d430b9d75dc558508eb7fec8d49d1bb6485b4aa969b23e45d9afa4c0a52ba"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/minimal/launch.py",
+      "size_bytes": 3483,
+      "sha256": "9c2d080eb8e35a539c47493f2810b3d246a28d385232b72871bc2f6efec1e0b5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/README.md",
+      "size_bytes": 1482,
+      "sha256": "7839af9453608c5bf8544679ca7fe54ae761410022d33103fceba7d060e1b596"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/README.pt-br.md",
+      "size_bytes": 1537,
+      "sha256": "f2a071e045f243d88932654ce7c0af2b85b65ea1444729caca2628237ab15e61"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/boundaries/Boundary_Http.py",
+      "size_bytes": 1543,
+      "sha256": "210e1771c13311b54db843da00167f9c6f292c8112bcf957f25f16d6cc428c61"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/boundaries/Boundary_Json.py",
+      "size_bytes": 1660,
+      "sha256": "227afbf5c7d504648bdbf31d680ab48613b5d970aff4dac8c56b114d7751543a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/composition/AppComposition.py",
+      "size_bytes": 1442,
+      "sha256": "3c8d4a0fdae58e7cf595a8b6527b597fc9ad28cabcc4138935548fe932016639"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/entities/Entity_ActorContext.py",
+      "size_bytes": 1415,
+      "sha256": "ed5b2b30c36f34ea140104e46d6001bc8df56551cc5df0a36608c98c0fcde35a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/entities/Entity_Task.py",
+      "size_bytes": 987,
+      "sha256": "d40403ad513c1a1e01482b6f543136630acd874ae9d8a30354579156532bf1cf"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/support/OperationFailure.py",
+      "size_bytes": 296,
+      "sha256": "6d4cb8901c2230d246f43ee47c302055f801b48c84ca10503aa80291fd04a213"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/support/SqliteResource.py",
+      "size_bytes": 1611,
+      "sha256": "be6cd05eaf47276ee8e345af02675efc785364a2189542377a604f09db16f0ae"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/tests/Test_Contracts.py",
+      "size_bytes": 14348,
+      "sha256": "3f2a5d48352e8109ba790e7e0bf84aaf076c4947a73aa4f5433b584805a9aa17"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/tools/Tool_SqliteTaskStore.py",
+      "size_bytes": 2857,
+      "sha256": "970fad1695fe8416f563ee96b3b95c21bc0dca41d4a9ceb40e4aa4f627a492a7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/usecases/Main/UseCase_CompleteTask.py",
+      "size_bytes": 976,
+      "sha256": "70c8959196cada358a3a12a0650616c59342081d6a52183201d5e026766e5561"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/usecases/Main/UseCase_CreateTask.py",
+      "size_bytes": 810,
+      "sha256": "9431f04ba107eb10d11222b2a5eba6403d0267a2bc22fd69732ded2f9d331c05"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/usecases/Main/UseCase_ListTasks.py",
+      "size_bytes": 736,
+      "sha256": "470a3f254284f2de6cac9b5bb7f8f45d138bcdcc0f4ef9f74fc468cffc174d05"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/value_objects/.gitkeep",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/value_objects/ValueObject_TaskIdentity.py",
+      "size_bytes": 277,
+      "sha256": "7fb99e3efe15f0a3e181d714b1181f80274fd374de11f4d698f0ef74d46b1654"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L1_AtlasSpecifications/LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L1_AtlasSpecifications/example.atlas.json",
+      "size_bytes": 130253,
+      "sha256": "fa14749cf58a179792ee66231e413cd912ddf944174824919b8c4615e91d87c8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/boundaries/Boundary_Http.py.yaml",
+      "size_bytes": 5019,
+      "sha256": "76b6ea4ed473f17cc762e2e64f90b4803d2b835c8f456cd2835e340156e7d666"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/boundaries/Boundary_Json.py.yaml",
+      "size_bytes": 4499,
+      "sha256": "f738881b4f6481fd17c8fb97906ad15b71cae47b4fee5f3808eb2b6148c69bb5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/composition/AppComposition.py.yaml",
+      "size_bytes": 5712,
+      "sha256": "7cd6f21fb5eb673240905edbb27a4ea3fb654491e97e0b3ebabe7c451b81d8d8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/entities/Entity_ActorContext.py.yaml",
+      "size_bytes": 4970,
+      "sha256": "380b199591e1fbecb6a9570c917d7e416239a90d5b03fcd9c0d2208e87540b9b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/entities/Entity_Task.py.yaml",
+      "size_bytes": 4203,
+      "sha256": "303c849e6a6d02784288a961dc53fc458b51ba23f615f6533ab142c274678736"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/support/OperationFailure.py.yaml",
+      "size_bytes": 2324,
+      "sha256": "f960d11b24a9ee548d4d85bc65039ed4910fb4d1b4dd1139f804d4eb0329066f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/support/SqliteResource.py.yaml",
+      "size_bytes": 5023,
+      "sha256": "8fa2b749b69d03146b8f3979706aad195c3f3a72b0d181663969c149ecb2cbe7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/tests/Test_Contracts.py.yaml",
+      "size_bytes": 32308,
+      "sha256": "ecffaf286bb8a0a77ac3de4b87213d34b632d411d86f7894e1934079b958ebaa"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/tools/Tool_SqliteTaskStore.py.yaml",
+      "size_bytes": 8976,
+      "sha256": "6aa95159fb74835590fd678e96e170b4a548ed423d7c2de403675d49d1e840a8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/usecases/Main/UseCase_CompleteTask.py.yaml",
+      "size_bytes": 5277,
+      "sha256": "5edaa8fac651ce02ff47b3cad054493a0c7f9e2ebebaf42461ee68496577b9a7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/usecases/Main/UseCase_CreateTask.py.yaml",
+      "size_bytes": 5241,
+      "sha256": "3798b561cd445aed089d053c5c963c9308c397eb157d79d3c688e7a4684c31fa"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/usecases/Main/UseCase_ListTasks.py.yaml",
+      "size_bytes": 4964,
+      "sha256": "a361131febed13093185f86cff841ca0cf82e4612bb341e0bf7289848046c59a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/value_objects/ValueObject_TaskIdentity.py.yaml",
+      "size_bytes": 1909,
+      "sha256": "3f5233c97c1710a5959d1bbb2fb661705fa444b8791b54427049d4ae8e77a70a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/blueprint.yaml",
+      "size_bytes": 130704,
+      "sha256": "aa7f70b0834324b4b6753e0e4a57064abbd0b498d3c71259c1f09584dd6763a1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/launch.py.yaml",
+      "size_bytes": 3239,
+      "sha256": "db536c61801c188380c71adf1c009bcfa423e4ac8a7ec472c04696c33723e477"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L3_Vulcan/README.md",
+      "size_bytes": 1809,
+      "sha256": "074f73218fbf0aed53624a61a05a15d727c1e88c2a24ef15b5859d85c09e8b63"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L3_Vulcan/README.pt-br.md",
+      "size_bytes": 1804,
+      "sha256": "22f0a250c2d599b64a9d7472adaa601308b9d706a9e9e9ebc4383704e86f6a72"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L3_Vulcan/realization.json",
+      "size_bytes": 1792,
+      "sha256": "4769c4ec51632f327d38d4000df29cdab2ba11100f4d62a7ce21b23a9f81d72a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L3_Vulcan/test-bindings.json",
+      "size_bytes": 7756,
+      "sha256": "74872774be5234a756af3f56a90d78a8e90ade4028f8ac44b57372c339f70edd"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/Shared/README.md",
+      "size_bytes": 829,
+      "sha256": "d0e9c7e31d07c744c2eb9436969669c1b5c4254b9b011ce782e241da9b61e3ab"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/docs/Shared/README.pt-br.md",
+      "size_bytes": 934,
+      "sha256": "f76d430b9d75dc558508eb7fec8d49d1bb6485b4aa969b23e45d9afa4c0a52ba"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board/launch.py",
+      "size_bytes": 3453,
+      "sha256": "47dfa12b8ffbfa08bdc6219bd4189c3dc75e409f54132f73a4171eb175eb6e30"
     },
     {
       "path": "versioning/Alpha-v0.1.0/guides/assessment.md",
-      "size_bytes": 5504,
-      "sha256": "b4b4229259b09d58bc7770f1c3f5babcaf47c40c56c5ebb1ddb7794c71b46d25"
+      "size_bytes": 1972,
+      "sha256": "f208f173f081bdc8bc7cc9c0c1f7fe0c6222ce1167588d72d8fd054125637228"
     },
     {
       "path": "versioning/Alpha-v0.1.0/guides/assessment.pt-br.md",
-      "size_bytes": 5374,
-      "sha256": "58f359d2273ee684f4e514ee09de1bfec09ff51286822d53ffed9ea44eb23861"
+      "size_bytes": 2042,
+      "sha256": "37a14d5ebd7e6eca55a1329a266dc9f9bdaede20b3183fc7d6e9c79ef98ad222"
     },
     {
       "path": "versioning/Alpha-v0.1.0/guides/execution.md",
-      "size_bytes": 6259,
-      "sha256": "d164ab4d46295597c8cb9f7e3bd2b6efd075587e4e1105fad3ea40192bf3bff2"
+      "size_bytes": 2507,
+      "sha256": "73d39b59291ea474f8183f24c0ef1c2ce8194e7bf4ef05f539821707ac3f1a32"
     },
     {
       "path": "versioning/Alpha-v0.1.0/guides/execution.pt-br.md",
-      "size_bytes": 6100,
-      "sha256": "373b7f858920ffbba0d304310c867e590d8ff019f51938da8b94736d1a4973a5"
+      "size_bytes": 2591,
+      "sha256": "254f1689fba3f87b99460d8f0597188c1ab77ba65d951f8571d75d92119c01a0"
     },
     {
       "path": "versioning/Alpha-v0.1.0/guides/legacy-and-boundaries.md",
-      "size_bytes": 2400,
-      "sha256": "0ddf847d2e8d23e391f4237433e504c92aafd2eefdb76ea960a4d2b769dcfa7f"
+      "size_bytes": 1071,
+      "sha256": "e9059046c576765f4356dc9153a096493e56840c418ccfc75df7bd9ceefeb131"
     },
     {
       "path": "versioning/Alpha-v0.1.0/guides/legacy-and-boundaries.pt-br.md",
-      "size_bytes": 2271,
-      "sha256": "c1edac69be02db0b74d8b8cdcb85f45cd9527f381744b6348f495b5988526fb8"
+      "size_bytes": 1091,
+      "sha256": "c7a76392780cf1c605a0b5df425328e5dadeacd5efeb8324f8b384f42fedc0c4"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/guides/vulcan-architecture.md",
-      "size_bytes": 6932,
-      "sha256": "ad00b2facd7afc17c5f2e9fe6d667b610cb2cdaf8455e6ddd4621fd5b3647e61"
+      "path": "versioning/Alpha-v0.1.0/integrations/README.md",
+      "size_bytes": 500,
+      "sha256": "c5bdcc9a41b89ea17ae36efd2e7c23b4f9286868fc903bb9fc4b2e565afd24b6"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/guides/vulcan-architecture.pt-br.md",
-      "size_bytes": 6839,
-      "sha256": "e862a192a0b1321931cd5c8cdb2d7284a9f93d15a02431b806368b97e971d312"
+      "path": "versioning/Alpha-v0.1.0/integrations/README.pt-br.md",
+      "size_bytes": 541,
+      "sha256": "68d3a9cefc3c300abd48e75bb991ba6c856171b674561f757ba848780e8a071f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/integrations/minerva/README.md",
+      "size_bytes": 4306,
+      "sha256": "86944731a872af0fbbc97b99c8758953337c883b903cee068faa60f6046a5ddf"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/integrations/minerva/README.pt-br.md",
+      "size_bytes": 4592,
+      "sha256": "24d30fc5637fbb27a0a34e45fc8162dbfedd5a834ee1385a6fb31b6b2c604f24"
     },
     {
       "path": "versioning/Alpha-v0.1.0/model.json",
-      "size_bytes": 758,
-      "sha256": "ac0e13666d0ea2f804b5fe6c5148192b0613fc43adf727add197e0b3d8f66685"
+      "size_bytes": 937,
+      "sha256": "96bdb8d6dc9988713acee034d3c965f50714a7e0dced061fefa665410f2e7b0d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/profiles/vulcan-architecture/README.md",
+      "size_bytes": 3298,
+      "sha256": "c9dafe23d775d21cb1adb0565dd3061184aa441518ae41ccf003e83fc1d419d8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/profiles/vulcan-architecture/README.pt-br.md",
+      "size_bytes": 3443,
+      "sha256": "8c3e7c801fa52b87068525b054b043745813a582814bc8d7632729f599f74c0c"
     },
     {
       "path": "versioning/Alpha-v0.1.0/pyproject.toml",
@@ -598,193 +943,263 @@
     },
     {
       "path": "versioning/Alpha-v0.1.0/requirements.txt",
-      "size_bytes": 191,
-      "sha256": "032b17c6c70cc98a09bf73f94ca0fa97fe594e5dbf26bcee98e9f16bede29460"
+      "size_bytes": 203,
+      "sha256": "8ae18d8a517c1b7839cd243aa79db2d4cbf25f6fdf6ef3c290fb43f47bb4761a"
     },
     {
       "path": "versioning/Alpha-v0.1.0/run_examples.py",
-      "size_bytes": 5678,
-      "sha256": "71f290acba25854f247d70883281b73de993b63ada756f3196499c000535c453"
+      "size_bytes": 6360,
+      "sha256": "4c9936259fdb447cd62dca66a8431ef47093d718ed4fb21f6b8b81abcbef6a76"
     },
     {
       "path": "versioning/Alpha-v0.1.0/scripts/evaluate_structure.py",
-      "size_bytes": 13243,
-      "sha256": "c0e7f3a6990e7c4f75d8233f88ec9a5b5ccd4ef26066dc0b679ef9a08261bf1c"
+      "size_bytes": 13255,
+      "sha256": "1630d9681a23ff54f24a8609f41835c07a2bede1058bed35c08024ba88ba0bae"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/scripts/record_tests.py",
+      "size_bytes": 5297,
+      "sha256": "8b11429e7f82237374d6f8f2f46022057c3a959d3bba41753f4ff7b94f76b0a7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/specification/OAL-ALIGNMENT.md",
+      "size_bytes": 2127,
+      "sha256": "e1cf9b25f47cdceb8aa5ef717b4105a57557e3a416b27417cee9358dfa8b3cb0"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/specification/OAL-ALIGNMENT.pt-br.md",
+      "size_bytes": 2322,
+      "sha256": "6c5984efae4836a228813201f2744f0330bf8d3b59d1db8094fdae720bba7747"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/specification/README.md",
+      "size_bytes": 6842,
+      "sha256": "bff331f553603164d62b4bb3d88c82fab971687405e0a4bd8f2cfa970eef5462"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/specification/README.pt-br.md",
+      "size_bytes": 7116,
+      "sha256": "464e3d05d368d5b9ff20ddf35bc0f70d061c1fc2276c3fbe7b62c91f9dd2cb62"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/templates/README.md",
+      "size_bytes": 937,
+      "sha256": "189fa85ac8880163d6cf25d9565f948657a21391e2e5d77ea823c5b717892b19"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/templates/README.pt-br.md",
+      "size_bytes": 961,
+      "sha256": "1bb2dab24a3ffa3342526c339d3e97b32e85e3c931ef2a22c29dfb88761afd53"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/Test_Runtime.py",
+      "size_bytes": 7458,
+      "sha256": "82a311d8032b827299426e5458165e3d252dd50c54cdd44afbb82e4e4e148437"
     },
     {
       "path": "versioning/Alpha-v0.1.0/tests/Test_Structure.py",
-      "size_bytes": 5065,
-      "sha256": "9692c4f08f720dcc4e1dc4904cc1b91f9bb07de09a519945599e2dba1372164a"
+      "size_bytes": 5171,
+      "sha256": "eeccb07d2a7a3c3e4a057eb93da1eb7c48d2da67fd0d70eff27bfc3a602d96e9"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/vendor/minerva/LICENSE",
-      "size_bytes": 1084,
-      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/README.md",
+      "size_bytes": 1166,
+      "sha256": "11c8fc6da76abe20e45f6ff57f5a9838a4223a510c819558db8b9787b69d4539"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/vendor/minerva/README.md",
-      "size_bytes": 1013,
-      "sha256": "8f5d415eb8a97b6e888b4bad0557e650fe94a0f84561f33350e240774c4bd829"
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/README.pt-br.md",
+      "size_bytes": 1167,
+      "sha256": "e2b31b09971d002b0625f33c70ddf308e1986c71ea63a22b5d27ec3cf58a73de"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/vendor/minerva/SOURCE.json",
-      "size_bytes": 1893,
-      "sha256": "6b139cb0fdfdb3086e75759565b125095bda8cdf763afe27e80110da578e82ee"
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/LegacyReports/reports.py",
+      "size_bytes": 4071,
+      "sha256": "8bec86f867da59162795a8bc99546e19004c3e6e41f2023d1e4b3742043cb7d5"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/vendor/minerva/minerva_blueprints/__init__.py",
-      "size_bytes": 145,
-      "sha256": "45c0e1759eee5ba51d28082fde87321e7293cc3eed99d99e5021ca10d2aa6e59"
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/boundaries/Boundary_Cli.py",
+      "size_bytes": 2411,
+      "sha256": "43fba3137ace8483b63e59fc386b7a552b875939e73fddd4143fbf5f19224978"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/vendor/minerva/minerva_blueprints/__main__.py",
-      "size_bytes": 2517,
-      "sha256": "568f3cedf2a498b1e1a9d349e6008e2bd8fed30c9bec43926b69c1ad83247353"
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/boundaries/Boundary_Http.py",
+      "size_bytes": 8701,
+      "sha256": "ae6b16698fb32ded4fd3502a0a5f4fc9953df4408395ceffff2cf78d5dcfd6e6"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/vendor/minerva/minerva_blueprints/schemas/minerva.schema.json",
-      "size_bytes": 49452,
-      "sha256": "eec3ddd2e09a2e4cebad8e5286ef93f890f336b72c865a32f27fb623f2865be3"
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/composition/AppComposition.py",
+      "size_bytes": 1677,
+      "sha256": "578a84a9a30e9c4ef42d03b0fa89ceefdd13903cfa2be3ee3a1391b89064553d"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/vendor/minerva/minerva_blueprints/validation.py",
-      "size_bytes": 35140,
-      "sha256": "633d7f8b7fe8026d1d08841062ca17d0e722dd676c9289701f6c4234f0b9189e"
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/entities/Entity_ActorContext.py",
+      "size_bytes": 1104,
+      "sha256": "baa11c6c0ea257b67618f5071c2b226780e9ec95c9e262186fe5810e9271b875"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/vendor/minerva/requirements.txt",
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/entities/Entity_Task.py",
+      "size_bytes": 925,
+      "sha256": "9528d654501ca196e4fbc5d2e3b65c0355f06e6f82491f13f2c2f9de6a46320d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/main.py",
+      "size_bytes": 3015,
+      "sha256": "8a4951d11c868178a241d44f5ae5fad014c2402ddc96e8f5663d890a9e62329f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/tests/Test_Boundaries.py",
+      "size_bytes": 8455,
+      "sha256": "aa4e3e1dfa5ceafc92a4a07faf20a506cbf920969d63344f78db9ab5abb8322a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/tests/Test_Launcher.py",
+      "size_bytes": 8394,
+      "sha256": "cb92ff8a022a0f22eb17f68a9461dc00b5c91d34c283dd305bafb64c0f927fc6"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py",
+      "size_bytes": 7676,
+      "sha256": "9650121915ced060fe75c68f6bffc57c521ed8948facee04c272c77d9fa81690"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/tools/Tool_SqliteTaskStore.py",
+      "size_bytes": 2377,
+      "sha256": "df7471b9ebc6c237f64b433c34a5ca31174420f172980dcd94f41ccb86df364b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_CompleteTask.py",
+      "size_bytes": 1043,
+      "sha256": "6072fb42ad91bb39d4006e3b4e1d34c481914b30ffe98ebc8ed830f658b7fe32"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py",
+      "size_bytes": 729,
+      "sha256": "667b975906356660986e7958ce62b1c9f689d81217a6c9bf4b5d5a3cb525ba82"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_ListTasks.py",
+      "size_bytes": 714,
+      "sha256": "6f42790f3c72f0661c7a90fe6800074ce381916abe9e0414ca6542855451fd57"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/value_objects/ValueObject_TaskTitle.py",
+      "size_bytes": 590,
+      "sha256": "b31261c7ed64413e725b045fffe5527751f8de209233bb954a316c2d9c7aa44c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/launch.py",
+      "size_bytes": 6975,
+      "sha256": "1678a8bb81da8582fe5d56cf5c9b4af22b44a8f7100944bd08a4ca3c6997a231"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/structural-counterexamples/README.md",
+      "size_bytes": 1133,
+      "sha256": "21f628d369654c6260d6c7ca9fd94709d0e0c3ff441a609c2504e7a281d10454"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/structural-counterexamples/README.pt-br.md",
+      "size_bytes": 1111,
+      "sha256": "a5d1d1a23a690900871a11bd07f09949c68892da861bb6183de30d9aaca776e1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/structural-counterexamples/expected-diagnostics.json",
+      "size_bytes": 406,
+      "sha256": "3c25df2c29b04c754a206e0eecaa3e44be3daba83e523d66bacc550a2e7fdeed"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/entities/Entity_Multiple.py",
+      "size_bytes": 61,
+      "sha256": "94530677ae2fae92802866852ad56c8a8fe1efe5219747806979a4099b42ffaa"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/entities/Entity_WrongName.py",
+      "size_bytes": 47,
+      "sha256": "1c65b8735b2546c43d4abd40023f88ffd382765c2befa9199baf070331b23589"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/tools/Tool_First.py",
+      "size_bytes": 231,
+      "sha256": "ce18ba750ddf289d404cacb3b67d1cb216aa71300c204e2b6165bad30bd9fac2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/tools/Tool_Second.py",
+      "size_bytes": 84,
+      "sha256": "f8570ec9b41a04ef83c07f6ec799d080898f215a9dbd924d0b0cb27e19314792"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/usecases/Domain/UseCase_First.py",
+      "size_bytes": 30,
+      "sha256": "a9380dd3e33d0fec35fb24ebd698cfc5ca2824a72a37688766fd2b406bd05eba"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/usecases/UseCase_NoDomain.py",
+      "size_bytes": 80,
+      "sha256": "c8a45e78971b9c4da1c74a2223efc638e17926eafce557336836530fbccb5c42"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/value_objects/ValueObject_Name.py",
       "size_bytes": 33,
-      "sha256": "a25155d17c235bf2cb3eaf9394b2aeef3e888cd47b542ee66f42a8e53b45a336"
+      "sha256": "906f577707c404fc354392a476060f903fde94fe5caa04af8a8166a285e4d7f7"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/vendor/minerva/validator/minerva_validate.py",
-      "size_bytes": 291,
-      "sha256": "cc9ca81f07cbd01c76514bb58d2c97a0b52d725c42900e019e614da6afe4e70e"
+      "path": "versioning/Alpha-v0.1.0/tests/fixtures/structural-counterexamples/invalid-ecosystem/launch.py",
+      "size_bytes": 94,
+      "sha256": "ea7a9ff6e861059eb368ab7911bce7001df1ddf71fdd279af03d583376321387"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/CONTRACT-REVIEW.md",
-      "size_bytes": 3840,
-      "sha256": "a3e51c3d3cdde71993cc01dd5372e8f2427ab8d1488b18a86e7f0203cb5b8a25"
+      "size_bytes": 1622,
+      "sha256": "248d2afc4d4683311b887c183a071da9a64c28dda9c7b2c3ac7cd9814bad0cfc"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/CONTRACT-REVIEW.pt-br.md",
-      "size_bytes": 3989,
-      "sha256": "b535b7b42c3bbedb9cf6ce0ce150bb2ceacf63f634e960e362bbecb3a75e670d"
+      "size_bytes": 1733,
+      "sha256": "f38d71c9f447e223dbd8211f2f8e481546ddbb5d55303aa04e26f4ac235721b0"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/MIGRATION.md",
-      "size_bytes": 3336,
-      "sha256": "53e59c21499e752afd39920dae4ccb91dc8ec8d44274c48e4b57857e38740c88"
+      "size_bytes": 1464,
+      "sha256": "5f58b28585b7c33ba97c094f870f7b41e668fae74f0926997263f36ee4480bfe"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/MIGRATION.pt-br.md",
-      "size_bytes": 13109,
-      "sha256": "b589b547b4921b43f55290b1ca2858432ae7815fbb404d0d1e393ae17f3c1cef"
+      "size_bytes": 1471,
+      "sha256": "40c47f74dee5791eba3c6c392b27ef034b2b9f9f4dec4ba671071f9ac69aaf41"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/README.md",
-      "size_bytes": 2087,
-      "sha256": "2929bf87671ea111cb19c61a0e40f4c0806bd1de4877fcb63b55095550b453ec"
+      "size_bytes": 948,
+      "sha256": "85341daf31cf024cb7199d39ede6212a0d1568e5f6d7b6359e3e98bb8ca4f6d6"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/README.pt-br.md",
-      "size_bytes": 2065,
-      "sha256": "f90107f86af98718513141a1357ab67857e1b55acbc7ab2f50659611cf168d89"
+      "size_bytes": 987,
+      "sha256": "4b9ab34accd76656732c60685e9e6bca6620c22c573172186dc305881f79cdc2"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/RELEASE.md",
-      "size_bytes": 5211,
-      "sha256": "9bdbef676166592ce667c9ee1a9e41419fd837aeea319719592dab022683bc9c"
+      "size_bytes": 3044,
+      "sha256": "515317a9d4ebf6c0fbcd837afbbd06d0d6ab11a3c605ed95a5e3d77bb42fb798"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/RELEASE.pt-br.md",
-      "size_bytes": 5633,
-      "sha256": "6cdcc948c9e214229fd56b3231b225742d6dd9813c5f263390480090fe89186d"
+      "size_bytes": 3166,
+      "sha256": "961ef9419e90a61afddc9cb01037f5944118b2d0c27f547c6175ea38fa590e00"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/REQUIREMENTS.md",
-      "size_bytes": 18174,
-      "sha256": "1c8f6bdcf230aeb335171d505ed59e9f6a90d07079696828812ddf29bffcbef8"
+      "size_bytes": 13163,
+      "sha256": "f1a6f6b74153a84be017a7d217ef6033594e176a9a3cb288d91b63398ad098f5"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/REQUIREMENTS.pt-br.md",
-      "size_bytes": 18130,
-      "sha256": "8ecfc8d86053c93a4efc1e1b3a64a0ef86fdde92f08cd6c76ba0c58e8cfbba09"
+      "size_bytes": 13233,
+      "sha256": "1e92e5462cf837799c24bb0f5c54a6a0105c5dc22a6f2b390a95b3b688fe3021"
     },
     {
-      "path": "versioning/Alpha-v0.1.0/verification/contract-review.json",
-      "size_bytes": 25102,
-      "sha256": "2e17b160470c4cbb73a7a8052359e6325d46aae2a183c7565eb38d4bf883f0cf"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/execution.json",
-      "size_bytes": 4078,
-      "sha256": "a957d08c83085fc02f4aa4fb434e3a06afafc9c95a376eb4fd84a80801b70603"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/minerva.json",
-      "size_bytes": 874,
-      "sha256": "0877475d795024928679726bb201633402ffc71e5d6cc06e9ebb0bf876201354"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/observed/artwork.json",
-      "size_bytes": 554,
-      "sha256": "d3e489557888466ef176b4b87dcd76bd04c77d61d5d0423c65b6dc8b74143c76"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/observed/atlas-validation.json",
-      "size_bytes": 1395,
-      "sha256": "8c8e7750e82a27cdaaf7280a7d4bc5faa3d65aff9a4eeacf4604456d8a26e459"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/observed/checks.json",
-      "size_bytes": 7539,
-      "sha256": "0dddcd49b107436733b6a19d63b9f830d11fa1efbda626e4891c3de52849dd0f"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/observed/distribution-tools.stderr.txt",
-      "size_bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/observed/distribution-tools.stdout.txt",
-      "size_bytes": 99,
-      "sha256": "37684cd6f075aa2786c2261a7f2ee49c0c01293319a7c03f4ee038bee40027dd"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/observed/final-document-check.json",
-      "size_bytes": 3957,
-      "sha256": "2f66e0e77a9f534cf7aaed72ec02b4bd73d54e01295d50557a229da5add2bdf5"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/observed/integrated-verification.stderr.txt",
-      "size_bytes": 4427,
-      "sha256": "4ce68d5d5a2b8313d0725fea1069d286b12b37339852e5e2d4bdb6f9be049b44"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/observed/integrated-verification.stdout.txt",
-      "size_bytes": 51,
-      "sha256": "b6f9cc7a5deff38a50b106198b16925350d5c6a10242cdc7e1b9550ee987c6ab"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/observed/isolation-1.stderr.txt",
-      "size_bytes": 4427,
-      "sha256": "2182651a13fbaf195eccd1e1c1a4b63bfed80e41a1b27afa00e272de3863850b"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/observed/isolation-1.stdout.txt",
-      "size_bytes": 51,
-      "sha256": "b6f9cc7a5deff38a50b106198b16925350d5c6a10242cdc7e1b9550ee987c6ab"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/observed/isolation.json",
-      "size_bytes": 5960,
-      "sha256": "f062e3308951a494f347031bf3db7f5cd2b8ed7743642addc315680ce1ca2412"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/observed/repository-check.json",
-      "size_bytes": 245,
-      "sha256": "ed3a26733d4fa61cf8d5bc79aa6f400514938406254dc360431df1676b214f2c"
+      "path": "versioning/Alpha-v0.1.0/verification/current.json",
+      "size_bytes": 292,
+      "sha256": "0daa790ac6ec419d363fd6ce6c67cf14b791669a054026c182a41468ca71735a"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/requirements/catalog.json",
@@ -793,8 +1208,8 @@
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/requirements/coverage.json",
-      "size_bytes": 49872,
-      "sha256": "01fbab00768a06e3c845e249848bbc8700d8ab129b5968981db6a7dd4b0bb2fc"
+      "size_bytes": 51404,
+      "sha256": "f31ec655d68e3c8a5f63a59c9a46271531b8658d1aacf7d1835dd253fca90593"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/requirements/migration.json",
@@ -802,9 +1217,234 @@
       "sha256": "789cd581b8d486e809aad13b989c144f9074b7f1fe07b1030504752ef3c67c76"
     },
     {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/contract-review.json",
+      "size_bytes": 25102,
+      "sha256": "2e17b160470c4cbb73a7a8052359e6325d46aae2a183c7565eb38d4bf883f0cf"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/execution.json",
+      "size_bytes": 4078,
+      "sha256": "a957d08c83085fc02f4aa4fb434e3a06afafc9c95a376eb4fd84a80801b70603"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/minerva.json",
+      "size_bytes": 874,
+      "sha256": "0877475d795024928679726bb201633402ffc71e5d6cc06e9ebb0bf876201354"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/observed/artwork.json",
+      "size_bytes": 554,
+      "sha256": "d3e489557888466ef176b4b87dcd76bd04c77d61d5d0423c65b6dc8b74143c76"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/observed/atlas-validation.json",
+      "size_bytes": 1395,
+      "sha256": "8c8e7750e82a27cdaaf7280a7d4bc5faa3d65aff9a4eeacf4604456d8a26e459"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/observed/checks.json",
+      "size_bytes": 7539,
+      "sha256": "0dddcd49b107436733b6a19d63b9f830d11fa1efbda626e4891c3de52849dd0f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/observed/distribution-tools.stderr.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/observed/distribution-tools.stdout.txt",
+      "size_bytes": 99,
+      "sha256": "37684cd6f075aa2786c2261a7f2ee49c0c01293319a7c03f4ee038bee40027dd"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/observed/final-document-check.json",
+      "size_bytes": 3957,
+      "sha256": "2f66e0e77a9f534cf7aaed72ec02b4bd73d54e01295d50557a229da5add2bdf5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/observed/integrated-verification.stderr.txt",
+      "size_bytes": 4427,
+      "sha256": "4ce68d5d5a2b8313d0725fea1069d286b12b37339852e5e2d4bdb6f9be049b44"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/observed/integrated-verification.stdout.txt",
+      "size_bytes": 51,
+      "sha256": "b6f9cc7a5deff38a50b106198b16925350d5c6a10242cdc7e1b9550ee987c6ab"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/observed/isolation-1.stderr.txt",
+      "size_bytes": 4427,
+      "sha256": "2182651a13fbaf195eccd1e1c1a4b63bfed80e41a1b27afa00e272de3863850b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/observed/isolation-1.stdout.txt",
+      "size_bytes": 51,
+      "sha256": "b6f9cc7a5deff38a50b106198b16925350d5c6a10242cdc7e1b9550ee987c6ab"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/observed/isolation.json",
+      "size_bytes": 5960,
+      "sha256": "f062e3308951a494f347031bf3db7f5cd2b8ed7743642addc315680ce1ca2412"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/observed/repository-check.json",
+      "size_bytes": 245,
+      "sha256": "ed3a26733d4fa61cf8d5bc79aa6f400514938406254dc360431df1676b214f2c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/structure.json",
+      "size_bytes": 6169,
+      "sha256": "d3c23ff87e9e95979650e0cea0336b8db73783672f10ae71c00c0f88b7350674"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-alpha-revision/composition/execution.json",
+      "size_bytes": 22612,
+      "sha256": "f73481ef732e85ea119a5826f2cde2e82b99707b189d9017a29b54d0291be589"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-alpha-revision/composition/minerva.json",
+      "size_bytes": 2364,
+      "sha256": "bde21ec396df59c3829114d264841ecf0dc2922ff55ac0e3321e0bc2b77ed333"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-alpha-revision/composition/structure.json",
+      "size_bytes": 5838,
+      "sha256": "06bf027aa61f3920f895f363a296b5ef23b27e02246085c41213061b7b3430ed"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-alpha-revision/legacy-fixture.json",
+      "size_bytes": 18512,
+      "sha256": "11c4b44df90ea98f936b8fe1d6d5a809aa760e47974c821d45f07b12ed6dff4f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-alpha-revision/minimal/execution.json",
+      "size_bytes": 13438,
+      "sha256": "2a85f5f904b46fd9a508003680ed96ef9bcd742aa06a2900e5173d243d5f2baf"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-alpha-revision/minimal/minerva.json",
+      "size_bytes": 2363,
+      "sha256": "15483bbfb194929ce7b10b2823e4dbe0a45ca0ec28551155310eb63bdf4ea729"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-alpha-revision/minimal/structure.json",
+      "size_bytes": 4748,
+      "sha256": "36492e349ed30ce8adfeb77c9faed8e06ba8cf73dd291ac029abddbe867b13ee"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-alpha-revision/summary.json",
+      "size_bytes": 591,
+      "sha256": "5ab6b1d262a031e605e59689b24d2ee23df8ef3d367aa3f8576973282d0fccd0"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-alpha-revision/task-board/execution.json",
+      "size_bytes": 21036,
+      "sha256": "2d609bc586a6ab200a281c87d6f168bd1f32fe502ef320a5c09fc7f26feb54fb"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-alpha-revision/task-board/minerva.json",
+      "size_bytes": 2364,
+      "sha256": "ba657e8dc46034e38f1f93bec118ddf56f32af507d65b9e7541347b20eaadb54"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-alpha-revision/task-board/structure.json",
+      "size_bytes": 5722,
+      "sha256": "061478e1f9e5fb91d37e0be6b563e3e9c6bcc45ed276b66d3d5cad77d828918f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-alpha-revision/tooling.json",
+      "size_bytes": 24436,
+      "sha256": "74840fd31c36a51767b07819b6fef450691c789bb7a128b4c6ba315df7cdecd8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/composition/execution.json",
+      "size_bytes": 22728,
+      "sha256": "da9fe4729612d6be5b084cc36fd926142443118eb4da022767efce351759a4c1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/composition/minerva.json",
+      "size_bytes": 2364,
+      "sha256": "bde21ec396df59c3829114d264841ecf0dc2922ff55ac0e3321e0bc2b77ed333"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/composition/structure.json",
+      "size_bytes": 5838,
+      "sha256": "08b336b4bd7a363fb37e599ed4ec989f3bc28ef7ed96e4a951dd6f797c4f5475"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/legacy-fixture.json",
+      "size_bytes": 18540,
+      "sha256": "b9372b19e93ba8b3d3559fe003292a7ef934ed6206bcf25a57380426bace55ab"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/minimal/execution.json",
+      "size_bytes": 13497,
+      "sha256": "01e4fb0cd6a7cbfad12411be27e1391c4afb6fac8d7c51822d3b7c8bcdfa5a87"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/minimal/minerva.json",
+      "size_bytes": 2363,
+      "sha256": "15483bbfb194929ce7b10b2823e4dbe0a45ca0ec28551155310eb63bdf4ea729"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/minimal/structure.json",
+      "size_bytes": 4748,
+      "sha256": "9dad83d10ba7b76b911871b4a56e1b994e64e38786a1b083db62abec76491c6f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/repository-check.json",
+      "size_bytes": 256,
+      "sha256": "f26cf88a4b5e42b869f6ee6bc6030ef07495fa396033836d449b2f857644064d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/repository-tests.json",
+      "size_bytes": 535,
+      "sha256": "4262bd56d972fb1815e38a4699d2d07f5c1c51037001f4a7ebeae6f47860faff"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/repository-tests.stderr.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/repository-tests.stdout.txt",
+      "size_bytes": 101,
+      "sha256": "a220acaf2971ad06da628e42ef6106d2b280304d4d15ab593d192029f52e2121"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/source-preservation.json",
+      "size_bytes": 1147,
+      "sha256": "72058d2ceb2f99c73950aca669f7618577d04a6bcd736aee736b904534dc6098"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/summary.json",
+      "size_bytes": 591,
+      "sha256": "2a07887fad441e895299e30f17af2d126652833832e3928ea38fe444d85800e7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/task-board/execution.json",
+      "size_bytes": 21064,
+      "sha256": "c588de1b173c8a77ec3339dc5f530054675dbd77ca0598eccdb85607de62299b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/task-board/minerva.json",
+      "size_bytes": 2364,
+      "sha256": "ba657e8dc46034e38f1f93bec118ddf56f32af507d65b9e7541347b20eaadb54"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/task-board/structure.json",
+      "size_bytes": 5722,
+      "sha256": "d9d9c70aca32422530b04185c788440d7200501b07ff18bf01eb8f0331fe1345"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-final/tooling.json",
+      "size_bytes": 24631,
+      "sha256": "9d4c4778aaa2eb784aa4b6561d4c41d74d89dc044b275ef29e7dcbdb85b6d613"
+    },
+    {
       "path": "versioning/Alpha-v0.1.0/verification/source-baselines.json",
-      "size_bytes": 4908,
-      "sha256": "b558de742017648c6be4d8aeb690557f6e5ec3ac6d7cfdeb992d9058521961f0"
+      "size_bytes": 8253,
+      "sha256": "adf84828db3d48f8febbd0cb2163ec21827e0bcaaf1e22e2bed79150b8c55f94"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/sources/atlas/LICENSE",
@@ -842,6 +1482,26 @@
       "sha256": "9e69d0e04cc220bf89f8b23927b1bebda00bbf6525bfc868aba9061f6e9148c3"
     },
     {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/minerva/LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/minerva/examples/composition/blueprint.yaml",
+      "size_bytes": 108191,
+      "sha256": "89f0703fc85e995c1a4c4ce65a90351861f590dca56c2d359d117a668ccc94d5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/minerva/examples/minimal/blueprint.yaml",
+      "size_bytes": 48101,
+      "sha256": "4d17ef6a82b0761836828e0d92f0428910090de46be6101ad0dec971071bc3f4"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/minerva/examples/task-board/blueprint.yaml",
+      "size_bytes": 125064,
+      "sha256": "2aab3f264c1bc9b1bb437b97dc21ffd64e9e7d250ccb34f0b21edf4b5b2809d8"
+    },
+    {
       "path": "versioning/Alpha-v0.1.0/verification/sources/oal/LICENSE",
       "size_bytes": 1106,
       "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
@@ -855,11 +1515,6 @@
       "path": "versioning/Alpha-v0.1.0/verification/sources/oal/README.pt-br.md.txt",
       "size_bytes": 69716,
       "sha256": "52e0f59f7f4ead7d9a94a924bc5b339196e4d1aa68c467b7200780b81a3cc1e9"
-    },
-    {
-      "path": "versioning/Alpha-v0.1.0/verification/structure.json",
-      "size_bytes": 6169,
-      "sha256": "d3c23ff87e9e95979650e0cea0336b8db73783672f10ae71c00c0f88b7350674"
     }
   ]
 }

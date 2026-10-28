@@ -1,0 +1,58 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-006
+source:
+  path: apps/RequestRegister/support/OperationFailure.py
+  app: RequestRegister
+  language: python
+  state: observed
+  sha256: 6d4cb8901c2230d246f43ee47c302055f801b48c84ca10503aa80291fd04a213
+  purpose: Documented refusal/failure; certainty concerns this invocation's write only.
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-006-01
+  code_name: OperationFailure
+  kind: class
+  role: support
+  model_refs: []
+  description: Documented refusal/failure; certainty concerns this invocation's write only.
+  attributes:
+  - name: code
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: write_outcome
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  operations:
+  - id: OP-SOURCE-006-01-01
+    code_name: __init__
+    contract_scope: technical
+    native_signature: '__init__(self, code: str, write_outcome: str=''not_applied'')'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: code
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: write_outcome
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.code = code
+      - self.write_outcome = write_outcome
+      - super().__init__(code)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies: []
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

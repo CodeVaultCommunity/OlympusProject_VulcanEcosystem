@@ -1,0 +1,42 @@
+{
+  "edition": "Alpha-v0.1.0",
+  "example": "composition",
+  "app": "BookingDesk",
+  "architecture_profile": "Vulcan Architecture Python",
+  "entry": "launch.py",
+  "registration": "Explicit REGISTRY in launch.py; no automatic directory scanning.",
+  "modes": {
+    "http": {
+      "default": true,
+      "bind": "127.0.0.1",
+      "readiness": "Bound listening socket and unique /health instance id",
+      "termination": "Ctrl+C or optional duration; server socket always closed"
+    },
+    "cli": {
+      "default": false,
+      "completion": "One JSON result on stdout; exit zero for confirmed success, nonzero for refusal/failure"
+    }
+  },
+  "dependencies": [],
+  "resources": {
+    "sqlite": "Per-operation connection, explicit transaction, close in finally; BEGIN IMMEDIATE protects conditional writes",
+    "identity": "Demo token resolved to trusted context. Internal callers must supply trusted context; not a production security boundary."
+  },
+  "model_baseline": {
+    "document_id": "MINERVA-COMPOSITION",
+    "revision": "2",
+    "sha256": "89f0703fc85e995c1a4c4ce65a90351861f590dca56c2d359d117a668ccc94d5",
+    "binding_revision": "2-vulcan-1",
+    "binding_sha256": "4781c57963bbbc83f99c83809ab6427e7bbb15a407b375b6ed6ef75b815ddfe1",
+    "atlas_sha256": "63a65c44f9fb4151c00389a954e9ce87531754c7c19076743b6dd6693ff62f96"
+  },
+  "aliases": {
+    "task_identifier": "task_id",
+    "authorized_board": "TaskStore instance board_id from composition; cases enforce matching trusted context"
+  },
+  "limitations": [
+    "Local Python/SQLite demonstration; no distributed transaction or production authentication guarantee.",
+    "Value objects and base classes are optional; minimal needs no value object.",
+    "Uncertain write outcome is propagated without automatic retry."
+  ]
+}

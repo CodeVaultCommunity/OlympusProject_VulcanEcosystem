@@ -1,0 +1,146 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-009
+source:
+  path: apps/BookingDesk/tools/Tool_SqliteBookingStore.py
+  app: BookingDesk
+  language: python
+  state: observed
+  sha256: 772444d3723a98498891f3474a8efa18ea4012bd64cf6c8260b4ffc1b61c9afc
+  purpose: Atomic insert/compare-and-save; ready Booking inputs are not revalidated.
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-009-01
+  code_name: Tool_SqliteBookingStore
+  kind: class
+  role: tool
+  model_refs:
+  - TOL-BOOKING-STORE
+  description: Atomic insert/compare-and-save; ready Booking inputs are not revalidated.
+  attributes:
+  - name: resource
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  operations:
+  - id: OP-SOURCE-009-01-01
+    code_name: __init__
+    contract_scope: technical
+    native_signature: '__init__(self, db_path: str)'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: db_path
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.resource = SqliteResource(db_path)
+      - self.resource.initialize('CREATE TABLE IF NOT EXISTS bookings (code TEXT PRIMARY KEY COLLATE BINARY, title
+        TEXT NOT NULL, status TEXT NOT NULL, version INTEGER NOT NULL)')
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-009-01-02
+    code_name: loadBooking
+    contract_scope: operational
+    native_signature: 'loadBooking(self, booking_code: str)'
+    description: Observed realization binding for OP-BOOKING-LOAD. Operational types are inherited from ADPM; task_identifier
+      is named task_id natively, and authorized board is bound to the store instance by composition. No semantic
+      contract is redefined.
+    inputs:
+    - name: booking_code
+      description: The exact code to locate.
+      type:
+        kind: primitive
+        name: string
+      required: true
+    outputs:
+    - name: booking
+      description: The retained booking with its current status.
+      type:
+        kind: entity
+        ref: ENT-BOOKING
+      required: true
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.resource.open() as connection:\n    row = connection.execute('SELECT code, title, status, version\
+        \ FROM bookings WHERE code = ?', (booking_code,)).fetchone()"
+      - "if row is None:\n    raise OperationFailure('NOT_FOUND')"
+      - "try:\n    return Entity_Booking(*row)\nexcept ValueError as error:\n    raise OperationFailure('STORE_INVALID_STATE')\
+        \ from error"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-009-01-03
+    code_name: saveBooking
+    contract_scope: operational
+    native_signature: 'saveBooking(self, booking: Entity_Booking, expected_version: int)'
+    description: Observed realization binding for OP-BOOKING-SAVE. Operational types are inherited from ADPM; task_identifier
+      is named task_id natively, and authorized board is bound to the store instance by composition. No semantic
+      contract is redefined.
+    inputs:
+    - name: booking
+      description: The booking to persist, including its status.
+      type:
+        kind: entity
+        ref: ENT-BOOKING
+      required: true
+    - name: expected_version
+      description: The version observed by the caller.
+      type:
+        kind: primitive
+        name: integer
+      required: true
+    outputs:
+    - name: saved_booking
+      description: The booking with an incremented version.
+      type:
+        kind: entity
+        ref: ENT-BOOKING
+      required: true
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.resource.open(write=True) as connection:\n    if expected_version == 0:\n        result = connection.execute('INSERT\
+        \ INTO bookings VALUES (?, ?, ?, 1) ON CONFLICT(code) DO NOTHING', (booking.booking_code, booking.title,\
+        \ booking.status))\n    else:\n        result = connection.execute('UPDATE bookings SET title = ?, status\
+        \ = ?, version = version + 1 WHERE code = ? AND version = ?', (booking.title, booking.status, booking.booking_code,\
+        \ expected_version))\n    if result.rowcount != 1:\n        raise OperationFailure('VERSION_CONFLICT')\n\
+        \    row = connection.execute('SELECT code, title, status, version FROM bookings WHERE code = ?', (booking.booking_code,)).fetchone()\n\
+        \    retained = Entity_Booking(*row)"
+      - return retained
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-009-01
+  target: apps.BookingDesk.entities.Entity_Booking
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-009-01
+  target: apps.BookingDesk.support.OperationFailure
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-009-01
+  target: apps.BookingDesk.support.SqliteResource
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

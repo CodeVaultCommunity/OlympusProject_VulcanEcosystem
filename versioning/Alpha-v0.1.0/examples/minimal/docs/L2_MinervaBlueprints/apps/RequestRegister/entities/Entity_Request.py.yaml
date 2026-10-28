@@ -1,0 +1,97 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-005
+source:
+  path: apps/RequestRegister/entities/Entity_Request.py
+  app: RequestRegister
+  language: python
+  state: observed
+  sha256: c3a8df159a583a974bb308a551360e5dc80a2f2cb85a6c42a4134203fb40556d
+  purpose: 'ENT-REQUEST: exact nonempty code, then positive integer quantity.'
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-005-01
+  code_name: Entity_Request
+  kind: class
+  role: entity
+  model_refs:
+  - ENT-REQUEST
+  description: 'ENT-REQUEST: exact nonempty code, then positive integer quantity.'
+  attributes:
+  - name: request_code
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: str
+  - name: quantity
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: int
+  operations:
+  - id: OP-SOURCE-005-01-01
+    code_name: __post_init__
+    contract_scope: technical
+    native_signature: __post_init__(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.validateCode(self.request_code)
+      - self.validateQuantity(self.quantity)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-005-01-02
+    code_name: validateCode
+    contract_scope: technical
+    native_signature: validateCode(value)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: value
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "if not isinstance(value, str) or not value:\n    raise ValueError('invalid_code')"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-005-01-03
+    code_name: validateQuantity
+    contract_scope: technical
+    native_signature: validateQuantity(value)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: value
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "if type(value) is not int or value < 1:\n    raise ValueError('invalid_quantity')"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-005-01
+  target: dataclasses
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

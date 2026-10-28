@@ -1,0 +1,95 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-002
+source:
+  path: apps/BookingDesk/boundaries/Boundary_Json.py
+  app: BookingDesk
+  language: python
+  state: observed
+  sha256: f3e173ca605f13663f4b3c21f80de02ef7f81cadf2b4b39d153652a2eee73a45
+  purpose: L4 projection shared by the local CLI and HTTP channel; the core owns authorization.
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-002-01
+  code_name: Boundary_Json
+  kind: class
+  role: boundary
+  model_refs: []
+  description: L4 projection shared by the local CLI and HTTP channel; the core owns authorization.
+  attributes:
+  - name: composition
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  operations:
+  - id: OP-SOURCE-002-01-01
+    code_name: __init__
+    contract_scope: technical
+    native_signature: __init__(self, composition)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: composition
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.composition = composition
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-002-01-02
+    code_name: invoke
+    contract_scope: technical
+    native_signature: 'invoke(self, operation: str, payload: dict, token: str | None)'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: operation
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: payload
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: token
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "if not isinstance(payload, dict):\n    return (400, {'error': 'INVALID_JSON_OBJECT'})"
+      - context = self.composition.resolveActor(token)
+      - "try:\n    if operation == 'create':\n        result = self.composition.create.createBooking(context, payload.get('booking_code'),\
+        \ payload.get('title'))\n    elif operation == 'lookup':\n        result = self.composition.lookup.lookupBooking(context,\
+        \ payload.get('booking_code'))\n    elif operation == 'cancel':\n        result = self.composition.cancel.cancelBooking(context,\
+        \ payload.get('booking_code'))\n    else:\n        return (404, {'error': 'UNKNOWN_OPERATION'})\n    body\
+        \ = [asdict(item) for item in result] if isinstance(result, list) else asdict(result)\n    return (200,\
+        \ {'result': body})\nexcept OperationFailure as error:\n    status = 403 if error.code == 'DENIED' else\
+        \ 503 if error.code == 'STORE_UNAVAILABLE' else 500 if error.code == 'STORE_INVALID_STATE' else 409\n  \
+        \  body = {'error': error.code}\n    if error.code == 'STORE_UNAVAILABLE':\n        body['write_outcome']\
+        \ = error.write_outcome\n    return (status, body)\nexcept ValueError as error:\n    return (400, {'error':\
+        \ 'INVALID_INPUT', 'detail': str(error)})"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-002-01
+  target: dataclasses
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-002-01
+  target: apps.BookingDesk.support.OperationFailure
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

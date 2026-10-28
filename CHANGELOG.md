@@ -1,7 +1,7 @@
 # Changelog
 
-## Alpha-v0.1.0 — 2026-10-28
+## Alpha-v0.1.0 — unpublished, revised 2026-10-28
 
-Initial separated Vulcan Ecosystem edition for review. Establishes the selected OAL scope, bilingual model/profile documentation, concrete verification tools and didactic examples. The integrated ecosystem uses recommended documentation folders by layer, with the per-file mirror at L2 and realization documentation at L3.
+Improved the same Alpha before publication. Replaced the divergent business example with canonical Atlas/Minerva minimal, composition and task-board realizations. Added explanatory integrations, separated rules/profiles/guides/technical fixtures and maintained English/Portuguese entry manuals at root and edition.
 
-This edition derives from the requirements discussion and the earlier combined Vulcan proposal. See the edition requirements mapping and source baselines for provenance. No remote publication or independent stakeholder approval is asserted.
+Removed the vendored Minerva validator; integration validation explicitly selects an external matching edition. Corrected Windows import-graph paths and exclusive port ownership. Added source-bound scenario evidence, conditional SQLite writes, board isolation, uncertainty handling and immutable run directories. Retained previous reports as historical records and the original distribution in a local Git baseline. No translator, new edition, remote publication or stakeholder approval is implied.

@@ -1,0 +1,135 @@
+{
+  "model": "Vulcan Ecosystem",
+  "edition": "Alpha-v0.1.0",
+  "profile": "Vulcan Architecture Python",
+  "evaluated_at_utc": "2026-10-28T13:18:41.564439+00:00",
+  "ecosystem": "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\examples\\minimal",
+  "status": "passed",
+  "scope": {
+    "profile_apps": [
+      "RequestRegister"
+    ],
+    "legacy_apps_not_structurally_assessed": [],
+    "python_files_parsed": 10,
+    "rules": [
+      "ECO_APPS",
+      "ECO_ENTRY",
+      "ECO_CLASSIFICATION",
+      "VA_AREAS",
+      "VA_SINGLE_STRUCTURE",
+      "VA_FILE_NAME",
+      "VA_ROLE_NAME",
+      "VA_METHOD_CASE",
+      "VA_ATTRIBUTE_CASE",
+      "VA_DOMAIN",
+      "VA_DEPENDENCY_DIRECTION",
+      "VA_VALUE_OBJECT_CONSUMER",
+      "VA_PURE_DATA",
+      "VA_STATIC_CYCLE",
+      "PYTHON_SYNTAX"
+    ],
+    "entry": "launch.py",
+    "not_assessed": [
+      "Minerva schema or per-file mirror",
+      "semantic preservation",
+      "authorization behavior",
+      "runtime execution",
+      "dynamic imports",
+      "C/Go",
+      "all foreign library dependencies",
+      "cross-app API public status"
+    ]
+  },
+  "diagnostics": [],
+  "adaptations": [
+    {
+      "path": "apps/RequestRegister/boundaries/Boundary_Http.py",
+      "symbol": "do_GET",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/RequestRegister/boundaries/Boundary_Http.py",
+      "symbol": "do_POST",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/RequestRegister/boundaries/Boundary_Http.py",
+      "symbol": "log_message",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/RequestRegister/boundaries/Boundary_Json.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/RequestRegister/composition/AppComposition.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/RequestRegister/entities/Entity_ActorContext.py",
+      "symbol": "__post_init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/RequestRegister/entities/Entity_Request.py",
+      "symbol": "__post_init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/RequestRegister/support/OperationFailure.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/RequestRegister/support/SqliteResource.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/RequestRegister/tools/Tool_SqliteRequestStore.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    }
+  ],
+  "static_dependencies": {
+    "apps/RequestRegister/boundaries/Boundary_Http.py": [],
+    "apps/RequestRegister/boundaries/Boundary_Json.py": [
+      "apps/RequestRegister/support/OperationFailure.py"
+    ],
+    "apps/RequestRegister/composition/AppComposition.py": [
+      "apps/RequestRegister/entities/Entity_ActorContext.py",
+      "apps/RequestRegister/tools/Tool_SqliteRequestStore.py",
+      "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.py"
+    ],
+    "apps/RequestRegister/entities/Entity_ActorContext.py": [],
+    "apps/RequestRegister/entities/Entity_Request.py": [],
+    "apps/RequestRegister/support/OperationFailure.py": [],
+    "apps/RequestRegister/support/SqliteResource.py": [
+      "apps/RequestRegister/support/OperationFailure.py"
+    ],
+    "apps/RequestRegister/tests/Test_Contracts.py": [
+      "apps/RequestRegister/boundaries/Boundary_Json.py",
+      "apps/RequestRegister/composition/AppComposition.py",
+      "apps/RequestRegister/entities/Entity_ActorContext.py",
+      "apps/RequestRegister/entities/Entity_Request.py",
+      "apps/RequestRegister/support/OperationFailure.py"
+    ],
+    "apps/RequestRegister/tools/Tool_SqliteRequestStore.py": [
+      "apps/RequestRegister/entities/Entity_Request.py",
+      "apps/RequestRegister/support/OperationFailure.py",
+      "apps/RequestRegister/support/SqliteResource.py"
+    ],
+    "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.py": [
+      "apps/RequestRegister/entities/Entity_ActorContext.py",
+      "apps/RequestRegister/entities/Entity_Request.py",
+      "apps/RequestRegister/support/OperationFailure.py"
+    ]
+  }
+}

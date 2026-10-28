@@ -17,7 +17,7 @@ SPEC.loader.exec_module(ASSESSOR)
 
 class Test_Structure(unittest.TestCase):
     def testRunnableExamplePassesWithExplicitScope(self):
-        report = ASSESSOR.assess(EDITION / "examples/task-board-ecosystem", ["TaskBoard"], ["LegacyReports"],
+        report = ASSESSOR.assess(EDITION / "tests/fixtures/legacy-ecosystem", ["TaskBoard"], ["LegacyReports"],
                                  technical_files=["apps/TaskBoard/main.py"])
         self.assertEqual(report["status"], "passed", report["diagnostics"])
         self.assertEqual(report["scope"]["python_files_parsed"], 14)
@@ -25,7 +25,7 @@ class Test_Structure(unittest.TestCase):
         self.assertIn("runtime execution", report["scope"]["not_assessed"])
 
     def testPublishedCounterexampleProducesAllPromisedDiagnostics(self):
-        directory = EDITION / "examples/structural-counterexamples"
+        directory = EDITION / "tests/fixtures/structural-counterexamples"
         expected = json.loads((directory / "expected-diagnostics.json").read_text())
         report = ASSESSOR.assess(directory / expected["fixture"], ["BrokenApp"])
         self.assertEqual(report["status"], expected["expected_status"])
@@ -65,7 +65,7 @@ class Test_Structure(unittest.TestCase):
 
     def testCliReturnsNonzeroAndMachineReadableDiagnostics(self):
         result = subprocess.run([sys.executable, str(EDITION / "scripts/evaluate_structure.py"),
-            "--ecosystem", str(EDITION / "examples/structural-counterexamples/invalid-ecosystem"),
+            "--ecosystem", str(EDITION / "tests/fixtures/structural-counterexamples/invalid-ecosystem"),
             "--profile-app", "BrokenApp", "--json"], capture_output=True, text=True, timeout=5)
         self.assertEqual(result.returncode, 1)
         report = json.loads(result.stdout)

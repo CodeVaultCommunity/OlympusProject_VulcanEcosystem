@@ -1,0 +1,42 @@
+{
+  "edition": "Alpha-v0.1.0",
+  "example": "minimal",
+  "app": "RequestRegister",
+  "architecture_profile": "Vulcan Architecture Python",
+  "entry": "launch.py",
+  "registration": "Explicit REGISTRY in launch.py; no automatic directory scanning.",
+  "modes": {
+    "http": {
+      "default": true,
+      "bind": "127.0.0.1",
+      "readiness": "Bound listening socket and unique /health instance id",
+      "termination": "Ctrl+C or optional duration; server socket always closed"
+    },
+    "cli": {
+      "default": false,
+      "completion": "One JSON result on stdout; exit zero for confirmed success, nonzero for refusal/failure"
+    }
+  },
+  "dependencies": [],
+  "resources": {
+    "sqlite": "Per-operation connection, explicit transaction, close in finally; BEGIN IMMEDIATE protects conditional writes",
+    "identity": "Demo token resolved to trusted context. Internal callers must supply trusted context; not a production security boundary."
+  },
+  "model_baseline": {
+    "document_id": "MINERVA-REQUEST-REGISTER",
+    "revision": "2",
+    "sha256": "4d17ef6a82b0761836828e0d92f0428910090de46be6101ad0dec971071bc3f4",
+    "binding_revision": "2-vulcan-1",
+    "binding_sha256": "8d71b0be80129042f4862e26229b7a1b0ba465482d59b6956a8031f46840d258",
+    "atlas_sha256": "731ef7e7f9e0dcda1b9dea1cae45a51a43bd16083948dae121d18fdd77bc746e"
+  },
+  "aliases": {
+    "task_identifier": "task_id",
+    "authorized_board": "TaskStore instance board_id from composition; cases enforce matching trusted context"
+  },
+  "limitations": [
+    "Local Python/SQLite demonstration; no distributed transaction or production authentication guarantee.",
+    "Value objects and base classes are optional; minimal needs no value object.",
+    "Uncertain write outcome is propagated without automatic retry."
+  ]
+}

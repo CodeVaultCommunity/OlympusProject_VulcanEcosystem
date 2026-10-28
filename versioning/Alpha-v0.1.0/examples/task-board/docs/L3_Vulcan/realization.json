@@ -1,0 +1,42 @@
+{
+  "edition": "Alpha-v0.1.0",
+  "example": "task-board",
+  "app": "TaskBoard",
+  "architecture_profile": "Vulcan Architecture Python",
+  "entry": "launch.py",
+  "registration": "Explicit REGISTRY in launch.py; no automatic directory scanning.",
+  "modes": {
+    "http": {
+      "default": true,
+      "bind": "127.0.0.1",
+      "readiness": "Bound listening socket and unique /health instance id",
+      "termination": "Ctrl+C or optional duration; server socket always closed"
+    },
+    "cli": {
+      "default": false,
+      "completion": "One JSON result on stdout; exit zero for confirmed success, nonzero for refusal/failure"
+    }
+  },
+  "dependencies": [],
+  "resources": {
+    "sqlite": "Per-operation connection, explicit transaction, close in finally; BEGIN IMMEDIATE protects conditional writes",
+    "identity": "Demo token resolved to trusted context. Internal callers must supply trusted context; not a production security boundary."
+  },
+  "model_baseline": {
+    "document_id": "MINERVA-TASK-BOARD",
+    "revision": "3",
+    "sha256": "2aab3f264c1bc9b1bb437b97dc21ffd64e9e7d250ccb34f0b21edf4b5b2809d8",
+    "binding_revision": "3-vulcan-1",
+    "binding_sha256": "aa7f70b0834324b4b6753e0e4a57064abbd0b498d3c71259c1f09584dd6763a1",
+    "atlas_sha256": "fa14749cf58a179792ee66231e413cd912ddf944174824919b8c4615e91d87c8"
+  },
+  "aliases": {
+    "task_identifier": "task_id",
+    "authorized_board": "TaskStore instance board_id from composition; cases enforce matching trusted context"
+  },
+  "limitations": [
+    "Local Python/SQLite demonstration; no distributed transaction or production authentication guarantee.",
+    "Value objects and base classes are optional; minimal needs no value object.",
+    "Uncertain write outcome is propagated without automatic retry."
+  ]
+}

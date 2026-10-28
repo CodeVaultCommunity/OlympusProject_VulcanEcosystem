@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "tests": 33,
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "command": [
+    "C:\\Users\\Douglas\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-m",
+    "pytest",
+    "scripts/tests",
+    "-p",
+    "no:cacheprovider",
+    "--basetemp",
+    "work/root-pytest-final",
+    "-q"
+  ],
+  "stdout": "repository-tests.stdout.txt",
+  "stderr": "repository-tests.stderr.txt",
+  "limit": "Local repository/distribution tools only; no remote CI execution."
+}

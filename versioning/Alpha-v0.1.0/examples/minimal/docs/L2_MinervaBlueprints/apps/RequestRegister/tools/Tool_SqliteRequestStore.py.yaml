@@ -1,0 +1,130 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-009
+source:
+  path: apps/RequestRegister/tools/Tool_SqliteRequestStore.py
+  app: RequestRegister
+  language: python
+  state: observed
+  sha256: 7697d3d113d987f5db8449d660e121367fcb14c1c48e5e0ae04760e5ee84fd75
+  purpose: OP-REQUEST-STORE consumes validated scalars; uniqueness is an atomic storage condition.
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-009-01
+  code_name: Tool_SqliteRequestStore
+  kind: class
+  role: tool
+  model_refs:
+  - TOL-REQUEST-STORE
+  description: OP-REQUEST-STORE consumes validated scalars; uniqueness is an atomic storage condition.
+  attributes:
+  - name: resource
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  operations:
+  - id: OP-SOURCE-009-01-01
+    code_name: __init__
+    contract_scope: technical
+    native_signature: '__init__(self, db_path: str)'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: db_path
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.resource = SqliteResource(db_path)
+      - self.resource.initialize('CREATE TABLE IF NOT EXISTS requests (code TEXT PRIMARY KEY COLLATE BINARY, quantity
+        TEXT NOT NULL)')
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-009-01-02
+    code_name: storeRequest
+    contract_scope: operational
+    native_signature: 'storeRequest(self, request_code: str, quantity: int)'
+    description: Observed realization binding for OP-REQUEST-STORE. Operational types are inherited from ADPM; task_identifier
+      is named task_id natively, and authorized board is bound to the store instance by composition. No semantic
+      contract is redefined.
+    inputs:
+    - name: request_code
+      description: The code to retain.
+      type:
+        kind: primitive
+        name: string
+      required: true
+    - name: quantity
+      description: An already validated positive integer.
+      type:
+        kind: primitive
+        name: integer
+      required: true
+    outputs:
+    - name: stored_request
+      description: The retained request with its code and quantity.
+      type:
+        kind: entity
+        ref: ENT-REQUEST
+      required: true
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.resource.open(write=True) as connection:\n    result = connection.execute('INSERT INTO requests(code,\
+        \ quantity) VALUES (?, ?) ON CONFLICT(code) DO NOTHING', (request_code, str(quantity)))\n    if result.rowcount\
+        \ != 1:\n        raise OperationFailure('DUPLICATE_CODE')\n    row = connection.execute('SELECT code, quantity\
+        \ FROM requests WHERE code = ?', (request_code,)).fetchone()\n    retained = Entity_Request(row[0], int(row[1]))"
+      - return retained
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-009-01-03
+    code_name: readRequest
+    contract_scope: technical
+    native_signature: 'readRequest(self, request_code: str)'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: request_code
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.resource.open() as connection:\n    row = connection.execute('SELECT code, quantity FROM requests\
+        \ WHERE code = ?', (request_code,)).fetchone()"
+      - return Entity_Request(row[0], int(row[1])) if row else None
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-009-01
+  target: apps.RequestRegister.entities.Entity_Request
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-009-01
+  target: apps.RequestRegister.support.SqliteResource
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-009-01
+  target: apps.RequestRegister.support.OperationFailure
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

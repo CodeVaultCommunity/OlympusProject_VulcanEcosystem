@@ -1,0 +1,87 @@
+{
+  "model_baseline": {
+    "document_id": "MINERVA-REQUEST-REGISTER",
+    "revision": "2",
+    "sha256": "4d17ef6a82b0761836828e0d92f0428910090de46be6101ad0dec971071bc3f4",
+    "binding_revision": "2-vulcan-1",
+    "binding_sha256": "8d71b0be80129042f4862e26229b7a1b0ba465482d59b6956a8031f46840d258",
+    "atlas_sha256": "731ef7e7f9e0dcda1b9dea1cae45a51a43bd16083948dae121d18fdd77bc746e"
+  },
+  "scenario_ids": [
+    "SC-REQUEST-SUBMIT-AUTH-ABSENT",
+    "SC-REQUEST-SUBMIT-AUTH-UNRESOLVED",
+    "SC-REQUEST-SUBMIT-AUTH-UNKNOWN",
+    "SC-REQUEST-SUBMIT-AUTH-INSUFFICIENT",
+    "SC-REQUEST-SUBMIT-AUTH-EXPIRED",
+    "SC-REQUEST-SUBMIT-AUTH-ANONYMOUS",
+    "SC-REQUEST-01",
+    "SC-REQUEST-02",
+    "SC-REQUEST-04",
+    "SC-REQUEST-05",
+    "SC-REQUEST-06",
+    "SC-REQUEST-SUBMIT-QUALITY"
+  ],
+  "supporting_check_ids": [
+    "CHK-RNF-REQUEST-01",
+    "CHK-OP-REQUEST-STORE"
+  ],
+  "bindings": {
+    "SC-REQUEST-SUBMIT-AUTH-ABSENT": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitAuthorization"
+    },
+    "SC-REQUEST-SUBMIT-AUTH-UNRESOLVED": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitAuthorization"
+    },
+    "SC-REQUEST-SUBMIT-AUTH-UNKNOWN": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitAuthorization"
+    },
+    "SC-REQUEST-SUBMIT-AUTH-INSUFFICIENT": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitAuthorization"
+    },
+    "SC-REQUEST-SUBMIT-AUTH-EXPIRED": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitAuthorization"
+    },
+    "SC-REQUEST-SUBMIT-AUTH-ANONYMOUS": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitAuthorization"
+    },
+    "SC-REQUEST-01": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitSuccess"
+    },
+    "CHK-OP-REQUEST-STORE": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitSuccess"
+    },
+    "SC-REQUEST-02": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitQuantityRefusal"
+    },
+    "SC-REQUEST-04": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitDuplicate"
+    },
+    "SC-REQUEST-05": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitUnknown"
+    },
+    "SC-REQUEST-06": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitCodeBeforeQuantity"
+    },
+    "SC-REQUEST-SUBMIT-QUALITY": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitQuality"
+    },
+    "CHK-RNF-REQUEST-01": {
+      "path": "apps/RequestRegister/tests/Test_Contracts.py",
+      "symbol": "Test_Contracts.testSubmitQuality"
+    }
+  },
+  "meaning": "Authored test-to-model mapping. Observed outcomes belong to immutable verification runs, not this planned mapping."
+}

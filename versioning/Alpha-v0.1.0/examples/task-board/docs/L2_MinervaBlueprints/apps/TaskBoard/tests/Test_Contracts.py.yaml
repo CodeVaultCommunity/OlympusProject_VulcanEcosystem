@@ -1,0 +1,683 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-008
+source:
+  path: apps/TaskBoard/tests/Test_Contracts.py
+  app: TaskBoard
+  language: python
+  state: observed
+  sha256: 3f2a5d48352e8109ba790e7e0bf84aaf076c4947a73aa4f5433b584805a9aa17
+  purpose: 'Executable ADVS observations: scenario IDs refer to the pinned designed blueprint.'
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-008-01
+  code_name: Test_Contracts
+  kind: class
+  role: test
+  model_refs:
+  - BT-TASK-CREATE
+  - BT-TASK-COMPLETE
+  - BT-TASK-LIST
+  - CHK-RNF-TASK-CREATE-RETENTION
+  - CHK-RNF-TASK-COMPLETE-ATOMICITY
+  - CHK-RNF-TASK-LIST-CONSISTENCY
+  - CHK-OP-TASK-CREATE
+  - CHK-OP-TASK-LOAD
+  - CHK-OP-TASK-COMPLETE
+  - CHK-OP-TASK-LIST
+  description: 'Executable ADVS observations: scenario IDs refer to the pinned designed blueprint.'
+  attributes:
+  - name: temporary
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: db
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: app
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: context
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: observations
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  operations:
+  - id: OP-SOURCE-008-01-01
+    code_name: setUp
+    contract_scope: technical
+    native_signature: setUp(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.temporary = tempfile.TemporaryDirectory()
+      - self.addCleanup(self.temporary.cleanup)
+      - self.db = str(Path(self.temporary.name) / 'test.sqlite3')
+      - self.app = AppComposition(self.db)
+      - self.context = self.app.resolveActor('demo-editor')
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-02
+    code_name: assertFailure
+    contract_scope: technical
+    native_signature: assertFailure(self, code, function, *args)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: code
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: function
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.assertRaises(OperationFailure) as caught:\n    function(*args)"
+      - self.assertEqual(caught.exception.code, code)
+      - return caught.exception
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-03
+    code_name: assertDeniedContexts
+    contract_scope: technical
+    native_signature: assertDeniedContexts(self, prefix, function, *args)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: prefix
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: function
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - 'contexts = {''ABSENT'': None, ''UNRESOLVED'': replace(self.context, resolved=False), ''UNKNOWN'': replace(self.context,
+        known=False), ''INSUFFICIENT'': replace(self.context, permissions=()), ''EXPIRED'': replace(self.context,
+        valid=False), ''ANONYMOUS'': replace(self.context, authenticated=False)}'
+      - "for label, context in contexts.items():\n    with self.subTest(scenario_id=prefix + '-AUTH-' + label):\n\
+        \        with patch.object(self.app.store.resource, 'open', side_effect=AssertionError('store invoked before\
+        \ denial')):\n            self.assertFailure('DENIED', function, context, *args)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-04
+    code_name: measureCli
+    contract_scope: technical
+    native_signature: measureCli(self, operation, payloads)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: operation
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: payloads
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - root = Path(__file__).resolve().parents[3]
+      - env = dict(os.environ, VULCAN_CALLER_TOKEN='demo-editor', VULCAN_DEMO_TOKEN='demo-editor')
+      - elapsed = []
+      - "for payload, success in payloads:\n    started = time.monotonic()\n    result = subprocess.run([sys.executable,\
+        \ str(root / 'launch.py'), 'start', '--mode', 'cli', '--operation', operation, '--payload', json.dumps(payload),\
+        \ '--db', self.db], capture_output=True, text=True, env=env, timeout=5)\n    elapsed.append(time.monotonic()\
+        \ - started)\n    self.assertEqual(result.returncode, 0 if success else 1, result.stderr)\n    self.assertIn('result'\
+        \ if success else 'error', json.loads(result.stdout))"
+      - self.assertEqual(len(elapsed), 30)
+      - self.assertLessEqual(max(elapsed), 2.0, elapsed)
+      - 'self.observations = {''boundary'': ''CLI subprocess start through captured complete JSON stdout'', ''samples'':
+        len(elapsed), ''elapsed_seconds'': elapsed, ''production_sla'': False}'
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-05
+    code_name: testChannelCannotForgeTrustedContext
+    contract_scope: technical
+    native_signature: testChannelCannotForgeTrustedContext(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - 'status, body = Boundary_Json(self.app).invoke(''create'', {''actor_context'': {''permissions'': [''*'']}},
+        ''invalid'')'
+      - self.assertEqual(status, 403)
+      - 'self.assertEqual(body, {''error'': ''DENIED''})'
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-06
+    code_name: testRealStoreFailureIsNotApplied
+    contract_scope: technical
+    native_signature: testRealStoreFailureIsNotApplied(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with patch('apps.TaskBoard.support.SqliteResource.sqlite3.connect', side_effect=sqlite3.OperationalError('offline')):\n\
+        \    error = self.assertFailure('STORE_UNAVAILABLE', self.app.store.resource.initialize, 'SELECT 1')"
+      - self.assertEqual(error.write_outcome, 'not_applied')
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-07
+    code_name: testCommitUncertaintyIsPreserved
+    contract_scope: technical
+    native_signature: testCommitUncertaintyIsPreserved(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - connection = Mock()
+      - connection.commit.side_effect = sqlite3.OperationalError('lost commit confirmation')
+      - "with patch('apps.TaskBoard.support.SqliteResource.sqlite3.connect', return_value=connection):\n    error\
+        \ = self.assertFailure('STORE_UNAVAILABLE', self.app.store.resource.initialize, 'SELECT 1')"
+      - self.assertEqual(error.write_outcome, 'unknown')
+      - connection.commit.assert_called_once()
+      - connection.close.assert_called_once()
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-08
+    code_name: testCreateAuthorization
+    contract_scope: technical
+    native_signature: testCreateAuthorization(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.assertDeniedContexts('SC-TASK-CREATE', self.app.create.createTask, '', '')
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-09
+    code_name: testCompleteAuthorization
+    contract_scope: technical
+    native_signature: testCompleteAuthorization(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.assertDeniedContexts('SC-TASK-COMPLETE', self.app.complete.completeTask, '')
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-10
+    code_name: testListAuthorization
+    contract_scope: technical
+    native_signature: testListAuthorization(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.assertDeniedContexts('SC-TASK-LIST', self.app.list.listTasks)
+      - self.assertFailure('DENIED', self.app.list.listTasks, replace(self.context, board_id='board-B'))
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-11
+    code_name: testCreateSurvivesRestart
+    contract_scope: technical
+    native_signature: testCreateSurvivesRestart(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-TASK-CREATE-SUCCESS', check_id='CHK-RNF-TASK-CREATE-RETENTION'):\n  \
+        \  task = self.app.create.createTask(self.context, 'TASK001', 'Review Atlas')\n    self.assertEqual((task.task_id,\
+        \ task.title, task.status, task.revision), ('TASK001', 'Review Atlas', 'open', 0))\n    restarted = AppComposition(self.db)\n\
+        \    self.assertEqual(restarted.list.listTasks(self.context), [task])"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-12
+    code_name: testCreateInvalid
+    contract_scope: technical
+    native_signature: testCreateInvalid(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-TASK-CREATE-INVALID'):\n    with patch.object(self.app.store, 'createTask')\
+        \ as store:\n        for identity, title in [('TASK001', ''), ('  ', 'Title')]:\n            with self.assertRaises(ValueError):\n\
+        \                self.app.create.createTask(self.context, identity, title)\n        store.assert_not_called()"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-13
+    code_name: testCreateDuplicate
+    contract_scope: technical
+    native_signature: testCreateDuplicate(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-TASK-CREATE-DUPLICATE', check_id='CHK-OP-TASK-CREATE'):\n    first =\
+        \ self.app.create.createTask(self.context, 'TASK001', 'First')\n    self.assertFailure('DUPLICATE_ID', self.app.create.createTask,\
+        \ self.context, 'TASK001', 'Second')\n    self.assertEqual(self.app.store.loadTask('TASK001'), first)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-14
+    code_name: testCreateUnknown
+    contract_scope: technical
+    native_signature: testCreateUnknown(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-TASK-CREATE-UNKNOWN'):\n    original = self.app.store.createTask\n\n\
+        \    def loseConfirmation(task):\n        original(task)\n        raise OperationFailure('STORE_UNAVAILABLE',\
+        \ 'unknown')\n    with patch.object(self.app.store, 'createTask', side_effect=loseConfirmation) as store:\n\
+        \        error = self.assertFailure('STORE_UNAVAILABLE', self.app.create.createTask, self.context, 'TASK001',\
+        \ 'Review Atlas')\n        self.assertEqual(error.write_outcome, 'unknown')\n        store.assert_called_once()\n\
+        \    self.assertEqual(len(self.app.store.listTasks()), 1)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-15
+    code_name: testCompleteSuccess
+    contract_scope: technical
+    native_signature: testCompleteSuccess(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-TASK-COMPLETE-SUCCESS', check_id='CHK-OP-TASK-COMPLETE'):\n    self.app.create.createTask(self.context,\
+        \ 'TASK001', 'Review Atlas')\n    task = self.app.complete.completeTask(self.context, 'TASK001')\n    self.assertEqual((task.task_id,\
+        \ task.title, task.status, task.revision), ('TASK001', 'Review Atlas', 'completed', 1))\n    self.assertEqual(self.app.list.listTasks(self.context),\
+        \ [task])"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-16
+    code_name: testCompleteMissing
+    contract_scope: technical
+    native_signature: testCompleteMissing(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-TASK-COMPLETE-MISSING', check_id='CHK-OP-TASK-LOAD'):\n    with patch.object(self.app.store,\
+        \ 'completeTask') as store:\n        self.assertFailure('NOT_FOUND', self.app.complete.completeTask, self.context,\
+        \ 'MISSING')\n        store.assert_not_called()"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-17
+    code_name: testCompleteInvalid
+    contract_scope: technical
+    native_signature: testCompleteInvalid(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-TASK-COMPLETE-INVALID'):\n    with patch.object(self.app.store, 'loadTask')\
+        \ as load, patch.object(self.app.store, 'completeTask') as complete:\n        for identity in ('', '  '):\n\
+        \            with self.assertRaises(ValueError):\n                self.app.complete.completeTask(self.context,\
+        \ identity)\n        load.assert_not_called()\n        complete.assert_not_called()"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-18
+    code_name: testCompleteAlready
+    contract_scope: technical
+    native_signature: testCompleteAlready(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-TASK-COMPLETE-ALREADY'):\n    self.app.create.createTask(self.context,\
+        \ 'TASK001', 'Review Atlas')\n    retained = self.app.complete.completeTask(self.context, 'TASK001')\n \
+        \   with patch.object(self.app.store, 'completeTask') as store:\n        self.assertFailure('ALREADY_COMPLETED',\
+        \ self.app.complete.completeTask, self.context, 'TASK001')\n        store.assert_not_called()\n    self.assertEqual(self.app.store.loadTask('TASK001'),\
+        \ retained)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-19
+    code_name: testCompleteConflict
+    contract_scope: technical
+    native_signature: testCompleteConflict(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-TASK-COMPLETE-CONFLICT'):\n    self.app.create.createTask(self.context,\
+        \ 'TASK001', 'Review Atlas')\n    original = self.app.store.completeTask\n\n    def compete(task, revision):\n\
+        \        with closing(sqlite3.connect(self.db)) as connection, connection:\n            connection.execute(\"\
+        UPDATE tasks SET title='Competing state', revision=1 WHERE task_id='TASK001'\")\n        return original(task,\
+        \ revision)\n    with patch.object(self.app.store, 'completeTask', side_effect=compete):\n        self.assertFailure('VERSION_CONFLICT',\
+        \ self.app.complete.completeTask, self.context, 'TASK001')\n    retained = self.app.store.loadTask('TASK001')\n\
+        \    self.assertEqual((retained.title, retained.status, retained.revision), ('Competing state', 'open',\
+        \ 1))"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-20
+    code_name: testCompleteUnknown
+    contract_scope: technical
+    native_signature: testCompleteUnknown(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-TASK-COMPLETE-UNKNOWN'):\n    self.app.create.createTask(self.context,\
+        \ 'TASK001', 'Review Atlas')\n    original = self.app.store.completeTask\n\n    def loseConfirmation(task,\
+        \ revision):\n        original(task, revision)\n        raise OperationFailure('STORE_UNAVAILABLE', 'unknown')\n\
+        \    with patch.object(self.app.store, 'completeTask', side_effect=loseConfirmation) as store:\n       \
+        \ error = self.assertFailure('STORE_UNAVAILABLE', self.app.complete.completeTask, self.context, 'TASK001')\n\
+        \        self.assertEqual(error.write_outcome, 'unknown')\n        store.assert_called_once()\n    self.assertEqual(self.app.store.loadTask('TASK001').revision,\
+        \ 1)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-21
+    code_name: testListContentsAndIsolation
+    contract_scope: technical
+    native_signature: testListContentsAndIsolation(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-TASK-LIST-CONTENT', check_id='CHK-OP-TASK-LIST'):\n    second = self.app.create.createTask(self.context,\
+        \ 'TASK002', '  Keep exact title  ')\n    self.app.create.createTask(self.context, 'TASK001', 'Review Atlas')\n\
+        \    first = self.app.complete.completeTask(self.context, 'TASK001')\n    other = AppComposition(self.db,\
+        \ board_id='board-B')\n    other.create.createTask(other.resolveActor('demo-editor'), 'SECRET', 'Other board')\n\
+        \    before = Path(self.db).read_bytes()\n    self.assertEqual(self.app.list.listTasks(self.context), [first,\
+        \ second])\n    self.assertEqual(Path(self.db).read_bytes(), before)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-22
+    code_name: testListEmptyVersusUnavailable
+    contract_scope: technical
+    native_signature: testListEmptyVersusUnavailable(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-TASK-LIST-EMPTY'):\n    before = Path(self.db).read_bytes()\n    self.assertEqual(self.app.list.listTasks(self.context),\
+        \ [])\n    self.assertEqual(Path(self.db).read_bytes(), before)\n    with patch.object(self.app.store, 'listTasks',\
+        \ side_effect=OperationFailure('STORE_UNAVAILABLE')):\n        self.assertFailure('STORE_UNAVAILABLE', self.app.list.listTasks,\
+        \ self.context)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-23
+    code_name: testListInvalidHydration
+    contract_scope: technical
+    native_signature: testListInvalidHydration(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-TASK-LIST-INTEGRITY'):\n    self.app.create.createTask(self.context,\
+        \ 'TASK001', 'Valid')\n    with closing(sqlite3.connect(self.db)) as connection, connection:\n        connection.execute(\"\
+        INSERT INTO tasks VALUES ('board-A','TASK002','','open',0)\")\n    before = Path(self.db).read_bytes()\n\
+        \    self.assertFailure('STORE_INVALID_STATE', self.app.list.listTasks, self.context)\n    self.assertEqual(Path(self.db).read_bytes(),\
+        \ before)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-24
+    code_name: testRealConcurrentCompletion
+    contract_scope: technical
+    native_signature: testRealConcurrentCompletion(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(check_id='CHK-RNF-TASK-COMPLETE-ATOMICITY'):\n    task = self.app.create.createTask(self.context,\
+        \ 'TASK001', 'Review Atlas')\n    barrier = threading.Barrier(2)\n\n    def complete(index):\n        barrier.wait(timeout=5)\n\
+        \        try:\n            return self.app.store.completeTask(task.complete(), 0)\n        except OperationFailure\
+        \ as error:\n            return error.code\n    with ThreadPoolExecutor(max_workers=2) as pool:\n      \
+        \  results = list(pool.map(complete, range(2)))\n    self.assertEqual(results.count('VERSION_CONFLICT'),\
+        \ 1)\n    self.assertEqual(self.app.store.loadTask('TASK001').revision, 1)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-25
+    code_name: testConsistentReadDuringWrite
+    contract_scope: technical
+    native_signature: testConsistentReadDuringWrite(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(check_id='CHK-RNF-TASK-LIST-CONSISTENCY'):\n    self.app.create.createTask(self.context,\
+        \ 'TASK001', 'Before')\n    self.app.create.createTask(self.context, 'TASK002', 'Before')\n    with closing(sqlite3.connect(self.db))\
+        \ as connection, connection:\n        connection.execute('PRAGMA journal_mode=WAL')\n    original = Entity_Task\n\
+        \    hydrated = []\n\n    def hydrate(*row):\n        hydrated.append(row[0])\n        if len(hydrated)\
+        \ == 1:\n            with closing(sqlite3.connect(self.db)) as connection, connection:\n               \
+        \ connection.execute(\"UPDATE tasks SET title='After', revision=1\")\n        return original(*row)\n  \
+        \  with patch('apps.TaskBoard.tools.Tool_SqliteTaskStore.Entity_Task', side_effect=hydrate):\n        snapshot\
+        \ = self.app.list.listTasks(self.context)\n    self.assertEqual([task.title for task in snapshot], ['Before',\
+        \ 'Before'])\n    self.assertEqual([task.revision for task in snapshot], [0, 0])\n    self.assertEqual([task.title\
+        \ for task in self.app.list.listTasks(self.context)], ['After', 'After'])"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-008-01
+  target: concurrent.futures
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: contextlib
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: dataclasses
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: json
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: os
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: pathlib
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: sqlite3
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: subprocess
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: sys
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: tempfile
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: threading
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: time
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: unittest
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: unittest.mock
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: apps.TaskBoard.composition.AppComposition
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: apps.TaskBoard.entities.Entity_ActorContext
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: apps.TaskBoard.support.OperationFailure
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: apps.TaskBoard.boundaries.Boundary_Json
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: apps.TaskBoard.entities.Entity_Task
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

@@ -1,0 +1,118 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-007
+source:
+  path: apps/RequestRegister/support/SqliteResource.py
+  app: RequestRegister
+  language: python
+  state: observed
+  sha256: 01ce7e1ae358a714e16eba8e64f7115912943c8c32e6c5e65c4537ccbe5f8192
+  purpose: Per-operation connection ownership. A commit error is conservatively unknown; no retry.
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-007-01
+  code_name: SqliteResource
+  kind: class
+  role: support
+  model_refs: []
+  description: Per-operation connection ownership. A commit error is conservatively unknown; no retry.
+  attributes:
+  - name: db_path
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  operations:
+  - id: OP-SOURCE-007-01-01
+    code_name: __init__
+    contract_scope: technical
+    native_signature: '__init__(self, db_path: str)'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: db_path
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.db_path = str(Path(db_path).resolve())
+      - Path(self.db_path).parent.mkdir(parents=True, exist_ok=True)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-007-01-02
+    code_name: open
+    contract_scope: technical
+    native_signature: 'open(self, write: bool=False)'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: write
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - connection = None
+      - commit_started = False
+      - "try:\n    connection = sqlite3.connect(self.db_path, timeout=5, isolation_level=None)\n    connection.execute('BEGIN\
+        \ IMMEDIATE' if write else 'BEGIN')\n    yield connection\n    commit_started = True\n    connection.commit()\n\
+        except (sqlite3.Error, OSError, OverflowError) as error:\n    outcome = 'unknown' if write and commit_started\
+        \ else 'not_applied'\n    if connection is not None:\n        try:\n            connection.rollback()\n\
+        \        except sqlite3.Error:\n            if write:\n                outcome = 'unknown'\n    raise OperationFailure('STORE_UNAVAILABLE',\
+        \ outcome) from error\nexcept BaseException:\n    if connection is not None:\n        connection.rollback()\n\
+        \    raise\nfinally:\n    if connection is not None:\n        connection.close()"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-007-01-03
+    code_name: initialize
+    contract_scope: technical
+    native_signature: 'initialize(self, statement: str)'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: statement
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.open(write=True) as connection:\n    connection.execute(statement)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-007-01
+  target: contextlib
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-007-01
+  target: pathlib
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-007-01
+  target: sqlite3
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-007-01
+  target: apps.RequestRegister.support.OperationFailure
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

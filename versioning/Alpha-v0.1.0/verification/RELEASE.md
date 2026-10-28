@@ -1,58 +1,25 @@
-# Delivery verification report — Vulcan Ecosystem Alpha-v0.1.0
+# Verification receipt — Alpha-v0.1.0
 
-[Português](RELEASE.pt-br.md) · [Manual](../README.md) · [Requirements](REQUIREMENTS.md) · [Contract review](CONTRACT-REVIEW.md) · [Migration](MIGRATION.md)
+[Português](RELEASE.pt-br.md) · [JSON](current.json) · [Summary / resumo](runs/20261028-windows-final/summary.json)
 
-**The checks listed below passed in the recorded environment.** This Alpha is supplied for review of the model, formats and examples. It distinguishes document validation, structural assessment, AI-assisted semantic review and observed execution. It does not assert project-owner approval or blanket OAL certification.
+Same unpublished Alpha revised in place. The current run passed on Windows with Python 3.12.14. No remote publication, hosted CI execution or stakeholder approval is asserted.
 
-## Observed results
-
-| Check | Result and scope |
+| Scope / escopo | Result / resultado |
 | --- | --- |
-| Realization and assessor | 26 tests passed: 19 application/lifecycle checks and 7 assessor checks; zero failures, errors or skips. |
-| Python structure | 14 profile TaskBoard source files assessed with no diagnostic; LegacyReports remains outside the internal architecture profile. |
-| Integrated Minerva | 16 documents; 3 cases; 3 behavioral tests; 11 criteria; 28 scenarios; 4 graphs; 15 source bindings checked. |
-| Channels and lifecycle | Direct calls, HTTP/CLI, public legacy integration, full/selected startup, readiness identity, partial failure and owned-child cleanup exercised. |
-| Distribution tooling | 33 tests passed for inventories, exact content and package checking. |
-| Edition isolation | Passed: only the edition directory was copied; commands were invoked from outside it with an external Python environment. |
-| Atlas input | Dedicated input validated by the official Atlas Stable-v1.0.0 translator pinned by commit. |
-| Artwork and visual integrity | Eight renders and eight SVGs per project; icons preserved byte-for-byte; all images visually reviewed and metadata/hashes checked. |
+| [minimal](runs/20261028-windows-final/minimal/execution.json) | 10 methods; 12 scenarios; 2 supporting checks; all passed |
+| [composition](runs/20261028-windows-final/composition/execution.json) | 19 methods; 33 scenarios; 3 supporting checks; all passed |
+| [task-board](runs/20261028-windows-final/task-board/execution.json) | 21 methods; 31 scenarios; 7 supporting checks; all passed |
+| [L3 tooling / ferramentas](runs/20261028-windows-final/tooling.json) | 13 methods, 1 skipped (directory symlink privilege unavailable) |
+| [Legacy technical fixture / fixture legada](runs/20261028-windows-final/legacy-fixture.json) | 19 methods, 1 skipped (POSIX SIGTERM assertion) |
+| [Repository tools / ferramentas da raiz](runs/20261028-windows-final/repository-tests.json) | 33 tests passed |
+| [Source preservation / preservação das fontes](runs/20261028-windows-final/source-preservation.json) | 3 exact canonical Atlas inputs; inherited Minerva ADPM/scenarios unchanged; observed source hashes match current bytes. |
 
-Counts refer to test methods, not every subcase or assertion. The 33 distribution checks are each repository maintenance suite; they are not additional domain cases.
+The edition executed 82 unittest methods: 80 passed and 2 skipped. Scenario/check coverage is a separate count: all 76 scenarios and 12 supports passed. Each of the three examples also passed structural assessment and the explicitly selected external Minerva validator with zero diagnostics. Tool source hashes/version are preserved in its report.
 
-## Environment and reproduction
+[minimal Minerva](runs/20261028-windows-final/minimal/minerva.json) · [composition Minerva](runs/20261028-windows-final/composition/minerva.json) · [task-board Minerva](runs/20261028-windows-final/task-board/minerva.json)
 
-- Python: **3.12.14** (CPython).
-- Platform: `Linux-6.18.55-x86_64-with-glibc2.39`.
-- PyYAML: `6.0.3`; jsonschema: `4.25.1`; pytest: `8.4.2`.
-- Commands, timestamps, raw outputs and Python source hashes: [observed/checks.json](observed/checks.json).
-- Isolation: [observed/isolation.json](observed/isolation.json).
-- Final document check: [observed/final-document-check.json](observed/final-document-check.json).
-- Atlas input validator: [observed/atlas-validation.json](observed/atlas-validation.json).
-- Artwork: [observed/artwork.json](observed/artwork.json).
-- Links and frozen source snapshots: [observed/repository-check.json](observed/repository-check.json).
+The local Minerva inputs were read from the unpublished working tree based on commit `5e4da7d`; hashes identify the selected content, not the old commit bytes. The preservation check confirmed equality with that working tree at the recorded time. The original input snapshots and final binding revisions remain separate.
 
-The edition declares Python 3.11+, but this delivery was observed in the environment above. The configured GitHub Actions Linux/Windows and Python 3.11/3.12 matrix is not reported as already executed.
+Limits: local SQLite and demo identity; fault doubles do not establish physical disaster durability. Timing records cover 30 CLI requests per relevant source procedure, not a production SLA. Booking cancellation reuses the source creation-time check; cancellation latency remains an open source question. No browser UI, C/Go, Docker, distributed deployment or hosted CI was executed. The two skipped checks are not considered verified. Artwork was unchanged in this revision. Historical reports are retained under `reviews/` and earlier runs, without being reused as current evidence.
 
-## Contract preservation
-
-The [review matrix](contract-review.json) links the dedicated Atlas input’s three cases and eleven criteria to ADPM, ADVS and the realization. It records application-generated identity, trimmed title, idempotent completion, insertion ordering, authorization and failure semantics. The source was reconstructed for this demonstration; it is not the different example published by Atlas.
-
-Cross-review corrected qualified Python references accepted under the wrong class, silently excluded app scope, two scenario/test mismatches and the missing list-failure observation. The validator also received a regression for source-record-local graphs. Final document checking added the omitted internal title attribute and recorded the optional completion argument correctly; these last edits did not change the business contract or app code.
-
-## Evidence limits
-
-Automation does not prove every scenario sufficient, arbitrary algorithm equivalence or production identity trust. Simulated connection failures do not establish ambiguous-commit recovery guarantees. HTTP and HTML responses were checked without browser interaction end to end. C/Go adaptations are descriptive; these languages, Docker, load, distributed recovery and remote deployment were not executed.
-
-In Minerva, the model and mirror are documents; the validator never imports or executes the described program. In Vulcan, execution is a separate explicit command, and L2 validation uses the selected vendored Minerva copy. File placement does not erase the L4 responsibility of interaction channels.
-
-## Distribution integrity
-
-The single repository-root `CONTENT-SHA256.json` is generated after final documents and evidence. It records the path, byte size and SHA-256 of every distributed file except the inventory itself. The builder archives only the checked commit and refuses dirty tracked content, stale inventory or temporary artifacts.
-
-The actual ZIP and its extracted tree are audited after packaging. The final commit and ZIP digest belong in the external delivery receipt, avoiding a circular self-reference. Audit the extracted copy before installing dependencies or generating new files:
-
-```bash
-python scripts/check_archive.py .
-```
-
-This local delivery does not imply remote repository creation, push, tag or GitHub release. The files are organized for review and subsequent publication from the checked content.
+Root inventory is generated after this receipt and checked separately; the final commit ID belongs in an external receipt to avoid circular hashes.

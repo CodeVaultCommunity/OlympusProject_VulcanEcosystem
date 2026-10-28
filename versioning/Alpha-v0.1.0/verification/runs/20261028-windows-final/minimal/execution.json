@@ -1,0 +1,318 @@
+{
+  "edition": "Alpha-v0.1.0",
+  "executed_at_utc": "2026-10-28T13:18:47.596453+00:00",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "command": [
+    "C:\\Users\\Douglas\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\scripts\\record_tests.py",
+    "--root",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\examples\\minimal",
+    "--tests",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\examples\\minimal\\apps\\RequestRegister\\tests",
+    "--report",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\verification\\runs\\20261028-windows-final\\minimal\\execution.json",
+    "--expectations",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\examples\\minimal\\docs\\L3_Vulcan\\test-bindings.json"
+  ],
+  "status": "passed",
+  "tests_run": 10,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "duration_seconds": 5.969,
+  "records": [
+    {
+      "test": "Test_Contracts.Test_Contracts.testChannelCannotForgeTrustedContext",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testCommitUncertaintyIsPreserved",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testRealStoreFailureIsNotApplied",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitAuthorization (scenario_id='SC-REQUEST-SUBMIT-AUTH-ABSENT')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-REQUEST-SUBMIT-AUTH-ABSENT"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitAuthorization (scenario_id='SC-REQUEST-SUBMIT-AUTH-UNRESOLVED')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-REQUEST-SUBMIT-AUTH-UNRESOLVED"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitAuthorization (scenario_id='SC-REQUEST-SUBMIT-AUTH-UNKNOWN')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-REQUEST-SUBMIT-AUTH-UNKNOWN"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitAuthorization (scenario_id='SC-REQUEST-SUBMIT-AUTH-INSUFFICIENT')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-REQUEST-SUBMIT-AUTH-INSUFFICIENT"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitAuthorization (scenario_id='SC-REQUEST-SUBMIT-AUTH-EXPIRED')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-REQUEST-SUBMIT-AUTH-EXPIRED"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitAuthorization (scenario_id='SC-REQUEST-SUBMIT-AUTH-ANONYMOUS')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-REQUEST-SUBMIT-AUTH-ANONYMOUS"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitAuthorization",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitCodeBeforeQuantity (scenario_id='SC-REQUEST-06')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-REQUEST-06"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitCodeBeforeQuantity",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitDuplicate (scenario_id='SC-REQUEST-04')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-REQUEST-04"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitDuplicate",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitQuality (scenario_id='SC-REQUEST-SUBMIT-QUALITY', check_id='CHK-RNF-REQUEST-01')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-REQUEST-SUBMIT-QUALITY",
+        "check_id": "CHK-RNF-REQUEST-01"
+      },
+      "detail": null,
+      "observations": {
+        "boundary": "CLI subprocess start through captured complete JSON stdout",
+        "samples": 30,
+        "elapsed_seconds": [
+          0.15600000001722947,
+          0.14100000000325963,
+          0.15599999998812564,
+          0.23399999999674037,
+          0.25,
+          0.20300000000861473,
+          0.29699999999138527,
+          0.20300000000861473,
+          0.15700000000651926,
+          0.139999999984866,
+          0.14100000000325963,
+          0.14100000000325963,
+          0.15599999998812564,
+          0.14000000001396984,
+          0.14100000000325963,
+          0.14100000000325963,
+          0.15599999998812564,
+          0.14100000000325963,
+          0.14000000001396984,
+          0.1409999999741558,
+          0.1720000000204891,
+          0.17199999999138527,
+          0.20300000000861473,
+          0.34299999999348074,
+          0.3129999999946449,
+          0.1870000000053551,
+          0.29699999999138527,
+          0.21900000001187436,
+          0.15599999998812564,
+          0.15700000000651926
+        ],
+        "production_sla": false
+      }
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitQuality",
+      "status": "passed",
+      "observations": {
+        "boundary": "CLI subprocess start through captured complete JSON stdout",
+        "samples": 30,
+        "elapsed_seconds": [
+          0.15600000001722947,
+          0.14100000000325963,
+          0.15599999998812564,
+          0.23399999999674037,
+          0.25,
+          0.20300000000861473,
+          0.29699999999138527,
+          0.20300000000861473,
+          0.15700000000651926,
+          0.139999999984866,
+          0.14100000000325963,
+          0.14100000000325963,
+          0.15599999998812564,
+          0.14000000001396984,
+          0.14100000000325963,
+          0.14100000000325963,
+          0.15599999998812564,
+          0.14100000000325963,
+          0.14000000001396984,
+          0.1409999999741558,
+          0.1720000000204891,
+          0.17199999999138527,
+          0.20300000000861473,
+          0.34299999999348074,
+          0.3129999999946449,
+          0.1870000000053551,
+          0.29699999999138527,
+          0.21900000001187436,
+          0.15599999998812564,
+          0.15700000000651926
+        ],
+        "production_sla": false
+      }
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitQuantityRefusal (scenario_id='SC-REQUEST-02')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-REQUEST-02"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitQuantityRefusal",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitSuccess (scenario_id='SC-REQUEST-01', check_id='CHK-OP-REQUEST-STORE')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-REQUEST-01",
+        "check_id": "CHK-OP-REQUEST-STORE"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitSuccess",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitUnknown (scenario_id='SC-REQUEST-05')",
+      "status": "passed",
+      "parameters": {
+        "scenario_id": "SC-REQUEST-05"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Contracts.Test_Contracts.testSubmitUnknown",
+      "status": "passed",
+      "observations": {}
+    }
+  ],
+  "coverage": {
+    "SC-REQUEST-SUBMIT-AUTH-ABSENT": "passed",
+    "SC-REQUEST-SUBMIT-AUTH-UNRESOLVED": "passed",
+    "SC-REQUEST-SUBMIT-AUTH-UNKNOWN": "passed",
+    "SC-REQUEST-SUBMIT-AUTH-INSUFFICIENT": "passed",
+    "SC-REQUEST-SUBMIT-AUTH-EXPIRED": "passed",
+    "SC-REQUEST-SUBMIT-AUTH-ANONYMOUS": "passed",
+    "SC-REQUEST-01": "passed",
+    "SC-REQUEST-02": "passed",
+    "SC-REQUEST-04": "passed",
+    "SC-REQUEST-05": "passed",
+    "SC-REQUEST-06": "passed",
+    "SC-REQUEST-SUBMIT-QUALITY": "passed",
+    "CHK-RNF-REQUEST-01": "passed",
+    "CHK-OP-REQUEST-STORE": "passed"
+  },
+  "sources": {
+    "apps/RequestRegister/boundaries/Boundary_Http.py": "210e1771c13311b54db843da00167f9c6f292c8112bcf957f25f16d6cc428c61",
+    "apps/RequestRegister/boundaries/Boundary_Json.py": "db561d96398cf9d2f66470a9ce72679e4c95a706a1ab57703ebfa6dc6de6da51",
+    "apps/RequestRegister/composition/AppComposition.py": "f14af244ce7622232e1cf81ddada72bf99d9b4a30c447463bc6aa25f2684691b",
+    "apps/RequestRegister/entities/Entity_ActorContext.py": "ed5b2b30c36f34ea140104e46d6001bc8df56551cc5df0a36608c98c0fcde35a",
+    "apps/RequestRegister/entities/Entity_Request.py": "c3a8df159a583a974bb308a551360e5dc80a2f2cb85a6c42a4134203fb40556d",
+    "apps/RequestRegister/support/OperationFailure.py": "6d4cb8901c2230d246f43ee47c302055f801b48c84ca10503aa80291fd04a213",
+    "apps/RequestRegister/support/SqliteResource.py": "01ce7e1ae358a714e16eba8e64f7115912943c8c32e6c5e65c4537ccbe5f8192",
+    "apps/RequestRegister/tests/Test_Contracts.py": "e2af4950fa324ead5e631a98c7501fa25ce8ff179234919e3335590f98a76908",
+    "apps/RequestRegister/tools/Tool_SqliteRequestStore.py": "7697d3d113d987f5db8449d660e121367fcb14c1c48e5e0ae04760e5ee84fd75",
+    "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.py": "2b38ab80fae19ae7707741deecdb10b5495c72bb9b2deee5f9a33cfcaa20e83f",
+    "docs/L1_AtlasSpecifications/example.atlas.json": "731ef7e7f9e0dcda1b9dea1cae45a51a43bd16083948dae121d18fdd77bc746e",
+    "docs/L2_MinervaBlueprints/apps/RequestRegister/boundaries/Boundary_Http.py.yaml": "6bc1aa3af5029fc92c2b27931e03785025d5724919b5951a66417c9932860cd8",
+    "docs/L2_MinervaBlueprints/apps/RequestRegister/boundaries/Boundary_Json.py.yaml": "5c3fdb15034ee321f0125ad52fbd73a2aabeaeff9827afd0eb9c3625bc076ba2",
+    "docs/L2_MinervaBlueprints/apps/RequestRegister/composition/AppComposition.py.yaml": "b702db258b2f0c4fbb1a3995b027fc3e14c5b5e4e64a94006ec385feb2080afb",
+    "docs/L2_MinervaBlueprints/apps/RequestRegister/entities/Entity_ActorContext.py.yaml": "736746399aa3f571bd961df22e6d20cd73b407672ab48592017627f9512df6a2",
+    "docs/L2_MinervaBlueprints/apps/RequestRegister/entities/Entity_Request.py.yaml": "3272dc133a1a6453e7bee89a339f3d1e869f745d5ba71f35394563bbf6b48634",
+    "docs/L2_MinervaBlueprints/apps/RequestRegister/support/OperationFailure.py.yaml": "21e1a37e8a87f3498ab73a79e29d6f5354cd1877f6171ec2045e2b3c1e013cc4",
+    "docs/L2_MinervaBlueprints/apps/RequestRegister/support/SqliteResource.py.yaml": "874eeec212806211e165fb553e0e1c9dc872146155a1fe42ac99501372a80469",
+    "docs/L2_MinervaBlueprints/apps/RequestRegister/tests/Test_Contracts.py.yaml": "be47f60cb95d9f6e2fb6fcdc8dd37d4c854eead385c82f8a68b2117c99750501",
+    "docs/L2_MinervaBlueprints/apps/RequestRegister/tools/Tool_SqliteRequestStore.py.yaml": "8aead171e9303bf913c87519102d5ef5a9f1251c4f2c1096ff16ebb61f2b6181",
+    "docs/L2_MinervaBlueprints/apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.py.yaml": "9cd3baff92915c2476d10e6c2d7e1455e1ce406a4f2986b6a46585943c90753b",
+    "docs/L2_MinervaBlueprints/blueprint.yaml": "8d71b0be80129042f4862e26229b7a1b0ba465482d59b6956a8031f46840d258",
+    "docs/L2_MinervaBlueprints/launch.py.yaml": "1f98d6fca9bd65c7ef206178ef1e58e448107d14255ec5effdbbe31c2e4aaf1e",
+    "docs/L3_Vulcan/realization.json": "591768739a22b6d67a81d79d83148068cb546a7d91e63f65f369a88666796085",
+    "docs/L3_Vulcan/test-bindings.json": "ac7249ffd038ec9883a8e02360353d67aa18540c73ac51e8b0280242db01d6b6",
+    "launch.py": "9c2d080eb8e35a539c47493f2810b3d246a28d385232b72871bc2f6efec1e0b5"
+  },
+  "sources_changed_during_run": false,
+  "binding_baseline_matches": true,
+  "model_baseline": {
+    "document_id": "MINERVA-REQUEST-REGISTER",
+    "revision": "2",
+    "sha256": "4d17ef6a82b0761836828e0d92f0428910090de46be6101ad0dec971071bc3f4",
+    "binding_revision": "2-vulcan-1",
+    "binding_sha256": "8d71b0be80129042f4862e26229b7a1b0ba465482d59b6956a8031f46840d258",
+    "atlas_sha256": "731ef7e7f9e0dcda1b9dea1cae45a51a43bd16083948dae121d18fdd77bc746e"
+  },
+  "limits": [
+    "Observations on the recorded host and selected Python/SQLite realization only.",
+    "Fault doubles verify handling of uncertainty, not physical disk-failure tolerance.",
+    "Skipped checks remain unverified. Passing scenarios do not imply stakeholder approval.",
+    "No production identity provider, distributed deployment, browser interaction or production SLA assessed."
+  ]
+}

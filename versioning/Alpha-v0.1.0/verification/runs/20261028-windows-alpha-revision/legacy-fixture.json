@@ -1,0 +1,476 @@
+{
+  "edition": "Alpha-v0.1.0",
+  "executed_at_utc": "2026-10-28T13:15:19.677917+00:00",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "command": [
+    "C:\\Users\\Douglas\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\scripts\\record_tests.py",
+    "--root",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\tests\\fixtures\\legacy-ecosystem",
+    "--tests",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\tests\\fixtures\\legacy-ecosystem\\apps\\TaskBoard\\tests",
+    "--report",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\verification\\runs\\20261028-windows-alpha-revision\\legacy-fixture.json"
+  ],
+  "status": "passed",
+  "tests_run": 19,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 1,
+  "duration_seconds": 22.782,
+  "records": [
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testBrowserPageAndHttpFailureProjection (data={'title': ''})",
+      "status": "passed",
+      "parameters": {
+        "data": {
+          "title": ""
+        }
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testBrowserPageAndHttpFailureProjection (data={'title': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'})",
+      "status": "passed",
+      "parameters": {
+        "data": {
+          "title": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        }
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testBrowserPageAndHttpFailureProjection (data={'title': 'ok', 'role': 'admin'})",
+      "status": "passed",
+      "parameters": {
+        "data": {
+          "title": "ok",
+          "role": "admin"
+        }
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testBrowserPageAndHttpFailureProjection",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testChannelRejectsUntrustedOrInsufficientContext (token='unknown')",
+      "status": "passed",
+      "parameters": {
+        "token": "unknown"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testChannelRejectsUntrustedOrInsufficientContext (token='unknown-ç')",
+      "status": "passed",
+      "parameters": {
+        "token": "unknown-ç"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testChannelRejectsUntrustedOrInsufficientContext (token='demo-reader')",
+      "status": "passed",
+      "parameters": {
+        "token": "demo-reader"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testChannelRejectsUntrustedOrInsufficientContext (token='')",
+      "status": "passed",
+      "parameters": {
+        "token": ""
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testChannelRejectsUntrustedOrInsufficientContext",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testCliExitCodesAndArbitraryWorkingDirectory",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testHttpCliAndLegacySharePublicContracts",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testLegacyReportsUsesDocumentedUpstreamFailure",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testMalformedBodiesAndStorageProjection (body_size=8)",
+      "status": "passed",
+      "parameters": {
+        "body_size": 8
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testMalformedBodiesAndStorageProjection (body_size=2)",
+      "status": "passed",
+      "parameters": {
+        "body_size": 2
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testMalformedBodiesAndStorageProjection (body_size=8193)",
+      "status": "passed",
+      "parameters": {
+        "body_size": 8193
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testMalformedBodiesAndStorageProjection",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testAllAndSelectedApps (selection=['--all'])",
+      "status": "passed",
+      "parameters": {
+        "selection": [
+          "--all"
+        ]
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testAllAndSelectedApps (selection=['--apps', 'TaskBoard'])",
+      "status": "passed",
+      "parameters": {
+        "selection": [
+          "--apps",
+          "TaskBoard"
+        ]
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testAllAndSelectedApps (selection=['--apps', 'LegacyReports'])",
+      "status": "passed",
+      "parameters": {
+        "selection": [
+          "--apps",
+          "LegacyReports"
+        ]
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testAllAndSelectedApps",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testCleanupEscalatesOnlyOwnedProcess",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testDependencyCyclesAndSelectionDiagnostics",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testOccupiedPortDoesNotStopForeignService",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testPartialStartupCleansEarlierChild",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testReadinessRejectsForeignInstance",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testSignalStopsOwnedChildren",
+      "status": "skipped",
+      "reason": "SIGTERM lifecycle assertion requires POSIX"
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testAuthorizationPrecedesDependencyAccess",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCanonicalValuesAndContext (invalid='')",
+      "status": "passed",
+      "parameters": {
+        "invalid": ""
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCanonicalValuesAndContext (invalid='   ')",
+      "status": "passed",
+      "parameters": {
+        "invalid": "   "
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCanonicalValuesAndContext (invalid=None)",
+      "status": "passed",
+      "parameters": {
+        "invalid": null
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCanonicalValuesAndContext (invalid='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')",
+      "status": "passed",
+      "parameters": {
+        "invalid": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCanonicalValuesAndContext",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCompleteTask (context=None)",
+      "status": "passed",
+      "parameters": {
+        "context": null
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCompleteTask (context=Entity_ActorContext(actor_id='unresolved', permissions=('tasks:create', 'tasks:read', 'tasks:complete'), resolution='unresolved', known_actor=True))",
+      "status": "passed",
+      "parameters": {
+        "context": "Entity_ActorContext(actor_id='unresolved', permissions=('tasks:create', 'tasks:read', 'tasks:complete'), resolution='unresolved', known_actor=True)"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCompleteTask (context=Entity_ActorContext(actor_id='unknown', permissions=('tasks:create', 'tasks:read', 'tasks:complete'), resolution='resolved', known_actor=False))",
+      "status": "passed",
+      "parameters": {
+        "context": "Entity_ActorContext(actor_id='unknown', permissions=('tasks:create', 'tasks:read', 'tasks:complete'), resolution='resolved', known_actor=False)"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCompleteTask (context=Entity_ActorContext(actor_id='limited', permissions=(), resolution='resolved', known_actor=True))",
+      "status": "passed",
+      "parameters": {
+        "context": "Entity_ActorContext(actor_id='limited', permissions=(), resolution='resolved', known_actor=True)"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCompleteTask (context=Entity_ActorContext(actor_id='demo-reader', permissions=('tasks:read',), resolution='resolved', known_actor=True))",
+      "status": "passed",
+      "parameters": {
+        "context": "Entity_ActorContext(actor_id='demo-reader', permissions=('tasks:read',), resolution='resolved', known_actor=True)"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCompleteTask",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCreateTask (context=None)",
+      "status": "passed",
+      "parameters": {
+        "context": null
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCreateTask (context=Entity_ActorContext(actor_id='unresolved', permissions=('tasks:create', 'tasks:read', 'tasks:complete'), resolution='unresolved', known_actor=True))",
+      "status": "passed",
+      "parameters": {
+        "context": "Entity_ActorContext(actor_id='unresolved', permissions=('tasks:create', 'tasks:read', 'tasks:complete'), resolution='unresolved', known_actor=True)"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCreateTask (context=Entity_ActorContext(actor_id='unknown', permissions=('tasks:create', 'tasks:read', 'tasks:complete'), resolution='resolved', known_actor=False))",
+      "status": "passed",
+      "parameters": {
+        "context": "Entity_ActorContext(actor_id='unknown', permissions=('tasks:create', 'tasks:read', 'tasks:complete'), resolution='resolved', known_actor=False)"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCreateTask (context=Entity_ActorContext(actor_id='limited', permissions=(), resolution='resolved', known_actor=True))",
+      "status": "passed",
+      "parameters": {
+        "context": "Entity_ActorContext(actor_id='limited', permissions=(), resolution='resolved', known_actor=True)"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCreateTask (context=Entity_ActorContext(actor_id='demo-reader', permissions=('tasks:read',), resolution='resolved', known_actor=True))",
+      "status": "passed",
+      "parameters": {
+        "context": "Entity_ActorContext(actor_id='demo-reader', permissions=('tasks:read',), resolution='resolved', known_actor=True)"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCreateTask (title='')",
+      "status": "passed",
+      "parameters": {
+        "title": ""
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCreateTask (title='   ')",
+      "status": "passed",
+      "parameters": {
+        "title": "   "
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCreateTask (title='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')",
+      "status": "passed",
+      "parameters": {
+        "title": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCreateTask (title=None)",
+      "status": "passed",
+      "parameters": {
+        "title": null
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCreateTask",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testListTasks (context=None)",
+      "status": "passed",
+      "parameters": {
+        "context": null
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testListTasks (context=Entity_ActorContext(actor_id='unresolved', permissions=('tasks:create', 'tasks:read', 'tasks:complete'), resolution='unresolved', known_actor=True))",
+      "status": "passed",
+      "parameters": {
+        "context": "Entity_ActorContext(actor_id='unresolved', permissions=('tasks:create', 'tasks:read', 'tasks:complete'), resolution='unresolved', known_actor=True)"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testListTasks (context=Entity_ActorContext(actor_id='unknown', permissions=('tasks:create', 'tasks:read', 'tasks:complete'), resolution='resolved', known_actor=False))",
+      "status": "passed",
+      "parameters": {
+        "context": "Entity_ActorContext(actor_id='unknown', permissions=('tasks:create', 'tasks:read', 'tasks:complete'), resolution='resolved', known_actor=False)"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testListTasks (context=Entity_ActorContext(actor_id='limited', permissions=(), resolution='resolved', known_actor=True))",
+      "status": "passed",
+      "parameters": {
+        "context": "Entity_ActorContext(actor_id='limited', permissions=(), resolution='resolved', known_actor=True)"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testListTasks",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testStorageFailureAndCanonicalConstruction",
+      "status": "passed",
+      "observations": {}
+    }
+  ],
+  "coverage": {},
+  "sources": {
+    "apps/LegacyReports/reports.py": "8bec86f867da59162795a8bc99546e19004c3e6e41f2023d1e4b3742043cb7d5",
+    "apps/TaskBoard/boundaries/Boundary_Cli.py": "43fba3137ace8483b63e59fc386b7a552b875939e73fddd4143fbf5f19224978",
+    "apps/TaskBoard/boundaries/Boundary_Http.py": "ae6b16698fb32ded4fd3502a0a5f4fc9953df4408395ceffff2cf78d5dcfd6e6",
+    "apps/TaskBoard/composition/AppComposition.py": "578a84a9a30e9c4ef42d03b0fa89ceefdd13903cfa2be3ee3a1391b89064553d",
+    "apps/TaskBoard/entities/Entity_ActorContext.py": "baa11c6c0ea257b67618f5071c2b226780e9ec95c9e262186fe5810e9271b875",
+    "apps/TaskBoard/entities/Entity_Task.py": "9528d654501ca196e4fbc5d2e3b65c0355f06e6f82491f13f2c2f9de6a46320d",
+    "apps/TaskBoard/main.py": "8a4951d11c868178a241d44f5ae5fad014c2402ddc96e8f5663d890a9e62329f",
+    "apps/TaskBoard/tests/Test_Boundaries.py": "aa4e3e1dfa5ceafc92a4a07faf20a506cbf920969d63344f78db9ab5abb8322a",
+    "apps/TaskBoard/tests/Test_Launcher.py": "cb92ff8a022a0f22eb17f68a9461dc00b5c91d34c283dd305bafb64c0f927fc6",
+    "apps/TaskBoard/tests/Test_TaskCases.py": "9650121915ced060fe75c68f6bffc57c521ed8948facee04c272c77d9fa81690",
+    "apps/TaskBoard/tools/Tool_SqliteTaskStore.py": "df7471b9ebc6c237f64b433c34a5ca31174420f172980dcd94f41ccb86df364b",
+    "apps/TaskBoard/usecases/TaskManagement/UseCase_CompleteTask.py": "6072fb42ad91bb39d4006e3b4e1d34c481914b30ffe98ebc8ed830f658b7fe32",
+    "apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py": "667b975906356660986e7958ce62b1c9f689d81217a6c9bf4b5d5a3cb525ba82",
+    "apps/TaskBoard/usecases/TaskManagement/UseCase_ListTasks.py": "6f42790f3c72f0661c7a90fe6800074ce381916abe9e0414ca6542855451fd57",
+    "apps/TaskBoard/value_objects/ValueObject_TaskTitle.py": "b31261c7ed64413e725b045fffe5527751f8de209233bb954a316c2d9c7aa44c",
+    "launch.py": "1678a8bb81da8582fe5d56cf5c9b4af22b44a8f7100944bd08a4ca3c6997a231"
+  },
+  "sources_changed_during_run": false,
+  "model_baseline": null,
+  "limits": [
+    "Observations on the recorded host and selected Python/SQLite realization only.",
+    "Fault doubles verify handling of uncertainty, not physical disk-failure tolerance.",
+    "Skipped checks remain unverified. Passing scenarios do not imply stakeholder approval.",
+    "No production identity provider, distributed deployment, browser interaction or production SLA assessed."
+  ]
+}

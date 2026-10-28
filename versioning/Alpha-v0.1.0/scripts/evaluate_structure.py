@@ -52,7 +52,7 @@ def assess(ecosystem, profile_apps, legacy_apps=(), entry="launch.py", technical
         elif not (root / "apps" / app_id).is_dir():
             add("ECO_CLASSIFICATION", "apps/" + app_id, "Declared app directory does not exist.")
 
-    technical = {str(Path(value)) for value in technical_files}
+    technical = {Path(value).as_posix() for value in technical_files}
     for app_id in profile_apps:
         app_root = root / "apps" / app_id
         if not app_root.is_dir():
@@ -121,7 +121,7 @@ def assess(ecosystem, profile_apps, legacy_apps=(), entry="launch.py", technical
                     if not ATTRIBUTE.fullmatch(node.attr):
                         add("VA_ATTRIBUTE_CASE", relative, f"Attribute {node.attr} must use snake_case.", node.lineno)
 
-    module_to_file = {str(Path(path).with_suffix("")).replace("/", "."): path for path in sources}
+    module_to_file = {Path(path).with_suffix("").as_posix().replace("/", "."): path for path in sources}
     for relative, information in sources.items():
         area, app_id = information["area"], information["app"]
         for node in ast.walk(information["tree"]):

@@ -266,10 +266,11 @@
       ],
       "artifacts": [
         "versioning/Alpha-v0.1.0/README.md",
-        "versioning/Alpha-v0.1.0/model.json"
+        "versioning/Alpha-v0.1.0/specification/OAL-ALIGNMENT.md"
       ],
-      "scope_and_limits_pt_br": "O modelo identifica L3/ADI, perfil interno opcional, fontes L2 e escolhas L4.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Responsabilidades L3, L2 e L4 explícitas.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "L3, L2 and L4 responsibilities are explicit."
     },
     {
       "id": "VUL-002",
@@ -282,11 +283,12 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/launch.py",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/README.md"
+        "versioning/Alpha-v0.1.0/examples/task-board/launch.py",
+        "versioning/Alpha-v0.1.0/examples/README.md"
       ],
-      "scope_and_limits_pt_br": "Ecossistema possui apps/ e inicializador real; docs/ por camadas é recomendado e a execução resolve caminhos a partir do próprio arquivo.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Cada ecossistema canônico tem apps e entrada funcional na raiz.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Each canonical ecosystem has apps and a functioning root entry."
     },
     {
       "id": "VUL-003",
@@ -299,10 +301,12 @@
         "example"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/realization.json"
+        "versioning/Alpha-v0.1.0/examples/task-board/docs/L3_Vulcan/realization.json",
+        "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/README.md"
       ],
-      "scope_and_limits_pt_br": "Inventário distingue TaskBoard no perfil e LegacyReports em outra arquitetura, com modos e limites por app.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Perfil canônico e participação legada têm escopos separados.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Canonical profile and legacy participation are scoped separately."
     },
     {
       "id": "VUL-004",
@@ -315,11 +319,12 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/LegacyReports/reports.py",
+        "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/LegacyReports/reports.py",
         "versioning/Alpha-v0.1.0/guides/legacy-and-boundaries.md"
       ],
-      "scope_and_limits_pt_br": "Legado conserva seus handlers e múltiplas unidades; não recebe alegação automática de conformidade à arquitetura interna.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Não se afirma conformidade do legado procedural ao perfil.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Procedural legacy internals are not claimed as profile-conformant."
     },
     {
       "id": "VUL-005",
@@ -332,11 +337,12 @@
         "structure"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/guides/vulcan-architecture.md",
+        "versioning/Alpha-v0.1.0/profiles/vulcan-architecture/README.md",
         "versioning/Alpha-v0.1.0/scripts/evaluate_structure.py"
       ],
-      "scope_and_limits_pt_br": "As quatro áreas irmãs são identificadas; o avaliador aplica o perfil somente ao escopo declarado.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Quatro áreas do núcleo; value objects podem estar ausentes.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Four core areas; value objects may be absent."
     },
     {
       "id": "VUL-006",
@@ -350,10 +356,11 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py"
+        "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/usecases/Main/UseCase_CreateTask.py"
       ],
-      "scope_and_limits_pt_br": "Casos estão no domínio TaskManagement; autorização existe no caso e independe de ser invocado pelo canal.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Main é domínio concreto explícito; a fonte não seleciona domínios.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Main is an explicit concrete domain folder; source domains are unselected."
     },
     {
       "id": "VUL-007",
@@ -367,10 +374,11 @@
       ],
       "artifacts": [
         "versioning/Alpha-v0.1.0/scripts/evaluate_structure.py",
-        "versioning/Alpha-v0.1.0/examples/structural-counterexamples/README.md"
+        "versioning/Alpha-v0.1.0/tests/fixtures/structural-counterexamples/README.md"
       ],
-      "scope_and_limits_pt_br": "Uma estrutura principal por fonte do perfil, com exceção técnica explícita para o ponto de entrada. Legado fica fora dessa obrigação.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Verificações delimitadas da estrutura Python e fixtures negativas.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Bounded Python structure checks and negative fixtures."
     },
     {
       "id": "VUL-008",
@@ -384,11 +392,12 @@
         "negative-tests"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/guides/vulcan-architecture.md",
+        "versioning/Alpha-v0.1.0/profiles/vulcan-architecture/README.md",
         "versioning/Alpha-v0.1.0/tests/Test_Structure.py"
       ],
-      "scope_and_limits_pt_br": "Prefixos, nome-base, camelCase e snake_case são avaliados nas formas Python suportadas. Overrides obrigatórios são adaptações declaradas.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Nomes e adaptações obrigatórias do framework são declarados.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Naming rules and framework adaptations are declared."
     },
     {
       "id": "VUL-009",
@@ -401,10 +410,11 @@
         "illustration"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/guides/vulcan-architecture.md"
+        "versioning/Alpha-v0.1.0/profiles/vulcan-architecture/README.md"
       ],
-      "scope_and_limits_pt_br": "C e Go têm adaptações documentadas, inclusive declaração/implementação e exportação. Não foram implementados ou executados avaliadores C/Go.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Adaptações C/Go são descritivas, sem compilação/execução.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "C/Go adaptations are descriptive, not compiled or executed."
     },
     {
       "id": "VUL-010",
@@ -417,11 +427,11 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/value_objects/ValueObject_TaskTitle.py",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py"
+        "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/value_objects/ValueObject_TaskIdentity.py"
       ],
-      "scope_and_limits_pt_br": "Value object congelado encapsula título e é consumido por entidade. Casos públicos usam primitivos/entidades; testes verificam imutabilidade e validade.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Valor intrínseco imutável consumido pela entidade; opcional em minimal.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Frozen intrinsic value consumed by entity; optional in minimal."
     },
     {
       "id": "VUL-011",
@@ -434,11 +444,12 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/entities/Entity_Task.py",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py"
+        "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/entities/Entity_Task.py",
+        "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/tests/Test_Contracts.py"
       ],
-      "scope_and_limits_pt_br": "Entidade mantém invariantes canônicas; criação/hidratação usam construção válida e não dependem de canal ou banco.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Construção, hidratação e transições canônicas.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Canonical construction, hydration and state transitions."
     },
     {
       "id": "VUL-012",
@@ -451,11 +462,11 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tools/Tool_SqliteTaskStore.py",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml"
+        "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/tools/Tool_SqliteTaskStore.py"
       ],
-      "scope_and_limits_pt_br": "Ferramenta concreta realiza contrato L2, usa construção canônica e declara garantias/falhas. Concorrência distribuída não está demonstrada.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Gravação condicional e leitura consistente no SQLite local; sem garantia distribuída.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Local SQLite conditional writes and consistent reads; no distributed guarantee."
     },
     {
       "id": "VUL-013",
@@ -467,11 +478,12 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Boundaries.py"
+        "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/usecases/Main/UseCase_CancelBooking.py",
+        "versioning/Alpha-v0.1.0/tests/Test_Runtime.py"
       ],
-      "scope_and_limits_pt_br": "Os mesmos três casos têm chamada direta e projeções HTTP/CLI, sem criação de identidades de domínio artificiais por canal.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Casos invocáveis diretamente e projetados por HTTP/CLI testados.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Cases are directly callable and projected through tested HTTP/CLI."
     },
     {
       "id": "VUL-014",
@@ -484,11 +496,12 @@
         "example"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/guides/vulcan-architecture.md",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml"
+        "versioning/Alpha-v0.1.0/integrations/minerva/README.md",
+        "versioning/Alpha-v0.1.0/profiles/vulcan-architecture/README.md"
       ],
-      "scope_and_limits_pt_br": "Dados operacionais permanecem primitivos, entidades ou coleções; dependências técnicas são injetadas separadamente.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Dados operacionais e injeções/aliases técnicos são distintos.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Operational data and technical injections/aliases are distinguished."
     },
     {
       "id": "VUL-015",
@@ -500,11 +513,12 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Boundaries.py"
+        "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/tests/Test_Contracts.py",
+        "versioning/Alpha-v0.1.0/tests/Test_Runtime.py"
       ],
-      "scope_and_limits_pt_br": "Recusa é exercitada antes de efeitos, incluindo chamadas diretas e canais. Tokens didáticos e confiança no chamador interno têm limites explícitos.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Recusa precede validação/armazenamento; identidade apenas didática.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Denial precedes validation/storage; local demo identity only."
     },
     {
       "id": "VUL-016",
@@ -517,11 +531,11 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/composition/AppComposition.py",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/realization.json"
+        "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/composition/AppComposition.py"
       ],
-      "scope_and_limits_pt_br": "Composição seleciona ferramentas e injeta colaboradores concretos, sem biblioteca arquitetural ou container obrigatório.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Seleção concreta de colaboradores sem biblioteca obrigatória.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Concrete collaborator selection without a mandatory support library."
     },
     {
       "id": "VUL-017",
@@ -535,12 +549,12 @@
         "negative-tests"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/scripts/evaluate_structure.py",
-        "versioning/Alpha-v0.1.0/tests/Test_Structure.py",
-        "versioning/Alpha-v0.1.0/guides/vulcan-architecture.md"
+        "versioning/Alpha-v0.1.0/examples/composition/apps/BookingDesk/usecases/Main/UseCase_CancelBooking.py",
+        "versioning/Alpha-v0.1.0/scripts/evaluate_structure.py"
       ],
-      "scope_and_limits_pt_br": "Ciclos de dependência declarados são recusados. Composição entre casos preserva contexto por regra; o TaskBoard não contém esse tipo de chamada.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Composição de casos com o mesmo contexto e ciclos estáticos delimitados.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Same-context case composition and bounded static cycle checks."
     },
     {
       "id": "VUL-018",
@@ -553,11 +567,12 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/Shared/interaction.md"
+        "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/tests/Test_Contracts.py",
+        "versioning/Alpha-v0.1.0/examples/task-board/docs/Shared/README.md"
       ],
-      "scope_and_limits_pt_br": "Resultados e falhas têm projeções explícitas; falha de conexão é exercitada. Não se promete rollback por cancelamento ou ausência de efeito em falha ambígua.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Resultados confirmados, conflitos e gravações incertas distintos; sem repetição.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Confirmed results, conflicts and unknown writes remain distinct; no retry."
     },
     {
       "id": "VUL-019",
@@ -569,11 +584,12 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tools/Tool_SqliteTaskStore.py",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Launcher.py"
+        "versioning/Alpha-v0.1.0/examples/task-board/apps/TaskBoard/support/SqliteResource.py",
+        "versioning/Alpha-v0.1.0/tests/Test_Runtime.py"
       ],
-      "scope_and_limits_pt_br": "Conexões têm vida por operação; launcher limpa filhos próprios. Os testes cobrem encerramento e falha parcial no escopo do exemplo.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Limpeza de conexões por operação e recursos próprios de execução.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Per-operation connection cleanup and owned runtime resources."
     },
     {
       "id": "VUL-020",
@@ -587,10 +603,11 @@
       ],
       "artifacts": [
         "versioning/Alpha-v0.1.0/guides/legacy-and-boundaries.md",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Boundaries.py"
+        "versioning/Alpha-v0.1.0/examples/task-board/docs/Shared/README.md"
       ],
-      "scope_and_limits_pt_br": "Canais TaskBoard adaptam dados/contexto para casos. Handlers legados são descritos como existem e escolhas de interação são L4.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Escolhas L4 identificadas; políticas do domínio nos casos/entidades.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "L4 choices are identified; domain policies stay in cases/entities."
     },
     {
       "id": "VUL-021",
@@ -603,11 +620,11 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/LegacyReports/reports.py",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Boundaries.py"
+        "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/LegacyReports/reports.py"
       ],
-      "scope_and_limits_pt_br": "LegacyReports usa HTTP público do TaskBoard; não importa seu núcleo nem acessa seu banco.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "HTTP público entre aplicativos demonstrado somente na fixture técnica.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Public cross-app HTTP is demonstrated only in the technical fixture."
     },
     {
       "id": "VUL-022",
@@ -619,11 +636,12 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/launch.py",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Launcher.py"
+        "versioning/Alpha-v0.1.0/examples/task-board/launch.py",
+        "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/launch.py"
       ],
-      "scope_and_limits_pt_br": "Inicialização total e seletiva é real e testada. Todos significa modos padrão, não executar silenciosamente tarefas de manutenção.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Registro explícito e modos padrão todos/selecionados; sem descoberta automática de pastas.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Explicit registry, all/selected default modes; no folder auto-discovery."
     },
     {
       "id": "VUL-023",
@@ -636,11 +654,11 @@
         "example"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/guides/execution.md",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/realization.json"
+        "versioning/Alpha-v0.1.0/guides/execution.md"
       ],
-      "scope_and_limits_pt_br": "Modos identificam entrada, configuração, prontidão/conclusão e encerramento. Docker é possibilidade de adoção, não demonstração executada.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Configuração, prontidão/conclusão, encerramento e diretório de trabalho documentados.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Configuration, readiness/completion, shutdown and working directory documented."
     },
     {
       "id": "VUL-024",
@@ -652,11 +670,12 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/launch.py",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Launcher.py"
+        "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/launch.py",
+        "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/tests/Test_Launcher.py"
       ],
-      "scope_and_limits_pt_br": "Selecionar LegacyReports expande TaskBoard; seleção inválida e ciclos falham antes de declarar prontidão.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Fixture de vários aplicativos inclui pré-requisitos e recusa ciclos.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Multi-app fixture expands prerequisites and rejects cycles."
     },
     {
       "id": "VUL-025",
@@ -668,10 +687,12 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Launcher.py"
+        "versioning/Alpha-v0.1.0/tests/Test_Runtime.py",
+        "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/apps/TaskBoard/tests/Test_Launcher.py"
       ],
-      "scope_and_limits_pt_br": "Prontidão verifica identidade da instância; portas alheias, falha parcial e interrupção têm limpeza limitada aos processos gerenciados.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Prontidão por instância, portas ocupadas e limpeza própria; skips de plataforma visíveis.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Instance readiness, occupied ports and owned-process cleanup; platform skips visible."
     },
     {
       "id": "VUL-026",
@@ -683,12 +704,12 @@
         "execution"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml",
-        "versioning/Alpha-v0.1.0/run_examples.py",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py"
+        "versioning/Alpha-v0.1.0/examples/task-board/docs/L3_Vulcan/test-bindings.json",
+        "versioning/Alpha-v0.1.0/scripts/record_tests.py"
       ],
-      "scope_and_limits_pt_br": "Runner executa testes da realização selecionada. Três identidades comportamentais mantêm seus cenários e apoios.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Sete testes lógicos vinculam 76 cenários e 12 apoios a subtestes nativos.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Seven logical tests map 76 scenarios and 12 supports to native subtests."
     },
     {
       "id": "VUL-027",
@@ -700,11 +721,12 @@
         "evidence"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/verification/execution.json",
-        "versioning/Alpha-v0.1.0/verification/RELEASE.md"
+        "versioning/Alpha-v0.1.0/verification/RELEASE.md",
+        "versioning/Alpha-v0.1.0/scripts/record_tests.py"
       ],
-      "scope_and_limits_pt_br": "Evidência registra o ambiente real, resultados e limites. CI, navegação em browser, C/Go e Docker não são relatados como execuções observadas.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Ambiente real, hashes, resultados e verificações ausentes registrados.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Actual environment, source hashes, outcomes and missing checks are recorded."
     },
     {
       "id": "VUL-028",
@@ -717,11 +739,12 @@
         "illustration"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/change-impact.md",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/realization.json"
+        "versioning/Alpha-v0.1.0/integrations/minerva/README.md",
+        "versioning/Alpha-v0.1.0/verification/source-baselines.json"
       ],
-      "scope_and_limits_pt_br": "Fontes e revisões são selecionadas; mudança ilustrativa lista impactos e preserva pendências, sem atualizar automaticamente a intenção.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Intenção fixada, revisão local de vínculos e procedimento explícito de impacto.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Pinned intent, separate local binding revision and explicit impact procedure."
     },
     {
       "id": "VUL-029",
@@ -734,11 +757,12 @@
         "example"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/README.md",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/realization.json"
+        "versioning/Alpha-v0.1.0/examples/task-board/docs/L3_Vulcan/README.md",
+        "versioning/Alpha-v0.1.0/examples/task-board/docs/L3_Vulcan/realization.json"
       ],
-      "scope_and_limits_pt_br": "L3 explica inventário, composição, operação, integração e evidência, e referencia L2 sem manter uma segunda ficha canônica por fonte.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Documentação da realização L3 distinta das observações de fontes L2.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "L3 realization documentation remains distinct from L2 source observations."
     },
     {
       "id": "VUL-030",
@@ -752,11 +776,11 @@
       ],
       "artifacts": [
         "versioning/Alpha-v0.1.0/scripts/evaluate_structure.py",
-        "versioning/Alpha-v0.1.0/tests/Test_Structure.py",
         "versioning/Alpha-v0.1.0/guides/assessment.md"
       ],
-      "scope_and_limits_pt_br": "Avaliador Python declara formas suportadas e diagnostica escopos não avaliados, inclusive app por symlink externo. Estrutura não certifica comportamento.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Escopo estático e diagnósticos não são certificação semântica.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Static supported scope and diagnostics are not semantic certification."
     },
     {
       "id": "INT-001",
@@ -770,10 +794,11 @@
       ],
       "artifacts": [
         "versioning/Alpha-v0.1.0/verification/source-baselines.json",
-        "versioning/Alpha-v0.1.0/verification/contract-review.json"
+        "versioning/Alpha-v0.1.0/integrations/minerva/README.md"
       ],
-      "scope_and_limits_pt_br": "Versões e escopo são fixados. O validador recusa perfis não suportados e verifica pins L1 no perfil selecionado.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Mapeamento manual fonte/realização; validação não implica aceite nem comportamento fora do escopo.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Manual source/realization mapping; source approval and broader behavior are not inferred from validation."
     },
     {
       "id": "INT-002",
@@ -786,11 +811,12 @@
         "example"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L1_AtlasSpecifications/task-board.atlas.json",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml"
+        "versioning/Alpha-v0.1.0/examples/README.md",
+        "versioning/Alpha-v0.1.0/examples/task-board/docs/L3_Vulcan/test-bindings.json"
       ],
-      "scope_and_limits_pt_br": "IDs dos três casos são preservados; mapeamento direto duplicado, extra ou ausente é diagnosticado.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Mapeamento manual fonte/realização; validação não implica aceite nem comportamento fora do escopo.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Manual source/realization mapping; source approval and broader behavior are not inferred from validation."
     },
     {
       "id": "INT-003",
@@ -802,10 +828,12 @@
         "review"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/verification/contract-review.json"
+        "versioning/Alpha-v0.1.0/verification/CONTRACT-REVIEW.md",
+        "versioning/Alpha-v0.1.0/verification/RELEASE.md"
       ],
-      "scope_and_limits_pt_br": "Matriz por obrigação identifica contrato, realização, teste e limite. A instância Atlas própria não é confundida com o TaskBoard publicado no Atlas.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Mapeamento manual fonte/realização; validação não implica aceite nem comportamento fora do escopo.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Manual source/realization mapping; source approval and broader behavior are not inferred from validation."
     },
     {
       "id": "INT-004",
@@ -817,11 +845,12 @@
         "provenance"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L1_AtlasSpecifications/task-board.atlas.json",
-        "versioning/Alpha-v0.1.0/verification/contract-review.json"
+        "versioning/Alpha-v0.1.0/verification/source-baselines.json",
+        "versioning/Alpha-v0.1.0/verification/CONTRACT-REVIEW.md"
       ],
-      "scope_and_limits_pt_br": "Derivação e revisão são assistidas por IA; aprovação do responsável do projeto está pendente. Não se alega transformação automática determinística.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Mapeamento manual fonte/realização; validação não implica aceite nem comportamento fora do escopo.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Manual source/realization mapping; source approval and broader behavior are not inferred from validation."
     },
     {
       "id": "INT-005",
@@ -834,11 +863,11 @@
         "consistency"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/LegacyReports/reports.py.yaml",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml"
+        "versioning/Alpha-v0.1.0/integrations/minerva/README.md"
       ],
-      "scope_and_limits_pt_br": "Espelho L2 liga arquivo e unidades sem prender identidade ao caminho; legado mantém múltiplas estruturas e escopo próprio.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Mapeamento manual fonte/realização; validação não implica aceite nem comportamento fora do escopo.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Manual source/realization mapping; source approval and broader behavior are not inferred from validation."
     },
     {
       "id": "INT-006",
@@ -851,11 +880,12 @@
         "review"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml",
-        "versioning/Alpha-v0.1.0/verification/contract-review.json"
+        "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/blueprint.yaml",
+        "versioning/Alpha-v0.1.0/verification/CONTRACT-REVIEW.md"
       ],
-      "scope_and_limits_pt_br": "Contrato projetado, reconstrução e observação são distinguidos. Shared é apoio transversal e hashes não equivalem a aprovação semântica.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Mapeamento manual fonte/realização; validação não implica aceite nem comportamento fora do escopo.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Manual source/realization mapping; source approval and broader behavior are not inferred from validation."
     },
     {
       "id": "INT-007",
@@ -869,10 +899,11 @@
       ],
       "artifacts": [
         "versioning/Alpha-v0.1.0/verification/MIGRATION.md",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/change-impact.md"
+        "versioning/Alpha-v0.1.0/integrations/minerva/README.md"
       ],
-      "scope_and_limits_pt_br": "Análise de impacto liga fontes, blueprint, realização e verificações; material pendente não é promovido a conforme por herança.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Mapeamento manual fonte/realização; validação não implica aceite nem comportamento fora do escopo.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Manual source/realization mapping; source approval and broader behavior are not inferred from validation."
     },
     {
       "id": "INT-008",
@@ -885,11 +916,11 @@
         "example"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/Shared/interaction.md",
-        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml"
+        "versioning/Alpha-v0.1.0/examples/task-board/docs/Shared/README.md"
       ],
-      "scope_and_limits_pt_br": "Mapeamentos de HTTP/CLI são identificados L4 e ligados a casos, resultados e verificações.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Mapeamento manual fonte/realização; validação não implica aceite nem comportamento fora do escopo.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Manual source/realization mapping; source approval and broader behavior are not inferred from validation."
     },
     {
       "id": "INT-009",
@@ -903,8 +934,9 @@
       "artifacts": [
         "versioning/Alpha-v0.1.0/README.md"
       ],
-      "scope_and_limits_pt_br": "Adoção independente e perfis explícitos preservam liberdade de linguagem/arquitetura e não impõem biblioteca ou repositório separado por camada do produto.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Mapeamento manual fonte/realização; validação não implica aceite nem comportamento fora do escopo.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Manual source/realization mapping; source approval and broader behavior are not inferred from validation."
     },
     {
       "id": "INT-010",
@@ -917,11 +949,12 @@
         "evidence"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/verification/contract-review.json",
-        "versioning/Alpha-v0.1.0/verification/RELEASE.md"
+        "versioning/Alpha-v0.1.0/verification/RELEASE.md",
+        "versioning/Alpha-v0.1.0/examples/README.md"
       ],
-      "scope_and_limits_pt_br": "Exemplo fixa instâncias L1/L2/L3. Verificação estrutural, revisão semântica e execução observada são relatadas separadamente.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Mapeamento manual fonte/realização; validação não implica aceite nem comportamento fora do escopo.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Manual source/realization mapping; source approval and broader behavior are not inferred from validation."
     },
     {
       "id": "INT-011",
@@ -936,8 +969,9 @@
         "versioning/Alpha-v0.1.0/verification/MIGRATION.md",
         "versioning/Alpha-v0.1.0/verification/requirements/migration.json"
       ],
-      "scope_and_limits_pt_br": "As 40 regras anteriores e famílias de artefatos têm destino explícito; a migração classifica conteúdo por responsabilidade.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Mapeamento manual fonte/realização; validação não implica aceite nem comportamento fora do escopo.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Manual source/realization mapping; source approval and broader behavior are not inferred from validation."
     },
     {
       "id": "INT-012",
@@ -950,10 +984,12 @@
         "review"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/verification/contract-review.json"
+        "versioning/Alpha-v0.1.0/profiles/vulcan-architecture/README.md",
+        "versioning/Alpha-v0.1.0/tests/fixtures/legacy-ecosystem/README.md"
       ],
-      "scope_and_limits_pt_br": "TaskBoard e legado têm escopos distintos. Participação no ecossistema não implica adesão à Vulcan Architecture.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Mapeamento manual fonte/realização; validação não implica aceite nem comportamento fora do escopo.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Manual source/realization mapping; source approval and broader behavior are not inferred from validation."
     },
     {
       "id": "REP-001",
@@ -965,11 +1001,13 @@
         "editorial"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/README.md",
+        "README.md",
+        "VERSION",
         "versioning/Alpha-v0.1.0/model.json"
       ],
-      "scope_and_limits_pt_br": "Nome, Olympus, OAL e objeto normativo são explícitos. Edição, representação e ferramenta mantêm identidades próprias.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Convenção de entrega do repositório; veja procedimento e recibo real de verificação.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Repository delivery convention; see release procedure and actual verification receipt."
     },
     {
       "id": "REP-002",
@@ -981,31 +1019,32 @@
         "editorial"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/README.md",
-        "versioning/Alpha-v0.1.0/README.pt-br.md",
         "README.md",
-        "README.pt-br.md"
+        "README.pt-br.md",
+        "versioning/Alpha-v0.1.0/README.md",
+        "versioning/Alpha-v0.1.0/README.pt-br.md"
       ],
-      "scope_and_limits_pt_br": "Manual normativo EN e tradução PT preservam IDs; apresentação ilustrada fica na raiz e manual de edição é textual.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Convenção de entrega do repositório; veja procedimento e recibo real de verificação.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Repository delivery convention; see release procedure and actual verification receipt."
     },
     {
       "id": "REP-003",
       "title": "Distribuir edições autossuficientes",
       "priority": "P1",
       "scope": "shared_delivery",
-      "delivery": "provided_for_alpha_review",
+      "delivery": "provided_with_explicit_external_integration_dependency",
       "assessment_facets": [
         "isolation",
         "evidence"
       ],
       "artifacts": [
         "versioning/Alpha-v0.1.0/run_examples.py",
-        "versioning/Alpha-v0.1.0/requirements.txt",
-        "versioning/Alpha-v0.1.0/verification/RELEASE.md"
+        "versioning/Alpha-v0.1.0/integrations/minerva/README.md"
       ],
-      "scope_and_limits_pt_br": "Edição contém recursos locais; cópia isolada é verificada. Dependências externas são declaradas.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Aplicações/testes/avaliador L3 são locais à edição. Integração L2 completa exige Minerva externo explícito; a distribuição não embute seu validador.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "L3 apps/tests/assessor are edition-local. Full L2 integration requires an explicitly selected external Minerva; this distribution does not embed its validator."
     },
     {
       "id": "REP-004",
@@ -1017,12 +1056,13 @@
         "artwork"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/README.md",
+        "README.md",
         "assets/README.md",
         "assets/asset-metadata.json"
       ],
-      "scope_and_limits_pt_br": "Headers e diagramas bilíngues têm fontes SVG, instruções, origem e integridade dos ícones; imagens não são fonte exclusiva de regras.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Convenção de entrega do repositório; veja procedimento e recibo real de verificação.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Repository delivery convention; see release procedure and actual verification receipt."
     },
     {
       "id": "REP-005",
@@ -1034,11 +1074,13 @@
         "examples"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/README.md",
-        "versioning/Alpha-v0.1.0/run_examples.py"
+        "README.md",
+        "versioning/Alpha-v0.1.0/examples/README.md",
+        "versioning/Alpha-v0.1.0/templates/README.md"
       ],
-      "scope_and_limits_pt_br": "Exemplos, entradas iniciais, recortes e contraexemplos têm objetivos e comandos distintos.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Convenção de entrega do repositório; veja procedimento e recibo real de verificação.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Repository delivery convention; see release procedure and actual verification receipt."
     },
     {
       "id": "REP-006",
@@ -1052,8 +1094,9 @@
       "artifacts": [
         "versioning/Alpha-v0.1.0/verification/RELEASE.md"
       ],
-      "scope_and_limits_pt_br": "Registros distinguem estrutura, consistência, revisão e execução; limites e itens não executados permanecem visíveis.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Convenção de entrega do repositório; veja procedimento e recibo real de verificação.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Repository delivery convention; see release procedure and actual verification receipt."
     },
     {
       "id": "REP-007",
@@ -1065,15 +1108,17 @@
         "integrity"
       ],
       "artifacts": [
-        "versioning/Alpha-v0.1.0/LICENSE",
-        "versioning/Alpha-v0.1.0/verification/source-baselines.json",
+        "LICENSE",
         "ACKNOWLEDGEMENTS.md",
         "CITATION.cff",
-        "scripts/content_inventory.py",
-        "scripts/check_archive.py"
+        "AGENTS.md",
+        "CLAUDE.md",
+        "CONTENT-SHA256.json",
+        "scripts/content_inventory.py"
       ],
-      "scope_and_limits_pt_br": "Licenças e créditos são preservados; inventário único na raiz cobre arquivos finais, e digest do ZIP fica no recibo externo.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Convenção de entrega do repositório; veja procedimento e recibo real de verificação.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Repository delivery convention; see release procedure and actual verification receipt."
     },
     {
       "id": "REP-008",
@@ -1085,11 +1130,13 @@
         "migration"
       ],
       "artifacts": [
+        "CHANGELOG.md",
         "versioning/Alpha-v0.1.0/verification/MIGRATION.md",
         "versioning/Alpha-v0.1.0/verification/requirements/catalog.json"
       ],
-      "scope_and_limits_pt_br": "Histórico da proposta anterior, mudanças e compatibilidade são preservados sem reescrever as evidências antigas.",
-      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+      "scope_and_limits_pt_br": "Convenção de entrega do repositório; veja procedimento e recibo real de verificação.",
+      "acceptance_verdict": "not_independent_certification; only scoped observations in current receipt",
+      "scope_and_limits_en": "Repository delivery convention; see release procedure and actual verification receipt."
     }
   ]
 }

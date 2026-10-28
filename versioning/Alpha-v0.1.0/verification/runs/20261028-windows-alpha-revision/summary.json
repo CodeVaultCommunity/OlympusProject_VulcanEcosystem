@@ -1,0 +1,24 @@
+{
+  "edition": "Alpha-v0.1.0",
+  "command": "verify",
+  "examples": [
+    "minimal",
+    "composition",
+    "task-board"
+  ],
+  "executed_at_utc": "2026-10-28T13:15:19.782142+00:00",
+  "status": "passed",
+  "checks": {
+    "minimal:structure": true,
+    "minimal:tests": true,
+    "minimal:minerva": true,
+    "composition:structure": true,
+    "composition:tests": true,
+    "composition:minerva": true,
+    "task-board:structure": true,
+    "task-board:tests": true,
+    "task-board:minerva": true,
+    "tooling:tests": true,
+    "legacy-fixture:tests": true
+  }
+}

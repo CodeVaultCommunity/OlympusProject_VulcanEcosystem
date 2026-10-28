@@ -1,0 +1,303 @@
+{
+  "edition": "Alpha-v0.1.0",
+  "executed_at_utc": "2026-10-28T13:19:04.949206+00:00",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "command": [
+    "C:\\Users\\Douglas\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\scripts\\record_tests.py",
+    "--root",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0",
+    "--tests",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\tests",
+    "--report",
+    "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\verification\\runs\\20261028-windows-final\\tooling.json"
+  ],
+  "status": "passed",
+  "tests_run": 13,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 1,
+  "duration_seconds": 7.922,
+  "records": [
+    {
+      "test": "Test_Runtime.Test_Runtime.testCanonicalHttpAndResourceClosure (example='minimal')",
+      "status": "passed",
+      "parameters": {
+        "example": "minimal"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testCanonicalHttpAndResourceClosure (example='composition')",
+      "status": "passed",
+      "parameters": {
+        "example": "composition"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testCanonicalHttpAndResourceClosure (example='task-board')",
+      "status": "passed",
+      "parameters": {
+        "example": "task-board"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testCanonicalHttpAndResourceClosure",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testCoverageDoesNotInventUnexecutedScenarios",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testExplicitRegistryAndUnknownSelection (example='minimal')",
+      "status": "passed",
+      "parameters": {
+        "example": "minimal"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testExplicitRegistryAndUnknownSelection (example='composition')",
+      "status": "passed",
+      "parameters": {
+        "example": "composition"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testExplicitRegistryAndUnknownSelection (example='task-board')",
+      "status": "passed",
+      "parameters": {
+        "example": "task-board"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testExplicitRegistryAndUnknownSelection",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testMissingMinervaIsInconclusive",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testOccupiedPortIsRejectedWithoutTouchingForeignService (example='minimal')",
+      "status": "passed",
+      "parameters": {
+        "example": "minimal"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testOccupiedPortIsRejectedWithoutTouchingForeignService (example='composition')",
+      "status": "passed",
+      "parameters": {
+        "example": "composition"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testOccupiedPortIsRejectedWithoutTouchingForeignService (example='task-board')",
+      "status": "passed",
+      "parameters": {
+        "example": "task-board"
+      },
+      "detail": null,
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testOccupiedPortIsRejectedWithoutTouchingForeignService",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Runtime.Test_Runtime.testRecorderHandlesNativeValuesAndRejectsStaleBinding",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testAlternativeDocumentationLocationDoesNotFailStructure",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testAppSymlinkOutsideRootCannotPassWithoutAssessment",
+      "status": "skipped",
+      "reason": "Directory symlink creation unavailable: [WinError 1314] O cliente não tem o privilégio necessário: 'C:\\\\Users\\\\Douglas\\\\AppData\\\\Local\\\\Temp\\\\tmpungndg0h' -> 'C:\\\\Users\\\\Douglas\\\\AppData\\\\Local\\\\Temp\\\\tmp6hkhblzg\\\\apps\\\\Escaped'"
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testCliReturnsNonzeroAndMachineReadableDiagnostics",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testMissingRootEntryAndCoreAreasAreDiagnosed",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testPublishedCounterexampleProducesAllPromisedDiagnostics",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testRunnableExamplePassesWithExplicitScope",
+      "status": "passed",
+      "observations": {}
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testSyntaxAndRelativeImportViolationsAreDiagnosed",
+      "status": "passed",
+      "observations": {}
+    }
+  ],
+  "coverage": {},
+  "sources": {
+    "examples/composition/apps/BookingDesk/boundaries/Boundary_Http.py": "210e1771c13311b54db843da00167f9c6f292c8112bcf957f25f16d6cc428c61",
+    "examples/composition/apps/BookingDesk/boundaries/Boundary_Json.py": "f3e173ca605f13663f4b3c21f80de02ef7f81cadf2b4b39d153652a2eee73a45",
+    "examples/composition/apps/BookingDesk/composition/AppComposition.py": "29229d62060d47ca5712a5421913ec8d233b3d188404447e3c96fad9afbab86b",
+    "examples/composition/apps/BookingDesk/entities/Entity_ActorContext.py": "ed5b2b30c36f34ea140104e46d6001bc8df56551cc5df0a36608c98c0fcde35a",
+    "examples/composition/apps/BookingDesk/entities/Entity_Booking.py": "c0f0fbcbbb39eb0a6a85928470d4c2f4d64a28d542eeb44d5838fb5f6f8e8383",
+    "examples/composition/apps/BookingDesk/support/OperationFailure.py": "6d4cb8901c2230d246f43ee47c302055f801b48c84ca10503aa80291fd04a213",
+    "examples/composition/apps/BookingDesk/support/SqliteResource.py": "2f5c5a2d185846c41e4159e79eff84d3ec3226b10fe97228e3c4302aa10b33f5",
+    "examples/composition/apps/BookingDesk/tests/Test_Contracts.py": "18b04f607e6cbe97342a24ec5fb710d66fea8151d48b3738e975820b1d50287f",
+    "examples/composition/apps/BookingDesk/tools/Tool_SqliteBookingStore.py": "772444d3723a98498891f3474a8efa18ea4012bd64cf6c8260b4ffc1b61c9afc",
+    "examples/composition/apps/BookingDesk/usecases/Main/UseCase_CancelBooking.py": "c909bb57f86bbf0d9d5559312ae82b0042a66962d68ffc1ad93f0e2d09c8e745",
+    "examples/composition/apps/BookingDesk/usecases/Main/UseCase_CreateBooking.py": "39c2322ab95fd9b6a4c52d4adf00978cf0d9c65e032f5e2a8df450bc383c038a",
+    "examples/composition/apps/BookingDesk/usecases/Main/UseCase_LookupBooking.py": "1765f4f12999cda740956ad330b1c80d8228b5975f6a0c82cafaae64f0356ba4",
+    "examples/composition/apps/BookingDesk/value_objects/ValueObject_BookingIdentity.py": "ee74211b02a4b16ce3c538e22b512b891f9b70b48fcf3d98b66577f01e11ce5f",
+    "examples/composition/docs/L1_AtlasSpecifications/example.atlas.json": "63a65c44f9fb4151c00389a954e9ce87531754c7c19076743b6dd6693ff62f96",
+    "examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/boundaries/Boundary_Http.py.yaml": "75bfd15f4c524460935ff85e513092d1ae2dfeaeba1498e46f82b860abcf0a78",
+    "examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/boundaries/Boundary_Json.py.yaml": "2b68bd31955fd0e13e909e8637541b5f599ded6d73557ab3b2056a5f6d344b6a",
+    "examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/composition/AppComposition.py.yaml": "2f66e26f008a3e071098a661beb210fb7936600010f6d495a37b7101f79a7e18",
+    "examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/entities/Entity_ActorContext.py.yaml": "76d5abbd39fd4e97a729d77b3c1434ec29724338484ccc7198c326700e8b284f",
+    "examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/entities/Entity_Booking.py.yaml": "697dd55354fb806f8ec2c7b9c3a6b6a2f3a240068152f2c468a295f35813a42a",
+    "examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/support/OperationFailure.py.yaml": "5ccea7fdcfbb59a3221bdfba4294715fb1b46897731727f6a608c9cef12b499f",
+    "examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/support/SqliteResource.py.yaml": "633a7e06f04375b404ef8b68eebe20b726fcf2e0326a746d51ca78c50a94eb0f",
+    "examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/tests/Test_Contracts.py.yaml": "cc3f2383b9f1de9c2ae7e09cec69b9109750fdcc35ab810403386f0e5fb1d15a",
+    "examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/tools/Tool_SqliteBookingStore.py.yaml": "8228cf459254cccb012dd1d9f765afbdcbc7a5d592e9adaa4bfcce9ab3212ec5",
+    "examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/usecases/Main/UseCase_CancelBooking.py.yaml": "6780e0d7df77e84b8a45e1aed7bc1a68b017e142c048a2d5d574b466523eff09",
+    "examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/usecases/Main/UseCase_CreateBooking.py.yaml": "a51fbf37567d569cab534d0ff08eb56f5568a1ae1ca3f40375df5e7e4b89212c",
+    "examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/usecases/Main/UseCase_LookupBooking.py.yaml": "50efc001cd2d4a04bcf4f80a33d698b9f206c661dd4d01c83ddad29169c34405",
+    "examples/composition/docs/L2_MinervaBlueprints/apps/BookingDesk/value_objects/ValueObject_BookingIdentity.py.yaml": "54999c4ab8f4be0e5ce9bf0a40c4cf6c7c49f967ed1b41c99e45a641d7923231",
+    "examples/composition/docs/L2_MinervaBlueprints/blueprint.yaml": "4781c57963bbbc83f99c83809ab6427e7bbb15a407b375b6ed6ef75b815ddfe1",
+    "examples/composition/docs/L2_MinervaBlueprints/launch.py.yaml": "b187be686ce6023cb3606e03a0fd825aab10a14d2e25b4d4bba9a1f5dbbe3ff3",
+    "examples/composition/docs/L3_Vulcan/realization.json": "43a6456dfe1d92e2684d94511e2b8c5e6acfcd498fafab8da41d3272d2bdfb26",
+    "examples/composition/docs/L3_Vulcan/test-bindings.json": "7b049cfd78f5f3cfffd898fe907ad24007f41935a71805e8284afd85216d9aa0",
+    "examples/composition/launch.py": "24dd02c5887c2f55e54ab413b704fcceffe28a59811ef4756d10e86f4ffdbd0b",
+    "examples/minimal/apps/RequestRegister/boundaries/Boundary_Http.py": "210e1771c13311b54db843da00167f9c6f292c8112bcf957f25f16d6cc428c61",
+    "examples/minimal/apps/RequestRegister/boundaries/Boundary_Json.py": "db561d96398cf9d2f66470a9ce72679e4c95a706a1ab57703ebfa6dc6de6da51",
+    "examples/minimal/apps/RequestRegister/composition/AppComposition.py": "f14af244ce7622232e1cf81ddada72bf99d9b4a30c447463bc6aa25f2684691b",
+    "examples/minimal/apps/RequestRegister/entities/Entity_ActorContext.py": "ed5b2b30c36f34ea140104e46d6001bc8df56551cc5df0a36608c98c0fcde35a",
+    "examples/minimal/apps/RequestRegister/entities/Entity_Request.py": "c3a8df159a583a974bb308a551360e5dc80a2f2cb85a6c42a4134203fb40556d",
+    "examples/minimal/apps/RequestRegister/support/OperationFailure.py": "6d4cb8901c2230d246f43ee47c302055f801b48c84ca10503aa80291fd04a213",
+    "examples/minimal/apps/RequestRegister/support/SqliteResource.py": "01ce7e1ae358a714e16eba8e64f7115912943c8c32e6c5e65c4537ccbe5f8192",
+    "examples/minimal/apps/RequestRegister/tests/Test_Contracts.py": "e2af4950fa324ead5e631a98c7501fa25ce8ff179234919e3335590f98a76908",
+    "examples/minimal/apps/RequestRegister/tools/Tool_SqliteRequestStore.py": "7697d3d113d987f5db8449d660e121367fcb14c1c48e5e0ae04760e5ee84fd75",
+    "examples/minimal/apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.py": "2b38ab80fae19ae7707741deecdb10b5495c72bb9b2deee5f9a33cfcaa20e83f",
+    "examples/minimal/docs/L1_AtlasSpecifications/example.atlas.json": "731ef7e7f9e0dcda1b9dea1cae45a51a43bd16083948dae121d18fdd77bc746e",
+    "examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/boundaries/Boundary_Http.py.yaml": "6bc1aa3af5029fc92c2b27931e03785025d5724919b5951a66417c9932860cd8",
+    "examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/boundaries/Boundary_Json.py.yaml": "5c3fdb15034ee321f0125ad52fbd73a2aabeaeff9827afd0eb9c3625bc076ba2",
+    "examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/composition/AppComposition.py.yaml": "b702db258b2f0c4fbb1a3995b027fc3e14c5b5e4e64a94006ec385feb2080afb",
+    "examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/entities/Entity_ActorContext.py.yaml": "736746399aa3f571bd961df22e6d20cd73b407672ab48592017627f9512df6a2",
+    "examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/entities/Entity_Request.py.yaml": "3272dc133a1a6453e7bee89a339f3d1e869f745d5ba71f35394563bbf6b48634",
+    "examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/support/OperationFailure.py.yaml": "21e1a37e8a87f3498ab73a79e29d6f5354cd1877f6171ec2045e2b3c1e013cc4",
+    "examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/support/SqliteResource.py.yaml": "874eeec212806211e165fb553e0e1c9dc872146155a1fe42ac99501372a80469",
+    "examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/tests/Test_Contracts.py.yaml": "be47f60cb95d9f6e2fb6fcdc8dd37d4c854eead385c82f8a68b2117c99750501",
+    "examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/tools/Tool_SqliteRequestStore.py.yaml": "8aead171e9303bf913c87519102d5ef5a9f1251c4f2c1096ff16ebb61f2b6181",
+    "examples/minimal/docs/L2_MinervaBlueprints/apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.py.yaml": "9cd3baff92915c2476d10e6c2d7e1455e1ce406a4f2986b6a46585943c90753b",
+    "examples/minimal/docs/L2_MinervaBlueprints/blueprint.yaml": "8d71b0be80129042f4862e26229b7a1b0ba465482d59b6956a8031f46840d258",
+    "examples/minimal/docs/L2_MinervaBlueprints/launch.py.yaml": "1f98d6fca9bd65c7ef206178ef1e58e448107d14255ec5effdbbe31c2e4aaf1e",
+    "examples/minimal/docs/L3_Vulcan/realization.json": "591768739a22b6d67a81d79d83148068cb546a7d91e63f65f369a88666796085",
+    "examples/minimal/docs/L3_Vulcan/test-bindings.json": "ac7249ffd038ec9883a8e02360353d67aa18540c73ac51e8b0280242db01d6b6",
+    "examples/minimal/launch.py": "9c2d080eb8e35a539c47493f2810b3d246a28d385232b72871bc2f6efec1e0b5",
+    "examples/task-board/apps/TaskBoard/boundaries/Boundary_Http.py": "210e1771c13311b54db843da00167f9c6f292c8112bcf957f25f16d6cc428c61",
+    "examples/task-board/apps/TaskBoard/boundaries/Boundary_Json.py": "227afbf5c7d504648bdbf31d680ab48613b5d970aff4dac8c56b114d7751543a",
+    "examples/task-board/apps/TaskBoard/composition/AppComposition.py": "3c8d4a0fdae58e7cf595a8b6527b597fc9ad28cabcc4138935548fe932016639",
+    "examples/task-board/apps/TaskBoard/entities/Entity_ActorContext.py": "ed5b2b30c36f34ea140104e46d6001bc8df56551cc5df0a36608c98c0fcde35a",
+    "examples/task-board/apps/TaskBoard/entities/Entity_Task.py": "d40403ad513c1a1e01482b6f543136630acd874ae9d8a30354579156532bf1cf",
+    "examples/task-board/apps/TaskBoard/support/OperationFailure.py": "6d4cb8901c2230d246f43ee47c302055f801b48c84ca10503aa80291fd04a213",
+    "examples/task-board/apps/TaskBoard/support/SqliteResource.py": "be6cd05eaf47276ee8e345af02675efc785364a2189542377a604f09db16f0ae",
+    "examples/task-board/apps/TaskBoard/tests/Test_Contracts.py": "3f2a5d48352e8109ba790e7e0bf84aaf076c4947a73aa4f5433b584805a9aa17",
+    "examples/task-board/apps/TaskBoard/tools/Tool_SqliteTaskStore.py": "970fad1695fe8416f563ee96b3b95c21bc0dca41d4a9ceb40e4aa4f627a492a7",
+    "examples/task-board/apps/TaskBoard/usecases/Main/UseCase_CompleteTask.py": "70c8959196cada358a3a12a0650616c59342081d6a52183201d5e026766e5561",
+    "examples/task-board/apps/TaskBoard/usecases/Main/UseCase_CreateTask.py": "9431f04ba107eb10d11222b2a5eba6403d0267a2bc22fd69732ded2f9d331c05",
+    "examples/task-board/apps/TaskBoard/usecases/Main/UseCase_ListTasks.py": "470a3f254284f2de6cac9b5bb7f8f45d138bcdcc0f4ef9f74fc468cffc174d05",
+    "examples/task-board/apps/TaskBoard/value_objects/ValueObject_TaskIdentity.py": "7fb99e3efe15f0a3e181d714b1181f80274fd374de11f4d698f0ef74d46b1654",
+    "examples/task-board/docs/L1_AtlasSpecifications/example.atlas.json": "fa14749cf58a179792ee66231e413cd912ddf944174824919b8c4615e91d87c8",
+    "examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/boundaries/Boundary_Http.py.yaml": "76b6ea4ed473f17cc762e2e64f90b4803d2b835c8f456cd2835e340156e7d666",
+    "examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/boundaries/Boundary_Json.py.yaml": "f738881b4f6481fd17c8fb97906ad15b71cae47b4fee5f3808eb2b6148c69bb5",
+    "examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/composition/AppComposition.py.yaml": "7cd6f21fb5eb673240905edbb27a4ea3fb654491e97e0b3ebabe7c451b81d8d8",
+    "examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/entities/Entity_ActorContext.py.yaml": "380b199591e1fbecb6a9570c917d7e416239a90d5b03fcd9c0d2208e87540b9b",
+    "examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/entities/Entity_Task.py.yaml": "303c849e6a6d02784288a961dc53fc458b51ba23f615f6533ab142c274678736",
+    "examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/support/OperationFailure.py.yaml": "f960d11b24a9ee548d4d85bc65039ed4910fb4d1b4dd1139f804d4eb0329066f",
+    "examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/support/SqliteResource.py.yaml": "8fa2b749b69d03146b8f3979706aad195c3f3a72b0d181663969c149ecb2cbe7",
+    "examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/tests/Test_Contracts.py.yaml": "ecffaf286bb8a0a77ac3de4b87213d34b632d411d86f7894e1934079b958ebaa",
+    "examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/tools/Tool_SqliteTaskStore.py.yaml": "6aa95159fb74835590fd678e96e170b4a548ed423d7c2de403675d49d1e840a8",
+    "examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/usecases/Main/UseCase_CompleteTask.py.yaml": "5edaa8fac651ce02ff47b3cad054493a0c7f9e2ebebaf42461ee68496577b9a7",
+    "examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/usecases/Main/UseCase_CreateTask.py.yaml": "3798b561cd445aed089d053c5c963c9308c397eb157d79d3c688e7a4684c31fa",
+    "examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/usecases/Main/UseCase_ListTasks.py.yaml": "a361131febed13093185f86cff841ca0cf82e4612bb341e0bf7289848046c59a",
+    "examples/task-board/docs/L2_MinervaBlueprints/apps/TaskBoard/value_objects/ValueObject_TaskIdentity.py.yaml": "3f5233c97c1710a5959d1bbb2fb661705fa444b8791b54427049d4ae8e77a70a",
+    "examples/task-board/docs/L2_MinervaBlueprints/blueprint.yaml": "aa7f70b0834324b4b6753e0e4a57064abbd0b498d3c71259c1f09584dd6763a1",
+    "examples/task-board/docs/L2_MinervaBlueprints/launch.py.yaml": "db536c61801c188380c71adf1c009bcfa423e4ac8a7ec472c04696c33723e477",
+    "examples/task-board/docs/L3_Vulcan/realization.json": "4769c4ec51632f327d38d4000df29cdab2ba11100f4d62a7ce21b23a9f81d72a",
+    "examples/task-board/docs/L3_Vulcan/test-bindings.json": "74872774be5234a756af3f56a90d78a8e90ade4028f8ac44b57372c339f70edd",
+    "examples/task-board/launch.py": "47dfa12b8ffbfa08bdc6219bd4189c3dc75e409f54132f73a4171eb175eb6e30",
+    "model.json": "96bdb8d6dc9988713acee034d3c965f50714a7e0dced061fefa665410f2e7b0d",
+    "run_examples.py": "4c9936259fdb447cd62dca66a8431ef47093d718ed4fb21f6b8b81abcbef6a76",
+    "scripts/evaluate_structure.py": "1630d9681a23ff54f24a8609f41835c07a2bede1058bed35c08024ba88ba0bae",
+    "scripts/record_tests.py": "8b11429e7f82237374d6f8f2f46022057c3a959d3bba41753f4ff7b94f76b0a7",
+    "tests/fixtures/legacy-ecosystem/apps/LegacyReports/reports.py": "8bec86f867da59162795a8bc99546e19004c3e6e41f2023d1e4b3742043cb7d5",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/boundaries/Boundary_Cli.py": "43fba3137ace8483b63e59fc386b7a552b875939e73fddd4143fbf5f19224978",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/boundaries/Boundary_Http.py": "ae6b16698fb32ded4fd3502a0a5f4fc9953df4408395ceffff2cf78d5dcfd6e6",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/composition/AppComposition.py": "578a84a9a30e9c4ef42d03b0fa89ceefdd13903cfa2be3ee3a1391b89064553d",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/entities/Entity_ActorContext.py": "baa11c6c0ea257b67618f5071c2b226780e9ec95c9e262186fe5810e9271b875",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/entities/Entity_Task.py": "9528d654501ca196e4fbc5d2e3b65c0355f06e6f82491f13f2c2f9de6a46320d",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/main.py": "8a4951d11c868178a241d44f5ae5fad014c2402ddc96e8f5663d890a9e62329f",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/tests/Test_Boundaries.py": "aa4e3e1dfa5ceafc92a4a07faf20a506cbf920969d63344f78db9ab5abb8322a",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/tests/Test_Launcher.py": "cb92ff8a022a0f22eb17f68a9461dc00b5c91d34c283dd305bafb64c0f927fc6",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py": "9650121915ced060fe75c68f6bffc57c521ed8948facee04c272c77d9fa81690",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/tools/Tool_SqliteTaskStore.py": "df7471b9ebc6c237f64b433c34a5ca31174420f172980dcd94f41ccb86df364b",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_CompleteTask.py": "6072fb42ad91bb39d4006e3b4e1d34c481914b30ffe98ebc8ed830f658b7fe32",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py": "667b975906356660986e7958ce62b1c9f689d81217a6c9bf4b5d5a3cb525ba82",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_ListTasks.py": "6f42790f3c72f0661c7a90fe6800074ce381916abe9e0414ca6542855451fd57",
+    "tests/fixtures/legacy-ecosystem/apps/TaskBoard/value_objects/ValueObject_TaskTitle.py": "b31261c7ed64413e725b045fffe5527751f8de209233bb954a316c2d9c7aa44c",
+    "tests/fixtures/legacy-ecosystem/launch.py": "1678a8bb81da8582fe5d56cf5c9b4af22b44a8f7100944bd08a4ca3c6997a231",
+    "tests/fixtures/structural-counterexamples/expected-diagnostics.json": "3c25df2c29b04c754a206e0eecaa3e44be3daba83e523d66bacc550a2e7fdeed",
+    "tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/entities/Entity_Multiple.py": "94530677ae2fae92802866852ad56c8a8fe1efe5219747806979a4099b42ffaa",
+    "tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/entities/Entity_WrongName.py": "1c65b8735b2546c43d4abd40023f88ffd382765c2befa9199baf070331b23589",
+    "tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/tools/Tool_First.py": "ce18ba750ddf289d404cacb3b67d1cb216aa71300c204e2b6165bad30bd9fac2",
+    "tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/tools/Tool_Second.py": "f8570ec9b41a04ef83c07f6ec799d080898f215a9dbd924d0b0cb27e19314792",
+    "tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/usecases/Domain/UseCase_First.py": "a9380dd3e33d0fec35fb24ebd698cfc5ca2824a72a37688766fd2b406bd05eba",
+    "tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/usecases/UseCase_NoDomain.py": "c8a45e78971b9c4da1c74a2223efc638e17926eafce557336836530fbccb5c42",
+    "tests/fixtures/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/value_objects/ValueObject_Name.py": "906f577707c404fc354392a476060f903fde94fe5caa04af8a8166a285e4d7f7",
+    "tests/fixtures/structural-counterexamples/invalid-ecosystem/launch.py": "ea7a9ff6e861059eb368ab7911bce7001df1ddf71fdd279af03d583376321387",
+    "tests/Test_Runtime.py": "82a311d8032b827299426e5458165e3d252dd50c54cdd44afbb82e4e4e148437",
+    "tests/Test_Structure.py": "eeccb07d2a7a3c3e4a057eb93da1eb7c48d2da67fd0d70eff27bfc3a602d96e9"
+  },
+  "sources_changed_during_run": false,
+  "binding_baseline_matches": true,
+  "model_baseline": null,
+  "limits": [
+    "Observations on the recorded host and selected Python/SQLite realization only.",
+    "Fault doubles verify handling of uncertainty, not physical disk-failure tolerance.",
+    "Skipped checks remain unverified. Passing scenarios do not imply stakeholder approval.",
+    "No production identity provider, distributed deployment, browser interaction or production SLA assessed."
+  ]
+}

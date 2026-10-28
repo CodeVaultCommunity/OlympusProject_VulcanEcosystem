@@ -22,7 +22,7 @@ From `versioning/Alpha-v0.1.0/`, install `requirements.txt` and execute the edit
 
 ```bash
 python -m pip install -r requirements.txt
-python run_examples.py verify
+python run_examples.py verify --minerva-edition /path/to/Minerva/versioning/Alpha-v0.1.0
 python run_examples.py test
 ```
 

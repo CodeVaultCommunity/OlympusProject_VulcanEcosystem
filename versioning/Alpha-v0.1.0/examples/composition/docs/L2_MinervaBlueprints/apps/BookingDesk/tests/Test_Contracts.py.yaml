@@ -1,0 +1,627 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-008
+source:
+  path: apps/BookingDesk/tests/Test_Contracts.py
+  app: BookingDesk
+  language: python
+  state: observed
+  sha256: 18b04f607e6cbe97342a24ec5fb710d66fea8151d48b3738e975820b1d50287f
+  purpose: 'Executable ADVS observations: scenario IDs refer to the pinned designed blueprint.'
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-008-01
+  code_name: Test_Contracts
+  kind: class
+  role: test
+  model_refs:
+  - BT-BOOKING-LOOKUP
+  - BT-BOOKING-CREATE
+  - BT-BOOKING-CANCEL
+  - CHK-RNF-BOOKING-CREATE-RESPONSE
+  - CHK-OP-BOOKING-LOAD
+  - CHK-OP-BOOKING-SAVE
+  description: 'Executable ADVS observations: scenario IDs refer to the pinned designed blueprint.'
+  attributes:
+  - name: temporary
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: db
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: app
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: context
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: observations
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  operations:
+  - id: OP-SOURCE-008-01-01
+    code_name: setUp
+    contract_scope: technical
+    native_signature: setUp(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.temporary = tempfile.TemporaryDirectory()
+      - self.addCleanup(self.temporary.cleanup)
+      - self.db = str(Path(self.temporary.name) / 'test.sqlite3')
+      - self.app = AppComposition(self.db)
+      - self.context = self.app.resolveActor('demo-editor')
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-02
+    code_name: assertFailure
+    contract_scope: technical
+    native_signature: assertFailure(self, code, function, *args)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: code
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: function
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.assertRaises(OperationFailure) as caught:\n    function(*args)"
+      - self.assertEqual(caught.exception.code, code)
+      - return caught.exception
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-03
+    code_name: assertDeniedContexts
+    contract_scope: technical
+    native_signature: assertDeniedContexts(self, prefix, function, *args)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: prefix
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: function
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - 'contexts = {''ABSENT'': None, ''UNRESOLVED'': replace(self.context, resolved=False), ''UNKNOWN'': replace(self.context,
+        known=False), ''INSUFFICIENT'': replace(self.context, permissions=()), ''EXPIRED'': replace(self.context,
+        valid=False), ''ANONYMOUS'': replace(self.context, authenticated=False)}'
+      - "for label, context in contexts.items():\n    with self.subTest(scenario_id=prefix + '-AUTH-' + label):\n\
+        \        with patch.object(self.app.store.resource, 'open', side_effect=AssertionError('store invoked before\
+        \ denial')):\n            self.assertFailure('DENIED', function, context, *args)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-04
+    code_name: measureCli
+    contract_scope: technical
+    native_signature: measureCli(self, operation, payloads)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: operation
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: payloads
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - root = Path(__file__).resolve().parents[3]
+      - env = dict(os.environ, VULCAN_CALLER_TOKEN='demo-editor', VULCAN_DEMO_TOKEN='demo-editor')
+      - elapsed = []
+      - "for payload, success in payloads:\n    started = time.monotonic()\n    result = subprocess.run([sys.executable,\
+        \ str(root / 'launch.py'), 'start', '--mode', 'cli', '--operation', operation, '--payload', json.dumps(payload),\
+        \ '--db', self.db], capture_output=True, text=True, env=env, timeout=5)\n    elapsed.append(time.monotonic()\
+        \ - started)\n    self.assertEqual(result.returncode, 0 if success else 1, result.stderr)\n    self.assertIn('result'\
+        \ if success else 'error', json.loads(result.stdout))"
+      - self.assertEqual(len(elapsed), 30)
+      - self.assertLessEqual(max(elapsed), 2.0, elapsed)
+      - 'self.observations = {''boundary'': ''CLI subprocess start through captured complete JSON stdout'', ''samples'':
+        len(elapsed), ''elapsed_seconds'': elapsed, ''production_sla'': False}'
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-05
+    code_name: testChannelCannotForgeTrustedContext
+    contract_scope: technical
+    native_signature: testChannelCannotForgeTrustedContext(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - 'status, body = Boundary_Json(self.app).invoke(''create'', {''actor_context'': {''permissions'': [''*'']}},
+        ''invalid'')'
+      - self.assertEqual(status, 403)
+      - 'self.assertEqual(body, {''error'': ''DENIED''})'
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-06
+    code_name: testRealStoreFailureIsNotApplied
+    contract_scope: technical
+    native_signature: testRealStoreFailureIsNotApplied(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with patch('apps.BookingDesk.support.SqliteResource.sqlite3.connect', side_effect=sqlite3.OperationalError('offline')):\n\
+        \    error = self.assertFailure('STORE_UNAVAILABLE', self.app.store.resource.initialize, 'SELECT 1')"
+      - self.assertEqual(error.write_outcome, 'not_applied')
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-07
+    code_name: testCommitUncertaintyIsPreserved
+    contract_scope: technical
+    native_signature: testCommitUncertaintyIsPreserved(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - connection = Mock()
+      - connection.commit.side_effect = sqlite3.OperationalError('lost commit confirmation')
+      - "with patch('apps.BookingDesk.support.SqliteResource.sqlite3.connect', return_value=connection):\n    error\
+        \ = self.assertFailure('STORE_UNAVAILABLE', self.app.store.resource.initialize, 'SELECT 1')"
+      - self.assertEqual(error.write_outcome, 'unknown')
+      - connection.commit.assert_called_once()
+      - connection.close.assert_called_once()
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-08
+    code_name: testLookupAuthorization
+    contract_scope: technical
+    native_signature: testLookupAuthorization(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.assertDeniedContexts('SC-BOOKING-LOOKUP', self.app.lookup.lookupBooking, 'invalid-')
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-09
+    code_name: testCreateAuthorization
+    contract_scope: technical
+    native_signature: testCreateAuthorization(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.assertDeniedContexts('SC-BOOKING-CREATE', self.app.create.createBooking, 'invalid-', '')
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-10
+    code_name: testCancelAuthorization
+    contract_scope: technical
+    native_signature: testCancelAuthorization(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.assertDeniedContexts('SC-BOOKING-CANCEL', self.app.cancel.cancelBooking, 'invalid-')
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-11
+    code_name: testLookupSuccess
+    contract_scope: technical
+    native_signature: testLookupSuccess(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-BOOKING-LOOKUP-01', check_id='CHK-OP-BOOKING-LOAD'):\n    created = self.app.create.createBooking(self.context,\
+        \ 'BOOK001', 'Annual review')\n    with patch.object(self.app.store, 'saveBooking', side_effect=AssertionError('lookup\
+        \ wrote')):\n        self.assertEqual(self.app.lookup.lookupBooking(self.context, 'BOOK001'), created)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-12
+    code_name: testLookupMissing
+    contract_scope: technical
+    native_signature: testLookupMissing(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-BOOKING-LOOKUP-02'):\n    self.assertFailure('NOT_FOUND', self.app.lookup.lookupBooking,\
+        \ self.context, 'BOOK999')"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-13
+    code_name: testLookupFailure
+    contract_scope: technical
+    native_signature: testLookupFailure(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-BOOKING-LOOKUP-03'):\n    with patch.object(self.app.store, 'loadBooking',\
+        \ side_effect=OperationFailure('STORE_UNAVAILABLE')):\n        self.assertFailure('STORE_UNAVAILABLE', self.app.lookup.lookupBooking,\
+        \ self.context, 'BOOK001')"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-14
+    code_name: testLookupInvalid
+    contract_scope: technical
+    native_signature: testLookupInvalid(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-BOOKING-LOOKUP-INVALID'):\n    with patch.object(self.app.store, 'loadBooking')\
+        \ as store:\n        for code in ('book001', 'BOOK-001', '', 'A' * 13):\n            with self.assertRaises(ValueError):\n\
+        \                self.app.lookup.lookupBooking(self.context, code)\n        store.assert_not_called()"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-15
+    code_name: testCreateSuccess
+    contract_scope: technical
+    native_signature: testCreateSuccess(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-BOOKING-CREATE-01', check_id='CHK-OP-BOOKING-SAVE'):\n    with patch.object(self.app.store,\
+        \ 'saveBooking', wraps=self.app.store.saveBooking) as store:\n        result = self.app.create.createBooking(self.context,\
+        \ 'BOOK001', 'Annual review')\n        self.assertEqual(store.call_args.args[1], 0)\n    self.assertEqual((result.booking_code,\
+        \ result.title, result.status, result.version), ('BOOK001', 'Annual review', 'active', 1))\n    self.assertEqual(self.app.lookup.lookupBooking(self.context,\
+        \ 'BOOK001'), result)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-16
+    code_name: testCreateInvalid
+    contract_scope: technical
+    native_signature: testCreateInvalid(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-BOOKING-CREATE-02'):\n    with patch.object(self.app.store, 'saveBooking')\
+        \ as store:\n        for code in ('book001', 'BOOK-001'):\n            with self.assertRaises(ValueError):\n\
+        \                self.app.create.createBooking(self.context, code, 'Title')\n        store.assert_not_called()"
+      - "with self.subTest(scenario_id='SC-BOOKING-CREATE-TITLE'):\n    with patch.object(self.app.store, 'saveBooking')\
+        \ as store:\n        with self.assertRaises(ValueError):\n            self.app.create.createBooking(self.context,\
+        \ 'BOOK001', '  ')\n        store.assert_not_called()"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-17
+    code_name: testCreateConflict
+    contract_scope: technical
+    native_signature: testCreateConflict(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-BOOKING-CREATE-03'):\n    first = self.app.create.createBooking(self.context,\
+        \ 'BOOK001', 'First')\n    self.assertFailure('VERSION_CONFLICT', self.app.create.createBooking, self.context,\
+        \ 'BOOK001', 'Second')\n    self.assertEqual(self.app.lookup.lookupBooking(self.context, 'BOOK001'), first)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-18
+    code_name: testCancelSuccess
+    contract_scope: technical
+    native_signature: testCancelSuccess(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-BOOKING-CANCEL-01'):\n    self.app.create.createBooking(self.context,\
+        \ 'BOOK001', 'Annual review')\n    result = self.app.cancel.cancelBooking(self.context, 'BOOK001')\n   \
+        \ self.assertEqual((result.booking_code, result.title, result.status, result.version), ('BOOK001', 'Annual\
+        \ review', 'cancelled', 2))\n    self.assertEqual(self.app.lookup.lookupBooking(self.context, 'BOOK001'),\
+        \ result)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-19
+    code_name: testCancelRefusals
+    contract_scope: technical
+    native_signature: testCancelRefusals(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.app.create.createBooking(self.context, 'BOOK001', 'Annual review')
+      - retained = self.app.cancel.cancelBooking(self.context, 'BOOK001')
+      - "with self.subTest(scenario_id='SC-BOOKING-CANCEL-02'):\n    with patch.object(self.app.store, 'saveBooking')\
+        \ as store:\n        self.assertFailure('ALREADY_CANCELLED', self.app.cancel.cancelBooking, self.context,\
+        \ 'BOOK001')\n        store.assert_not_called()\n    self.assertEqual(self.app.lookup.lookupBooking(self.context,\
+        \ 'BOOK001'), retained)"
+      - "with self.subTest(scenario_id='SC-BOOKING-CANCEL-03'):\n    with patch.object(self.app.store, 'saveBooking')\
+        \ as store:\n        self.assertFailure('NOT_FOUND', self.app.cancel.cancelBooking, self.context, 'BOOK999')\n\
+        \        self.assertFailure('ALREADY_CANCELLED', self.app.cancel.cancelBooking, self.context, 'BOOK001')\n\
+        \        store.assert_not_called()"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-20
+    code_name: testCancelFailures
+    contract_scope: technical
+    native_signature: testCancelFailures(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.app.create.createBooking(self.context, 'BOOK001', 'Annual review')
+      - "with self.subTest(scenario_id='SC-BOOKING-CANCEL-FAILURE'):\n    with patch.object(self.app.store, 'loadBooking',\
+        \ side_effect=OperationFailure('STORE_UNAVAILABLE')), patch.object(self.app.store, 'saveBooking') as save:\n\
+        \        self.assertFailure('STORE_UNAVAILABLE', self.app.cancel.cancelBooking, self.context, 'BOOK001')\n\
+        \        save.assert_not_called()\n    with patch.object(self.app.store, 'saveBooking', side_effect=OperationFailure('STORE_UNAVAILABLE',\
+        \ 'not_applied')) as save:\n        error = self.assertFailure('STORE_UNAVAILABLE', self.app.cancel.cancelBooking,\
+        \ self.context, 'BOOK001')\n        self.assertEqual(error.write_outcome, 'not_applied')\n        save.assert_called_once()\n\
+        \    original = self.app.store.saveBooking\n\n    def loseConfirmation(booking, version):\n        original(booking,\
+        \ version)\n        raise OperationFailure('STORE_UNAVAILABLE', 'unknown')\n    with patch.object(self.app.store,\
+        \ 'saveBooking', side_effect=loseConfirmation) as save:\n        error = self.assertFailure('STORE_UNAVAILABLE',\
+        \ self.app.cancel.cancelBooking, self.context, 'BOOK001')\n        self.assertEqual(error.write_outcome,\
+        \ 'unknown')\n        save.assert_called_once()\n    self.assertEqual(self.app.lookup.lookupBooking(self.context,\
+        \ 'BOOK001').version, 2)"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-21
+    code_name: testCancelPreservesContext
+    contract_scope: technical
+    native_signature: testCancelPreservesContext(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_id='SC-BOOKING-CANCEL-CONTEXT'):\n    context = replace(self.context, permissions=('booking.cancel',))\n\
+        \    with patch.object(self.app.lookup, 'lookupBooking', wraps=self.app.lookup.lookupBooking) as lookup,\
+        \ patch.object(self.app.store, 'saveBooking') as save:\n        self.assertFailure('DENIED', self.app.cancel.cancelBooking,\
+        \ context, 'BOOK001')\n        self.assertIs(lookup.call_args.args[0], context)\n        save.assert_not_called()"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-22
+    code_name: testSharedCreationQuality
+    contract_scope: technical
+    native_signature: testSharedCreationQuality(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "with self.subTest(scenario_ids=['SC-BOOKING-CREATE-QUALITY', 'SC-BOOKING-CANCEL-QUALITY'], check_id='CHK-RNF-BOOKING-CREATE-RESPONSE'):\n\
+        \    self.measureCli('create', [({'booking_code': f'BOOK{i}', 'title': 'Annual review' if i % 2 == 0 else\
+        \ ' '}, i % 2 == 0) for i in range(30)])"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-008-01-23
+    code_name: testConcurrentSaveIsConditional
+    contract_scope: technical
+    native_signature: testConcurrentSaveIsConditional(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - booking = self.app.create.createBooking(self.context, 'BOOK001', 'Original')
+      - barrier = threading.Barrier(2)
+      - "def save(title):\n    barrier.wait(timeout=5)\n    try:\n        return self.app.store.saveBooking(replace(booking,\
+        \ title=title), 1)\n    except OperationFailure as error:\n        return error.code"
+      - "with ThreadPoolExecutor(max_workers=2) as pool:\n    results = list(pool.map(save, ['First', 'Second']))"
+      - self.assertEqual(results.count('VERSION_CONFLICT'), 1)
+      - winner = next((item for item in results if item != 'VERSION_CONFLICT'))
+      - self.assertEqual(winner.version, 2)
+      - self.assertEqual(self.app.lookup.lookupBooking(self.context, 'BOOK001'), winner)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-008-01
+  target: concurrent.futures
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: dataclasses
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: json
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: os
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: pathlib
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: sqlite3
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: subprocess
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: sys
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: tempfile
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: threading
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: time
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: unittest
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: unittest.mock
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: apps.BookingDesk.composition.AppComposition
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: apps.BookingDesk.entities.Entity_ActorContext
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: apps.BookingDesk.support.OperationFailure
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-008-01
+  target: apps.BookingDesk.boundaries.Boundary_Json
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

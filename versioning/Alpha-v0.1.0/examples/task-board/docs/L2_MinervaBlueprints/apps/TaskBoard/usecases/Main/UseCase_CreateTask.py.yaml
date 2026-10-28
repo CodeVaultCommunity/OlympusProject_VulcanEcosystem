@@ -1,0 +1,128 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-011
+source:
+  path: apps/TaskBoard/usecases/Main/UseCase_CreateTask.py
+  app: TaskBoard
+  language: python
+  state: observed
+  sha256: 9431f04ba107eb10d11222b2a5eba6403d0267a2bc22fd69732ded2f9d331c05
+  purpose: 'UC-TASK-CREATE: authorization precedes entity validation and persistence.'
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-011-01
+  code_name: UseCase_CreateTask
+  kind: class
+  role: use_case
+  model_refs:
+  - UC-TASK-CREATE
+  description: 'UC-TASK-CREATE: authorization precedes entity validation and persistence.'
+  attributes:
+  - name: store
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  - name: board_id
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: Python dynamic; see native assignment
+  operations:
+  - id: OP-SOURCE-011-01-01
+    code_name: __init__
+    contract_scope: technical
+    native_signature: '__init__(self, store, board_id: str)'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: store
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: board_id
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - self.store = store
+      - self.board_id = board_id
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-011-01-02
+    code_name: createTask
+    contract_scope: operational
+    native_signature: 'createTask(self, actor_context: Entity_ActorContext | None, task_id: str, title: str)'
+    description: Observed realization binding for UC-TASK-CREATE. Operational types are inherited from ADPM; task_identifier
+      is named task_id natively, and authorized board is bound to the store instance by composition. No semantic
+      contract is redefined.
+    inputs:
+    - name: actor_context
+      description: 'Required caller context: resolved principal identifier, selected board identifier, authenticated
+        status, granted case permissions, issuer, and validity status. The context originates from a trusted identity-and-permission
+        authority configured for the application; claims in the task request are untrusted and cannot supply authorization.
+
+        The trust assumption is ASM-TASK-IDENTITY. Authentication is required; its mechanism and token/channel encoding
+        belong to later design. Authorization is reevaluated for this invocation, and composed invocations would
+        preserve the same principal and board context.
+
+        The actor is a role. The caller is the concrete principal for this request. Neither is an accountable human
+        author for a Needs-to-L1 derivation.'
+      type:
+        kind: entity
+        ref: ENT-CALLER-CONTEXT
+        nullable: true
+      required: true
+    - name: task_id
+      description: Requested stable task identifier.
+      type:
+        kind: primitive
+        name: string
+      required: true
+    - name: title
+      description: The work to remember.
+      type:
+        kind: primitive
+        name: string
+      required: true
+    outputs:
+    - name: result
+      description: The retained Task is returned.
+      type:
+        kind: entity
+        ref: ENT-TASK
+      required: true
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "if not isinstance(actor_context, Entity_ActorContext) or not actor_context.permits('task.create', 'ACT-BOARD-MEMBER',\
+        \ self.board_id):\n    raise OperationFailure('DENIED')"
+      - task = Entity_Task(task_id, title)
+      - return self.store.createTask(task)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-011-01
+  target: apps.TaskBoard.entities.Entity_ActorContext
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-011-01
+  target: apps.TaskBoard.entities.Entity_Task
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-011-01
+  target: apps.TaskBoard.support.OperationFailure
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

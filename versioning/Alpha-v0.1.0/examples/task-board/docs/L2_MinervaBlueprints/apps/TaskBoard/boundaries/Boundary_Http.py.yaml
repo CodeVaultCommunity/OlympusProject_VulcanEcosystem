@@ -1,0 +1,125 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-001
+source:
+  path: apps/TaskBoard/boundaries/Boundary_Http.py
+  app: TaskBoard
+  language: python
+  state: observed
+  sha256: 210e1771c13311b54db843da00167f9c6f292c8112bcf957f25f16d6cc428c61
+  purpose: Loopback-only demonstration transport; no production identity provider is supplied.
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-001-01
+  code_name: Boundary_Http
+  kind: class
+  role: boundary
+  model_refs: []
+  description: Loopback-only demonstration transport; no production identity provider is supplied.
+  attributes: []
+  operations:
+  - id: OP-SOURCE-001-01-01
+    code_name: do_GET
+    contract_scope: technical
+    native_signature: do_GET(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "if self.path == '/health':\n    self.respond(200, {'status': 'ready', 'instance': self.server.instance_id})\n\
+        else:\n    self.respond(404, {'error': 'NOT_FOUND'})"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-001-01-02
+    code_name: do_POST
+    contract_scope: technical
+    native_signature: do_POST(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "try:\n    length = int(self.headers.get('Content-Length', '0'))\n    if not 0 < length <= 65536:\n    \
+        \    raise ValueError('invalid_body_length')\n    self.connection.settimeout(5)\n    payload = json.loads(self.rfile.read(length))\n\
+        except (ValueError, UnicodeError, OSError):\n    self.respond(400, {'error': 'INVALID_JSON'})\n    return"
+      - authorization = self.headers.get('Authorization', '')
+      - token = authorization[7:] if authorization.startswith('Bearer ') else None
+      - status, body = self.server.boundary.invoke(self.path.removeprefix('/'), payload, token)
+      - self.respond(status, body)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-001-01-03
+    code_name: respond
+    contract_scope: technical
+    native_signature: 'respond(self, status: int, body: dict)'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: status
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: body
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - data = json.dumps(body, ensure_ascii=True).encode('utf-8')
+      - self.send_response(status)
+      - self.send_header('Content-Type', 'application/json; charset=utf-8')
+      - self.send_header('Content-Length', str(len(data)))
+      - self.end_headers()
+      - self.wfile.write(data)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-001-01-04
+    code_name: log_message
+    contract_scope: technical
+    native_signature: log_message(self, format, *args)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: format
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - pass
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-001-01
+  target: http.server
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-001-01
+  target: json
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

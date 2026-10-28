@@ -1,0 +1,59 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-013
+source:
+  path: apps/BookingDesk/value_objects/ValueObject_BookingIdentity.py
+  app: BookingDesk
+  language: python
+  state: observed
+  sha256: ee74211b02a4b16ce3c538e22b512b891f9b70b48fcf3d98b66577f01e11ce5f
+  purpose: Realization source.
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-013-01
+  code_name: ValueObject_BookingIdentity
+  kind: class
+  role: value_object
+  model_refs: []
+  description: Observed realization source.
+  attributes:
+  - name: value
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: str
+  operations:
+  - id: OP-SOURCE-013-01-01
+    code_name: __post_init__
+    contract_scope: technical
+    native_signature: __post_init__(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "if not isinstance(self.value, str) or re.fullmatch('[A-Z0-9]{1,12}', self.value) is None:\n    raise ValueError('invalid_identifier')"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-013-01
+  target: re
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+- from_unit: UNIT-013-01
+  target: dataclasses
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

@@ -10,7 +10,7 @@ import sys
 from urllib.parse import unquote, urlsplit
 
 ROOT=Path(__file__).resolve().parents[1]
-IGNORED={'.git','.venv','__pycache__','.pytest_cache','build','dist'}
+IGNORED={'.git','.venv','__pycache__','.pytest_cache','build','dist','work','.runtime'}
 
 def anchors(path):
     text=path.read_text(encoding='utf-8')

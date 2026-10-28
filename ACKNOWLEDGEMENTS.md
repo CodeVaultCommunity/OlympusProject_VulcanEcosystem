@@ -6,4 +6,4 @@ The repository inventory, archive builder and archive checker are adapted from A
 
 The project and Olympus icons were supplied by the user and retained byte for byte. Decorative hero artwork was created with AI assistance; the assets guide identifies its reproducible assembly and sources. Diagrams are editable SVG and are not generated as semantic bitmap drawings.
 
-The example L1 contract is a separate manual reconstruction of the previous Vulcan demo. It is not the Task Board instance published in Atlas. Review and execution evidence are recorded with their actual scope; no personal approval or remote CI execution is fabricated.
+The three primary examples preserve the canonical Atlas minimal, composition and task-board source bytes and the corresponding pinned Minerva designs. Their concrete Python/SQLite realizations and local source-observation bindings were authored with AI assistance. The previous divergent demo is retained only as a technical fixture. Review and execution evidence record their actual scope; no personal approval or remote CI execution is inferred.

@@ -1,0 +1,110 @@
+format: minerva-yaml
+model_version: Alpha-v0.1.0
+profile_version: 0.1.0
+kind: source
+document_id: DOC-SOURCE-004
+source:
+  path: apps/RequestRegister/entities/Entity_ActorContext.py
+  app: RequestRegister
+  language: python
+  state: observed
+  sha256: ed5b2b30c36f34ea140104e46d6001bc8df56551cc5df0a36608c98c0fcde35a
+  purpose: Trusted invocation data. Only the configured authority or a trusted direct caller creates it.
+  observation: Observed 2026-10-28 during the user-authorized unpublished Alpha revision. Source does not override
+    designed ADPM/ADVS.
+units:
+- id: UNIT-004-01
+  code_name: Entity_ActorContext
+  kind: class
+  role: entity
+  model_refs:
+  - ENT-CALLER-CONTEXT
+  description: Trusted invocation data. Only the configured authority or a trusted direct caller creates it.
+  attributes:
+  - name: principal
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: str
+  - name: role
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: str
+  - name: permissions
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: tuple[str, ...]
+  - name: board_id
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: str | None
+  - name: issuer
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: str
+  - name: authenticated
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: bool
+  - name: valid
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: bool
+  - name: known
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: bool
+  - name: resolved
+    description: Observed native attribute; intrinsic meaning remains in linked ADPM where applicable.
+    native_type: bool
+  operations:
+  - id: OP-SOURCE-004-01-01
+    code_name: __post_init__
+    contract_scope: technical
+    native_signature: __post_init__(self)
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters: []
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - "if not isinstance(self.principal, str) or not isinstance(self.role, str):\n    raise ValueError('invalid_context_data')"
+      - "if not isinstance(self.permissions, tuple) or any((not isinstance(p, str) for p in self.permissions)):\n\
+        \    raise ValueError('invalid_permissions')"
+      - "if not isinstance(self.issuer, str) or (self.board_id is not None and (not isinstance(self.board_id, str))):\n\
+        \    raise ValueError('invalid_context_origin')"
+      - "if any((type(v) is not bool for v in (self.authenticated, self.valid, self.known, self.resolved))):\n \
+        \   raise ValueError('invalid_context_flags')"
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+  - id: OP-SOURCE-004-01-02
+    code_name: permits
+    contract_scope: technical
+    native_signature: 'permits(self, permission: str, role: str, board_id: str | None=None)'
+    description: Observed Python method. Operational meaning, where applicable, remains in linked ADPM; this record
+      does not redefine its contract.
+    inputs: []
+    outputs: []
+    technical_parameters:
+    - name: permission
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: role
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    - name: board_id
+      description: Observed native parameter; operational aliases and injection are explained in L3 realization.
+    behavior:
+      summary: Observed lexical body; not a proof of runtime behavior.
+      steps:
+      - return bool(self.principal.strip()) and self.issuer == 'local-demo' and self.authenticated and self.valid
+        and self.known and self.resolved and (self.role == role) and (permission in self.permissions) and (self.board_id
+        == board_id)
+      preconditions: []
+      postconditions: []
+      effects: []
+      graph_refs: []
+graphs: []
+dependencies:
+- from_unit: UNIT-004-01
+  target: dataclasses
+  kind: import
+  basis: observed
+  description: Lexical module import in the containing file; not proof of runtime calls.
+limitations:
+- Lexical body and signatures are observations; operational data contracts remain authoritative in ADPM.
+- Native parameter records include transport/configuration/injection; L3 documents aliases. No semantic inference
+  or approval is claimed.

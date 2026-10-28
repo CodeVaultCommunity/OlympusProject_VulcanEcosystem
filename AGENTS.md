@@ -17,3 +17,7 @@ Keep English and Portuguese aligned, preserve IDs, update links and validate exa
 ## Verify and distribute
 
 Run the edition tests and example checks and inspect changed artwork. From the root, use scripts/check_repository.py and scripts/tests. Update evidence before generating CONTENT-SHA256.json. Stage intended delivery files, generate the inventory last, verify it and commit locally. Follow docs/releasing.md for ZIP creation and extraction checks. The final commit and ZIP digest belong in an external receipt to avoid circular hashes. A ZIP request does not imply permission to push or publish remotely.
+
+## Unpublished Alpha revision
+
+Continue improving Alpha-v0.1.0 in place until the user requests another edition. Use specification/ for adopted rules, profiles/ for optional architecture, integrations/ for explanatory manual derivation only, and examples/minimal, composition and task-board for the canonical Atlas/Minerva family. Do not implement a translator or reintroduce vendor/. Old divergent business behavior is isolated in tests/fixtures/. Full verify requires an explicitly selected external Minerva edition; do not claim complete integration when it is unavailable. Keep new runs separate from historical reports.

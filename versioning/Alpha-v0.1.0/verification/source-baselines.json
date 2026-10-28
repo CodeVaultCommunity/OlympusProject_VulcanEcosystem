@@ -1,7 +1,7 @@
 {
   "captured": "2026-10-28",
   "algorithm": "SHA-256",
-  "note": "Immutable input snapshots, distinct from the active root delivery inventory. Public HEADs checked on this date; copied source bytes preserved.",
+  "note": "OAL/Atlas snapshots preserve pinned committed bytes. Minerva snapshots pin the explicitly read unpublished working-tree content; baseline commit is provenance only. Inputs are documentary, not an embedded validator.",
   "files": [
     {
       "source": "OAL Open Analysis Layers",
@@ -99,6 +99,67 @@
       "snapshot_path": "verification/sources/legacy-vulcan/LICENSE",
       "size_bytes": 1084,
       "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "source": "Minerva Blueprints working-tree input",
+      "edition": "Alpha-v0.1.0",
+      "commit": "5e4da7df52fbc3ca7a0527133bb4e24ba1942322",
+      "source_state": "working tree; content hash identifies selected unpublished input, not commit bytes",
+      "source_path": "versioning/Alpha-v0.1.0/examples/minimal/docs/L2_MinervaBlueprints/blueprint.yaml",
+      "snapshot_path": "verification/sources/minerva/examples/minimal/blueprint.yaml",
+      "size_bytes": 48101,
+      "sha256": "4d17ef6a82b0761836828e0d92f0428910090de46be6101ad0dec971071bc3f4"
+    },
+    {
+      "source": "Atlas canonical example",
+      "edition": "Stable-v1.0.0",
+      "commit": "b5941830515d9968bb7f313301f1abe25fb6f8aa",
+      "source_state": "committed canonical source",
+      "source_path": "versioning/Stable-v1.0.0/examples/minimal/example.atlas.json",
+      "snapshot_path": "examples/minimal/docs/L1_AtlasSpecifications/example.atlas.json",
+      "size_bytes": 59472,
+      "sha256": "731ef7e7f9e0dcda1b9dea1cae45a51a43bd16083948dae121d18fdd77bc746e"
+    },
+    {
+      "source": "Minerva Blueprints working-tree input",
+      "edition": "Alpha-v0.1.0",
+      "commit": "5e4da7df52fbc3ca7a0527133bb4e24ba1942322",
+      "source_state": "working tree; content hash identifies selected unpublished input, not commit bytes",
+      "source_path": "versioning/Alpha-v0.1.0/examples/composition/docs/L2_MinervaBlueprints/blueprint.yaml",
+      "snapshot_path": "verification/sources/minerva/examples/composition/blueprint.yaml",
+      "size_bytes": 108191,
+      "sha256": "89f0703fc85e995c1a4c4ce65a90351861f590dca56c2d359d117a668ccc94d5"
+    },
+    {
+      "source": "Atlas canonical example",
+      "edition": "Stable-v1.0.0",
+      "commit": "b5941830515d9968bb7f313301f1abe25fb6f8aa",
+      "source_state": "committed canonical source",
+      "source_path": "versioning/Stable-v1.0.0/examples/composition/example.atlas.json",
+      "snapshot_path": "examples/composition/docs/L1_AtlasSpecifications/example.atlas.json",
+      "size_bytes": 114924,
+      "sha256": "63a65c44f9fb4151c00389a954e9ce87531754c7c19076743b6dd6693ff62f96"
+    },
+    {
+      "source": "Minerva Blueprints working-tree input",
+      "edition": "Alpha-v0.1.0",
+      "commit": "5e4da7df52fbc3ca7a0527133bb4e24ba1942322",
+      "source_state": "working tree; content hash identifies selected unpublished input, not commit bytes",
+      "source_path": "versioning/Alpha-v0.1.0/examples/task-board/docs/L2_MinervaBlueprints/blueprint.yaml",
+      "snapshot_path": "verification/sources/minerva/examples/task-board/blueprint.yaml",
+      "size_bytes": 125064,
+      "sha256": "2aab3f264c1bc9b1bb437b97dc21ffd64e9e7d250ccb34f0b21edf4b5b2809d8"
+    },
+    {
+      "source": "Atlas canonical example",
+      "edition": "Stable-v1.0.0",
+      "commit": "b5941830515d9968bb7f313301f1abe25fb6f8aa",
+      "source_state": "committed canonical source",
+      "source_path": "versioning/Stable-v1.0.0/examples/task-board/example.atlas.json",
+      "snapshot_path": "examples/task-board/docs/L1_AtlasSpecifications/example.atlas.json",
+      "size_bytes": 130253,
+      "sha256": "fa14749cf58a179792ee66231e413cd912ddf944174824919b8c4615e91d87c8"
     }
-  ]
+  ],
+  "captured_at_utc": "2026-10-28T13:11:17.205330+00:00"
 }

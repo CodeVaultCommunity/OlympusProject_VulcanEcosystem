@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-28T13:22:28.750111+00:00",
+  "checks": [
+    {
+      "example": "minimal",
+      "atlas_schema_errors": [],
+      "atlas_bytes_equal_canonical": true,
+      "adpm_unchanged": true,
+      "scenario_intent_unchanged": true,
+      "minerva_snapshot_equals_current_working_tree": true,
+      "executed_source_hashes_match_current": true
+    },
+    {
+      "example": "composition",
+      "atlas_schema_errors": [],
+      "atlas_bytes_equal_canonical": true,
+      "adpm_unchanged": true,
+      "scenario_intent_unchanged": true,
+      "minerva_snapshot_equals_current_working_tree": true,
+      "executed_source_hashes_match_current": true
+    },
+    {
+      "example": "task-board",
+      "atlas_schema_errors": [],
+      "atlas_bytes_equal_canonical": true,
+      "adpm_unchanged": true,
+      "scenario_intent_unchanged": true,
+      "minerva_snapshot_equals_current_working_tree": true,
+      "executed_source_hashes_match_current": true
+    }
+  ],
+  "limits": "Exact source bytes and inherited ADPM/scenarios compared; semantic sufficiency and owner approval are separate review questions."
+}
