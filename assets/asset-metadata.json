@@ -1,0 +1,218 @@
+{
+  "project": "Vulcan Ecosystem",
+  "parent_project": "Olympus Project",
+  "version": "Alpha-v0.1.0",
+  "layer": "OAL L3 · ADI",
+  "created_on": "2026-10-28",
+  "scope": "Header decoration and explanatory diagrams. Diagrams describe model relationships and a review workflow; they do not certify application conformity or automatic generation.",
+  "original_icons": [
+    {
+      "id": "vulcan",
+      "origin": "user_supplied",
+      "source": "sources/vulcan-icon-original.png",
+      "display_copy": "vulcan-icon.png",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "sha256": "49a9f7da8a63e0447681a126088e788f7c60ca5ce33b9f2c1a75a66f431f829c",
+      "preservation": "byte-for-byte; original PNG embedded unchanged in banner SVGs"
+    },
+    {
+      "id": "olympus",
+      "origin": "user_supplied",
+      "source": "sources/olympus-icon-original.png",
+      "display_copy": "olympus-icon.png",
+      "dimensions_px": [
+        1254,
+        1254
+      ],
+      "sha256": "ce7e0f8f710aadd693a1d1e5c009644af9195533983f02ed54fe9a4b6a4985f9",
+      "preservation": "byte-for-byte; original PNG embedded unchanged in banner SVGs"
+    }
+  ],
+  "decorative_artwork": {
+    "file": "sources/vulcan-hero-art.png",
+    "origin": "generated_for_this_release",
+    "tool": "image_gen.imagegen",
+    "model_identifier": null,
+    "model_identifier_note": "The generation tool did not expose a model identifier.",
+    "dimensions_px": [
+      2170,
+      725
+    ],
+    "sha256": "5c91e0ff1c8bfbe9e2412ec95c97e30db4609fb82cc5b72a5d10b197c62ccc59",
+    "transparent_background": false,
+    "prompt_record": "sources/ARTWORK-PROMPT.md",
+    "prompt": "Create a polished wide cinematic decorative background illustration for the Vulcan Ecosystem software architecture project, belonging to the Olympus Project. Ultra-wide banner composition about 3:1, target1600x534. Deep midnight navy #061525 with electric blue/cyan/teal light and restrained warm gold sparks, elegant premium scientific editorial realism. The LEFT 47 percent must stay very dark and calm with only subtle atmosphere, completely empty of objects so editorial text and an existing logo can later be overlaid. Concentrate all meaningful artwork on the RIGHT 53 percent, full scene safely inside right area: a sculptural futuristic dark metallic anvil on a refined digital forge platform, a hammer hovering at a slight angle above a glowing modular crystalline assembly on the anvil, delicate illuminated circuit traces and several translucent geometric software module blocks being fitted together, tiny precise golden sparks frozen at the join. Evoke implementation, composition of applications, crafted executable systems and Vulcan's forge, with refined Greek-inspired material craftsmanship, but no figures or gods. Very faint volumetric navy atmosphere and celestial dust match an elegant scientific atlas banner. Clean silhouette, beautiful metal and glass, rich detail, controlled contrast. The overall canvas should stay navy, no large white areas, no smoky industrial grunge. No logos, no text, no letters, no readable numbers, no title, no watermark, no pseudo code, no terminal or screenshots. Image is decorative only, not a technical diagram.",
+    "processing": "Copied from the generated PNG without raster editing. The banner SVG scales and clips it to 1600×534.",
+    "semantics": "Decoration only; not a normative or machine-readable program diagram.",
+    "regeneration_note": "The retained PNG is the reproducible input. Repeating the generative prompt may produce different artwork."
+  },
+  "diagrams": {
+    "authoring": "Native editable SVG text, geometry and connectors, composed by render_images.py. No generated imagery in the technical diagrams.",
+    "semantic_source": "Current Alpha-v0.1.0 model documentation and revised Minerva/Vulcan requirements.",
+    "recommended_layout": "docs/L1_AtlasSpecifications/, docs/L2_MinervaBlueprints/, docs/L3_Vulcan/, docs/Shared/; only adopted models need corresponding folders.",
+    "ownership": "The per-file mirror belongs to L2. L3 records concrete organization, composition, execution, integrations and evidence. Shared is support, not an OAL layer.",
+    "minerva_state_alignment": "The Minerva diagram follows the edition schema: source.state planned/observed; document.nature designed/reconstructed/mixed. Observed source metadata is not proof of execution.",
+    "independent_svg": true,
+    "external_raster_references": false
+  },
+  "reproduction": {
+    "script": "sources/render_images.py",
+    "python": "3.10+",
+    "cairosvg": "2.8.2",
+    "fonts": [
+      "DejaVu Sans",
+      "DejaVu Sans Mono"
+    ],
+    "command": "python assets/sources/render_images.py",
+    "font_note": "Text remains editable; fonts are not embedded. Install the listed fonts for matching layout.",
+    "network_required": false,
+    "project_runtime_dependency": false,
+    "bitmap_output_note": "Rendering is reproducible from the retained inputs. Different font or Cairo versions can alter pixels.",
+    "renderer_sha256": "11f4740370bbcf6cbe498aa9db3bab9ea91be80f438aa3efc3db75ee328852b2"
+  },
+  "attribution": {
+    "atlas_visual_source": "https://github.com/CodeVaultCommunity/OlympusProject_AtlasSpecifications/tree/b5941830515d9968bb7f313301f1abe25fb6f8aa/assets",
+    "atlas_revision": "b5941830515d9968bb7f313301f1abe25fb6f8aa",
+    "atlas_version": "Stable-v1.0.0",
+    "atlas_reuse": "Visual conventions and SVG helper patterns adapted; full MIT notice retained in sources/ATLAS-LICENSE.txt.",
+    "copyright_notice": "Copyright (c) 2026 Douglas de Oliveira Alkimim",
+    "oal_source": "https://github.com/CodeVaultCommunity/OAL_OpenAnalysisLayers/tree/0cc54a19df324ac54857b92b068931cc1b090a10",
+    "icon_credit": "Original icons supplied for the project. No external creator attribution invented."
+  },
+  "renders": [
+    {
+      "id": "vulcan-banner-en",
+      "language": "en",
+      "kind": "banner",
+      "svg": "sources/vulcan-banner-en.svg",
+      "png": "vulcan-banner-en.png",
+      "dimensions_px": [
+        1600,
+        534
+      ],
+      "has_transparency": true,
+      "svg_sha256": "fd836826de7201e9323947cb8e393ca3a7492f90abd9ec3fc0fc5d5e21f23c5c",
+      "png_sha256": "1958ea5cb34e22f683ab984d9a82f054969c1326a3ddb78fb19f31ab6778003e"
+    },
+    {
+      "id": "vulcan-banner-pt-br",
+      "language": "pt-br",
+      "kind": "banner",
+      "svg": "sources/vulcan-banner-pt-br.svg",
+      "png": "vulcan-banner-pt-br.png",
+      "dimensions_px": [
+        1600,
+        534
+      ],
+      "has_transparency": true,
+      "svg_sha256": "1ef9ff81572f2e9e98b49198b3b1cca43747709006222f55c9eb2c39fa3649b8",
+      "png_sha256": "bddaf9a6908f39c413a95ba150d4d23780ceb220875846fa0ee7f7de3d506f63"
+    },
+    {
+      "id": "vulcan-oal-position-en",
+      "language": "en",
+      "kind": "oal-position",
+      "svg": "sources/vulcan-oal-position-en.svg",
+      "png": "vulcan-oal-position-en.png",
+      "dimensions_px": [
+        1400,
+        1080
+      ],
+      "has_transparency": true,
+      "svg_sha256": "d29cf869a78b92d91a250f773fd18707268815835f37e784a973ce271ef02bd0",
+      "png_sha256": "b62088260faa2cb281c6bc1506fe877ebf17d84b5b5e5eb0e10abacdddbd04ea"
+    },
+    {
+      "id": "vulcan-oal-position-pt-br",
+      "language": "pt-br",
+      "kind": "oal-position",
+      "svg": "sources/vulcan-oal-position-pt-br.svg",
+      "png": "vulcan-oal-position-pt-br.png",
+      "dimensions_px": [
+        1400,
+        1080
+      ],
+      "has_transparency": true,
+      "svg_sha256": "f7346a998219cac68ff91c55c90911885eef7ebfb3b1d726048647d1c0ae051f",
+      "png_sha256": "a288997f5a9f59581ab3b8ee6c8f756f0193fe4d2de4cbc4f36289689b4b4acb"
+    },
+    {
+      "id": "vulcan-model-en",
+      "language": "en",
+      "kind": "model",
+      "svg": "sources/vulcan-model-en.svg",
+      "png": "vulcan-model-en.png",
+      "dimensions_px": [
+        1400,
+        1200
+      ],
+      "has_transparency": true,
+      "svg_sha256": "503340eeb755c29f2e5deba8fc6b01d8cfcd3c282a14a6ac0854adea09ea9757",
+      "png_sha256": "b6f0d243ea9915e0cca54a7c6bdd966a09067194f4703751488e622e39e16fa9"
+    },
+    {
+      "id": "vulcan-model-pt-br",
+      "language": "pt-br",
+      "kind": "model",
+      "svg": "sources/vulcan-model-pt-br.svg",
+      "png": "vulcan-model-pt-br.png",
+      "dimensions_px": [
+        1400,
+        1200
+      ],
+      "has_transparency": true,
+      "svg_sha256": "ca42e1b418e76cfe803ad09da3f057a246f49c9eb86c0187836c627e3dcc37fb",
+      "png_sha256": "c8e2095052d4b94215d2e578430e7169ad20814ce30358074f5923baeadba85e"
+    },
+    {
+      "id": "vulcan-workflow-en",
+      "language": "en",
+      "kind": "workflow",
+      "svg": "sources/vulcan-workflow-en.svg",
+      "png": "vulcan-workflow-en.png",
+      "dimensions_px": [
+        1400,
+        1230
+      ],
+      "has_transparency": true,
+      "svg_sha256": "ce2b15b6ca3026dad673074dded4a094369f5d3a1f248bb0ef3ceda1010b87bd",
+      "png_sha256": "9fed5632751286aa9dcd9805a18964eb7965fad8965df6cfb5d9f13931260f6f"
+    },
+    {
+      "id": "vulcan-workflow-pt-br",
+      "language": "pt-br",
+      "kind": "workflow",
+      "svg": "sources/vulcan-workflow-pt-br.svg",
+      "png": "vulcan-workflow-pt-br.png",
+      "dimensions_px": [
+        1400,
+        1230
+      ],
+      "has_transparency": true,
+      "svg_sha256": "32c1fa16063d61fa2e3d0a5f3905682f431986212f3c1f79de2ebc627dcfdc6b",
+      "png_sha256": "803f6e1b9810d56b09b834510c4b37d7ecc96235d384a59b0b2acb6edced1f76"
+    }
+  ],
+  "quality_review": {
+    "png_full_decode": true,
+    "original_icon_integrity": true,
+    "embedded_icon_integrity": true,
+    "svg_well_formed": true,
+    "all_rendered_pngs_visually_reviewed": true,
+    "reviewed_assets": [
+      "vulcan-banner-en.png",
+      "vulcan-banner-pt-br.png",
+      "vulcan-oal-position-en.png",
+      "vulcan-oal-position-pt-br.png",
+      "vulcan-model-en.png",
+      "vulcan-model-pt-br.png",
+      "vulcan-workflow-en.png",
+      "vulcan-workflow-pt-br.png"
+    ],
+    "unresolved_visual_findings": [],
+    "note": "All eight rendered assets were visually inspected in both languages at native resolution. The PT Vulcan integration label was shortened to preserve padding, and complete PNG byte writes were verified after the renderer adopted atomic replacement. This review concerns presentation and source integrity, not application conformance."
+  }
+}

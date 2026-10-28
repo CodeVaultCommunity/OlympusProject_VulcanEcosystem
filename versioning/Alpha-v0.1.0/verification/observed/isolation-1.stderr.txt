@@ -1,0 +1,48 @@
+testBrowserPageAndHttpFailureProjection (Test_Boundaries.Test_Boundaries.testBrowserPageAndHttpFailureProjection) ... ok
+testChannelRejectsUntrustedOrInsufficientContext (Test_Boundaries.Test_Boundaries.testChannelRejectsUntrustedOrInsufficientContext) ... ok
+testCliExitCodesAndArbitraryWorkingDirectory (Test_Boundaries.Test_Boundaries.testCliExitCodesAndArbitraryWorkingDirectory) ... ok
+testHttpCliAndLegacySharePublicContracts (Test_Boundaries.Test_Boundaries.testHttpCliAndLegacySharePublicContracts) ... ok
+testLegacyReportsUsesDocumentedUpstreamFailure (Test_Boundaries.Test_Boundaries.testLegacyReportsUsesDocumentedUpstreamFailure) ... ok
+testMalformedBodiesAndStorageProjection (Test_Boundaries.Test_Boundaries.testMalformedBodiesAndStorageProjection) ... ok
+testAllAndSelectedApps (Test_Launcher.Test_Launcher.testAllAndSelectedApps) ... ok
+testCleanupEscalatesOnlyOwnedProcess (Test_Launcher.Test_Launcher.testCleanupEscalatesOnlyOwnedProcess) ... ok
+testDependencyCyclesAndSelectionDiagnostics (Test_Launcher.Test_Launcher.testDependencyCyclesAndSelectionDiagnostics) ... ok
+testOccupiedPortDoesNotStopForeignService (Test_Launcher.Test_Launcher.testOccupiedPortDoesNotStopForeignService) ... 127.0.0.1 - - [27/Oct/2026 23:28:27] code 501, message Unsupported method ('GET')
+127.0.0.1 - - [27/Oct/2026 23:28:27] "GET /health HTTP/1.1" 501 -
+127.0.0.1 - - [27/Oct/2026 23:28:27] code 501, message Unsupported method ('GET')
+127.0.0.1 - - [27/Oct/2026 23:28:27] "GET /health HTTP/1.1" 501 -
+127.0.0.1 - - [27/Oct/2026 23:28:27] code 501, message Unsupported method ('GET')
+127.0.0.1 - - [27/Oct/2026 23:28:27] "GET /health HTTP/1.1" 501 -
+ok
+testPartialStartupCleansEarlierChild (Test_Launcher.Test_Launcher.testPartialStartupCleansEarlierChild) ... 127.0.0.1 - - [27/Oct/2026 23:28:27] code 501, message Unsupported method ('GET')
+127.0.0.1 - - [27/Oct/2026 23:28:27] "GET /health HTTP/1.1" 501 -
+127.0.0.1 - - [27/Oct/2026 23:28:27] code 501, message Unsupported method ('GET')
+127.0.0.1 - - [27/Oct/2026 23:28:27] "GET /health HTTP/1.1" 501 -
+127.0.0.1 - - [27/Oct/2026 23:28:28] code 501, message Unsupported method ('GET')
+127.0.0.1 - - [27/Oct/2026 23:28:28] "GET /health HTTP/1.1" 501 -
+ok
+testReadinessRejectsForeignInstance (Test_Launcher.Test_Launcher.testReadinessRejectsForeignInstance) ... ok
+testSignalStopsOwnedChildren (Test_Launcher.Test_Launcher.testSignalStopsOwnedChildren) ... ok
+testAuthorizationPrecedesDependencyAccess (Test_TaskCases.Test_TaskCases.testAuthorizationPrecedesDependencyAccess)
+Supporting proof: denied direct invocations never call an injected tool. ... ok
+testCanonicalValuesAndContext (Test_TaskCases.Test_TaskCases.testCanonicalValuesAndContext) ... ok
+testCompleteTask (Test_TaskCases.Test_TaskCases.testCompleteTask)
+UC-TASK-003: refusal precedes mutation; completion is durable and idempotent. ... ok
+testCreateTask (Test_TaskCases.Test_TaskCases.testCreateTask)
+UC-TASK-001: denied callers and invalid titles have no task-write effects. ... ok
+testListTasks (Test_TaskCases.Test_TaskCases.testListTasks)
+UC-TASK-002: the direct core and a read-only actor enforce the same policy. ... ok
+testStorageFailureAndCanonicalConstruction (Test_TaskCases.Test_TaskCases.testStorageFailureAndCanonicalConstruction)
+PERSISTENCE includes durable success and explicit connection failure. ... ok
+testAlternativeDocumentationLocationDoesNotFailStructure (Test_Structure.Test_Structure.testAlternativeDocumentationLocationDoesNotFailStructure) ... ok
+testAppSymlinkOutsideRootCannotPassWithoutAssessment (Test_Structure.Test_Structure.testAppSymlinkOutsideRootCannotPassWithoutAssessment) ... ok
+testCliReturnsNonzeroAndMachineReadableDiagnostics (Test_Structure.Test_Structure.testCliReturnsNonzeroAndMachineReadableDiagnostics) ... ok
+testMissingRootEntryAndCoreAreasAreDiagnosed (Test_Structure.Test_Structure.testMissingRootEntryAndCoreAreasAreDiagnosed) ... ok
+testPublishedCounterexampleProducesAllPromisedDiagnostics (Test_Structure.Test_Structure.testPublishedCounterexampleProducesAllPromisedDiagnostics) ... ok
+testRunnableExamplePassesWithExplicitScope (Test_Structure.Test_Structure.testRunnableExamplePassesWithExplicitScope) ... ok
+testSyntaxAndRelativeImportViolationsAreDiagnosed (Test_Structure.Test_Structure.testSyntaxAndRelativeImportViolationsAreDiagnosed) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 6.864s
+
+OK

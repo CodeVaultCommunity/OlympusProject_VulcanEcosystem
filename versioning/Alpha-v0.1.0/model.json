@@ -1,0 +1,26 @@
+{
+  "id": "OLYMPUS-VULCAN-ECOSYSTEM",
+  "name": "Vulcan Ecosystem",
+  "edition": "Alpha-v0.1.0",
+  "project": "Olympus Project",
+  "oal_edition": "Stable-v1.0.0",
+  "primary_layer": "L3",
+  "normative_manual": "README.md",
+  "translations": {
+    "pt-BR": "README.pt-br.md"
+  },
+  "architecture_profile": "Vulcan Architecture",
+  "source_model": {
+    "name": "Minerva Blueprints",
+    "edition": "Alpha-v0.1.0"
+  },
+  "metadata_scope": "Editorial declaration, not a required runtime manifest or universal L3 serialization schema",
+  "example": "examples/task-board-ecosystem",
+  "verification_entry": [
+    "python",
+    "run_examples.py",
+    "verify"
+  ],
+  "assessment_limits": "guides/assessment.md",
+  "sources": "verification/source-baselines.json"
+}

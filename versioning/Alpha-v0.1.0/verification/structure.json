@@ -1,0 +1,176 @@
+{
+  "model": "Vulcan Ecosystem",
+  "edition": "Alpha-v0.1.0",
+  "profile": "Vulcan Architecture Python",
+  "evaluated_at_utc": "2026-10-28T03:27:37.349698+00:00",
+  "ecosystem": "/workspace/scratch/3863ab4332a6/repository_build/OlympusProject_VulcanEcosystem/versioning/Alpha-v0.1.0/examples/task-board-ecosystem",
+  "status": "passed",
+  "scope": {
+    "profile_apps": [
+      "TaskBoard"
+    ],
+    "legacy_apps_not_structurally_assessed": [
+      "LegacyReports"
+    ],
+    "python_files_parsed": 14,
+    "rules": [
+      "ECO_APPS",
+      "ECO_ENTRY",
+      "ECO_CLASSIFICATION",
+      "VA_AREAS",
+      "VA_SINGLE_STRUCTURE",
+      "VA_FILE_NAME",
+      "VA_ROLE_NAME",
+      "VA_METHOD_CASE",
+      "VA_ATTRIBUTE_CASE",
+      "VA_DOMAIN",
+      "VA_DEPENDENCY_DIRECTION",
+      "VA_VALUE_OBJECT_CONSUMER",
+      "VA_PURE_DATA",
+      "VA_STATIC_CYCLE",
+      "PYTHON_SYNTAX"
+    ],
+    "entry": "launch.py",
+    "not_assessed": [
+      "Minerva schema or per-file mirror",
+      "semantic preservation",
+      "authorization behavior",
+      "runtime execution",
+      "dynamic imports",
+      "C/Go",
+      "all foreign library dependencies",
+      "cross-app API public status"
+    ]
+  },
+  "diagnostics": [],
+  "adaptations": [
+    {
+      "path": "apps/TaskBoard/boundaries/Boundary_Cli.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/TaskBoard/boundaries/Boundary_Http.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/TaskBoard/boundaries/Boundary_Http.py",
+      "symbol": "do_GET",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/TaskBoard/boundaries/Boundary_Http.py",
+      "symbol": "do_POST",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/TaskBoard/boundaries/Boundary_Http.py",
+      "symbol": "log_message",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/TaskBoard/composition/AppComposition.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/TaskBoard/entities/Entity_ActorContext.py",
+      "symbol": "__post_init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/TaskBoard/entities/Entity_Task.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/TaskBoard/main.py",
+      "reason": "Explicit technical entry point; no application class is required. Semantic allocation requires review."
+    },
+    {
+      "path": "apps/TaskBoard/tools/Tool_SqliteTaskStore.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/TaskBoard/usecases/TaskManagement/UseCase_CompleteTask.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/TaskBoard/usecases/TaskManagement/UseCase_ListTasks.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/TaskBoard/value_objects/ValueObject_TaskTitle.py",
+      "symbol": "__post_init__",
+      "reason": "Python or HTTP framework spelling."
+    }
+  ],
+  "static_dependencies": {
+    "apps/TaskBoard/boundaries/Boundary_Cli.py": [
+      "apps/TaskBoard/entities/Entity_ActorContext.py",
+      "apps/TaskBoard/entities/Entity_Task.py",
+      "apps/TaskBoard/usecases/TaskManagement/UseCase_CompleteTask.py",
+      "apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py",
+      "apps/TaskBoard/usecases/TaskManagement/UseCase_ListTasks.py"
+    ],
+    "apps/TaskBoard/boundaries/Boundary_Http.py": [
+      "apps/TaskBoard/entities/Entity_Task.py"
+    ],
+    "apps/TaskBoard/composition/AppComposition.py": [
+      "apps/TaskBoard/entities/Entity_ActorContext.py",
+      "apps/TaskBoard/tools/Tool_SqliteTaskStore.py",
+      "apps/TaskBoard/usecases/TaskManagement/UseCase_CompleteTask.py",
+      "apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py",
+      "apps/TaskBoard/usecases/TaskManagement/UseCase_ListTasks.py"
+    ],
+    "apps/TaskBoard/entities/Entity_ActorContext.py": [],
+    "apps/TaskBoard/entities/Entity_Task.py": [
+      "apps/TaskBoard/value_objects/ValueObject_TaskTitle.py"
+    ],
+    "apps/TaskBoard/main.py": [
+      "apps/TaskBoard/boundaries/Boundary_Cli.py",
+      "apps/TaskBoard/boundaries/Boundary_Http.py",
+      "apps/TaskBoard/composition/AppComposition.py"
+    ],
+    "apps/TaskBoard/tests/Test_Boundaries.py": [
+      "apps/TaskBoard/boundaries/Boundary_Cli.py",
+      "apps/TaskBoard/boundaries/Boundary_Http.py",
+      "apps/TaskBoard/composition/AppComposition.py"
+    ],
+    "apps/TaskBoard/tests/Test_Launcher.py": [],
+    "apps/TaskBoard/tests/Test_TaskCases.py": [
+      "apps/TaskBoard/composition/AppComposition.py",
+      "apps/TaskBoard/entities/Entity_ActorContext.py",
+      "apps/TaskBoard/entities/Entity_Task.py",
+      "apps/TaskBoard/value_objects/ValueObject_TaskTitle.py"
+    ],
+    "apps/TaskBoard/tools/Tool_SqliteTaskStore.py": [
+      "apps/TaskBoard/entities/Entity_Task.py"
+    ],
+    "apps/TaskBoard/usecases/TaskManagement/UseCase_CompleteTask.py": [
+      "apps/TaskBoard/entities/Entity_ActorContext.py",
+      "apps/TaskBoard/entities/Entity_Task.py",
+      "apps/TaskBoard/tools/Tool_SqliteTaskStore.py"
+    ],
+    "apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py": [
+      "apps/TaskBoard/entities/Entity_ActorContext.py",
+      "apps/TaskBoard/entities/Entity_Task.py",
+      "apps/TaskBoard/tools/Tool_SqliteTaskStore.py"
+    ],
+    "apps/TaskBoard/usecases/TaskManagement/UseCase_ListTasks.py": [
+      "apps/TaskBoard/entities/Entity_ActorContext.py",
+      "apps/TaskBoard/entities/Entity_Task.py",
+      "apps/TaskBoard/tools/Tool_SqliteTaskStore.py"
+    ],
+    "apps/TaskBoard/value_objects/ValueObject_TaskTitle.py": []
+  }
+}

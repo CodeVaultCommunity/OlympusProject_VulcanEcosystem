@@ -1,0 +1,131 @@
+{
+  "model": "Vulcan Ecosystem",
+  "edition": "Alpha-v0.1.0",
+  "executed_at_utc": "2026-10-28T03:27:37.401416+00:00",
+  "command": [
+    "/tmp/olympus-review-20261028/bin/python",
+    "run_examples.py",
+    "verify"
+  ],
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "status": "passed",
+  "tests_run": 26,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "duration_seconds": 6.985,
+  "tests": [
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testBrowserPageAndHttpFailureProjection",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testChannelRejectsUntrustedOrInsufficientContext",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testCliExitCodesAndArbitraryWorkingDirectory",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testHttpCliAndLegacySharePublicContracts",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testLegacyReportsUsesDocumentedUpstreamFailure",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Boundaries.Test_Boundaries.testMalformedBodiesAndStorageProjection",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testAllAndSelectedApps",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testCleanupEscalatesOnlyOwnedProcess",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testDependencyCyclesAndSelectionDiagnostics",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testOccupiedPortDoesNotStopForeignService",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testPartialStartupCleansEarlierChild",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testReadinessRejectsForeignInstance",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Launcher.Test_Launcher.testSignalStopsOwnedChildren",
+      "status": "passed"
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testAuthorizationPrecedesDependencyAccess",
+      "status": "passed"
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCanonicalValuesAndContext",
+      "status": "passed"
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCompleteTask",
+      "status": "passed"
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testCreateTask",
+      "status": "passed"
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testListTasks",
+      "status": "passed"
+    },
+    {
+      "test": "Test_TaskCases.Test_TaskCases.testStorageFailureAndCanonicalConstruction",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testAlternativeDocumentationLocationDoesNotFailStructure",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testAppSymlinkOutsideRootCannotPassWithoutAssessment",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testCliReturnsNonzeroAndMachineReadableDiagnostics",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testMissingRootEntryAndCoreAreasAreDiagnosed",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testPublishedCounterexampleProducesAllPromisedDiagnostics",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testRunnableExamplePassesWithExplicitScope",
+      "status": "passed"
+    },
+    {
+      "test": "Test_Structure.Test_Structure.testSyntaxAndRelativeImportViolationsAreDiagnosed",
+      "status": "passed"
+    }
+  ],
+  "limits": [
+    "Python standard-library implementation only; recorded host only",
+    "HTTP requests and HTML response checks do not demonstrate browser interaction",
+    "Test counts are unittest methods, not counts of every subcase or assertion",
+    "C/Go, Docker, production identity, load, distributed failure and deployment were not tested",
+    "CI configuration alone is not a hosted CI run"
+  ]
+}

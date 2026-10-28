@@ -1,0 +1,1095 @@
+{
+  "format": "olympus-requirement-coverage/1",
+  "project": "Vulcan Ecosystem",
+  "edition": "Alpha-v0.1.0",
+  "catalog_revision": "0.1",
+  "status": "delivery_mapping_for_review",
+  "assessment_author": "AI-assisted technical preparation and review",
+  "owner_approval": "not_asserted",
+  "path_base": "repository_root",
+  "counts": {
+    "catalog": 80,
+    "primary_model": 30,
+    "shared_delivery": 20,
+    "companion_model": 30
+  },
+  "meaning": "This is an artifact and assessment-scope mapping, not a blanket pass/fail verdict on all requirements. Tests establish only their recorded observations. Original proposal statuses remain in the source catalog.",
+  "requirements": [
+    {
+      "id": "MIN-001",
+      "title": "Cobertura integrada de modelagem e verificação",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-002",
+      "title": "Modelo semântico independente da representação",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-003",
+      "title": "Identidade e versões do blueprint",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-004",
+      "title": "Elementos lógicos independentes dos arquivos",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-005",
+      "title": "Contrato e comportamento de cada caso de programa",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-006",
+      "title": "Entradas e saídas semanticamente tipadas",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-007",
+      "title": "Propriedade das regras das entidades",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-008",
+      "title": "Contratos de ferramentas sem abstração de linguagem obrigatória",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-009",
+      "title": "Validação canônica e condições contextuais",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-010",
+      "title": "Garantias observáveis da persistência",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-011",
+      "title": "Dependências e composição explícitas",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-012",
+      "title": "Contexto de ator e autorização por caso",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-013",
+      "title": "Composição entre casos com preservação do contrato",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-014",
+      "title": "Descrição semântica recuperável do comportamento",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-015",
+      "title": "Grafos com semântica e identidade",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-016",
+      "title": "Decisões acrescentadas e pendências explícitas",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-017",
+      "title": "Identidade dos testes comportamentais",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-018",
+      "title": "Contrato completo dos cenários de verificação",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-019",
+      "title": "Cobertura rastreável dos critérios de aceite",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-020",
+      "title": "Verificação de autorização e ausência de efeitos proibidos",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-021",
+      "title": "Alternativas e falhas pertinentes ao contrato",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-022",
+      "title": "Distinção entre plano realização e execução da verificação",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-023",
+      "title": "Verificação de obrigações de interação referenciadas",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-024",
+      "title": "Perfil YAML e espelho documental em L2",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-025",
+      "title": "Raiz do blueprint referências e empacotamento",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-026",
+      "title": "Leitura YAML previsível",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-027",
+      "title": "Validação estrutural e de consistência",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-028",
+      "title": "Validação dos grafos suportados",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-029",
+      "title": "Diagnósticos utilizáveis em revisão e automação",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "MIN-030",
+      "title": "Exemplos válidos e contraexemplos do modelo",
+      "scope": "companion_model",
+      "delivery": "outside_primary_model_scope",
+      "companion_distribution": "OlympusProject_MinervaBlueprints_Alpha-v0.1.0.zip",
+      "note": "Requisito próprio do modelo companheiro. Sua presença no catálogo não cria obrigação arquitetural adicional neste modelo."
+    },
+    {
+      "id": "VUL-001",
+      "title": "Identidade e escopo do modelo L3",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/README.md",
+        "versioning/Alpha-v0.1.0/model.json"
+      ],
+      "scope_and_limits_pt_br": "O modelo identifica L3/ADI, perfil interno opcional, fontes L2 e escolhas L4.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-002",
+      "title": "Organização da raiz e aplicativos",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/launch.py",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/README.md"
+      ],
+      "scope_and_limits_pt_br": "Ecossistema possui apps/ e inicializador real; docs/ por camadas é recomendado e a execução resolve caminhos a partir do próprio arquivo.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-003",
+      "title": "Inventário e conformidade por aplicativo",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "example"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/realization.json"
+      ],
+      "scope_and_limits_pt_br": "Inventário distingue TaskBoard no perfil e LegacyReports em outra arquitetura, com modos e limites por app.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-004",
+      "title": "Participação fiel de aplicativos legados",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "example",
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/LegacyReports/reports.py",
+        "versioning/Alpha-v0.1.0/guides/legacy-and-boundaries.md"
+      ],
+      "scope_and_limits_pt_br": "Legado conserva seus handlers e múltiplas unidades; não recebe alegação automática de conformidade à arquitetura interna.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-005",
+      "title": "Áreas do perfil Vulcan Architecture",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "structure"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/guides/vulcan-architecture.md",
+        "versioning/Alpha-v0.1.0/scripts/evaluate_structure.py"
+      ],
+      "scope_and_limits_pt_br": "As quatro áreas irmãs são identificadas; o avaliador aplica o perfil somente ao escopo declarado.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-006",
+      "title": "Domínios dos casos de uso",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "structure",
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py"
+      ],
+      "scope_and_limits_pt_br": "Casos estão no domínio TaskManagement; autorização existe no caso e independe de ser invocado pelo canal.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-007",
+      "title": "Uma estrutura principal por arquivo",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "structure"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/scripts/evaluate_structure.py",
+        "versioning/Alpha-v0.1.0/examples/structural-counterexamples/README.md"
+      ],
+      "scope_and_limits_pt_br": "Uma estrutura principal por fonte do perfil, com exceção técnica explícita para o ponto de entrada. Legado fica fora dessa obrigação.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-008",
+      "title": "Convenções de nomes",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "structure",
+        "negative-tests"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/guides/vulcan-architecture.md",
+        "versioning/Alpha-v0.1.0/tests/Test_Structure.py"
+      ],
+      "scope_and_limits_pt_br": "Prefixos, nome-base, camelCase e snake_case são avaliados nas formas Python suportadas. Overrides obrigatórios são adaptações declaradas.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-009",
+      "title": "Adaptações de linguagem declaradas",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "illustration"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/guides/vulcan-architecture.md"
+      ],
+      "scope_and_limits_pt_br": "C e Go têm adaptações documentadas, inclusive declaração/implementação e exportação. Não foram implementados ou executados avaliadores C/Go.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-010",
+      "title": "Value objects encapsulados",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "structure",
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/value_objects/ValueObject_TaskTitle.py",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py"
+      ],
+      "scope_and_limits_pt_br": "Value object congelado encapsula título e é consumido por entidade. Casos públicos usam primitivos/entidades; testes verificam imutabilidade e validade.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-011",
+      "title": "Entidades e validade canônica",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "structure",
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/entities/Entity_Task.py",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py"
+      ],
+      "scope_and_limits_pt_br": "Entidade mantém invariantes canônicas; criação/hidratação usam construção válida e não dependem de canal ou banco.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-012",
+      "title": "Ferramentas concretas e garantias",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tools/Tool_SqliteTaskStore.py",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml"
+      ],
+      "scope_and_limits_pt_br": "Ferramenta concreta realiza contrato L2, usa construção canônica e declara garantias/falhas. Concorrência distribuída não está demonstrada.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-013",
+      "title": "Núcleo invocável por caso",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Boundaries.py"
+      ],
+      "scope_and_limits_pt_br": "Os mesmos três casos têm chamada direta e projeções HTTP/CLI, sem criação de identidades de domínio artificiais por canal.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-014",
+      "title": "Dados operacionais e injeção separados",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "example"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/guides/vulcan-architecture.md",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml"
+      ],
+      "scope_and_limits_pt_br": "Dados operacionais permanecem primitivos, entidades ou coleções; dependências técnicas são injetadas separadamente.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-015",
+      "title": "Autorização antes de efeitos",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Boundaries.py"
+      ],
+      "scope_and_limits_pt_br": "Recusa é exercitada antes de efeitos, incluindo chamadas diretas e canais. Tokens didáticos e confiança no chamador interno têm limites explícitos.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-016",
+      "title": "Composição explícita e biblioteca opcional",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "example",
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/composition/AppComposition.py",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/realization.json"
+      ],
+      "scope_and_limits_pt_br": "Composição seleciona ferramentas e injeta colaboradores concretos, sem biblioteca arquitetural ou container obrigatório.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-017",
+      "title": "Dependências e chamadas entre componentes",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "structure",
+        "negative-tests"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/scripts/evaluate_structure.py",
+        "versioning/Alpha-v0.1.0/tests/Test_Structure.py",
+        "versioning/Alpha-v0.1.0/guides/vulcan-architecture.md"
+      ],
+      "scope_and_limits_pt_br": "Ciclos de dependência declarados são recusados. Composição entre casos preserva contexto por regra; o TaskBoard não contém esse tipo de chamada.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-018",
+      "title": "Resultados falhas e efeitos",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/Shared/interaction.md"
+      ],
+      "scope_and_limits_pt_br": "Resultados e falhas têm projeções explícitas; falha de conexão é exercitada. Não se promete rollback por cancelamento ou ausência de efeito em falha ambígua.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-019",
+      "title": "Vida útil e liberação de recursos",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tools/Tool_SqliteTaskStore.py",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Launcher.py"
+      ],
+      "scope_and_limits_pt_br": "Conexões têm vida por operação; launcher limpa filhos próprios. Os testes cobrem encerramento e falha parcial no escopo do exemplo.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-020",
+      "title": "Separação das interfaces de interação",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/guides/legacy-and-boundaries.md",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Boundaries.py"
+      ],
+      "scope_and_limits_pt_br": "Canais TaskBoard adaptam dados/contexto para casos. Handlers legados são descritos como existem e escolhas de interação são L4.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-021",
+      "title": "Comunicação por contratos públicos",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "example",
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/LegacyReports/reports.py",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Boundaries.py"
+      ],
+      "scope_and_limits_pt_br": "LegacyReports usa HTTP público do TaskBoard; não importa seu núcleo nem acessa seu banco.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-022",
+      "title": "Inicialização completa e seletiva",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/launch.py",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Launcher.py"
+      ],
+      "scope_and_limits_pt_br": "Inicialização total e seletiva é real e testada. Todos significa modos padrão, não executar silenciosamente tarefas de manutenção.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-023",
+      "title": "Contrato de execução por modo",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "example"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/guides/execution.md",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/realization.json"
+      ],
+      "scope_and_limits_pt_br": "Modos identificam entrada, configuração, prontidão/conclusão e encerramento. Docker é possibilidade de adoção, não demonstração executada.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-024",
+      "title": "Política de dependências de inicialização",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/launch.py",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Launcher.py"
+      ],
+      "scope_and_limits_pt_br": "Selecionar LegacyReports expande TaskBoard; seleção inválida e ciclos falham antes de declarar prontidão.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-025",
+      "title": "Prontidão e recursos pertencentes à execução",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Launcher.py"
+      ],
+      "scope_and_limits_pt_br": "Prontidão verifica identidade da instância; portas alheias, falha parcial e interrupção têm limpeza limitada aos processos gerenciados.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-026",
+      "title": "Integração dos testes derivados da ADVS",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "execution"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml",
+        "versioning/Alpha-v0.1.0/run_examples.py",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py"
+      ],
+      "scope_and_limits_pt_br": "Runner executa testes da realização selecionada. Três identidades comportamentais mantêm seus cenários e apoios.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-027",
+      "title": "Evidência observada e limites de verificação",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "evidence"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/verification/execution.json",
+        "versioning/Alpha-v0.1.0/verification/RELEASE.md"
+      ],
+      "scope_and_limits_pt_br": "Evidência registra o ambiente real, resultados e limites. CI, navegação em browser, C/Go e Docker não são relatados como execuções observadas.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-028",
+      "title": "Versões das fontes e impacto de mudanças",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "illustration"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/change-impact.md",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/realization.json"
+      ],
+      "scope_and_limits_pt_br": "Fontes e revisões são selecionadas; mudança ilustrativa lista impactos e preserva pendências, sem atualizar automaticamente a intenção.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-029",
+      "title": "Documentação da organização e realização em L3",
+      "priority": "P0",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "example"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/README.md",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/realization.json"
+      ],
+      "scope_and_limits_pt_br": "L3 explica inventário, composição, operação, integração e evidência, e referencia L2 sem manter uma segunda ficha canônica por fonte.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "VUL-030",
+      "title": "Avaliação estrutural com escopo explícito",
+      "priority": "P1",
+      "scope": "primary_model",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "implementation",
+        "negative-tests"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/scripts/evaluate_structure.py",
+        "versioning/Alpha-v0.1.0/tests/Test_Structure.py",
+        "versioning/Alpha-v0.1.0/guides/assessment.md"
+      ],
+      "scope_and_limits_pt_br": "Avaliador Python declara formas suportadas e diagnostica escopos não avaliados, inclusive app por symlink externo. Estrutura não certifica comportamento.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "INT-001",
+      "title": "Fixar versões e escopo da integração",
+      "priority": "P0",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "consistency"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/verification/source-baselines.json",
+        "versioning/Alpha-v0.1.0/verification/contract-review.json"
+      ],
+      "scope_and_limits_pt_br": "Versões e escopo são fixados. O validador recusa perfis não suportados e verifica pins L1 no perfil selecionado.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "INT-002",
+      "title": "Preservar identidades dos casos entre camadas",
+      "priority": "P0",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "consistency",
+        "example"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L1_AtlasSpecifications/task-board.atlas.json",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml"
+      ],
+      "scope_and_limits_pt_br": "IDs dos três casos são preservados; mapeamento direto duplicado, extra ou ausente é diagnosticado.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "INT-003",
+      "title": "Verificar preservação dos contratos",
+      "priority": "P0",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "review"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/verification/contract-review.json"
+      ],
+      "scope_and_limits_pt_br": "Matriz por obrigação identifica contrato, realização, teste e limite. A instância Atlas própria não é confundida com o TaskBoard publicado no Atlas.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "INT-004",
+      "title": "Registrar proveniência e responsabilidade da derivação",
+      "priority": "P0",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "provenance"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L1_AtlasSpecifications/task-board.atlas.json",
+        "versioning/Alpha-v0.1.0/verification/contract-review.json"
+      ],
+      "scope_and_limits_pt_br": "Derivação e revisão são assistidas por IA; aprovação do responsável do projeto está pendente. Não se alega transformação automática determinística.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "INT-005",
+      "title": "Definir vínculo independente da disposição física",
+      "priority": "P0",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "example",
+        "consistency"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/LegacyReports/reports.py.yaml",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml"
+      ],
+      "scope_and_limits_pt_br": "Espelho L2 liga arquivo e unidades sem prender identidade ao caminho; legado mantém múltiplas estruturas e escopo próprio.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "INT-006",
+      "title": "Separar decisões projetadas de observações do código",
+      "priority": "P0",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "review"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml",
+        "versioning/Alpha-v0.1.0/verification/contract-review.json"
+      ],
+      "scope_and_limits_pt_br": "Contrato projetado, reconstrução e observação são distinguidos. Shared é apoio transversal e hashes não equivalem a aprovação semântica.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "INT-007",
+      "title": "Manter análise de impacto entre modelos",
+      "priority": "P0",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "illustration"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/verification/MIGRATION.md",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/change-impact.md"
+      ],
+      "scope_and_limits_pt_br": "Análise de impacto liga fontes, blueprint, realização e verificações; material pendente não é promovido a conforme por herança.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "INT-008",
+      "title": "Identificar a responsabilidade dos contratos de interação",
+      "priority": "P0",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "example"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/Shared/interaction.md",
+        "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml"
+      ],
+      "scope_and_limits_pt_br": "Mapeamentos de HTTP/CLI são identificados L4 e ligados a casos, resultados e verificações.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "INT-009",
+      "title": "Permitir adoção independente mediante perfil explícito",
+      "priority": "P1",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/README.md"
+      ],
+      "scope_and_limits_pt_br": "Adoção independente e perfis explícitos preservam liberdade de linguagem/arquitetura e não impõem biblioteca ou repositório separado por camada do produto.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "INT-010",
+      "title": "Entregar demonstração integrada com escopo verificado",
+      "priority": "P0",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "review",
+        "evidence"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/verification/contract-review.json",
+        "versioning/Alpha-v0.1.0/verification/RELEASE.md"
+      ],
+      "scope_and_limits_pt_br": "Exemplo fixa instâncias L1/L2/L3. Verificação estrutural, revisão semântica e execução observada são relatadas separadamente.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "INT-011",
+      "title": "Migrar a proposta anterior com correspondência explícita",
+      "priority": "P0",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "migration"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/verification/MIGRATION.md",
+        "versioning/Alpha-v0.1.0/verification/requirements/migration.json"
+      ],
+      "scope_and_limits_pt_br": "As 40 regras anteriores e famílias de artefatos têm destino explícito; a migração classifica conteúdo por responsabilidade.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "INT-012",
+      "title": "Delimitar conformidade por app e por perfil",
+      "priority": "P0",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "model",
+        "review"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/verification/contract-review.json"
+      ],
+      "scope_and_limits_pt_br": "TaskBoard e legado têm escopos distintos. Participação no ecossistema não implica adesão à Vulcan Architecture.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "REP-001",
+      "title": "Publicar identidades e escopos dos dois projetos",
+      "priority": "P0",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "editorial"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/README.md",
+        "versioning/Alpha-v0.1.0/model.json"
+      ],
+      "scope_and_limits_pt_br": "Nome, Olympus, OAL e objeto normativo são explícitos. Edição, representação e ferramenta mantêm identidades próprias.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "REP-002",
+      "title": "Manter documentação bilíngue e por edição",
+      "priority": "P1",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "editorial"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/README.md",
+        "versioning/Alpha-v0.1.0/README.pt-br.md",
+        "README.md",
+        "README.pt-br.md"
+      ],
+      "scope_and_limits_pt_br": "Manual normativo EN e tradução PT preservam IDs; apresentação ilustrada fica na raiz e manual de edição é textual.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "REP-003",
+      "title": "Distribuir edições autossuficientes",
+      "priority": "P1",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "isolation",
+        "evidence"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/run_examples.py",
+        "versioning/Alpha-v0.1.0/requirements.txt",
+        "versioning/Alpha-v0.1.0/verification/RELEASE.md"
+      ],
+      "scope_and_limits_pt_br": "Edição contém recursos locais; cópia isolada é verificada. Dependências externas são declaradas.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "REP-004",
+      "title": "Manter imagens verificáveis e fontes editáveis",
+      "priority": "P1",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "artwork"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/README.md",
+        "assets/README.md",
+        "assets/asset-metadata.json"
+      ],
+      "scope_and_limits_pt_br": "Headers e diagramas bilíngues têm fontes SVG, instruções, origem e integridade dos ícones; imagens não são fonte exclusiva de regras.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "REP-005",
+      "title": "Organizar entradas para adoção e revisão",
+      "priority": "P1",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "examples"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/README.md",
+        "versioning/Alpha-v0.1.0/run_examples.py"
+      ],
+      "scope_and_limits_pt_br": "Exemplos, entradas iniciais, recortes e contraexemplos têm objetivos e comandos distintos.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "REP-006",
+      "title": "Publicar verificações e evidências com limites",
+      "priority": "P0",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "evidence"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/verification/RELEASE.md"
+      ],
+      "scope_and_limits_pt_br": "Registros distinguem estrutura, consistência, revisão e execução; limites e itens não executados permanecem visíveis.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "REP-007",
+      "title": "Preservar autoria licença e integridade da distribuição",
+      "priority": "P1",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "integrity"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/LICENSE",
+        "versioning/Alpha-v0.1.0/verification/source-baselines.json",
+        "ACKNOWLEDGEMENTS.md",
+        "CITATION.cff",
+        "scripts/content_inventory.py",
+        "scripts/check_archive.py"
+      ],
+      "scope_and_limits_pt_br": "Licenças e créditos são preservados; inventário único na raiz cobre arquivos finais, e digest do ZIP fica no recibo externo.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    },
+    {
+      "id": "REP-008",
+      "title": "Registrar evolução e preservar edições históricas",
+      "priority": "P1",
+      "scope": "shared_delivery",
+      "delivery": "provided_for_alpha_review",
+      "assessment_facets": [
+        "migration"
+      ],
+      "artifacts": [
+        "versioning/Alpha-v0.1.0/verification/MIGRATION.md",
+        "versioning/Alpha-v0.1.0/verification/requirements/catalog.json"
+      ],
+      "scope_and_limits_pt_br": "Histórico da proposta anterior, mudanças e compatibilidade são preservados sem reescrever as evidências antigas.",
+      "acceptance_verdict": "not_independent_certification; see linked execution records and stated review scope"
+    }
+  ]
+}

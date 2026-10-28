@@ -1,0 +1,865 @@
+{
+  "algorithm": "SHA-256",
+  "vulcan_edition": "Alpha-v0.1.0",
+  "scope": "All Git-indexed delivery files, using actual working-tree bytes; stage new delivery files before generation.",
+  "excluded_paths": [
+    "CONTENT-SHA256.json"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size_bytes": 79,
+      "sha256": "c4dd67c4e6324e078e70430befa00e87cde55ebaa99203054d36ee9d903431ff"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "size_bytes": 679,
+      "sha256": "3514599976b1f0ba497778ad1e3f166beca5fe63a06cdc3729049599f39c9850"
+    },
+    {
+      "path": ".gitignore",
+      "size_bytes": 110,
+      "sha256": "0ac196128e7b5df54bb8fb883aa7bf40f5b563bf22a53d066cae47bfd2f7db49"
+    },
+    {
+      "path": "ACKNOWLEDGEMENTS.md",
+      "size_bytes": 1238,
+      "sha256": "5aea88a962ff94334a6a14b7430ec377e84017da758823f1f418de7d20749867"
+    },
+    {
+      "path": "AGENTS.md",
+      "size_bytes": 1961,
+      "sha256": "c40d84739539adffe567aa42809c1703f96983a72132170c3a85c4335b9d88be"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size_bytes": 610,
+      "sha256": "ab96c2f5961759847664a0b9261842768df0faebe0dde69cf55f382e061cc34c"
+    },
+    {
+      "path": "CITATION.cff",
+      "size_bytes": 359,
+      "sha256": "98a0cd986465fdb76169238765bd3302fd3022b4920d62bdeabb6356bc4a07bb"
+    },
+    {
+      "path": "CLAUDE.md",
+      "size_bytes": 355,
+      "sha256": "a4d7db60c77add2649a999a1e9f796bd31f2911c93489f05d36fda25717ea993"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size_bytes": 536,
+      "sha256": "241865230050523f0b1ebd494c4bd67a0dfacd9a69e9f0977bf57353838e8c8b"
+    },
+    {
+      "path": "CONTRIBUTING.pt-br.md",
+      "size_bytes": 465,
+      "sha256": "0b74a47b2166f0487ac96d40218e3c66c89a34dedf0f619be49bbd1c7e24dd5d"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 7441,
+      "sha256": "1787eadb80219e6b4d016379c6f60f67d29284fdc7f9c629f8aeae37c6d8b949"
+    },
+    {
+      "path": "README.pt-br.md",
+      "size_bytes": 7777,
+      "sha256": "ecd5cbd37390c27cee2e6854098efc10ec0c40ff6b28eb29f00fe15fb6e51293"
+    },
+    {
+      "path": "VERSION",
+      "size_bytes": 13,
+      "sha256": "49a7bc69db18b8a7b48a2ce456f5129f0e81c3d8eca22a5695ee7cf0cb19bbe3"
+    },
+    {
+      "path": "assets/README.md",
+      "size_bytes": 4558,
+      "sha256": "c313f94b8fd92ecff9a471dd6086765f5850da7b0a94913e4ee4bc5238709e3f"
+    },
+    {
+      "path": "assets/README.pt-br.md",
+      "size_bytes": 4909,
+      "sha256": "1cb88878cf1bdb800b1f6af8e2d6725650767ab5c1c43bccd223f8c6a2e66f8a"
+    },
+    {
+      "path": "assets/asset-metadata.json",
+      "size_bytes": 10408,
+      "sha256": "0c95ea0082c26f724a90d37adae293cab76dc74eae9df4020db7a612baae7c5e"
+    },
+    {
+      "path": "assets/olympus-icon.png",
+      "size_bytes": 1633020,
+      "sha256": "ce7e0f8f710aadd693a1d1e5c009644af9195533983f02ed54fe9a4b6a4985f9"
+    },
+    {
+      "path": "assets/sources/ARTWORK-PROMPT.md",
+      "size_bytes": 3118,
+      "sha256": "d5838744734e3832d4cc64a3e45b18e307beddd74cf8a52372fe2c05a402b01a"
+    },
+    {
+      "path": "assets/sources/ATLAS-LICENSE.txt",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "assets/sources/olympus-icon-original.png",
+      "size_bytes": 1633020,
+      "sha256": "ce7e0f8f710aadd693a1d1e5c009644af9195533983f02ed54fe9a4b6a4985f9"
+    },
+    {
+      "path": "assets/sources/render_images.py",
+      "size_bytes": 24874,
+      "sha256": "11f4740370bbcf6cbe498aa9db3bab9ea91be80f438aa3efc3db75ee328852b2"
+    },
+    {
+      "path": "assets/sources/vulcan-banner-en.svg",
+      "size_bytes": 7298694,
+      "sha256": "fd836826de7201e9323947cb8e393ca3a7492f90abd9ec3fc0fc5d5e21f23c5c"
+    },
+    {
+      "path": "assets/sources/vulcan-banner-pt-br.svg",
+      "size_bytes": 7298700,
+      "sha256": "1ef9ff81572f2e9e98b49198b3b1cca43747709006222f55c9eb2c39fa3649b8"
+    },
+    {
+      "path": "assets/sources/vulcan-hero-art.png",
+      "size_bytes": 2126716,
+      "sha256": "5c91e0ff1c8bfbe9e2412ec95c97e30db4609fb82cc5b72a5d10b197c62ccc59"
+    },
+    {
+      "path": "assets/sources/vulcan-icon-original.png",
+      "size_bytes": 1712618,
+      "sha256": "49a9f7da8a63e0447681a126088e788f7c60ca5ce33b9f2c1a75a66f431f829c"
+    },
+    {
+      "path": "assets/sources/vulcan-model-en.svg",
+      "size_bytes": 6716,
+      "sha256": "503340eeb755c29f2e5deba8fc6b01d8cfcd3c282a14a6ac0854adea09ea9757"
+    },
+    {
+      "path": "assets/sources/vulcan-model-pt-br.svg",
+      "size_bytes": 6751,
+      "sha256": "ca42e1b418e76cfe803ad09da3f057a246f49c9eb86c0187836c627e3dcc37fb"
+    },
+    {
+      "path": "assets/sources/vulcan-oal-position-en.svg",
+      "size_bytes": 6411,
+      "sha256": "d29cf869a78b92d91a250f773fd18707268815835f37e784a973ce271ef02bd0"
+    },
+    {
+      "path": "assets/sources/vulcan-oal-position-pt-br.svg",
+      "size_bytes": 6439,
+      "sha256": "f7346a998219cac68ff91c55c90911885eef7ebfb3b1d726048647d1c0ae051f"
+    },
+    {
+      "path": "assets/sources/vulcan-workflow-en.svg",
+      "size_bytes": 6782,
+      "sha256": "ce2b15b6ca3026dad673074dded4a094369f5d3a1f248bb0ef3ceda1010b87bd"
+    },
+    {
+      "path": "assets/sources/vulcan-workflow-pt-br.svg",
+      "size_bytes": 6891,
+      "sha256": "32c1fa16063d61fa2e3d0a5f3905682f431986212f3c1f79de2ebc627dcfdc6b"
+    },
+    {
+      "path": "assets/vulcan-banner-en.png",
+      "size_bytes": 1326970,
+      "sha256": "1958ea5cb34e22f683ab984d9a82f054969c1326a3ddb78fb19f31ab6778003e"
+    },
+    {
+      "path": "assets/vulcan-banner-pt-br.png",
+      "size_bytes": 1329166,
+      "sha256": "bddaf9a6908f39c413a95ba150d4d23780ceb220875846fa0ee7f7de3d506f63"
+    },
+    {
+      "path": "assets/vulcan-icon.png",
+      "size_bytes": 1712618,
+      "sha256": "49a9f7da8a63e0447681a126088e788f7c60ca5ce33b9f2c1a75a66f431f829c"
+    },
+    {
+      "path": "assets/vulcan-model-en.png",
+      "size_bytes": 146080,
+      "sha256": "b6f0d243ea9915e0cca54a7c6bdd966a09067194f4703751488e622e39e16fa9"
+    },
+    {
+      "path": "assets/vulcan-model-pt-br.png",
+      "size_bytes": 147239,
+      "sha256": "c8e2095052d4b94215d2e578430e7169ad20814ce30358074f5923baeadba85e"
+    },
+    {
+      "path": "assets/vulcan-oal-position-en.png",
+      "size_bytes": 114587,
+      "sha256": "b62088260faa2cb281c6bc1506fe877ebf17d84b5b5e5eb0e10abacdddbd04ea"
+    },
+    {
+      "path": "assets/vulcan-oal-position-pt-br.png",
+      "size_bytes": 118985,
+      "sha256": "a288997f5a9f59581ab3b8ee6c8f756f0193fe4d2de4cbc4f36289689b4b4acb"
+    },
+    {
+      "path": "assets/vulcan-workflow-en.png",
+      "size_bytes": 147715,
+      "sha256": "9fed5632751286aa9dcd9805a18964eb7965fad8965df6cfb5d9f13931260f6f"
+    },
+    {
+      "path": "assets/vulcan-workflow-pt-br.png",
+      "size_bytes": 147792,
+      "sha256": "803f6e1b9810d56b09b834510c4b37d7ecc96235d384a59b0b2acb6edced1f76"
+    },
+    {
+      "path": "docs/releasing.md",
+      "size_bytes": 5234,
+      "sha256": "23387fdbfa42d625825e53597bfec7fb2d4febf92bfbb48da33439368d5c4923"
+    },
+    {
+      "path": "docs/releasing.pt-br.md",
+      "size_bytes": 2421,
+      "sha256": "f2da63798ed55c11faef92ba490316dd956e0f562779dd75b4434dbdb8ff4f2d"
+    },
+    {
+      "path": "requirements-artwork.txt",
+      "size_bytes": 31,
+      "sha256": "9cc9be1825d4ed4823d536d6814f1a131c81473a06d97626a0380c3a567fc6d8"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "size_bytes": 47,
+      "sha256": "4ecb17fe1779cab55da20fc2fb865c9d3b8aa5d88bc608ddcbbbc2c646c13d5e"
+    },
+    {
+      "path": "scripts/build_distribution.py",
+      "size_bytes": 2352,
+      "sha256": "0baf3953ee47c4624597862988d27106a14b24be432102988bcf38d7197db6ad"
+    },
+    {
+      "path": "scripts/check_archive.py",
+      "size_bytes": 2562,
+      "sha256": "f9f74fdf34fa8d61e8814b78b209c78f28293874ef73501b7aaea9c757c6686d"
+    },
+    {
+      "path": "scripts/check_repository.py",
+      "size_bytes": 4481,
+      "sha256": "595f6b32e6a18662ac8bd4f609b43938dc6064bed0b3fab197d6d2848d12d287"
+    },
+    {
+      "path": "scripts/content_inventory.py",
+      "size_bytes": 6004,
+      "sha256": "18736b74f5fbef70d3bf512c0be5030d07b04c2da7c6ec5daae723fa7d0d3bbf"
+    },
+    {
+      "path": "scripts/tests/test_content_inventory.py",
+      "size_bytes": 9729,
+      "sha256": "7253f9741950f0d557428b4780045058c60af1d9755fc19b62e001f376e85402"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/README.md",
+      "size_bytes": 17884,
+      "sha256": "e2cc0ea03d9a79d01b4c7d9c5224d9998d5406f55b8e8328e6c3792bde0b1847"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/README.pt-br.md",
+      "size_bytes": 18663,
+      "sha256": "7b0af0f62fc1c008b0da43778595f58b84d8d29f28213dffd8e8d4b515a59b2d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/README.md",
+      "size_bytes": 1127,
+      "sha256": "5da4b6292922b732bac716ff11b2ad6497dc1066d7cd7bb7b5a11891578d6b03"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/README.pt-br.md",
+      "size_bytes": 1105,
+      "sha256": "381ee5626c987d08c5aacac10e518692523ce4a1f90b14006880277ed5ecc5dd"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/expected-diagnostics.json",
+      "size_bytes": 406,
+      "sha256": "3c25df2c29b04c754a206e0eecaa3e44be3daba83e523d66bacc550a2e7fdeed"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/entities/Entity_Multiple.py",
+      "size_bytes": 61,
+      "sha256": "94530677ae2fae92802866852ad56c8a8fe1efe5219747806979a4099b42ffaa"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/entities/Entity_WrongName.py",
+      "size_bytes": 47,
+      "sha256": "1c65b8735b2546c43d4abd40023f88ffd382765c2befa9199baf070331b23589"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/tools/Tool_First.py",
+      "size_bytes": 231,
+      "sha256": "ce18ba750ddf289d404cacb3b67d1cb216aa71300c204e2b6165bad30bd9fac2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/tools/Tool_Second.py",
+      "size_bytes": 84,
+      "sha256": "f8570ec9b41a04ef83c07f6ec799d080898f215a9dbd924d0b0cb27e19314792"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/usecases/Domain/UseCase_First.py",
+      "size_bytes": 30,
+      "sha256": "a9380dd3e33d0fec35fb24ebd698cfc5ca2824a72a37688766fd2b406bd05eba"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/usecases/UseCase_NoDomain.py",
+      "size_bytes": 80,
+      "sha256": "c8a45e78971b9c4da1c74a2223efc638e17926eafce557336836530fbccb5c42"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/value_objects/ValueObject_Name.py",
+      "size_bytes": 33,
+      "sha256": "906f577707c404fc354392a476060f903fde94fe5caa04af8a8166a285e4d7f7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/structural-counterexamples/invalid-ecosystem/launch.py",
+      "size_bytes": 94,
+      "sha256": "ea7a9ff6e861059eb368ab7911bce7001df1ddf71fdd279af03d583376321387"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/README.md",
+      "size_bytes": 2951,
+      "sha256": "e3b55b65448493a806811c425bc27219efc57ba5c325b97f1eb7d2d09db00a68"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/README.pt-br.md",
+      "size_bytes": 2910,
+      "sha256": "9ffc659c3b278f23040d1192e3d31fd54e61fd49f6439bff3d391e6aadbbc978"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/LegacyReports/reports.py",
+      "size_bytes": 4071,
+      "sha256": "8bec86f867da59162795a8bc99546e19004c3e6e41f2023d1e4b3742043cb7d5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/boundaries/Boundary_Cli.py",
+      "size_bytes": 2411,
+      "sha256": "43fba3137ace8483b63e59fc386b7a552b875939e73fddd4143fbf5f19224978"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/boundaries/Boundary_Http.py",
+      "size_bytes": 8701,
+      "sha256": "ae6b16698fb32ded4fd3502a0a5f4fc9953df4408395ceffff2cf78d5dcfd6e6"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/composition/AppComposition.py",
+      "size_bytes": 1677,
+      "sha256": "578a84a9a30e9c4ef42d03b0fa89ceefdd13903cfa2be3ee3a1391b89064553d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/entities/Entity_ActorContext.py",
+      "size_bytes": 1104,
+      "sha256": "baa11c6c0ea257b67618f5071c2b226780e9ec95c9e262186fe5810e9271b875"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/entities/Entity_Task.py",
+      "size_bytes": 925,
+      "sha256": "9528d654501ca196e4fbc5d2e3b65c0355f06e6f82491f13f2c2f9de6a46320d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/main.py",
+      "size_bytes": 2709,
+      "sha256": "da4d756a666819ce8e054710067bb0f77059affc4a95c4f61c6dbc1c73c7a3e0"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Boundaries.py",
+      "size_bytes": 8455,
+      "sha256": "aa4e3e1dfa5ceafc92a4a07faf20a506cbf920969d63344f78db9ab5abb8322a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Launcher.py",
+      "size_bytes": 8208,
+      "sha256": "67da68c32fdcf398047fd7c105f94e1389f70bae90e1704cfb264c6e27edf26c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py",
+      "size_bytes": 7676,
+      "sha256": "9650121915ced060fe75c68f6bffc57c521ed8948facee04c272c77d9fa81690"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/tools/Tool_SqliteTaskStore.py",
+      "size_bytes": 2377,
+      "sha256": "df7471b9ebc6c237f64b433c34a5ca31174420f172980dcd94f41ccb86df364b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_CompleteTask.py",
+      "size_bytes": 1043,
+      "sha256": "6072fb42ad91bb39d4006e3b4e1d34c481914b30ffe98ebc8ed830f658b7fe32"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py",
+      "size_bytes": 729,
+      "sha256": "667b975906356660986e7958ce62b1c9f689d81217a6c9bf4b5d5a3cb525ba82"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_ListTasks.py",
+      "size_bytes": 714,
+      "sha256": "6f42790f3c72f0661c7a90fe6800074ce381916abe9e0414ca6542855451fd57"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/apps/TaskBoard/value_objects/ValueObject_TaskTitle.py",
+      "size_bytes": 590,
+      "sha256": "b31261c7ed64413e725b045fffe5527751f8de209233bb954a316c2d9c7aa44c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L1_AtlasSpecifications/README.md",
+      "size_bytes": 1367,
+      "sha256": "468fea8f9625359e44de912ed90435b63fd923e5373d1b00506e8d48859ba468"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L1_AtlasSpecifications/README.pt-br.md",
+      "size_bytes": 871,
+      "sha256": "615b448258db34aff2e4a69bfce3bfadf0c2b6275c6eb6be79c2bf8f3021a44f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L1_AtlasSpecifications/task-board.atlas.json",
+      "size_bytes": 72965,
+      "sha256": "e9a71a546814888cf0f7e577c79595a0136024c062a9187d5a457c04ba76a886"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/LegacyReports/reports.py.yaml",
+      "size_bytes": 13269,
+      "sha256": "ddbe848fe650e879e1e93311e2e41629c72d5368c1fb668892130aeb06c0bf81"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/boundaries/Boundary_Cli.py.yaml",
+      "size_bytes": 8194,
+      "sha256": "478a575ac94adab38b04dfedff30c8eb1584606c504fe627e13471f2dcf4d73c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/boundaries/Boundary_Http.py.yaml",
+      "size_bytes": 12147,
+      "sha256": "8be1d2a68125f999f7c1821783013c0b59324a07546ffd9344a85a8cf2f8b2cf"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/composition/AppComposition.py.yaml",
+      "size_bytes": 6212,
+      "sha256": "93670afcd283b3754ad391dd0effab6d3ab13685fd527d5d2e1c2c8194301b00"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/entities/Entity_ActorContext.py.yaml",
+      "size_bytes": 3793,
+      "sha256": "2a407f62befb87c8f8c5c87a9dfadd6c6e0ac857b649442e74e12293d4047441"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/entities/Entity_Task.py.yaml",
+      "size_bytes": 5729,
+      "sha256": "82fa3876a465fa70331bc30418b6e8b4e549f89f462db3a3cbdb2bccee507681"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/main.py.yaml",
+      "size_bytes": 4892,
+      "sha256": "939fc2f42f5e39bc9b78581eb9b027845e41b91adcefcca35d89cf6b908a3435"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/tests/Test_Boundaries.py.yaml",
+      "size_bytes": 14716,
+      "sha256": "4e6d45dd7ebf22cbbfb93567e1aef54076d032201db6ed7e988722dabcf19f56"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/tests/Test_Launcher.py.yaml",
+      "size_bytes": 11612,
+      "sha256": "adb60718efa48c5bfbad2d247da13477d6dcc161d5bef36f457bb54c942c19cb"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/tests/Test_TaskCases.py.yaml",
+      "size_bytes": 10546,
+      "sha256": "943d20d5cb08d107ae23a4975c5626b487b0233f7a1c79a0ee8bba51a5e73618"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/tools/Tool_SqliteTaskStore.py.yaml",
+      "size_bytes": 7784,
+      "sha256": "95af40509edbf209654a3c0da2f2a64ff4763a77214d82a09493288891368dc2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/usecases/TaskManagement/UseCase_CompleteTask.py.yaml",
+      "size_bytes": 4824,
+      "sha256": "586b8ad61e62e6112679e46af77c630e2db7284981097438ac38d489cae7060a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py.yaml",
+      "size_bytes": 4744,
+      "sha256": "e51ed7a68a6ebc7b076ff4ac9134e8093a474a2cf9667fc8e6f851458f5e79d3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/usecases/TaskManagement/UseCase_ListTasks.py.yaml",
+      "size_bytes": 4430,
+      "sha256": "cbb9a100e136373a325e462b5b5bda6141cbbd1d5466f7e3303874564c734de8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/apps/TaskBoard/value_objects/ValueObject_TaskTitle.py.yaml",
+      "size_bytes": 3178,
+      "sha256": "efb49f3d582cd8ca3f3780fe5994bb336db09fdf3970ff28e797de7755fd0d8f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L2_MinervaBlueprints/blueprint.yaml",
+      "size_bytes": 61412,
+      "sha256": "6688bcffd600b62ea8e8a950aa48137535942ee41a23a5f7fdb378435df59151"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/README.md",
+      "size_bytes": 4709,
+      "sha256": "f739ff7572a024773880d8e98407c4190b7026d4d9e48fd678148d2e823fb8af"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/README.pt-br.md",
+      "size_bytes": 4515,
+      "sha256": "4c5d11450706d5781f5ed7cde8501a24d1435b5c53a786d430c1593ab3f119d2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/change-impact.md",
+      "size_bytes": 2633,
+      "sha256": "6715311bb72008e77499c42f37237f864e26b91726a127f0d316a285b4954e3b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/change-impact.pt-br.md",
+      "size_bytes": 2570,
+      "sha256": "dc7bdcf2045b785e8a2f36ff37c0373d52d9d5a141157bdf22578b38de9316bb"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/L3_Vulcan/realization.json",
+      "size_bytes": 7230,
+      "sha256": "bec2b7f3ac639c73d9b7cb0941f4bd3e5dd5c9271df5a0d447e71a5951f016ae"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/Shared/interaction.md",
+      "size_bytes": 3433,
+      "sha256": "3e3c04c923b645b6a1bd1e2ec3eaf2ee52e0e008c468d72a9301e26140da006b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/docs/Shared/interaction.pt-br.md",
+      "size_bytes": 3387,
+      "sha256": "db2314b7c633ccdd69a975ef3cba6c2860d8398b55db4ba77b2ed1c4c8194abd"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/examples/task-board-ecosystem/launch.py",
+      "size_bytes": 6975,
+      "sha256": "1678a8bb81da8582fe5d56cf5c9b4af22b44a8f7100944bd08a4ca3c6997a231"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/guides/assessment.md",
+      "size_bytes": 5504,
+      "sha256": "b4b4229259b09d58bc7770f1c3f5babcaf47c40c56c5ebb1ddb7794c71b46d25"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/guides/assessment.pt-br.md",
+      "size_bytes": 5374,
+      "sha256": "58f359d2273ee684f4e514ee09de1bfec09ff51286822d53ffed9ea44eb23861"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/guides/execution.md",
+      "size_bytes": 6259,
+      "sha256": "d164ab4d46295597c8cb9f7e3bd2b6efd075587e4e1105fad3ea40192bf3bff2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/guides/execution.pt-br.md",
+      "size_bytes": 6100,
+      "sha256": "373b7f858920ffbba0d304310c867e590d8ff019f51938da8b94736d1a4973a5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/guides/legacy-and-boundaries.md",
+      "size_bytes": 2400,
+      "sha256": "0ddf847d2e8d23e391f4237433e504c92aafd2eefdb76ea960a4d2b769dcfa7f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/guides/legacy-and-boundaries.pt-br.md",
+      "size_bytes": 2271,
+      "sha256": "c1edac69be02db0b74d8b8cdcb85f45cd9527f381744b6348f495b5988526fb8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/guides/vulcan-architecture.md",
+      "size_bytes": 6932,
+      "sha256": "ad00b2facd7afc17c5f2e9fe6d667b610cb2cdaf8455e6ddd4621fd5b3647e61"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/guides/vulcan-architecture.pt-br.md",
+      "size_bytes": 6839,
+      "sha256": "e862a192a0b1321931cd5c8cdb2d7284a9f93d15a02431b806368b97e971d312"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/model.json",
+      "size_bytes": 758,
+      "sha256": "ac0e13666d0ea2f804b5fe6c5148192b0613fc43adf727add197e0b3d8f66685"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/pyproject.toml",
+      "size_bytes": 485,
+      "sha256": "eddbf81eaf5fd139b6c54d9a159501e61297236970991ac7a27dfdbf0e13c892"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/requirements.txt",
+      "size_bytes": 191,
+      "sha256": "032b17c6c70cc98a09bf73f94ca0fa97fe594e5dbf26bcee98e9f16bede29460"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/run_examples.py",
+      "size_bytes": 5678,
+      "sha256": "71f290acba25854f247d70883281b73de993b63ada756f3196499c000535c453"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/scripts/evaluate_structure.py",
+      "size_bytes": 13243,
+      "sha256": "c0e7f3a6990e7c4f75d8233f88ec9a5b5ccd4ef26066dc0b679ef9a08261bf1c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/tests/Test_Structure.py",
+      "size_bytes": 5065,
+      "sha256": "9692c4f08f720dcc4e1dc4904cc1b91f9bb07de09a519945599e2dba1372164a"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/vendor/minerva/LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/vendor/minerva/README.md",
+      "size_bytes": 1013,
+      "sha256": "8f5d415eb8a97b6e888b4bad0557e650fe94a0f84561f33350e240774c4bd829"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/vendor/minerva/SOURCE.json",
+      "size_bytes": 1893,
+      "sha256": "6b139cb0fdfdb3086e75759565b125095bda8cdf763afe27e80110da578e82ee"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/vendor/minerva/minerva_blueprints/__init__.py",
+      "size_bytes": 145,
+      "sha256": "45c0e1759eee5ba51d28082fde87321e7293cc3eed99d99e5021ca10d2aa6e59"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/vendor/minerva/minerva_blueprints/__main__.py",
+      "size_bytes": 2517,
+      "sha256": "568f3cedf2a498b1e1a9d349e6008e2bd8fed30c9bec43926b69c1ad83247353"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/vendor/minerva/minerva_blueprints/schemas/minerva.schema.json",
+      "size_bytes": 49452,
+      "sha256": "eec3ddd2e09a2e4cebad8e5286ef93f890f336b72c865a32f27fb623f2865be3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/vendor/minerva/minerva_blueprints/validation.py",
+      "size_bytes": 35140,
+      "sha256": "633d7f8b7fe8026d1d08841062ca17d0e722dd676c9289701f6c4234f0b9189e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/vendor/minerva/requirements.txt",
+      "size_bytes": 33,
+      "sha256": "a25155d17c235bf2cb3eaf9394b2aeef3e888cd47b542ee66f42a8e53b45a336"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/vendor/minerva/validator/minerva_validate.py",
+      "size_bytes": 291,
+      "sha256": "cc9ca81f07cbd01c76514bb58d2c97a0b52d725c42900e019e614da6afe4e70e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/CONTRACT-REVIEW.md",
+      "size_bytes": 3840,
+      "sha256": "a3e51c3d3cdde71993cc01dd5372e8f2427ab8d1488b18a86e7f0203cb5b8a25"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/CONTRACT-REVIEW.pt-br.md",
+      "size_bytes": 3989,
+      "sha256": "b535b7b42c3bbedb9cf6ce0ce150bb2ceacf63f634e960e362bbecb3a75e670d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/MIGRATION.md",
+      "size_bytes": 3336,
+      "sha256": "53e59c21499e752afd39920dae4ccb91dc8ec8d44274c48e4b57857e38740c88"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/MIGRATION.pt-br.md",
+      "size_bytes": 13109,
+      "sha256": "b589b547b4921b43f55290b1ca2858432ae7815fbb404d0d1e393ae17f3c1cef"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/README.md",
+      "size_bytes": 2087,
+      "sha256": "2929bf87671ea111cb19c61a0e40f4c0806bd1de4877fcb63b55095550b453ec"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/README.pt-br.md",
+      "size_bytes": 2065,
+      "sha256": "f90107f86af98718513141a1357ab67857e1b55acbc7ab2f50659611cf168d89"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/RELEASE.md",
+      "size_bytes": 5211,
+      "sha256": "9bdbef676166592ce667c9ee1a9e41419fd837aeea319719592dab022683bc9c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/RELEASE.pt-br.md",
+      "size_bytes": 5633,
+      "sha256": "6cdcc948c9e214229fd56b3231b225742d6dd9813c5f263390480090fe89186d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/REQUIREMENTS.md",
+      "size_bytes": 18174,
+      "sha256": "1c8f6bdcf230aeb335171d505ed59e9f6a90d07079696828812ddf29bffcbef8"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/REQUIREMENTS.pt-br.md",
+      "size_bytes": 18130,
+      "sha256": "8ecfc8d86053c93a4efc1e1b3a64a0ef86fdde92f08cd6c76ba0c58e8cfbba09"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/contract-review.json",
+      "size_bytes": 25102,
+      "sha256": "2e17b160470c4cbb73a7a8052359e6325d46aae2a183c7565eb38d4bf883f0cf"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/execution.json",
+      "size_bytes": 4078,
+      "sha256": "a957d08c83085fc02f4aa4fb434e3a06afafc9c95a376eb4fd84a80801b70603"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/minerva.json",
+      "size_bytes": 874,
+      "sha256": "0877475d795024928679726bb201633402ffc71e5d6cc06e9ebb0bf876201354"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/observed/artwork.json",
+      "size_bytes": 554,
+      "sha256": "d3e489557888466ef176b4b87dcd76bd04c77d61d5d0423c65b6dc8b74143c76"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/observed/atlas-validation.json",
+      "size_bytes": 1395,
+      "sha256": "8c8e7750e82a27cdaaf7280a7d4bc5faa3d65aff9a4eeacf4604456d8a26e459"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/observed/checks.json",
+      "size_bytes": 7539,
+      "sha256": "0dddcd49b107436733b6a19d63b9f830d11fa1efbda626e4891c3de52849dd0f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/observed/distribution-tools.stderr.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/observed/distribution-tools.stdout.txt",
+      "size_bytes": 99,
+      "sha256": "37684cd6f075aa2786c2261a7f2ee49c0c01293319a7c03f4ee038bee40027dd"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/observed/final-document-check.json",
+      "size_bytes": 3957,
+      "sha256": "2f66e0e77a9f534cf7aaed72ec02b4bd73d54e01295d50557a229da5add2bdf5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/observed/integrated-verification.stderr.txt",
+      "size_bytes": 4427,
+      "sha256": "4ce68d5d5a2b8313d0725fea1069d286b12b37339852e5e2d4bdb6f9be049b44"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/observed/integrated-verification.stdout.txt",
+      "size_bytes": 51,
+      "sha256": "b6f9cc7a5deff38a50b106198b16925350d5c6a10242cdc7e1b9550ee987c6ab"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/observed/isolation-1.stderr.txt",
+      "size_bytes": 4427,
+      "sha256": "2182651a13fbaf195eccd1e1c1a4b63bfed80e41a1b27afa00e272de3863850b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/observed/isolation-1.stdout.txt",
+      "size_bytes": 51,
+      "sha256": "b6f9cc7a5deff38a50b106198b16925350d5c6a10242cdc7e1b9550ee987c6ab"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/observed/isolation.json",
+      "size_bytes": 5960,
+      "sha256": "f062e3308951a494f347031bf3db7f5cd2b8ed7743642addc315680ce1ca2412"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/observed/repository-check.json",
+      "size_bytes": 245,
+      "sha256": "ed3a26733d4fa61cf8d5bc79aa6f400514938406254dc360431df1676b214f2c"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/requirements/catalog.json",
+      "size_bytes": 147257,
+      "sha256": "fc9fba5d2fcb4862511d71c8b647dcf573b7396ba70312e357630a357e1068e4"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/requirements/coverage.json",
+      "size_bytes": 49872,
+      "sha256": "01fbab00768a06e3c845e249848bbc8700d8ab129b5968981db6a7dd4b0bb2fc"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/requirements/migration.json",
+      "size_bytes": 20143,
+      "sha256": "789cd581b8d486e809aad13b989c144f9074b7f1fe07b1030504752ef3c67c76"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/source-baselines.json",
+      "size_bytes": 4908,
+      "sha256": "b558de742017648c6be4d8aeb690557f6e5ec3ac6d7cfdeb992d9058521961f0"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/atlas/LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/atlas/README.md.txt",
+      "size_bytes": 72150,
+      "sha256": "b06bfc70b65ce567cc7d03ab281c1c13529ef5eaa0e96037c19ca64aa36b10a1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/atlas/README.pt-br.md.txt",
+      "size_bytes": 65813,
+      "sha256": "22d1695d0c723eb516b35d3afe4e92ea637977b885b6c64b4f80be593026fb6e"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/atlas/atlas.schema.json",
+      "size_bytes": 55891,
+      "sha256": "c695b889a86ca51942559fb2d88c7d4e192f312eff8dfb3fa2e1e74a92c8cb8f"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/legacy-vulcan/LICENSE",
+      "size_bytes": 1084,
+      "sha256": "7dc6c48f35573ce6766c5abca1e634c56b82ffef632b5f45a0d60c2a1c03b7de"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/legacy-vulcan/README.pt-br.md.txt",
+      "size_bytes": 42411,
+      "sha256": "3d4c0571bb1ea9218cf2250d93a7a76a0c7bf4a8f270926eba3f4628e5c8d04b"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/legacy-vulcan/YAML-FORMAT.pt-br.md.txt",
+      "size_bytes": 14504,
+      "sha256": "9e69d0e04cc220bf89f8b23927b1bebda00bbf6525bfc868aba9061f6e9148c3"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/oal/LICENSE",
+      "size_bytes": 1106,
+      "sha256": "dfee2cfbba02ad5b688116a71e4870843ab88cce92cf01c97dafa7e428c74fd7"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/oal/README.md.txt",
+      "size_bytes": 63838,
+      "sha256": "d6ad987008c200460af919eff3b03989dca5a3b0f7e14d7a9d5b4e67f598b2da"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/sources/oal/README.pt-br.md.txt",
+      "size_bytes": 69716,
+      "sha256": "52e0f59f7f4ead7d9a94a924bc5b339196e4d1aa68c467b7200780b81a3cc1e9"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/structure.json",
+      "size_bytes": 6169,
+      "sha256": "d3c23ff87e9e95979650e0cea0336b8db73783672f10ae71c00c0f88b7350674"
+    }
+  ]
+}

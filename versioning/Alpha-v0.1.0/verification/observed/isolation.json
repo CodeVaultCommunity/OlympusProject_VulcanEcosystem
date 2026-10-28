@@ -1,0 +1,66 @@
+{
+  "edition": "Alpha-v0.1.0",
+  "project": "OlympusProject_VulcanEcosystem",
+  "status": "passed",
+  "procedure": "Copied only the edition directory into a new temporary directory; invoked its entrypoints from outside that directory with an external Python environment. Repository-root assets, scripts and working directory were unavailable to the copied edition.",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "executable": "/tmp/olympus-review-20261028/bin/python"
+  },
+  "copied_edition": "/tmp/olympus-isolated-vulcan-1j0n5t0_/edition",
+  "commands": [
+    {
+      "command": [
+        "/tmp/olympus-review-20261028/bin/python",
+        "/tmp/olympus-isolated-vulcan-1j0n5t0_/edition/run_examples.py",
+        "verify",
+        "--report-dir",
+        "/tmp/olympus-isolated-vulcan-1j0n5t0_/verification"
+      ],
+      "cwd": "/tmp/olympus-isolated-vulcan-1j0n5t0_",
+      "started_at_utc": "2026-10-28T03:28:21.899652+00:00",
+      "duration_seconds": 7.606,
+      "exit_code": 0,
+      "stdout": "isolation-1.stdout.txt",
+      "stderr": "isolation-1.stderr.txt"
+    }
+  ],
+  "copied_runtime_hashes": {
+    "examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/entities/Entity_Multiple.py": "94530677ae2fae92802866852ad56c8a8fe1efe5219747806979a4099b42ffaa",
+    "examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/entities/Entity_WrongName.py": "1c65b8735b2546c43d4abd40023f88ffd382765c2befa9199baf070331b23589",
+    "examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/tools/Tool_First.py": "ce18ba750ddf289d404cacb3b67d1cb216aa71300c204e2b6165bad30bd9fac2",
+    "examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/tools/Tool_Second.py": "f8570ec9b41a04ef83c07f6ec799d080898f215a9dbd924d0b0cb27e19314792",
+    "examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/usecases/Domain/UseCase_First.py": "a9380dd3e33d0fec35fb24ebd698cfc5ca2824a72a37688766fd2b406bd05eba",
+    "examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/usecases/UseCase_NoDomain.py": "c8a45e78971b9c4da1c74a2223efc638e17926eafce557336836530fbccb5c42",
+    "examples/structural-counterexamples/invalid-ecosystem/apps/BrokenApp/value_objects/ValueObject_Name.py": "906f577707c404fc354392a476060f903fde94fe5caa04af8a8166a285e4d7f7",
+    "examples/structural-counterexamples/invalid-ecosystem/launch.py": "ea7a9ff6e861059eb368ab7911bce7001df1ddf71fdd279af03d583376321387",
+    "examples/task-board-ecosystem/apps/LegacyReports/reports.py": "8bec86f867da59162795a8bc99546e19004c3e6e41f2023d1e4b3742043cb7d5",
+    "examples/task-board-ecosystem/apps/TaskBoard/boundaries/Boundary_Cli.py": "43fba3137ace8483b63e59fc386b7a552b875939e73fddd4143fbf5f19224978",
+    "examples/task-board-ecosystem/apps/TaskBoard/boundaries/Boundary_Http.py": "ae6b16698fb32ded4fd3502a0a5f4fc9953df4408395ceffff2cf78d5dcfd6e6",
+    "examples/task-board-ecosystem/apps/TaskBoard/composition/AppComposition.py": "578a84a9a30e9c4ef42d03b0fa89ceefdd13903cfa2be3ee3a1391b89064553d",
+    "examples/task-board-ecosystem/apps/TaskBoard/entities/Entity_ActorContext.py": "baa11c6c0ea257b67618f5071c2b226780e9ec95c9e262186fe5810e9271b875",
+    "examples/task-board-ecosystem/apps/TaskBoard/entities/Entity_Task.py": "9528d654501ca196e4fbc5d2e3b65c0355f06e6f82491f13f2c2f9de6a46320d",
+    "examples/task-board-ecosystem/apps/TaskBoard/main.py": "da4d756a666819ce8e054710067bb0f77059affc4a95c4f61c6dbc1c73c7a3e0",
+    "examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Boundaries.py": "aa4e3e1dfa5ceafc92a4a07faf20a506cbf920969d63344f78db9ab5abb8322a",
+    "examples/task-board-ecosystem/apps/TaskBoard/tests/Test_Launcher.py": "67da68c32fdcf398047fd7c105f94e1389f70bae90e1704cfb264c6e27edf26c",
+    "examples/task-board-ecosystem/apps/TaskBoard/tests/Test_TaskCases.py": "9650121915ced060fe75c68f6bffc57c521ed8948facee04c272c77d9fa81690",
+    "examples/task-board-ecosystem/apps/TaskBoard/tools/Tool_SqliteTaskStore.py": "df7471b9ebc6c237f64b433c34a5ca31174420f172980dcd94f41ccb86df364b",
+    "examples/task-board-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_CompleteTask.py": "6072fb42ad91bb39d4006e3b4e1d34c481914b30ffe98ebc8ed830f658b7fe32",
+    "examples/task-board-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_CreateTask.py": "667b975906356660986e7958ce62b1c9f689d81217a6c9bf4b5d5a3cb525ba82",
+    "examples/task-board-ecosystem/apps/TaskBoard/usecases/TaskManagement/UseCase_ListTasks.py": "6f42790f3c72f0661c7a90fe6800074ce381916abe9e0414ca6542855451fd57",
+    "examples/task-board-ecosystem/apps/TaskBoard/value_objects/ValueObject_TaskTitle.py": "b31261c7ed64413e725b045fffe5527751f8de209233bb954a316c2d9c7aa44c",
+    "examples/task-board-ecosystem/launch.py": "1678a8bb81da8582fe5d56cf5c9b4af22b44a8f7100944bd08a4ca3c6997a231",
+    "run_examples.py": "71f290acba25854f247d70883281b73de993b63ada756f3196499c000535c453",
+    "scripts/evaluate_structure.py": "c0e7f3a6990e7c4f75d8233f88ec9a5b5ccd4ef26066dc0b679ef9a08261bf1c",
+    "tests/Test_Structure.py": "9692c4f08f720dcc4e1dc4904cc1b91f9bb07de09a519945599e2dba1372164a",
+    "vendor/minerva/minerva_blueprints/__init__.py": "45c0e1759eee5ba51d28082fde87321e7293cc3eed99d99e5021ca10d2aa6e59",
+    "vendor/minerva/minerva_blueprints/__main__.py": "568f3cedf2a498b1e1a9d349e6008e2bd8fed30c9bec43926b69c1ad83247353",
+    "vendor/minerva/minerva_blueprints/validation.py": "633d7f8b7fe8026d1d08841062ca17d0e722dd676c9289701f6c4234f0b9189e",
+    "vendor/minerva/validator/minerva_validate.py": "cc9ca81f07cbd01c76514bb58d2c97a0b52d725c42900e019e614da6afe4e70e"
+  },
+  "limits": [
+    "Uses the same recorded Linux/Python host and already installed declared dependencies; this is isolation evidence, not a new operating-system result.",
+    "The Minerva copy validates model examples and counterexamples; its source observations are not an executable Vulcan program."
+  ]
+}

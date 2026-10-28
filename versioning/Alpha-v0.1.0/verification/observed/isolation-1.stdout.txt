@@ -1,0 +1,2 @@
+Structure: passed; 14 Python files
+Minerva: exit 0

@@ -1,0 +1,4 @@
+# The executable apps and structural evaluator use only the Python standard library.
+# These exact dependencies serve the vendored Minerva verification gate.
+PyYAML==6.0.3
+jsonschema==4.25.1

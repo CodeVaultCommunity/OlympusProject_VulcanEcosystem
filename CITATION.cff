@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use Vulcan Ecosystem, please cite this Alpha edition."
+title: "Vulcan Ecosystem"
+version: "Alpha-v0.1.0"
+date-released: "2026-10-28"
+type: software
+license: MIT
+authors:
+  - family-names: "Alkimim"
+    given-names: "Douglas de Oliveira"
+abstract: "Olympus Project model at OAL L3 ADI, with reference tooling and examples."

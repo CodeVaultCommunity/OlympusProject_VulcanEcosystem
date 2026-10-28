@@ -1,0 +1,17 @@
+{
+  "fixture": "invalid-ecosystem",
+  "expected_status": "failed",
+  "required_rules": [
+    "VA_SINGLE_STRUCTURE",
+    "VA_FILE_NAME",
+    "VA_ROLE_NAME",
+    "VA_METHOD_CASE",
+    "VA_ATTRIBUTE_CASE",
+    "VA_DOMAIN",
+    "VA_DEPENDENCY_DIRECTION",
+    "VA_VALUE_OBJECT_CONSUMER",
+    "VA_PURE_DATA",
+    "VA_STATIC_CYCLE"
+  ],
+  "purpose": "Counterexample; not an executable or conforming ecosystem."
+}
