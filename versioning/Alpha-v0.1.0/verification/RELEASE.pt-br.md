@@ -23,3 +23,7 @@ As entradas Minerva foram lidas da árvore local não publicada baseada no commi
 Limites: SQLite local e identidade didática; doubles não estabelecem durabilidade física diante de desastre. Tempos cobrem 30 chamadas CLI por procedimento aplicável da fonte, não SLA de produção. Cancelamento de reserva reutiliza a verificação temporal da criação; latência do cancelamento permanece questão aberta da fonte. Não houve execução de UI de navegador, C/Go, Docker, implantação distribuída ou CI hospedada. Os dois testes ignorados não são considerados verificados. As imagens não foram alteradas nesta revisão. Relatórios históricos ficam em `reviews/` e execuções anteriores, sem serem reutilizados como evidência atual.
 
 O inventário da raiz é gerado após este recibo e conferido separadamente; o ID do commit final fica em recibo externo para evitar hashes circulares.
+
+## Revisão da organização da raiz
+
+A raiz foi reduzida aos arquivos de entrada/governança combinados, LICENSE e configuração técnica Git/CI. Documentos auxiliares e dependências foram realocados; temporários foram preservados fora do repositório. Os 33 testes das ferramentas e a verificação completa da edição passaram novamente. Veja o [recibo da organização](runs/20261028-root-organization/organization.json) e os [resultados da edição](runs/20261028-root-organization/summary.json).

@@ -23,3 +23,7 @@ The local Minerva inputs were read from the unpublished working tree based on co
 Limits: local SQLite and demo identity; fault doubles do not establish physical disaster durability. Timing records cover 30 CLI requests per relevant source procedure, not a production SLA. Booking cancellation reuses the source creation-time check; cancellation latency remains an open source question. No browser UI, C/Go, Docker, distributed deployment or hosted CI was executed. The two skipped checks are not considered verified. Artwork was unchanged in this revision. Historical reports are retained under `reviews/` and earlier runs, without being reused as current evidence.
 
 Root inventory is generated after this receipt and checked separately; the final commit ID belongs in an external receipt to avoid circular hashes.
+
+## Root organization follow-up
+
+The root was reduced to the agreed entry/governance files, LICENSE and technical Git/CI configuration. Auxiliary documents and dependency files were relocated; task scratch files were preserved outside the repository. All 33 repository-tool tests and the complete edition verification passed again. See the [organization receipt](runs/20261028-root-organization/organization.json) and [edition results](runs/20261028-root-organization/summary.json).

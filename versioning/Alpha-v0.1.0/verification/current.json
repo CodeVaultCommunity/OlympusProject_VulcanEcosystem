@@ -3,5 +3,6 @@
   "run": "runs/20261028-windows-final",
   "status": "passed",
   "previous_run": "runs/20261028-windows-alpha-revision",
-  "note": "Current run includes final operational mirror types and stale-binding protection; older runs describe their own source hashes."
+  "note": "Current run includes final operational mirror types and stale-binding protection; older runs describe their own source hashes.",
+  "repository_follow_up": "runs/20261028-root-organization/organization.json"
 }

@@ -44,9 +44,9 @@ L3-VulcanEcosystem/
 ├── README.md / README.pt-br.md
 ├── AGENTS.md / CLAUDE.md
 ├── CHANGELOG.md / VERSION / CONTENT-SHA256.json
-├── LICENSE / CITATION.cff / CONTRIBUTING.md
+├── LICENSE
 ├── assets/                 # illustrated introductions
-├── docs/                   # repository maintenance/release procedure
+├── docs/                   # maintenance, contribution, citation and acknowledgements
 ├── scripts/                # repository and distribution checks
 └── versioning/Alpha-v0.1.0/
     ├── README.md / README.pt-br.md
@@ -65,4 +65,4 @@ A edição permanece **Alpha-v0.1.0**, melhorada no lugar antes da publicação.
 
 `CONTENT-SHA256.json` na raiz inventaria os bytes exatos da entrega. O [procedimento de entrega](docs/releasing.pt-br.md) explica preparação, verificação e commits locais. Testes são observações delimitadas, sem representar aceite dos interessados ou certificação de projetos futuros. Configuração de CI hospedada não demonstra que houve execução hospedada.
 
-Concepção e autoria: Douglas de Oliveira Alkimim. Preparação e revisão técnica assistidas por IA. Veja [licença MIT](LICENSE), [citação](CITATION.cff), [proveniência das imagens](assets/README.pt-br.md) e [contribuição](CONTRIBUTING.md).
+Concepção e autoria: Douglas de Oliveira Alkimim. Preparação e revisão técnica assistidas por IA. Veja [licença MIT](LICENSE), [citação](docs/CITATION.cff), [proveniência das imagens](assets/README.pt-br.md) e [contribuição](docs/CONTRIBUTING.pt-br.md).

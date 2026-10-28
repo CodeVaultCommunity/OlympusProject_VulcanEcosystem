@@ -21,7 +21,7 @@ import content_inventory as inventory
 @pytest.fixture
 def files():
     result = {
-        "CITATION.cff": b"version: Stable-v1.0.0\n",
+        "docs/CITATION.cff": b"version: Stable-v1.0.0\n",
         "README.md": b"exact\r\nbytes\n",
         "Z.txt": b"upper", "a.txt": b"lower", "Alpha.txt": b"mixed",
         ".github/workflows/check.yml": b"workflow\n",

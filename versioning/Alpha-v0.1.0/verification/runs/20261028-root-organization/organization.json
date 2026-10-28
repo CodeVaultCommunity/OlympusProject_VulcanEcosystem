@@ -1,0 +1,54 @@
+{
+  "scope": "Repository root organization within unpublished Alpha-v0.1.0",
+  "checked_at_utc": "2026-10-28T13:36:59.833216+00:00",
+  "status": "passed",
+  "root_files": [
+    ".gitattributes",
+    ".gitignore",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CLAUDE.md",
+    "CONTENT-SHA256.json",
+    "LICENSE",
+    "README.md",
+    "README.pt-br.md",
+    "VERSION"
+  ],
+  "relocated": {
+    "ACKNOWLEDGEMENTS.md": "docs/ACKNOWLEDGEMENTS.md",
+    "CITATION.cff": "docs/CITATION.cff",
+    "CONTRIBUTING.md": "docs/CONTRIBUTING.md",
+    "CONTRIBUTING.pt-br.md": "docs/CONTRIBUTING.pt-br.md",
+    "requirements-dev.txt": "scripts/requirements-dev.txt",
+    "requirements-artwork.txt": "assets/sources/requirements.txt"
+  },
+  "temporary_work": "Preserved outside repository in the task artifact directory",
+  "repository_tests": {
+    "passed": 33,
+    "python": "3.12.14",
+    "command": [
+      "C:\\Users\\Douglas\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-m",
+      "pytest",
+      "scripts/tests",
+      "-p",
+      "no:cacheprovider",
+      "--basetemp",
+      "C:\\Users\\Douglas\\.codex\\visualizations\\2026\\10\\28\\01a1824b-76e0-7002-92a5-323363550d5d\\vulcan-root-cleanup\\pytest",
+      "-q"
+    ],
+    "stdout": "repository-tests.stdout.txt",
+    "sources": {
+      "scripts/content_inventory.py": "50694e74c6dc273693a1d88c665312b127a5dfb907c9b9dcde5e16c8a9b39cdc",
+      "scripts/check_repository.py": "e9543a829532f02236a48660fcd170298f02e3890c6022cb0a48fcf2a054e7f7",
+      "scripts/build_distribution.py": "0baf3953ee47c4624597862988d27106a14b24be432102988bcf38d7197db6ad",
+      "scripts/check_archive.py": "f9f74fdf34fa8d61e8814b78b209c78f28293874ef73501b7aaea9c757c6686d",
+      "scripts/tests/test_content_inventory.py": "ce691b28d87768b7bc21829182ec247b628443b1eb0b9dbd81a5a6d8cd662f60"
+    }
+  },
+  "edition_verification": "summary.json",
+  "limits": [
+    "Repository organization changed; canonical application behavior and model inputs were not edited.",
+    "Edition tests retain the recorded Windows skips; no hosted CI execution is claimed."
+  ]
+}

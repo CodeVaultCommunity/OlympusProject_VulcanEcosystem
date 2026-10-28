@@ -21,3 +21,7 @@ Run the edition tests and example checks and inspect changed artwork. From the r
 ## Unpublished Alpha revision
 
 Continue improving Alpha-v0.1.0 in place until the user requests another edition. Use specification/ for adopted rules, profiles/ for optional architecture, integrations/ for explanatory manual derivation only, and examples/minimal, composition and task-board for the canonical Atlas/Minerva family. Do not implement a translator or reintroduce vendor/. Old divergent business behavior is isolated in tests/fixtures/. Full verify requires an explicitly selected external Minerva edition; do not claim complete integration when it is unavailable. Keep new runs separate from historical reports.
+
+## Keep the root focused
+
+Root documentation is limited to README.md, README.pt-br.md, AGENTS.md, CLAUDE.md, CHANGELOG.md, VERSION, CONTENT-SHA256.json and LICENSE. Keep citation, contribution and acknowledgements under docs/; development requirements under scripts/; artwork dependencies under assets/sources/. Store task scratch files outside the repository. Hidden Git/CI configuration and assets/, docs/, scripts/, versioning/ remain at the root.

@@ -67,9 +67,9 @@ def check(root):
     version=(root/'VERSION').read_text(encoding='utf-8').strip()
     if not (root/'versioning'/version/'README.md').is_file():
         errors.append('VERSION does not identify an edition manual')
-    citation=(root/'CITATION.cff').read_text(encoding='utf-8')
+    citation=(root/'docs/CITATION.cff').read_text(encoding='utf-8')
     if not re.search(r'^version:\s*[\"\']?'+re.escape(version)+r'[\"\']?\s*$',citation,re.M):
-        errors.append('CITATION.cff and VERSION differ')
+        errors.append('docs/CITATION.cff and VERSION differ')
     return {'status':'failed' if errors else 'passed','markdown_files':markdown,
             'local_links':local_links,'source_snapshots':snapshots,'errors':errors,
             'limits':['External URLs are not fetched.','Structural documentation checks do not prove behavioral correctness.']}

@@ -44,9 +44,9 @@ L3-VulcanEcosystem/
 ├── README.md / README.pt-br.md
 ├── AGENTS.md / CLAUDE.md
 ├── CHANGELOG.md / VERSION / CONTENT-SHA256.json
-├── LICENSE / CITATION.cff / CONTRIBUTING.md
+├── LICENSE
 ├── assets/                 # illustrated introductions
-├── docs/                   # repository maintenance/release procedure
+├── docs/                   # maintenance, contribution, citation and acknowledgements
 ├── scripts/                # repository and distribution checks
 └── versioning/Alpha-v0.1.0/
     ├── README.md / README.pt-br.md
@@ -65,4 +65,4 @@ The edition remains **Alpha-v0.1.0**, improved in place before publication. [Rul
 
 Root `CONTENT-SHA256.json` inventories exact delivery bytes. [Release procedure](docs/releasing.md) explains staging, verification and local commits. Tests are bounded observations, not stakeholder approval or certification for future projects. Hosted CI configuration is not evidence of a hosted run.
 
-Concept and authorship: Douglas de Oliveira Alkimim. Preparation and technical review were AI-assisted. See [MIT license](LICENSE), [citation](CITATION.cff), [artwork provenance](assets/README.md) and [contribution guide](CONTRIBUTING.md).
+Concept and authorship: Douglas de Oliveira Alkimim. Preparation and technical review were AI-assisted. See [MIT license](LICENSE), [citation](docs/CITATION.cff), [artwork provenance](assets/README.md) and [contribution guide](docs/CONTRIBUTING.md).

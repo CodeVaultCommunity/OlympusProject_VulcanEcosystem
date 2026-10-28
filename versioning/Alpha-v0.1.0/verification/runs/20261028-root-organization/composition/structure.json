@@ -1,0 +1,164 @@
+{
+  "model": "Vulcan Ecosystem",
+  "edition": "Alpha-v0.1.0",
+  "profile": "Vulcan Architecture Python",
+  "evaluated_at_utc": "2026-10-28T13:34:25.008582+00:00",
+  "ecosystem": "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L3-VulcanEcosystem\\versioning\\Alpha-v0.1.0\\examples\\composition",
+  "status": "passed",
+  "scope": {
+    "profile_apps": [
+      "BookingDesk"
+    ],
+    "legacy_apps_not_structurally_assessed": [],
+    "python_files_parsed": 13,
+    "rules": [
+      "ECO_APPS",
+      "ECO_ENTRY",
+      "ECO_CLASSIFICATION",
+      "VA_AREAS",
+      "VA_SINGLE_STRUCTURE",
+      "VA_FILE_NAME",
+      "VA_ROLE_NAME",
+      "VA_METHOD_CASE",
+      "VA_ATTRIBUTE_CASE",
+      "VA_DOMAIN",
+      "VA_DEPENDENCY_DIRECTION",
+      "VA_VALUE_OBJECT_CONSUMER",
+      "VA_PURE_DATA",
+      "VA_STATIC_CYCLE",
+      "PYTHON_SYNTAX"
+    ],
+    "entry": "launch.py",
+    "not_assessed": [
+      "Minerva schema or per-file mirror",
+      "semantic preservation",
+      "authorization behavior",
+      "runtime execution",
+      "dynamic imports",
+      "C/Go",
+      "all foreign library dependencies",
+      "cross-app API public status"
+    ]
+  },
+  "diagnostics": [],
+  "adaptations": [
+    {
+      "path": "apps/BookingDesk/boundaries/Boundary_Http.py",
+      "symbol": "do_GET",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/BookingDesk/boundaries/Boundary_Http.py",
+      "symbol": "do_POST",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/BookingDesk/boundaries/Boundary_Http.py",
+      "symbol": "log_message",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/BookingDesk/boundaries/Boundary_Json.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/BookingDesk/composition/AppComposition.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/BookingDesk/entities/Entity_ActorContext.py",
+      "symbol": "__post_init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/BookingDesk/entities/Entity_Booking.py",
+      "symbol": "__post_init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/BookingDesk/support/OperationFailure.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/BookingDesk/support/SqliteResource.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/BookingDesk/tools/Tool_SqliteBookingStore.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/BookingDesk/usecases/Main/UseCase_CancelBooking.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/BookingDesk/usecases/Main/UseCase_CreateBooking.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/BookingDesk/usecases/Main/UseCase_LookupBooking.py",
+      "symbol": "__init__",
+      "reason": "Python or HTTP framework spelling."
+    },
+    {
+      "path": "apps/BookingDesk/value_objects/ValueObject_BookingIdentity.py",
+      "symbol": "__post_init__",
+      "reason": "Python or HTTP framework spelling."
+    }
+  ],
+  "static_dependencies": {
+    "apps/BookingDesk/boundaries/Boundary_Http.py": [],
+    "apps/BookingDesk/boundaries/Boundary_Json.py": [
+      "apps/BookingDesk/support/OperationFailure.py"
+    ],
+    "apps/BookingDesk/composition/AppComposition.py": [
+      "apps/BookingDesk/entities/Entity_ActorContext.py",
+      "apps/BookingDesk/tools/Tool_SqliteBookingStore.py",
+      "apps/BookingDesk/usecases/Main/UseCase_CancelBooking.py",
+      "apps/BookingDesk/usecases/Main/UseCase_CreateBooking.py",
+      "apps/BookingDesk/usecases/Main/UseCase_LookupBooking.py"
+    ],
+    "apps/BookingDesk/entities/Entity_ActorContext.py": [],
+    "apps/BookingDesk/entities/Entity_Booking.py": [
+      "apps/BookingDesk/value_objects/ValueObject_BookingIdentity.py"
+    ],
+    "apps/BookingDesk/support/OperationFailure.py": [],
+    "apps/BookingDesk/support/SqliteResource.py": [
+      "apps/BookingDesk/support/OperationFailure.py"
+    ],
+    "apps/BookingDesk/tests/Test_Contracts.py": [
+      "apps/BookingDesk/boundaries/Boundary_Json.py",
+      "apps/BookingDesk/composition/AppComposition.py",
+      "apps/BookingDesk/entities/Entity_ActorContext.py",
+      "apps/BookingDesk/support/OperationFailure.py"
+    ],
+    "apps/BookingDesk/tools/Tool_SqliteBookingStore.py": [
+      "apps/BookingDesk/entities/Entity_Booking.py",
+      "apps/BookingDesk/support/OperationFailure.py",
+      "apps/BookingDesk/support/SqliteResource.py"
+    ],
+    "apps/BookingDesk/usecases/Main/UseCase_CancelBooking.py": [
+      "apps/BookingDesk/entities/Entity_ActorContext.py",
+      "apps/BookingDesk/entities/Entity_Booking.py",
+      "apps/BookingDesk/support/OperationFailure.py"
+    ],
+    "apps/BookingDesk/usecases/Main/UseCase_CreateBooking.py": [
+      "apps/BookingDesk/entities/Entity_ActorContext.py",
+      "apps/BookingDesk/entities/Entity_Booking.py",
+      "apps/BookingDesk/support/OperationFailure.py"
+    ],
+    "apps/BookingDesk/usecases/Main/UseCase_LookupBooking.py": [
+      "apps/BookingDesk/entities/Entity_ActorContext.py",
+      "apps/BookingDesk/entities/Entity_Booking.py",
+      "apps/BookingDesk/support/OperationFailure.py"
+    ],
+    "apps/BookingDesk/value_objects/ValueObject_BookingIdentity.py": []
+  }
+}

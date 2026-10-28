@@ -1109,8 +1109,8 @@
       ],
       "artifacts": [
         "LICENSE",
-        "ACKNOWLEDGEMENTS.md",
-        "CITATION.cff",
+        "docs/ACKNOWLEDGEMENTS.md",
+        "docs/CITATION.cff",
         "AGENTS.md",
         "CLAUDE.md",
         "CONTENT-SHA256.json",

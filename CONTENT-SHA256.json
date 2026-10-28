@@ -13,8 +13,8 @@
     },
     {
       "path": ".github/workflows/verify.yml",
-      "size_bytes": 986,
-      "sha256": "46c3019be26d4d97fe070fe676449a599ec17dba662de54f8da89a0046e38ddc"
+      "size_bytes": 994,
+      "sha256": "f4166013d9c252365ebaaf5aa408854c057379be6ac4c73323ef500eee62d0b5"
     },
     {
       "path": ".gitignore",
@@ -22,39 +22,19 @@
       "sha256": "0ac196128e7b5df54bb8fb883aa7bf40f5b563bf22a53d066cae47bfd2f7db49"
     },
     {
-      "path": "ACKNOWLEDGEMENTS.md",
-      "size_bytes": 1416,
-      "sha256": "bf0842f583d2e0d3074f36c100ba0d0c218be1b995abe73371dbc48c1972521e"
-    },
-    {
       "path": "AGENTS.md",
-      "size_bytes": 2591,
-      "sha256": "91e90faf08e81f60d2ea7939e461473b181487e3ba94bb3dd171304a905afffd"
+      "size_bytes": 3039,
+      "sha256": "49dead9a17997b592424ef19b9f278f3711490516786dfb84c888cecd6bd13bc"
     },
     {
       "path": "CHANGELOG.md",
-      "size_bytes": 881,
-      "sha256": "782769df34e248c79776f987d73e222d56a2e2f6da7e50af0b446c5f86648972"
-    },
-    {
-      "path": "CITATION.cff",
-      "size_bytes": 359,
-      "sha256": "98a0cd986465fdb76169238765bd3302fd3022b4920d62bdeabb6356bc4a07bb"
+      "size_bytes": 1217,
+      "sha256": "72823d283a15c1dbb297bd833bd55809e2ea137389b0b49a8a7420efe9e23a4e"
     },
     {
       "path": "CLAUDE.md",
       "size_bytes": 355,
       "sha256": "a4d7db60c77add2649a999a1e9f796bd31f2911c93489f05d36fda25717ea993"
-    },
-    {
-      "path": "CONTRIBUTING.md",
-      "size_bytes": 596,
-      "sha256": "267f91e4ae083fd2d0bf7636bc7c039b1c12b3ff130218ebe7e700b1c0916b5a"
-    },
-    {
-      "path": "CONTRIBUTING.pt-br.md",
-      "size_bytes": 465,
-      "sha256": "0b74a47b2166f0487ac96d40218e3c66c89a34dedf0f619be49bbd1c7e24dd5d"
     },
     {
       "path": "LICENSE",
@@ -63,13 +43,13 @@
     },
     {
       "path": "README.md",
-      "size_bytes": 4999,
-      "sha256": "c7cf76191123498c53a8016dbb51846015927074f3abff3874945d4d3983f915"
+      "size_bytes": 4992,
+      "sha256": "3de3997753b5ee86f85bf5629843841576086cc6978fbf91152e852a24dae761"
     },
     {
       "path": "README.pt-br.md",
-      "size_bytes": 5233,
-      "sha256": "66b629be4304559eb33f52694e7e872b8dab38db5bc6a51e9a3b901ede77e36e"
+      "size_bytes": 5232,
+      "sha256": "344aa0abf47e522c171fa5e771f067b45eaa8f2b602817fef650374b91b2fc72"
     },
     {
       "path": "VERSION",
@@ -78,13 +58,13 @@
     },
     {
       "path": "assets/README.md",
-      "size_bytes": 4558,
-      "sha256": "c313f94b8fd92ecff9a471dd6086765f5850da7b0a94913e4ee4bc5238709e3f"
+      "size_bytes": 4577,
+      "sha256": "b8fe791f3020c3df0098019464fe964b083be83e010a53946cbbf47c14679915"
     },
     {
       "path": "assets/README.pt-br.md",
-      "size_bytes": 4909,
-      "sha256": "1cb88878cf1bdb800b1f6af8e2d6725650767ab5c1c43bccd223f8c6a2e66f8a"
+      "size_bytes": 4928,
+      "sha256": "fd0336836d285de79dc1ef7670eb6946a5d09f3a7e914c46ab614b8240689f61"
     },
     {
       "path": "assets/asset-metadata.json",
@@ -115,6 +95,11 @@
       "path": "assets/sources/render_images.py",
       "size_bytes": 24874,
       "sha256": "11f4740370bbcf6cbe498aa9db3bab9ea91be80f438aa3efc3db75ee328852b2"
+    },
+    {
+      "path": "assets/sources/requirements.txt",
+      "size_bytes": 31,
+      "sha256": "9cc9be1825d4ed4823d536d6814f1a131c81473a06d97626a0380c3a567fc6d8"
     },
     {
       "path": "assets/sources/vulcan-banner-en.svg",
@@ -212,24 +197,34 @@
       "sha256": "803f6e1b9810d56b09b834510c4b37d7ecc96235d384a59b0b2acb6edced1f76"
     },
     {
+      "path": "docs/ACKNOWLEDGEMENTS.md",
+      "size_bytes": 1416,
+      "sha256": "bf0842f583d2e0d3074f36c100ba0d0c218be1b995abe73371dbc48c1972521e"
+    },
+    {
+      "path": "docs/CITATION.cff",
+      "size_bytes": 359,
+      "sha256": "98a0cd986465fdb76169238765bd3302fd3022b4920d62bdeabb6356bc4a07bb"
+    },
+    {
+      "path": "docs/CONTRIBUTING.md",
+      "size_bytes": 631,
+      "sha256": "a38820926dbd7e4671a0e9c43c079d06b060bafd0d20907e31afec4dff408919"
+    },
+    {
+      "path": "docs/CONTRIBUTING.pt-br.md",
+      "size_bytes": 683,
+      "sha256": "2d73de18ab6d283af57cf90fd18f8794e827bc190c32dab02dff1d3832ebff1a"
+    },
+    {
       "path": "docs/releasing.md",
-      "size_bytes": 5293,
-      "sha256": "05b554bf16ae722b86fcf64f899d4f2f4ab2f7ba3e774971341133dd60c95712"
+      "size_bytes": 5301,
+      "sha256": "abf7c10dd5d0f6bc4c1cd66676ce092f9432d390ff548096f590cb7ba7168c5b"
     },
     {
       "path": "docs/releasing.pt-br.md",
-      "size_bytes": 2421,
-      "sha256": "f2da63798ed55c11faef92ba490316dd956e0f562779dd75b4434dbdb8ff4f2d"
-    },
-    {
-      "path": "requirements-artwork.txt",
-      "size_bytes": 31,
-      "sha256": "9cc9be1825d4ed4823d536d6814f1a131c81473a06d97626a0380c3a567fc6d8"
-    },
-    {
-      "path": "requirements-dev.txt",
-      "size_bytes": 47,
-      "sha256": "4ecb17fe1779cab55da20fc2fb865c9d3b8aa5d88bc608ddcbbbc2c646c13d5e"
+      "size_bytes": 2426,
+      "sha256": "ede26997bb9fa58604f62983eda08aaa28d8a05120d8013fa96ea916c8a35411"
     },
     {
       "path": "scripts/build_distribution.py",
@@ -243,18 +238,23 @@
     },
     {
       "path": "scripts/check_repository.py",
-      "size_bytes": 4499,
-      "sha256": "c57c51493c7226dd23bfa095c9e6b024e8abb7d8542e9ed44f80cb7e95eaf8cf"
+      "size_bytes": 4509,
+      "sha256": "e9543a829532f02236a48660fcd170298f02e3890c6022cb0a48fcf2a054e7f7"
     },
     {
       "path": "scripts/content_inventory.py",
-      "size_bytes": 6004,
-      "sha256": "18736b74f5fbef70d3bf512c0be5030d07b04c2da7c6ec5daae723fa7d0d3bbf"
+      "size_bytes": 6019,
+      "sha256": "50694e74c6dc273693a1d88c665312b127a5dfb907c9b9dcde5e16c8a9b39cdc"
+    },
+    {
+      "path": "scripts/requirements-dev.txt",
+      "size_bytes": 47,
+      "sha256": "4ecb17fe1779cab55da20fc2fb865c9d3b8aa5d88bc608ddcbbbc2c646c13d5e"
     },
     {
       "path": "scripts/tests/test_content_inventory.py",
-      "size_bytes": 9729,
-      "sha256": "7253f9741950f0d557428b4780045058c60af1d9755fc19b62e001f376e85402"
+      "size_bytes": 9734,
+      "sha256": "ce691b28d87768b7bc21829182ec247b628443b1eb0b9dbd81a5a6d8cd662f60"
     },
     {
       "path": "versioning/Alpha-v0.1.0/LICENSE",
@@ -1178,28 +1178,28 @@
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/RELEASE.md",
-      "size_bytes": 3044,
-      "sha256": "515317a9d4ebf6c0fbcd837afbbd06d0d6ab11a3c605ed95a5e3d77bb42fb798"
+      "size_bytes": 3527,
+      "sha256": "0ed57771f498438487a48cb268f31c069ab52dd0ec834cf96c76c5a8d0ff8e75"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/RELEASE.pt-br.md",
-      "size_bytes": 3166,
-      "sha256": "961ef9419e90a61afddc9cb01037f5944118b2d0c27f547c6175ea38fa590e00"
+      "size_bytes": 3673,
+      "sha256": "4c28deb3b1380e51d051046e344d98e8f4201f087f07616342f0c6b631716c8b"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/REQUIREMENTS.md",
-      "size_bytes": 13163,
-      "sha256": "f1a6f6b74153a84be017a7d217ef6033594e176a9a3cb288d91b63398ad098f5"
+      "size_bytes": 13173,
+      "sha256": "d128033e362918f2a0010c165113de1015956e0bd00bbde0eb0ab396f8db6995"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/REQUIREMENTS.pt-br.md",
-      "size_bytes": 13233,
-      "sha256": "1e92e5462cf837799c24bb0f5c54a6a0105c5dc22a6f2b390a95b3b688fe3021"
+      "size_bytes": 13243,
+      "sha256": "1d7d809c5cf7c7231679e4ba0605a64e988c031ca8ff3098ded574295fe2e03d"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/current.json",
-      "size_bytes": 292,
-      "sha256": "0daa790ac6ec419d363fd6ce6c67cf14b791669a054026c182a41468ca71735a"
+      "size_bytes": 371,
+      "sha256": "9c7d73b0b7bcfa0daf12a60ed8bbb31b79b4fc480e9890c8b943ecdaabc12eaa"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/requirements/catalog.json",
@@ -1208,8 +1208,8 @@
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/requirements/coverage.json",
-      "size_bytes": 51404,
-      "sha256": "f31ec655d68e3c8a5f63a59c9a46271531b8658d1aacf7d1835dd253fca90593"
+      "size_bytes": 51414,
+      "sha256": "3ef579643fdd3b079b9e475a2fdee8897c2a46258f01b0e5c59411fc9a845898"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/requirements/migration.json",
@@ -1295,6 +1295,86 @@
       "path": "versioning/Alpha-v0.1.0/verification/reviews/baseline-78232f2/structure.json",
       "size_bytes": 6169,
       "sha256": "d3c23ff87e9e95979650e0cea0336b8db73783672f10ae71c00c0f88b7350674"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/composition/execution.json",
+      "size_bytes": 22750,
+      "sha256": "032a0bcc8e92bdfc36ac87dec6a6eaaf1bd3cd6272f6b851456e02e933f43dd1"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/composition/minerva.json",
+      "size_bytes": 2364,
+      "sha256": "bde21ec396df59c3829114d264841ecf0dc2922ff55ac0e3321e0bc2b77ed333"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/composition/structure.json",
+      "size_bytes": 5838,
+      "sha256": "80abffa1bd1a2c065b6bd243edb68cbb6642c8fd4bf79ae032a378f71b1e3a61"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/legacy-fixture.json",
+      "size_bytes": 18543,
+      "sha256": "edb614366ff3ac55bc4d3fc14dad25ada7b03c1470da2bac9cba6e1ff1a7da64"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/minimal/execution.json",
+      "size_bytes": 13539,
+      "sha256": "800b1d18637a2f45dd357cc344e7e228308a3738cf93bebf3e26ea007171fc3d"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/minimal/minerva.json",
+      "size_bytes": 2363,
+      "sha256": "15483bbfb194929ce7b10b2823e4dbe0a45ca0ec28551155310eb63bdf4ea729"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/minimal/structure.json",
+      "size_bytes": 4748,
+      "sha256": "8d57acdbb16792b19223ff323143cd49d05ad83f6e42433d9b64de7cfb077589"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/organization.json",
+      "size_bytes": 2120,
+      "sha256": "5fdcbfeb5b5ae0a05136646fef28c0560d06d5bf04734a01f7f8d502a1b07f87"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/repository-check.json",
+      "size_bytes": 245,
+      "sha256": "6024a201b79ef98fff69b94a5cc3a85f293b491ec4ec3ebf99a3a70bbc417aec"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/repository-tests.stderr.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/repository-tests.stdout.txt",
+      "size_bytes": 101,
+      "sha256": "c52301386abe79b817750090d9a47496ea7431983c91d41179ce38090255bbb5"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/summary.json",
+      "size_bytes": 591,
+      "sha256": "ab7bbf3963481ff7ff30bf98e7430687c414966f9099fd2baf7d3d775f1a63d2"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/task-board/execution.json",
+      "size_bytes": 21068,
+      "sha256": "dbd303edb471690e4a24e4ebc7f55d91d248a167afe2eea8476e75a15008fe08"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/task-board/minerva.json",
+      "size_bytes": 2364,
+      "sha256": "ba657e8dc46034e38f1f93bec118ddf56f32af507d65b9e7541347b20eaadb54"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/task-board/structure.json",
+      "size_bytes": 5722,
+      "sha256": "d574dd199a592010c4527f12ce34476e4c2b5bda52c0b95edbb8494aecdc7d94"
+    },
+    {
+      "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-root-organization/tooling.json",
+      "size_bytes": 24636,
+      "sha256": "44e23079daeabf73ac8c241f68bcf35b0bb5d214ed4444ab50c6ee1a9306bb34"
     },
     {
       "path": "versioning/Alpha-v0.1.0/verification/runs/20261028-windows-alpha-revision/composition/execution.json",

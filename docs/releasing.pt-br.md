@@ -8,7 +8,7 @@ Selecione Alpha-v0.1.0. Conclua fontes, tradução, exemplos, recursos e evidên
 
 ## Gerar o inventário único
 
-CONTENT-SHA256.json é o inventário ativo da distribuição. Registra algoritmo SHA-256, vulcan_edition igual a CITATION.cff, escopo, exclusão de si mesmo, caminho POSIX, tamanho em bytes e hash. Abrange todos os arquivos versionados destinados à entrega. Os snapshots de fontes e seus mapas registram proveniência e não substituem esse inventário.
+CONTENT-SHA256.json é o inventário ativo da distribuição. Registra algoritmo SHA-256, vulcan_edition igual a docs/CITATION.cff, escopo, exclusão de si mesmo, caminho POSIX, tamanho em bytes e hash. Abrange todos os arquivos versionados destinados à entrega. Os snapshots de fontes e seus mapas registram proveniência e não substituem esse inventário.
 
 Prepare explicitamente as adições, mudanças e remoções no índice Git. O gerador lê os caminhos do índice e os bytes atuais sem normalização de fim de linha. Gere o inventário por último:
 

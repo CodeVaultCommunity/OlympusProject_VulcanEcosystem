@@ -41,13 +41,13 @@ def read_file(root: Path, name: str) -> bytes:
 
 
 def edition(files: dict[str, bytes]) -> str:
-    text = files["CITATION.cff"].decode("utf-8")
+    text = files["docs/CITATION.cff"].decode("utf-8")
     matches = re.findall(r"^version:\s*([^\r\n]+)", text, re.M)
     if len(matches) != 1:
-        raise ValueError("CITATION.cff must declare exactly one release version")
+        raise ValueError("docs/CITATION.cff must declare exactly one release version")
     value = matches[0].strip().strip("\"'")
     if not re.fullmatch(r"(?:Stable|Alpha)-v\d+\.\d+\.\d+", value):
-        raise ValueError("unsupported release version in CITATION.cff")
+        raise ValueError("unsupported release version in docs/CITATION.cff")
     return value
 
 

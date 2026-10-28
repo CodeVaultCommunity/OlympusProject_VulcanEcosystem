@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "external_tool": "E:\\Alkimim\\Projetos\\CodeVault\\ProjectOlympus\\L2-MinervaBlueprints\\versioning\\Alpha-v0.1.0",
+  "tool_version": "Minerva Blueprints Alpha-v0.1.0 | YAML 0.1.0 | tool 0.1.0a0",
+  "tool_sources": {
+    "minerva_blueprints/__init__.py": "45c0e1759eee5ba51d28082fde87321e7293cc3eed99d99e5021ca10d2aa6e59",
+    "minerva_blueprints/__main__.py": "568f3cedf2a498b1e1a9d349e6008e2bd8fed30c9bec43926b69c1ad83247353",
+    "minerva_blueprints/code_inspection.py": "3cb0a35f816cfbf58063d9196656845f3d85717595a81ed38f2d96022731d61d",
+    "minerva_blueprints/loading.py": "a7fd5a7dd4ae2970d29c6be6ed75e6e094aa9f52dc2f7a2d4cb5e2d0d938ce58",
+    "minerva_blueprints/schemas/minerva.schema.json": "25f3406368387da26f245665b375bb2f96108729c0966dbb42de2b01176296e5",
+    "minerva_blueprints/validation.py": "7e98f4e5636cb9707ccaf73c31c1b07e7009401398561caecd4161ff796c9f82",
+    "validator/minerva_validate.py": "cc9ca81f07cbd01c76514bb58d2c97a0b52d725c42900e019e614da6afe4e70e"
+  },
+  "exit_code": 0,
+  "result": {
+    "tool_version": "0.1.0a0",
+    "model_version": "Alpha-v0.1.0",
+    "profile_version": "0.1.0",
+    "status": "passed",
+    "exit_code": 0,
+    "validation_level": "consistency",
+    "layer_coverage": "declared_adpm_and_advs",
+    "code_check": "checked",
+    "counts": {
+      "documents": 15,
+      "cases": 3,
+      "behavioral_tests": 3,
+      "criteria": 16,
+      "scenarios": 31,
+      "graphs": 6,
+      "code_files": 14
+    },
+    "diagnostics": [],
+    "limitations": [
+      "Structural and consistency checks do not prove behavioral correctness, sufficient scenarios or OAL conformance.",
+      "Project code and YAML command text are never executed or imported.",
+      "Textual rules, trust policies, algorithm equivalence and contextual-condition adequacy require review.",
+      "Python code inspection, when requested, checks top-level names and hashes; it does not prove runtime behavior.",
+      "Source catalogue and mappings are authored Minerva declarations. No source-model reader is included; fidelity to the pinned L1 content requires separate review."
+    ],
+    "source_check": "opaque_bytes_and_declared_catalog"
+  },
+  "limit": "Structural and consistency validation plus declared source observations; not behavioral proof or translation."
+}
