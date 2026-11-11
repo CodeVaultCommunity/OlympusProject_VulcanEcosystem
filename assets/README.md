@@ -2,7 +2,7 @@
 
 [Português brasileiro](README.pt-br.md)
 
-**Olympus Project · OAL L3 · ADI · Alpha-v0.1.0**
+**Olympus Project · OAL L3 · ADI · Stable-v1.0.0**
 
 The headers and diagrams follow the visual composition of Atlas Specifications: blue/teal, light and navy cards, explicit arrows, and transparent diagram backgrounds. Both languages express the same content. Images explain the model; the edition documentation defines requirements and contracts.
 
@@ -28,7 +28,7 @@ In this edition's Minerva profile, `source.state` distinguishes `planned` from `
 Use Python 3.10+, CairoSVG 2.8.2, its system Cairo libraries, and the **DejaVu Sans** and **DejaVu Sans Mono** fonts. These dependencies only reproduce images; they are not dependencies of the model or Vulcan applications.
 
 ```sh
-python -m pip install -r assets/sources/requirements.txt
+python -m pip install -r assets/requirements-artwork.txt
 python assets/sources/render_images.py
 ```
 

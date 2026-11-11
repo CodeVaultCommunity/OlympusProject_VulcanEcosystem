@@ -1,11 +1,19 @@
-name: Verify Vulcan Ecosystem
-on: [push, pull_request]
+name: Verify Vulcan Stable
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
 jobs:
   verify:
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
         python: ['3.11', '3.12']
+        os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -15,8 +23,8 @@ jobs:
       - run: python -m pip install -r scripts/requirements-dev.txt
       - run: python scripts/check_repository.py
       - run: python -m pytest scripts/tests
-      - run: python versioning/Alpha-v0.1.0/run_examples.py evaluate --report-dir "${{ runner.temp }}/vulcan-structure"
-      - run: python versioning/Alpha-v0.1.0/run_examples.py test --report-dir "${{ runner.temp }}/vulcan-tests"
-      # Full L2 integration is run separately with an explicitly selected, recorded Minerva edition.
-      # This job does not claim Minerva validation or a hosted run merely by being configured.
+      - run: python -m pip install -e "versioning/Stable-v1.0.0"
+      - run: python versioning/Stable-v1.0.0/run_examples.py
+      - run: python versioning/Stable-v1.0.0/scripts/validate_ecosystem.py
+      - run: python -m pytest versioning/Stable-v1.0.0/tests
       - run: python scripts/content_inventory.py --check

@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vulcan-ecosystem"
+version = "1.0.0"
+description = "Deterministic realization and validation of Minerva Stable-v1.0.0 projects"
+requires-python = ">=3.11"
+dependencies = [
+  "PyYAML>=6.0,<7",
+]
+
+[project.scripts]
+vulcan-generate = "vulcan_ecosystem.cli:generate_main"
+vulcan-validate = "vulcan_ecosystem.cli:validate_main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["vulcan_ecosystem"]
+

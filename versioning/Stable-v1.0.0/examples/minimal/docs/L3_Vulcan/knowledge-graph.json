@@ -1,0 +1,3586 @@
+{
+  "format": "vulcan-knowledge-graph/1.0.0",
+  "model_version": "Stable-v1.0.0",
+  "project_id": "MINERVA-REQUESTREGISTER",
+  "source_graph_format": "minerva-knowledge-graph/1.0.0",
+  "nodes": [
+    {
+      "id": "ACT-REQUESTER",
+      "kind": "actor",
+      "module": "shared/actors/Actor_Requester.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "VOC-REQUEST-CODE",
+      "kind": "term",
+      "module": "project/vocabulary/Term_RequestCode.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "ENT-REQUEST",
+      "kind": "entity",
+      "module": "apps/RequestRegister/entities/Entity_Request.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "FLD-REQUEST-CODE",
+      "kind": "entity_field",
+      "module": "apps/RequestRegister/entities/Entity_Request.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "FLD-REQUEST-QUANTITY",
+      "kind": "entity_field",
+      "module": "apps/RequestRegister/entities/Entity_Request.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "VLD-REQUEST-QUANTITY",
+      "kind": "entity_validation",
+      "module": "apps/RequestRegister/entities/Entity_Request.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "VLD-REQUEST-CODE",
+      "kind": "entity_validation",
+      "module": "apps/RequestRegister/entities/Entity_Request.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "TOL-REQUEST-STORE",
+      "kind": "abstract_tool",
+      "module": "apps/RequestRegister/tools/abstract/AbstractTool_RequestStore.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "OP-REQUEST-STORE",
+      "kind": "abstract_tool_operation",
+      "module": "apps/RequestRegister/tools/abstract/AbstractTool_RequestStore.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "UC-REQUEST-SUBMIT",
+      "kind": "use_case",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "OUT-REQUEST-CONFIRMED",
+      "kind": "use_case_outcome",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "OUT-REQUEST-INVALID",
+      "kind": "use_case_outcome",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "OUT-REQUEST-DENIED",
+      "kind": "use_case_outcome",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "OUT-REQUEST-STORE-FAILURE",
+      "kind": "use_case_outcome",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "OUT-REQUEST-DUPLICATE",
+      "kind": "use_case_outcome",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "RF-REQUEST-01",
+      "kind": "functional_requirement",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "RF-REQUEST-02",
+      "kind": "functional_requirement",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "RF-REQUEST-03",
+      "kind": "functional_requirement",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "RF-REQUEST-04",
+      "kind": "functional_requirement",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "RF-REQUEST-05",
+      "kind": "functional_requirement",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "RF-REQUEST-06",
+      "kind": "functional_requirement",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "RF-REQUEST-07",
+      "kind": "functional_requirement",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "RNF-REQUEST-01",
+      "kind": "nonfunctional_requirement",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "AC-REQUEST-01",
+      "kind": "acceptance_criterion",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "AC-REQUEST-02",
+      "kind": "acceptance_criterion",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "AC-REQUEST-03",
+      "kind": "acceptance_criterion",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "AC-REQUEST-04",
+      "kind": "acceptance_criterion",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "AC-REQUEST-05",
+      "kind": "acceptance_criterion",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "AC-REQUEST-06",
+      "kind": "acceptance_criterion",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "AC-REQUEST-SUBMIT-QUALITY",
+      "kind": "acceptance_criterion",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "TRC-REQUEST-01",
+      "kind": "trace_link",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "TRC-REQUEST-02",
+      "kind": "trace_link",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "TRC-REQUEST-SUBMIT-ORIGIN",
+      "kind": "trace_link",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "BND-REQUEST-WEB",
+      "kind": "boundary",
+      "module": "apps/RequestRegister/boundaries/Boundary_RequestRegisterWebForm.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "INT-REQUEST-SUBMIT",
+      "kind": "interaction",
+      "module": "apps/RequestRegister/boundaries/Boundary_RequestRegisterWebForm.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "GRAPH-VLD-REQUEST-QUANTITY",
+      "kind": "graph",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-VLD-REQ-START",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-VLD-REQ-READ",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-VLD-REQ-TYPE",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-VLD-REQ-MIN",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-VLD-REQ-PASS",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-VLD-REQ-FAIL-TYPE",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-VLD-REQ-FAIL-MIN",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-VLD-REQ-1",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-VLD-REQ-2",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-VLD-REQ-3",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-VLD-REQ-4",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-VLD-REQ-5",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-VLD-REQ-6",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "GRAPH-REQUEST-SUBMIT",
+      "kind": "graph",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-REQ-START",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-REQ-PERM",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-REQ-DENY",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-REQ-VALIDATE",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-REQ-QTYDEC",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-REQ-INVALID",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-REQ-STORE",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-REQ-STOREERROR",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-REQ-SUCCESS",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-REQ-DUPLICATE",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-REQ-CODE",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-REQ-CODE-VALID",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-REQ-1",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-REQ-2",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-REQ-3",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-REQ-4",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-REQ-5",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-REQ-6",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-REQ-7",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-REQ-8",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-REQ-DUPLICATE",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-REQ-CODE-1",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-REQ-CODE-2",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-REQ-CODE-3",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "GRAPH-VLD-REQUEST-CODE",
+      "kind": "graph",
+      "module": "apps/RequestRegister/graphs/Graph_RequestCodeValidity.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-VLD-REQ-CODE-START",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_RequestCodeValidity.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-VLD-REQ-CODE-CHECK",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_RequestCodeValidity.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-VLD-REQ-CODE-PASS",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_RequestCodeValidity.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "N-VLD-REQ-CODE-FAIL",
+      "kind": "graph_node",
+      "module": "apps/RequestRegister/graphs/Graph_RequestCodeValidity.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-VLD-REQ-CODE-1",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_RequestCodeValidity.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-VLD-REQ-CODE-2",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_RequestCodeValidity.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "E-VLD-REQ-CODE-3",
+      "kind": "graph_edge",
+      "module": "apps/RequestRegister/graphs/Graph_RequestCodeValidity.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "RES-REQUEST-WIRE",
+      "kind": "resource",
+      "module": "project/resources/ResRequestWire.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "RES-REQUEST-FLOW",
+      "kind": "resource",
+      "module": "project/resources/ResRequestFlow.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "ASM-REQUEST-STORE-UNIQUE",
+      "kind": "assumption",
+      "module": "project/assumptions/AsmRequestStoreUnique.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "DEC-MIN-TOOL-ABSTRACTION",
+      "kind": "decision",
+      "module": "project/decisions/DecMinToolAbstraction.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "OI-REQUEST-LATENCY",
+      "kind": "open_issue",
+      "module": "project/open_issues/OiRequestLatency.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "SRC-REQUEST-BRIEF",
+      "kind": "source",
+      "module": "project/sources/SrcRequestBrief.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "HIST-REQUEST-01",
+      "kind": "history_entry",
+      "module": "project/history/HistRequest01.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "HIST-MIGRATION-STABLE",
+      "kind": "history_entry",
+      "module": "project/history/HistMigrationStable.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "HIST-ATLAS-1-1",
+      "kind": "history_entry",
+      "module": "project/history/HistAtlas11.md",
+      "layer": "atlas"
+    },
+    {
+      "id": "MOD:ACT-REQUESTER",
+      "kind": "minerva_module",
+      "module_id": "ACT-REQUESTER",
+      "module": "shared/actors/Actor_Requester.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:ASM-REQUEST-STORE-UNIQUE",
+      "kind": "minerva_module",
+      "module_id": "ASM-REQUEST-STORE-UNIQUE",
+      "module": "project/assumptions/AsmRequestStoreUnique.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:BND-REQUEST-WEB",
+      "kind": "minerva_module",
+      "module_id": "BND-REQUEST-WEB",
+      "module": "apps/RequestRegister/boundaries/Boundary_RequestRegisterWebForm.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:CMP-REQUESTREGISTER",
+      "kind": "minerva_module",
+      "module_id": "CMP-REQUESTREGISTER",
+      "module": "apps/RequestRegister/composition/AppComposition.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:CTL-REQUEST-STORE",
+      "kind": "minerva_module",
+      "module_id": "CTL-REQUEST-STORE",
+      "module": "apps/RequestRegister/tools/concrete/Tool_SqliteImplementationOfRequestStore.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:DEC-MIN-TOOL-ABSTRACTION",
+      "kind": "minerva_module",
+      "module_id": "DEC-MIN-TOOL-ABSTRACTION",
+      "module": "project/decisions/DecMinToolAbstraction.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:ENT-REQUEST",
+      "kind": "minerva_module",
+      "module_id": "ENT-REQUEST",
+      "module": "apps/RequestRegister/entities/Entity_Request.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:GRAPH-REQUEST-SUBMIT",
+      "kind": "minerva_module",
+      "module_id": "GRAPH-REQUEST-SUBMIT",
+      "module": "apps/RequestRegister/graphs/Graph_SubmitRequest.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:GRAPH-VLD-REQUEST-CODE",
+      "kind": "minerva_module",
+      "module_id": "GRAPH-VLD-REQUEST-CODE",
+      "module": "apps/RequestRegister/graphs/Graph_RequestCodeValidity.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:GRAPH-VLD-REQUEST-QUANTITY",
+      "kind": "minerva_module",
+      "module_id": "GRAPH-VLD-REQUEST-QUANTITY",
+      "module": "apps/RequestRegister/graphs/Graph_QuantityValidation.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:HIST-ATLAS-1-1",
+      "kind": "minerva_module",
+      "module_id": "HIST-ATLAS-1-1",
+      "module": "project/history/HistAtlas11.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:HIST-MIGRATION-STABLE",
+      "kind": "minerva_module",
+      "module_id": "HIST-MIGRATION-STABLE",
+      "module": "project/history/HistMigrationStable.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:HIST-REQUEST-01",
+      "kind": "minerva_module",
+      "module_id": "HIST-REQUEST-01",
+      "module": "project/history/HistRequest01.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:MINERVA-REQUESTREGISTER",
+      "kind": "minerva_module",
+      "module_id": "MINERVA-REQUESTREGISTER",
+      "module": "project/Project.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:OI-REQUEST-LATENCY",
+      "kind": "minerva_module",
+      "module_id": "OI-REQUEST-LATENCY",
+      "module": "project/open_issues/OiRequestLatency.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:RES-REQUEST-FLOW",
+      "kind": "minerva_module",
+      "module_id": "RES-REQUEST-FLOW",
+      "module": "project/resources/ResRequestFlow.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:RES-REQUEST-WIRE",
+      "kind": "minerva_module",
+      "module_id": "RES-REQUEST-WIRE",
+      "module": "project/resources/ResRequestWire.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:SRC-REQUEST-BRIEF",
+      "kind": "minerva_module",
+      "module_id": "SRC-REQUEST-BRIEF",
+      "module": "project/sources/SrcRequestBrief.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:TOL-REQUEST-STORE",
+      "kind": "minerva_module",
+      "module_id": "TOL-REQUEST-STORE",
+      "module": "apps/RequestRegister/tools/abstract/AbstractTool_RequestStore.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:TST-REQUEST-SUBMIT",
+      "kind": "minerva_module",
+      "module_id": "TST-REQUEST-SUBMIT",
+      "module": "apps/RequestRegister/tests/BehavioralTest_SubmitRequest.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:UC-REQUEST-SUBMIT",
+      "kind": "minerva_module",
+      "module_id": "UC-REQUEST-SUBMIT",
+      "module": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "MOD:VOC-REQUEST-CODE",
+      "kind": "minerva_module",
+      "module_id": "VOC-REQUEST-CODE",
+      "module": "project/vocabulary/Term_RequestCode.md",
+      "layer": "minerva"
+    },
+    {
+      "id": "CODE:BND-REQUEST-WEB",
+      "kind": "code_symbol",
+      "path": "apps/RequestRegister/boundaries/Boundary_RequestRegisterWebForm.py",
+      "symbol": "Boundary_RequestRegisterWebForm"
+    },
+    {
+      "id": "CODE:CMP-REQUESTREGISTER",
+      "kind": "code_symbol",
+      "path": "apps/RequestRegister/composition/AppComposition.py",
+      "symbol": "AppComposition"
+    },
+    {
+      "id": "CODE:ENT-REQUEST",
+      "kind": "code_symbol",
+      "path": "apps/RequestRegister/entities/Entity_Request.py",
+      "symbol": "Entity_Request"
+    },
+    {
+      "id": "CODE:TST-REQUEST-SUBMIT",
+      "kind": "code_symbol",
+      "path": "apps/RequestRegister/tests/Test_SubmitRequest.py",
+      "symbol": "Test_SubmitRequest"
+    },
+    {
+      "id": "CODE:TOL-REQUEST-STORE",
+      "kind": "code_symbol",
+      "path": "apps/RequestRegister/tools/abstract/AbstractTool_RequestStore.py",
+      "symbol": "AbstractTool_RequestStore"
+    },
+    {
+      "id": "CODE:CTL-REQUEST-STORE",
+      "kind": "code_symbol",
+      "path": "apps/RequestRegister/tools/concrete/Tool_SqliteRequestStore.py",
+      "symbol": "Tool_SqliteRequestStore"
+    },
+    {
+      "id": "CODE:UC-REQUEST-SUBMIT",
+      "kind": "code_symbol",
+      "path": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.py",
+      "symbol": "UseCase_SubmitRequest"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/0/verifies",
+      "layer": "atlas",
+      "source": "AC-REQUEST-01",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/0/verifies",
+      "layer": "atlas",
+      "source": "AC-REQUEST-01",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/0/verifies",
+      "layer": "atlas",
+      "source": "AC-REQUEST-01",
+      "target": "RF-REQUEST-05"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/1/verifies",
+      "layer": "atlas",
+      "source": "AC-REQUEST-02",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/2/verifies",
+      "layer": "atlas",
+      "source": "AC-REQUEST-03",
+      "target": "RF-REQUEST-01"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/3/verifies",
+      "layer": "atlas",
+      "source": "AC-REQUEST-04",
+      "target": "RF-REQUEST-06"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/4/verifies",
+      "layer": "atlas",
+      "source": "AC-REQUEST-05",
+      "target": "RF-REQUEST-04"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/5/verifies",
+      "layer": "atlas",
+      "source": "AC-REQUEST-06",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/6/verifies",
+      "layer": "atlas",
+      "source": "AC-REQUEST-SUBMIT-QUALITY",
+      "target": "RNF-REQUEST-01"
+    },
+    {
+      "relation": "affected",
+      "pointer": "/atlas/assumptions/0/affected",
+      "layer": "atlas",
+      "source": "ASM-REQUEST-STORE-UNIQUE",
+      "target": "TOL-REQUEST-STORE"
+    },
+    {
+      "relation": "affected",
+      "pointer": "/atlas/assumptions/0/affected",
+      "layer": "atlas",
+      "source": "ASM-REQUEST-STORE-UNIQUE",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "assumptions",
+      "pointer": "/atlas/boundaries/0/assumptions",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "ASM-REQUEST-STORE-UNIQUE"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/input_mapping/0/source_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/input_mapping/1/source_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/0/target_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/1/target_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/2/target_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/3/target_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/4/target_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "open_issues",
+      "pointer": "/atlas/boundaries/0/open_issues",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "OI-REQUEST-LATENCY"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/0/source_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "OUT-REQUEST-CONFIRMED"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/0/source",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "OUT-REQUEST-CONFIRMED"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/3/source_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "OUT-REQUEST-DENIED"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/3/source",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "OUT-REQUEST-DENIED"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/4/source_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "OUT-REQUEST-DUPLICATE"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/4/source",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "OUT-REQUEST-DUPLICATE"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/1/source_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "OUT-REQUEST-INVALID"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/1/source",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "OUT-REQUEST-INVALID"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/2/source_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "OUT-REQUEST-STORE-FAILURE"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/2/source",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "OUT-REQUEST-STORE-FAILURE"
+    },
+    {
+      "relation": "resources",
+      "pointer": "/atlas/boundaries/0/interactions/0/resources",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "RES-REQUEST-FLOW"
+    },
+    {
+      "relation": "resource",
+      "pointer": "/atlas/boundaries/0/interactions/0/examples/0/resource",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "RES-REQUEST-WIRE"
+    },
+    {
+      "relation": "resources",
+      "pointer": "/atlas/boundaries/0/interactions/0/resources",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "RES-REQUEST-WIRE"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "RF-REQUEST-01"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "RF-REQUEST-04"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "RF-REQUEST-05"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "RF-REQUEST-06"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "sources",
+      "pointer": "/atlas/boundaries/0/sources",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "SRC-REQUEST-BRIEF"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/input_mapping/0/target_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/input_mapping/1/target_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "use_case",
+      "pointer": "/atlas/boundaries/0/interactions/0/use_case",
+      "layer": "atlas",
+      "source": "BND-REQUEST-WEB",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "refs",
+      "pointer": "/atlas/decisions/0/refs",
+      "layer": "atlas",
+      "source": "DEC-MIN-TOOL-ABSTRACTION",
+      "target": "TOL-REQUEST-STORE"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/0/to",
+      "layer": "atlas",
+      "source": "E-REQ-1",
+      "target": "N-REQ-PERM"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/0/from",
+      "layer": "atlas",
+      "source": "E-REQ-1",
+      "target": "N-REQ-START"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/1/to",
+      "layer": "atlas",
+      "source": "E-REQ-2",
+      "target": "N-REQ-DENY"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/1/from",
+      "layer": "atlas",
+      "source": "E-REQ-2",
+      "target": "N-REQ-PERM"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/1/requirement_refs",
+      "layer": "atlas",
+      "source": "E-REQ-2",
+      "target": "RF-REQUEST-01"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/2/to",
+      "layer": "atlas",
+      "source": "E-REQ-3",
+      "target": "N-REQ-CODE"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/2/from",
+      "layer": "atlas",
+      "source": "E-REQ-3",
+      "target": "N-REQ-PERM"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/3/to",
+      "layer": "atlas",
+      "source": "E-REQ-4",
+      "target": "N-REQ-QTYDEC"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/3/from",
+      "layer": "atlas",
+      "source": "E-REQ-4",
+      "target": "N-REQ-VALIDATE"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/3/requirement_refs",
+      "layer": "atlas",
+      "source": "E-REQ-4",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/4/to",
+      "layer": "atlas",
+      "source": "E-REQ-5",
+      "target": "N-REQ-INVALID"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/4/from",
+      "layer": "atlas",
+      "source": "E-REQ-5",
+      "target": "N-REQ-QTYDEC"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/4/requirement_refs",
+      "layer": "atlas",
+      "source": "E-REQ-5",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/5/from",
+      "layer": "atlas",
+      "source": "E-REQ-6",
+      "target": "N-REQ-QTYDEC"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/5/to",
+      "layer": "atlas",
+      "source": "E-REQ-6",
+      "target": "N-REQ-STORE"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/5/requirement_refs",
+      "layer": "atlas",
+      "source": "E-REQ-6",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/6/from",
+      "layer": "atlas",
+      "source": "E-REQ-7",
+      "target": "N-REQ-STORE"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/6/to",
+      "layer": "atlas",
+      "source": "E-REQ-7",
+      "target": "N-REQ-SUCCESS"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/6/requirement_refs",
+      "layer": "atlas",
+      "source": "E-REQ-7",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/6/requirement_refs",
+      "layer": "atlas",
+      "source": "E-REQ-7",
+      "target": "RF-REQUEST-05"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/7/from",
+      "layer": "atlas",
+      "source": "E-REQ-8",
+      "target": "N-REQ-STORE"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/7/to",
+      "layer": "atlas",
+      "source": "E-REQ-8",
+      "target": "N-REQ-STOREERROR"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/7/requirement_refs",
+      "layer": "atlas",
+      "source": "E-REQ-8",
+      "target": "RF-REQUEST-04"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/9/from",
+      "layer": "atlas",
+      "source": "E-REQ-CODE-1",
+      "target": "N-REQ-CODE"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/9/to",
+      "layer": "atlas",
+      "source": "E-REQ-CODE-1",
+      "target": "N-REQ-CODE-VALID"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/10/from",
+      "layer": "atlas",
+      "source": "E-REQ-CODE-2",
+      "target": "N-REQ-CODE-VALID"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/10/to",
+      "layer": "atlas",
+      "source": "E-REQ-CODE-2",
+      "target": "N-REQ-VALIDATE"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/10/requirement_refs",
+      "layer": "atlas",
+      "source": "E-REQ-CODE-2",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/11/from",
+      "layer": "atlas",
+      "source": "E-REQ-CODE-3",
+      "target": "N-REQ-CODE-VALID"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/11/to",
+      "layer": "atlas",
+      "source": "E-REQ-CODE-3",
+      "target": "N-REQ-INVALID"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/11/requirement_refs",
+      "layer": "atlas",
+      "source": "E-REQ-CODE-3",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/8/to",
+      "layer": "atlas",
+      "source": "E-REQ-DUPLICATE",
+      "target": "N-REQ-DUPLICATE"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/8/from",
+      "layer": "atlas",
+      "source": "E-REQ-DUPLICATE",
+      "target": "N-REQ-STORE"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/8/requirement_refs",
+      "layer": "atlas",
+      "source": "E-REQ-DUPLICATE",
+      "target": "RF-REQUEST-06"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/0/edges/0/to",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-1",
+      "target": "N-VLD-REQ-READ"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/0/edges/0/from",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-1",
+      "target": "N-VLD-REQ-START"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/0/edges/1/from",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-2",
+      "target": "N-VLD-REQ-READ"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/0/edges/1/to",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-2",
+      "target": "N-VLD-REQ-TYPE"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/0/edges/2/to",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-3",
+      "target": "N-VLD-REQ-FAIL-TYPE"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/0/edges/2/from",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-3",
+      "target": "N-VLD-REQ-TYPE"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/0/edges/3/to",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-4",
+      "target": "N-VLD-REQ-MIN"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/0/edges/3/from",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-4",
+      "target": "N-VLD-REQ-TYPE"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/0/edges/4/to",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-5",
+      "target": "N-VLD-REQ-FAIL-MIN"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/0/edges/4/from",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-5",
+      "target": "N-VLD-REQ-MIN"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/0/edges/5/from",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-6",
+      "target": "N-VLD-REQ-MIN"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/0/edges/5/to",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-6",
+      "target": "N-VLD-REQ-PASS"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/2/edges/0/to",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-CODE-1",
+      "target": "N-VLD-REQ-CODE-CHECK"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/2/edges/0/from",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-CODE-1",
+      "target": "N-VLD-REQ-CODE-START"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/2/edges/1/from",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-CODE-2",
+      "target": "N-VLD-REQ-CODE-CHECK"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/2/edges/1/to",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-CODE-2",
+      "target": "N-VLD-REQ-CODE-PASS"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/2/edges/2/from",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-CODE-3",
+      "target": "N-VLD-REQ-CODE-CHECK"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/2/edges/2/to",
+      "layer": "atlas",
+      "source": "E-VLD-REQ-CODE-3",
+      "target": "N-VLD-REQ-CODE-FAIL"
+    },
+    {
+      "relation": "assumptions",
+      "pointer": "/atlas/entities/0/assumptions",
+      "layer": "atlas",
+      "source": "ENT-REQUEST",
+      "target": "ASM-REQUEST-STORE-UNIQUE"
+    },
+    {
+      "relation": "fields",
+      "pointer": "/atlas/entities/0/identity/fields",
+      "layer": "atlas",
+      "source": "ENT-REQUEST",
+      "target": "FLD-REQUEST-CODE"
+    },
+    {
+      "relation": "flow",
+      "pointer": "/atlas/entities/0/validations/1/flow",
+      "layer": "atlas",
+      "source": "ENT-REQUEST",
+      "target": "GRAPH-VLD-REQUEST-CODE"
+    },
+    {
+      "relation": "flow",
+      "pointer": "/atlas/entities/0/validations/0/flow",
+      "layer": "atlas",
+      "source": "ENT-REQUEST",
+      "target": "GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "open_issues",
+      "pointer": "/atlas/entities/0/open_issues",
+      "layer": "atlas",
+      "source": "ENT-REQUEST",
+      "target": "OI-REQUEST-LATENCY"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/9/from",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-CODE"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/2/to",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-CODE"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/10/from",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-CODE-VALID"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/11/from",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-CODE-VALID"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/9/to",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-CODE-VALID"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/1/to",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-DENY"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/8/to",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-DUPLICATE"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/11/to",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-INVALID"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/4/to",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-INVALID"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/1/from",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-PERM"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/2/from",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-PERM"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/0/to",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-PERM"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/4/from",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-QTYDEC"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/5/from",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-QTYDEC"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/3/to",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-QTYDEC"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/0/from",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-START"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/6/from",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-STORE"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/7/from",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-STORE"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/8/from",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-STORE"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/5/to",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-STORE"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/7/to",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-STOREERROR"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/6/to",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-SUCCESS"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/1/edges/3/from",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-VALIDATE"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/1/edges/10/to",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "N-REQ-VALIDATE"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/1/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-01"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/1/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-01"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/2/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-01"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/3/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/4/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/3/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/4/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/5/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/5/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/6/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/6/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/7/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-04"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/7/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-04"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/6/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-05"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/8/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-05"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/8/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-06"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/9/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-06"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/10/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/edges/11/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/10/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/11/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/5/requirement_refs",
+      "layer": "atlas",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/2/edges/1/from",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-CODE",
+      "target": "N-VLD-REQ-CODE-CHECK"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/2/edges/2/from",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-CODE",
+      "target": "N-VLD-REQ-CODE-CHECK"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/2/edges/0/to",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-CODE",
+      "target": "N-VLD-REQ-CODE-CHECK"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/2/edges/2/to",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-CODE",
+      "target": "N-VLD-REQ-CODE-FAIL"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/2/edges/1/to",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-CODE",
+      "target": "N-VLD-REQ-CODE-PASS"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/2/edges/0/from",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-CODE",
+      "target": "N-VLD-REQ-CODE-START"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/0/edges/4/to",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-QUANTITY",
+      "target": "N-VLD-REQ-FAIL-MIN"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/0/edges/2/to",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-QUANTITY",
+      "target": "N-VLD-REQ-FAIL-TYPE"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/0/edges/4/from",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-QUANTITY",
+      "target": "N-VLD-REQ-MIN"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/0/edges/5/from",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-QUANTITY",
+      "target": "N-VLD-REQ-MIN"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/0/edges/3/to",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-QUANTITY",
+      "target": "N-VLD-REQ-MIN"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/0/edges/5/to",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-QUANTITY",
+      "target": "N-VLD-REQ-PASS"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/0/edges/1/from",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-QUANTITY",
+      "target": "N-VLD-REQ-READ"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/0/edges/0/to",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-QUANTITY",
+      "target": "N-VLD-REQ-READ"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/0/edges/0/from",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-QUANTITY",
+      "target": "N-VLD-REQ-START"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/0/edges/2/from",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-QUANTITY",
+      "target": "N-VLD-REQ-TYPE"
+    },
+    {
+      "relation": "from",
+      "pointer": "/atlas/graphs/0/edges/3/from",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-QUANTITY",
+      "target": "N-VLD-REQ-TYPE"
+    },
+    {
+      "relation": "to",
+      "pointer": "/atlas/graphs/0/edges/1/to",
+      "layer": "atlas",
+      "source": "GRAPH-VLD-REQUEST-QUANTITY",
+      "target": "N-VLD-REQ-TYPE"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/0/source_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "OUT-REQUEST-CONFIRMED"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/0/source",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "OUT-REQUEST-CONFIRMED"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/3/source_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "OUT-REQUEST-DENIED"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/3/source",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "OUT-REQUEST-DENIED"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/4/source_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "OUT-REQUEST-DUPLICATE"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/4/source",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "OUT-REQUEST-DUPLICATE"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/1/source_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "OUT-REQUEST-INVALID"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/1/source",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "OUT-REQUEST-INVALID"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/2/source_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "OUT-REQUEST-STORE-FAILURE"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/boundaries/0/interactions/0/result_mapping/2/source",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "OUT-REQUEST-STORE-FAILURE"
+    },
+    {
+      "relation": "resources",
+      "pointer": "/atlas/boundaries/0/interactions/0/resources",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "RES-REQUEST-FLOW"
+    },
+    {
+      "relation": "resource",
+      "pointer": "/atlas/boundaries/0/interactions/0/examples/0/resource",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "RES-REQUEST-WIRE"
+    },
+    {
+      "relation": "resources",
+      "pointer": "/atlas/boundaries/0/interactions/0/resources",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "RES-REQUEST-WIRE"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-01"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-04"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-05"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-06"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/boundaries/0/interactions/0/requirement_refs",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/input_mapping/0/target_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "owner_ref",
+      "pointer": "/atlas/boundaries/0/interactions/0/input_mapping/1/target_endpoint/owner_ref",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "use_case",
+      "pointer": "/atlas/boundaries/0/interactions/0/use_case",
+      "layer": "atlas",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/10/requirement_refs",
+      "layer": "atlas",
+      "source": "N-REQ-CODE",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/11/requirement_refs",
+      "layer": "atlas",
+      "source": "N-REQ-CODE-VALID",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/2/requirement_refs",
+      "layer": "atlas",
+      "source": "N-REQ-DENY",
+      "target": "RF-REQUEST-01"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/9/requirement_refs",
+      "layer": "atlas",
+      "source": "N-REQ-DUPLICATE",
+      "target": "RF-REQUEST-06"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/5/requirement_refs",
+      "layer": "atlas",
+      "source": "N-REQ-INVALID",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/5/requirement_refs",
+      "layer": "atlas",
+      "source": "N-REQ-INVALID",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/1/requirement_refs",
+      "layer": "atlas",
+      "source": "N-REQ-PERM",
+      "target": "RF-REQUEST-01"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/4/requirement_refs",
+      "layer": "atlas",
+      "source": "N-REQ-QTYDEC",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/6/requirement_refs",
+      "layer": "atlas",
+      "source": "N-REQ-STORE",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/7/requirement_refs",
+      "layer": "atlas",
+      "source": "N-REQ-STOREERROR",
+      "target": "RF-REQUEST-04"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/8/requirement_refs",
+      "layer": "atlas",
+      "source": "N-REQ-SUCCESS",
+      "target": "RF-REQUEST-05"
+    },
+    {
+      "relation": "requirement_refs",
+      "pointer": "/atlas/graphs/1/nodes/3/requirement_refs",
+      "layer": "atlas",
+      "source": "N-REQ-VALIDATE",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "refs",
+      "pointer": "/atlas/open_issues/0/refs",
+      "layer": "atlas",
+      "source": "OI-REQUEST-LATENCY",
+      "target": "RNF-REQUEST-01"
+    },
+    {
+      "relation": "derived_from_graph",
+      "pointer": "/atlas/resources/1/derived_from_graph",
+      "layer": "atlas",
+      "source": "RES-REQUEST-FLOW",
+      "target": "GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/0/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-01",
+      "target": "E-REQ-2"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/0/applies_to",
+      "layer": "atlas",
+      "source": "RF-REQUEST-01",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/0/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-01",
+      "target": "N-REQ-DENY"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/0/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-01",
+      "target": "N-REQ-PERM"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/0/applies_to",
+      "layer": "atlas",
+      "source": "RF-REQUEST-01",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/1/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-02",
+      "target": "E-REQ-4"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/1/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-02",
+      "target": "E-REQ-5"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/1/applies_to",
+      "layer": "atlas",
+      "source": "RF-REQUEST-02",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/1/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-02",
+      "target": "N-REQ-INVALID"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/1/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-02",
+      "target": "N-REQ-QTYDEC"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/1/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-02",
+      "target": "N-REQ-VALIDATE"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/1/applies_to",
+      "layer": "atlas",
+      "source": "RF-REQUEST-02",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/2/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-03",
+      "target": "E-REQ-6"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/2/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-03",
+      "target": "E-REQ-7"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/2/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-03",
+      "target": "N-REQ-STORE"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/2/applies_to",
+      "layer": "atlas",
+      "source": "RF-REQUEST-03",
+      "target": "OP-REQUEST-STORE"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/2/applies_to",
+      "layer": "atlas",
+      "source": "RF-REQUEST-03",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/3/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-04",
+      "target": "E-REQ-8"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/3/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-04",
+      "target": "N-REQ-STOREERROR"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/3/applies_to",
+      "layer": "atlas",
+      "source": "RF-REQUEST-04",
+      "target": "OP-REQUEST-STORE"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/3/applies_to",
+      "layer": "atlas",
+      "source": "RF-REQUEST-04",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/4/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-05",
+      "target": "E-REQ-7"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/4/applies_to",
+      "layer": "atlas",
+      "source": "RF-REQUEST-05",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/4/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-05",
+      "target": "N-REQ-SUCCESS"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/4/applies_to",
+      "layer": "atlas",
+      "source": "RF-REQUEST-05",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/5/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-06",
+      "target": "E-REQ-DUPLICATE"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/5/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-06",
+      "target": "N-REQ-DUPLICATE"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/5/applies_to",
+      "layer": "atlas",
+      "source": "RF-REQUEST-06",
+      "target": "OP-REQUEST-STORE"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/5/applies_to",
+      "layer": "atlas",
+      "source": "RF-REQUEST-06",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/6/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-07",
+      "target": "E-REQ-CODE-2"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/6/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-07",
+      "target": "E-REQ-CODE-3"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/6/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-07",
+      "target": "N-REQ-CODE"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/6/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-07",
+      "target": "N-REQ-CODE-VALID"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/6/flow_refs",
+      "layer": "atlas",
+      "source": "RF-REQUEST-07",
+      "target": "N-REQ-INVALID"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/6/applies_to",
+      "layer": "atlas",
+      "source": "RF-REQUEST-07",
+      "target": "UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/nonfunctional_requirements/0/applies_to",
+      "layer": "atlas",
+      "source": "RNF-REQUEST-01",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "references",
+      "pointer": "/atlas/use_cases/0/nonfunctional_requirements/0/references",
+      "layer": "atlas",
+      "source": "RNF-REQUEST-01",
+      "target": "SRC-REQUEST-BRIEF"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/0/targets",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-01",
+      "target": "AC-REQUEST-02"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/use_cases/0/traceability/0/source",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-01",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/0/targets",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-01",
+      "target": "VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/1/targets",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-02",
+      "target": "AC-REQUEST-01"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/1/targets",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-02",
+      "target": "OP-REQUEST-STORE"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/use_cases/0/traceability/1/source",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-02",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-SUBMIT-ORIGIN",
+      "target": "RF-REQUEST-01"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-SUBMIT-ORIGIN",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-SUBMIT-ORIGIN",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-SUBMIT-ORIGIN",
+      "target": "RF-REQUEST-04"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-SUBMIT-ORIGIN",
+      "target": "RF-REQUEST-05"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-SUBMIT-ORIGIN",
+      "target": "RF-REQUEST-06"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-SUBMIT-ORIGIN",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-SUBMIT-ORIGIN",
+      "target": "RNF-REQUEST-01"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/use_cases/0/traceability/2/source",
+      "layer": "atlas",
+      "source": "TRC-REQUEST-SUBMIT-ORIGIN",
+      "target": "SRC-REQUEST-BRIEF"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/1/targets",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "AC-REQUEST-01"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/0/targets",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "AC-REQUEST-02"
+    },
+    {
+      "relation": "actor",
+      "pointer": "/atlas/use_cases/0/actors/0/actor",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "ACT-REQUESTER"
+    },
+    {
+      "relation": "assumptions",
+      "pointer": "/atlas/use_cases/0/assumptions",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "ASM-REQUEST-STORE-UNIQUE"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/0/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "E-REQ-2"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/1/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "E-REQ-4"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/1/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "E-REQ-5"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/2/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "E-REQ-6"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/2/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "E-REQ-7"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/4/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "E-REQ-7"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/3/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "E-REQ-8"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/6/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "E-REQ-CODE-2"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/6/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "E-REQ-CODE-3"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/5/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "E-REQ-DUPLICATE"
+    },
+    {
+      "relation": "entity",
+      "pointer": "/atlas/use_cases/0/entities/0/entity",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "ENT-REQUEST"
+    },
+    {
+      "relation": "main",
+      "pointer": "/atlas/use_cases/0/flows/main",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/0/applies_to",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/1/applies_to",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/4/applies_to",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/nonfunctional_requirements/0/applies_to",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "INT-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/6/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "N-REQ-CODE"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/6/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "N-REQ-CODE-VALID"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/0/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "N-REQ-DENY"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/5/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "N-REQ-DUPLICATE"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/1/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "N-REQ-INVALID"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/6/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "N-REQ-INVALID"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/0/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "N-REQ-PERM"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/1/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "N-REQ-QTYDEC"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/2/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "N-REQ-STORE"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/3/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "N-REQ-STOREERROR"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/4/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "N-REQ-SUCCESS"
+    },
+    {
+      "relation": "flow_refs",
+      "pointer": "/atlas/use_cases/0/functional_requirements/1/flow_refs",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "N-REQ-VALIDATE"
+    },
+    {
+      "relation": "open_issues",
+      "pointer": "/atlas/use_cases/0/open_issues",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "OI-REQUEST-LATENCY"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/2/applies_to",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "OP-REQUEST-STORE"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/3/applies_to",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "OP-REQUEST-STORE"
+    },
+    {
+      "relation": "applies_to",
+      "pointer": "/atlas/use_cases/0/functional_requirements/5/applies_to",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "OP-REQUEST-STORE"
+    },
+    {
+      "relation": "operation",
+      "pointer": "/atlas/use_cases/0/tools/0/operation",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "OP-REQUEST-STORE"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/1/targets",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "OP-REQUEST-STORE"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-01"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/2/verifies",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-01"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/use_cases/0/traceability/0/source",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/0/verifies",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/1/verifies",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-02"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/use_cases/0/traceability/1/source",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/0/verifies",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-03"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-04"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/4/verifies",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-04"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-05"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/0/verifies",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-05"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-06"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/3/verifies",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-06"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/5/verifies",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RF-REQUEST-07"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/2/targets",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RNF-REQUEST-01"
+    },
+    {
+      "relation": "verifies",
+      "pointer": "/atlas/use_cases/0/acceptance_criteria/6/verifies",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "RNF-REQUEST-01"
+    },
+    {
+      "relation": "references",
+      "pointer": "/atlas/use_cases/0/nonfunctional_requirements/0/references",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "SRC-REQUEST-BRIEF"
+    },
+    {
+      "relation": "source",
+      "pointer": "/atlas/use_cases/0/traceability/2/source",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "SRC-REQUEST-BRIEF"
+    },
+    {
+      "relation": "sources",
+      "pointer": "/atlas/use_cases/0/sources",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "SRC-REQUEST-BRIEF"
+    },
+    {
+      "relation": "tool",
+      "pointer": "/atlas/use_cases/0/tools/0/tool",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "TOL-REQUEST-STORE"
+    },
+    {
+      "relation": "validations",
+      "pointer": "/atlas/use_cases/0/entities/0/validations",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "VLD-REQUEST-CODE"
+    },
+    {
+      "relation": "targets",
+      "pointer": "/atlas/use_cases/0/traceability/0/targets",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "validations",
+      "pointer": "/atlas/use_cases/0/entities/0/validations",
+      "layer": "atlas",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "flow",
+      "pointer": "/atlas/entities/0/validations/1/flow",
+      "layer": "atlas",
+      "source": "VLD-REQUEST-CODE",
+      "target": "GRAPH-VLD-REQUEST-CODE"
+    },
+    {
+      "relation": "flow",
+      "pointer": "/atlas/entities/0/validations/0/flow",
+      "layer": "atlas",
+      "source": "VLD-REQUEST-QUANTITY",
+      "target": "GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "implements",
+      "layer": "minerva",
+      "source": "MOD:CTL-REQUEST-STORE",
+      "target": "MOD:TOL-REQUEST-STORE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "ACT-REQUESTER",
+      "target": "MOD:ACT-REQUESTER"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "VOC-REQUEST-CODE",
+      "target": "MOD:VOC-REQUEST-CODE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "ENT-REQUEST",
+      "target": "MOD:ENT-REQUEST"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "FLD-REQUEST-CODE",
+      "target": "MOD:ENT-REQUEST"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "FLD-REQUEST-QUANTITY",
+      "target": "MOD:ENT-REQUEST"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "VLD-REQUEST-QUANTITY",
+      "target": "MOD:ENT-REQUEST"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "VLD-REQUEST-CODE",
+      "target": "MOD:ENT-REQUEST"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "TOL-REQUEST-STORE",
+      "target": "MOD:TOL-REQUEST-STORE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "OP-REQUEST-STORE",
+      "target": "MOD:TOL-REQUEST-STORE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "UC-REQUEST-SUBMIT",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "OUT-REQUEST-CONFIRMED",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "OUT-REQUEST-INVALID",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "OUT-REQUEST-DENIED",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "OUT-REQUEST-STORE-FAILURE",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "OUT-REQUEST-DUPLICATE",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "RF-REQUEST-01",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "RF-REQUEST-02",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "RF-REQUEST-03",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "RF-REQUEST-04",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "RF-REQUEST-05",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "RF-REQUEST-06",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "RF-REQUEST-07",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "RNF-REQUEST-01",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "AC-REQUEST-01",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "AC-REQUEST-02",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "AC-REQUEST-03",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "AC-REQUEST-04",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "AC-REQUEST-05",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "AC-REQUEST-06",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "AC-REQUEST-SUBMIT-QUALITY",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "TRC-REQUEST-01",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "TRC-REQUEST-02",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "TRC-REQUEST-SUBMIT-ORIGIN",
+      "target": "MOD:UC-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "BND-REQUEST-WEB",
+      "target": "MOD:BND-REQUEST-WEB"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "INT-REQUEST-SUBMIT",
+      "target": "MOD:BND-REQUEST-WEB"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "GRAPH-VLD-REQUEST-QUANTITY",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-VLD-REQ-START",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-VLD-REQ-READ",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-VLD-REQ-TYPE",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-VLD-REQ-MIN",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-VLD-REQ-PASS",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-VLD-REQ-FAIL-TYPE",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-VLD-REQ-FAIL-MIN",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-VLD-REQ-1",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-VLD-REQ-2",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-VLD-REQ-3",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-VLD-REQ-4",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-VLD-REQ-5",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-VLD-REQ-6",
+      "target": "MOD:GRAPH-VLD-REQUEST-QUANTITY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "GRAPH-REQUEST-SUBMIT",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-REQ-START",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-REQ-PERM",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-REQ-DENY",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-REQ-VALIDATE",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-REQ-QTYDEC",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-REQ-INVALID",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-REQ-STORE",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-REQ-STOREERROR",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-REQ-SUCCESS",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-REQ-DUPLICATE",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-REQ-CODE",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-REQ-CODE-VALID",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-REQ-1",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-REQ-2",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-REQ-3",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-REQ-4",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-REQ-5",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-REQ-6",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-REQ-7",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-REQ-8",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-REQ-DUPLICATE",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-REQ-CODE-1",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-REQ-CODE-2",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-REQ-CODE-3",
+      "target": "MOD:GRAPH-REQUEST-SUBMIT"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "GRAPH-VLD-REQUEST-CODE",
+      "target": "MOD:GRAPH-VLD-REQUEST-CODE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-VLD-REQ-CODE-START",
+      "target": "MOD:GRAPH-VLD-REQUEST-CODE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-VLD-REQ-CODE-CHECK",
+      "target": "MOD:GRAPH-VLD-REQUEST-CODE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-VLD-REQ-CODE-PASS",
+      "target": "MOD:GRAPH-VLD-REQUEST-CODE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "N-VLD-REQ-CODE-FAIL",
+      "target": "MOD:GRAPH-VLD-REQUEST-CODE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-VLD-REQ-CODE-1",
+      "target": "MOD:GRAPH-VLD-REQUEST-CODE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-VLD-REQ-CODE-2",
+      "target": "MOD:GRAPH-VLD-REQUEST-CODE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "E-VLD-REQ-CODE-3",
+      "target": "MOD:GRAPH-VLD-REQUEST-CODE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "RES-REQUEST-WIRE",
+      "target": "MOD:RES-REQUEST-WIRE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "RES-REQUEST-FLOW",
+      "target": "MOD:RES-REQUEST-FLOW"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "ASM-REQUEST-STORE-UNIQUE",
+      "target": "MOD:ASM-REQUEST-STORE-UNIQUE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "DEC-MIN-TOOL-ABSTRACTION",
+      "target": "MOD:DEC-MIN-TOOL-ABSTRACTION"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "OI-REQUEST-LATENCY",
+      "target": "MOD:OI-REQUEST-LATENCY"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "SRC-REQUEST-BRIEF",
+      "target": "MOD:SRC-REQUEST-BRIEF"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "HIST-REQUEST-01",
+      "target": "MOD:HIST-REQUEST-01"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "HIST-MIGRATION-STABLE",
+      "target": "MOD:HIST-MIGRATION-STABLE"
+    },
+    {
+      "relation": "described_by",
+      "layer": "minerva",
+      "source": "HIST-ATLAS-1-1",
+      "target": "MOD:HIST-ATLAS-1-1"
+    },
+    {
+      "source": "MOD:BND-REQUEST-WEB",
+      "target": "CODE:BND-REQUEST-WEB",
+      "relation": "realized_by"
+    },
+    {
+      "source": "MOD:CMP-REQUESTREGISTER",
+      "target": "CODE:CMP-REQUESTREGISTER",
+      "relation": "realized_by"
+    },
+    {
+      "source": "MOD:ENT-REQUEST",
+      "target": "CODE:ENT-REQUEST",
+      "relation": "realized_by"
+    },
+    {
+      "source": "MOD:TST-REQUEST-SUBMIT",
+      "target": "CODE:TST-REQUEST-SUBMIT",
+      "relation": "realized_by"
+    },
+    {
+      "source": "MOD:TOL-REQUEST-STORE",
+      "target": "CODE:TOL-REQUEST-STORE",
+      "relation": "realized_by"
+    },
+    {
+      "source": "MOD:CTL-REQUEST-STORE",
+      "target": "CODE:CTL-REQUEST-STORE",
+      "relation": "realized_by"
+    },
+    {
+      "source": "MOD:UC-REQUEST-SUBMIT",
+      "target": "CODE:UC-REQUEST-SUBMIT",
+      "relation": "realized_by"
+    }
+  ]
+}

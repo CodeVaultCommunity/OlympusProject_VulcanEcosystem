@@ -1,0 +1,9 @@
+{
+  "name": "Vulcan Ecosystem",
+  "edition": "Stable-v1.0.0",
+  "version": "1.0.0",
+  "source_contract": "Minerva Stable-v1.0.0",
+  "realization_format": "vulcan-realization/1.0.0",
+  "knowledge_graph_format": "vulcan-knowledge-graph/1.0.0"
+}
+

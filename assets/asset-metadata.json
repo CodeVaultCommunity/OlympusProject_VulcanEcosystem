@@ -1,7 +1,7 @@
 {
   "project": "Vulcan Ecosystem",
   "parent_project": "Olympus Project",
-  "version": "Alpha-v0.1.0",
+  "version": "Stable-v1.0.0",
   "layer": "OAL L3 · ADI",
   "created_on": "2026-10-28",
   "scope": "Header decoration and explanatory diagrams. Diagrams describe model relationships and a review workflow; they do not certify application conformity or automatic generation.",
@@ -51,7 +51,7 @@
   },
   "diagrams": {
     "authoring": "Native editable SVG text, geometry and connectors, composed by render_images.py. No generated imagery in the technical diagrams.",
-    "semantic_source": "Current Alpha-v0.1.0 model documentation and revised Minerva/Vulcan requirements.",
+    "semantic_source": "Current Stable-v1.0.0 model documentation and the Atlas-to-Minerva-to-Vulcan contracts.",
     "recommended_layout": "docs/L1_AtlasSpecifications/, docs/L2_MinervaBlueprints/, docs/L3_Vulcan/, docs/Shared/; only adopted models need corresponding folders.",
     "ownership": "The per-file mirror belongs to L2. L3 records concrete organization, composition, execution, integrations and evidence. Shared is support, not an OAL layer.",
     "minerva_state_alignment": "The Minerva diagram follows the edition schema: source.state planned/observed; document.nature designed/reconstructed/mixed. Observed source metadata is not proof of execution.",
@@ -71,7 +71,7 @@
     "network_required": false,
     "project_runtime_dependency": false,
     "bitmap_output_note": "Rendering is reproducible from the retained inputs. Different font or Cairo versions can alter pixels.",
-    "renderer_sha256": "11f4740370bbcf6cbe498aa9db3bab9ea91be80f438aa3efc3db75ee328852b2"
+    "renderer_sha256": "2ae50a6f731346d8e5f5537741e125002e6b11b3807857078f405a4909481958"
   },
   "attribution": {
     "atlas_visual_source": "https://github.com/CodeVaultCommunity/OlympusProject_AtlasSpecifications/tree/b5941830515d9968bb7f313301f1abe25fb6f8aa/assets",
@@ -94,8 +94,8 @@
         534
       ],
       "has_transparency": true,
-      "svg_sha256": "fd836826de7201e9323947cb8e393ca3a7492f90abd9ec3fc0fc5d5e21f23c5c",
-      "png_sha256": "1958ea5cb34e22f683ab984d9a82f054969c1326a3ddb78fb19f31ab6778003e"
+      "svg_sha256": "c0b8f3a632d992395c4c4655647bbc003970e23b9bc401a2737012579828565e",
+      "png_sha256": "84117b017862f3e41ae636bce79ef1fa23f2cc6807c7f6931dc1fdef97bf3bce"
     },
     {
       "id": "vulcan-banner-pt-br",
@@ -108,8 +108,8 @@
         534
       ],
       "has_transparency": true,
-      "svg_sha256": "1ef9ff81572f2e9e98b49198b3b1cca43747709006222f55c9eb2c39fa3649b8",
-      "png_sha256": "bddaf9a6908f39c413a95ba150d4d23780ceb220875846fa0ee7f7de3d506f63"
+      "svg_sha256": "c289a8bab74f53e7ab3285397e2502ce3b114cc0a4e4380a060f5254669e9f98",
+      "png_sha256": "ae75cdd660492ebc62cf380636444f1bc97b535c2b99937a4ccbcd632ef2f979"
     },
     {
       "id": "vulcan-oal-position-en",
@@ -122,8 +122,8 @@
         1080
       ],
       "has_transparency": true,
-      "svg_sha256": "d29cf869a78b92d91a250f773fd18707268815835f37e784a973ce271ef02bd0",
-      "png_sha256": "b62088260faa2cb281c6bc1506fe877ebf17d84b5b5e5eb0e10abacdddbd04ea"
+      "svg_sha256": "b3535e27117e93a8d516b9a7c48e2ed1b28f51db8cb10ef4436572ccb7bb2ad2",
+      "png_sha256": "c935b5d69cda63c13e277c3abb4fc7dd282457eac790ac6cccb740d138f82e0e"
     },
     {
       "id": "vulcan-oal-position-pt-br",
@@ -136,8 +136,8 @@
         1080
       ],
       "has_transparency": true,
-      "svg_sha256": "f7346a998219cac68ff91c55c90911885eef7ebfb3b1d726048647d1c0ae051f",
-      "png_sha256": "a288997f5a9f59581ab3b8ee6c8f756f0193fe4d2de4cbc4f36289689b4b4acb"
+      "svg_sha256": "87e7e2559e231eba31f1277f81b9b6ef8a0a2384c7ae2392d080fc29a4154b2d",
+      "png_sha256": "2ad392ad276b8b97d2fe68fd30f9e4704448eb6583f95b90e25035603bff649d"
     },
     {
       "id": "vulcan-model-en",
@@ -150,8 +150,8 @@
         1200
       ],
       "has_transparency": true,
-      "svg_sha256": "503340eeb755c29f2e5deba8fc6b01d8cfcd3c282a14a6ac0854adea09ea9757",
-      "png_sha256": "b6f0d243ea9915e0cca54a7c6bdd966a09067194f4703751488e622e39e16fa9"
+      "svg_sha256": "44afe68623d01aef53e2f4b5a8c116bb77f4b2b017affbaf5735115b943353e6",
+      "png_sha256": "d341aaccab01c129516513c0bf18bbaf0c6ea796562853a33d99fccb86551115"
     },
     {
       "id": "vulcan-model-pt-br",
@@ -164,8 +164,8 @@
         1200
       ],
       "has_transparency": true,
-      "svg_sha256": "ca42e1b418e76cfe803ad09da3f057a246f49c9eb86c0187836c627e3dcc37fb",
-      "png_sha256": "c8e2095052d4b94215d2e578430e7169ad20814ce30358074f5923baeadba85e"
+      "svg_sha256": "7da914f08ef6db42939c1acaf7d908156cd6a1456c9a320af90376d97f76c11c",
+      "png_sha256": "e990ee74efd8ddbf87e3f4b39c29fd9d9d59da11dccd5617b01afe6cb66de7fe"
     },
     {
       "id": "vulcan-workflow-en",
@@ -178,8 +178,8 @@
         1230
       ],
       "has_transparency": true,
-      "svg_sha256": "ce2b15b6ca3026dad673074dded4a094369f5d3a1f248bb0ef3ceda1010b87bd",
-      "png_sha256": "9fed5632751286aa9dcd9805a18964eb7965fad8965df6cfb5d9f13931260f6f"
+      "svg_sha256": "9ebdd985d2f724075fd1a472f5932f4fb5429eb8e79b134b812e91f501d4c25c",
+      "png_sha256": "77d2ea44eb841fc2de1e79ca804eccca8e301587cee01c221f7f722b45aa1beb"
     },
     {
       "id": "vulcan-workflow-pt-br",
@@ -192,8 +192,8 @@
         1230
       ],
       "has_transparency": true,
-      "svg_sha256": "32c1fa16063d61fa2e3d0a5f3905682f431986212f3c1f79de2ebc627dcfdc6b",
-      "png_sha256": "803f6e1b9810d56b09b834510c4b37d7ecc96235d384a59b0b2acb6edced1f76"
+      "svg_sha256": "d7c95e808a3f293e80e6f6ba004ebc12d370982ef984acf5cca1188868b7de49",
+      "png_sha256": "34300d76a5d7bbc2d61e1a50bc5ea838957c8b523ab4391e790a3ff409148f5b"
     }
   ],
   "quality_review": {

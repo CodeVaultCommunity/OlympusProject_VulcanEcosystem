@@ -1,0 +1,54 @@
+{
+  "format": "olympus-ecosystem-validation/1.0.0",
+  "atlas_version": "Stable-v1.1.0",
+  "minerva_version": "Stable-v1.0.0",
+  "vulcan_version": "Stable-v1.0.0",
+  "status": "passed",
+  "examples": {
+    "minimal": {
+      "status": "passed",
+      "atlas_document_id": "ATLAS-EX-MINIMAL",
+      "atlas_revision": "2",
+      "atlas_semantic_sha256": "e35fbe25ca79941ce67853b9932390145ea0a0a44409980ef95d1d15da603775",
+      "minerva_tree_sha256": "d2ab34790b23bcc801aa7f14e115995105e73a846de39ab488b6ff61a0f0ab61",
+      "vulcan": {
+        "minerva_modules": 22,
+        "code_modules": 7,
+        "realized_modules": 7,
+        "knowledge_nodes": 120,
+        "knowledge_edges": 420
+      },
+      "errors": []
+    },
+    "composition": {
+      "status": "passed",
+      "atlas_document_id": "ATLAS-EX-COMPOSITION",
+      "atlas_revision": "2",
+      "atlas_semantic_sha256": "7638f937e58c0da8e337ecb10dec63792e41a5a7235e36d88bcf65a0413a9463",
+      "minerva_tree_sha256": "9d0a87a7e648b8cdb540cca4324d53fe6e3cee9655bcbd1750702231f94262bf",
+      "vulcan": {
+        "minerva_modules": 26,
+        "code_modules": 12,
+        "realized_modules": 12,
+        "knowledge_nodes": 237,
+        "knowledge_edges": 992
+      },
+      "errors": []
+    },
+    "task-board": {
+      "status": "passed",
+      "atlas_document_id": "DOC-TASK-BOARD",
+      "atlas_revision": "3",
+      "atlas_semantic_sha256": "5a111a98cebb832e38f0bf5ec517d0eadc62bf65afb0abdca9c530cb6398cae6",
+      "minerva_tree_sha256": "63901e62bca04a55a1fceb25e6f8a322ec1ce04795525791565b547ac5799f49",
+      "vulcan": {
+        "minerva_modules": 28,
+        "code_modules": 12,
+        "realized_modules": 12,
+        "knowledge_nodes": 227,
+        "knowledge_edges": 969
+      },
+      "errors": []
+    }
+  }
+}

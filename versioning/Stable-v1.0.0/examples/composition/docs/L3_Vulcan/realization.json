@@ -1,0 +1,219 @@
+{
+  "format": "vulcan-realization/1.0.0",
+  "model_version": "Stable-v1.0.0",
+  "project_id": "MINERVA-BOOKINGDESK",
+  "generated_by": "vulcan-ecosystem/1.0.0",
+  "source": {
+    "minerva_format": "minerva-project/1.0.0",
+    "minerva_model_version": "Stable-v1.0.0",
+    "semantic_authority": "distributed_markdown_modules",
+    "atlas_document_id": "ATLAS-EX-COMPOSITION",
+    "atlas_revision": "2",
+    "atlas_semantic_sha256": "7638f937e58c0da8e337ecb10dec63792e41a5a7235e36d88bcf65a0413a9463"
+  },
+  "modules": [
+    {
+      "minerva_module_id": "BND-BOOKING-CLI",
+      "minerva_path": "apps/BookingDesk/boundaries/Boundary_BookingDeskCommandLine.md",
+      "kind": "boundary",
+      "source_refs": [
+        "BND-BOOKING-CLI"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/BookingDesk/boundaries/Boundary_BookingDeskCommandLine.py",
+        "symbol": "Boundary_BookingDeskCommandLine"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "13948b36310fd5ebabdd7cf4c767719b6268f0e28448ed668db012ac88b6fdb1"
+    },
+    {
+      "minerva_module_id": "CMP-BOOKINGDESK",
+      "minerva_path": "apps/BookingDesk/composition/AppComposition.md",
+      "kind": "composition",
+      "source_refs": [
+        "TOL-BOOKING-STORE"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/BookingDesk/composition/AppComposition.py",
+        "symbol": "AppComposition"
+      },
+      "realization_mode": "preserved_reference_implementation",
+      "sha256": "29229d62060d47ca5712a5421913ec8d233b3d188404447e3c96fad9afbab86b"
+    },
+    {
+      "minerva_module_id": "ENT-BOOKING",
+      "minerva_path": "apps/BookingDesk/entities/Entity_Booking.md",
+      "kind": "entity",
+      "source_refs": [
+        "ENT-BOOKING"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/BookingDesk/entities/Entity_Booking.py",
+        "symbol": "Entity_Booking"
+      },
+      "realization_mode": "preserved_reference_implementation",
+      "sha256": "da442d51399ce1766048bcdff6d5a2e7d16fdeea30dec9005e9b99d394ad8efd"
+    },
+    {
+      "minerva_module_id": "TST-BOOKING-CANCEL",
+      "minerva_path": "apps/BookingDesk/tests/BehavioralTest_CancelBooking.md",
+      "kind": "behavioral_test",
+      "source_refs": [
+        "UC-BOOKING-CANCEL",
+        "AC-BOOKING-CANCEL-01",
+        "AC-BOOKING-CANCEL-02",
+        "AC-BOOKING-CANCEL-03",
+        "AC-BOOKING-CANCEL-FAILURE",
+        "AC-BOOKING-CANCEL-CONTEXT",
+        "AC-BOOKING-CANCEL-AUTH",
+        "AC-BOOKING-CANCEL-QUALITY"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/BookingDesk/tests/Test_CancelBooking.py",
+        "symbol": "Test_CancelBooking"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "a60c4696ca99dbcaa95638949f6223cb52ddab4e36cbb4de8c7880e46d78a60d"
+    },
+    {
+      "minerva_module_id": "TST-BOOKING-CREATE",
+      "minerva_path": "apps/BookingDesk/tests/BehavioralTest_CreateBooking.md",
+      "kind": "behavioral_test",
+      "source_refs": [
+        "UC-BOOKING-CREATE",
+        "AC-BOOKING-CREATE-01",
+        "AC-BOOKING-CREATE-02",
+        "AC-BOOKING-CREATE-03",
+        "AC-BOOKING-CREATE-TITLE",
+        "AC-BOOKING-CREATE-AUTH",
+        "AC-BOOKING-CREATE-QUALITY"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/BookingDesk/tests/Test_CreateBooking.py",
+        "symbol": "Test_CreateBooking"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "77b7786c5b3231f8886c537cbc34c9de74809fa9d717cd460dd4d21a4ecc5468"
+    },
+    {
+      "minerva_module_id": "TST-BOOKING-LOOKUP",
+      "minerva_path": "apps/BookingDesk/tests/BehavioralTest_LocateBooking.md",
+      "kind": "behavioral_test",
+      "source_refs": [
+        "UC-BOOKING-LOOKUP",
+        "AC-BOOKING-LOOKUP-01",
+        "AC-BOOKING-LOOKUP-02",
+        "AC-BOOKING-LOOKUP-03",
+        "AC-BOOKING-LOOKUP-INVALID",
+        "AC-BOOKING-LOOKUP-AUTH"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/BookingDesk/tests/Test_LocateBooking.py",
+        "symbol": "Test_LocateBooking"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "f4f7200396275fc1581bf3e7a3e17bef752f694ff94de8bc1723f7cf557ac63c"
+    },
+    {
+      "minerva_module_id": "TOL-BOOKING-STORE",
+      "minerva_path": "apps/BookingDesk/tools/abstract/AbstractTool_BookingStore.md",
+      "kind": "abstract_tool",
+      "source_refs": [
+        "TOL-BOOKING-STORE"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/BookingDesk/tools/abstract/AbstractTool_BookingStore.py",
+        "symbol": "AbstractTool_BookingStore"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "62a6f1cf00a22af9772642028aff99f7f1487daa44010d138953053521936881"
+    },
+    {
+      "minerva_module_id": "CTL-BOOKING-STORE",
+      "minerva_path": "apps/BookingDesk/tools/concrete/Tool_SqliteImplementationOfBookingStore.md",
+      "kind": "concrete_tool",
+      "source_refs": [
+        "TOL-BOOKING-STORE"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/BookingDesk/tools/concrete/Tool_SqliteBookingStore.py",
+        "symbol": "Tool_SqliteBookingStore"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "6cbdcff6e9e15d540f99bda4cc600f3966a74677ce16b4578f1a0add0d065772"
+    },
+    {
+      "minerva_module_id": "UC-BOOKING-CANCEL",
+      "minerva_path": "apps/BookingDesk/usecases/Main/UseCase_CancelBooking.md",
+      "kind": "use_case",
+      "source_refs": [
+        "UC-BOOKING-CANCEL"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/BookingDesk/usecases/Main/UseCase_CancelBooking.py",
+        "symbol": "UseCase_CancelBooking"
+      },
+      "realization_mode": "preserved_reference_implementation",
+      "sha256": "2e25b2bcf7c92705e13e9abe9cd8091430d7a01a6180f89e267d5be1d55443c5"
+    },
+    {
+      "minerva_module_id": "UC-BOOKING-CREATE",
+      "minerva_path": "apps/BookingDesk/usecases/Main/UseCase_CreateBooking.md",
+      "kind": "use_case",
+      "source_refs": [
+        "UC-BOOKING-CREATE"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/BookingDesk/usecases/Main/UseCase_CreateBooking.py",
+        "symbol": "UseCase_CreateBooking"
+      },
+      "realization_mode": "preserved_reference_implementation",
+      "sha256": "884208cf4f002f35c39f6b3fea5bc0eff44395442e0ef0aa461b76bffbcc39fe"
+    },
+    {
+      "minerva_module_id": "UC-BOOKING-LOOKUP",
+      "minerva_path": "apps/BookingDesk/usecases/Main/UseCase_LocateBooking.md",
+      "kind": "use_case",
+      "source_refs": [
+        "UC-BOOKING-LOOKUP"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/BookingDesk/usecases/Main/UseCase_LocateBooking.py",
+        "symbol": "UseCase_LocateBooking"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "e7a723c6691fe809f4d4e80699c12bcb3784c4415d8e1d0a2ca1ced5727165e8"
+    },
+    {
+      "minerva_module_id": "TYP-BOOKING-STATUS",
+      "minerva_path": "shared/types/Type_BookingStatus.md",
+      "kind": "type",
+      "source_refs": [
+        "TYP-BOOKING-STATUS"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/BookingDesk/types/Type_BookingStatus.py",
+        "symbol": "Type_BookingStatus"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "d1bc4fc16e8887987dbc3d55411a1ce3040a588d1f423a1fad9356cfa03a3506"
+    }
+  ],
+  "coverage": {
+    "minerva_code_modules": 12,
+    "realized_modules": 12,
+    "complete": true
+  }
+}

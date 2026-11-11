@@ -1,0 +1,133 @@
+{
+  "format": "vulcan-realization/1.0.0",
+  "model_version": "Stable-v1.0.0",
+  "project_id": "MINERVA-REQUESTREGISTER",
+  "generated_by": "vulcan-ecosystem/1.0.0",
+  "source": {
+    "minerva_format": "minerva-project/1.0.0",
+    "minerva_model_version": "Stable-v1.0.0",
+    "semantic_authority": "distributed_markdown_modules",
+    "atlas_document_id": "ATLAS-EX-MINIMAL",
+    "atlas_revision": "2",
+    "atlas_semantic_sha256": "e35fbe25ca79941ce67853b9932390145ea0a0a44409980ef95d1d15da603775"
+  },
+  "modules": [
+    {
+      "minerva_module_id": "BND-REQUEST-WEB",
+      "minerva_path": "apps/RequestRegister/boundaries/Boundary_RequestRegisterWebForm.md",
+      "kind": "boundary",
+      "source_refs": [
+        "BND-REQUEST-WEB"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/RequestRegister/boundaries/Boundary_RequestRegisterWebForm.py",
+        "symbol": "Boundary_RequestRegisterWebForm"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "cd062ef628ce07282c45e0e5f961f18a245a68ba068327dee398f274a439746e"
+    },
+    {
+      "minerva_module_id": "CMP-REQUESTREGISTER",
+      "minerva_path": "apps/RequestRegister/composition/AppComposition.md",
+      "kind": "composition",
+      "source_refs": [
+        "TOL-REQUEST-STORE"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/RequestRegister/composition/AppComposition.py",
+        "symbol": "AppComposition"
+      },
+      "realization_mode": "preserved_reference_implementation",
+      "sha256": "f14af244ce7622232e1cf81ddada72bf99d9b4a30c447463bc6aa25f2684691b"
+    },
+    {
+      "minerva_module_id": "ENT-REQUEST",
+      "minerva_path": "apps/RequestRegister/entities/Entity_Request.md",
+      "kind": "entity",
+      "source_refs": [
+        "ENT-REQUEST"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/RequestRegister/entities/Entity_Request.py",
+        "symbol": "Entity_Request"
+      },
+      "realization_mode": "preserved_reference_implementation",
+      "sha256": "8256aab6a70e6faffe718db7b43f1629e1d6db127bb2a5a09417c29c92a3df6a"
+    },
+    {
+      "minerva_module_id": "TST-REQUEST-SUBMIT",
+      "minerva_path": "apps/RequestRegister/tests/BehavioralTest_SubmitRequest.md",
+      "kind": "behavioral_test",
+      "source_refs": [
+        "UC-REQUEST-SUBMIT",
+        "AC-REQUEST-01",
+        "AC-REQUEST-02",
+        "AC-REQUEST-03",
+        "AC-REQUEST-04",
+        "AC-REQUEST-05",
+        "AC-REQUEST-06",
+        "AC-REQUEST-SUBMIT-QUALITY"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/RequestRegister/tests/Test_SubmitRequest.py",
+        "symbol": "Test_SubmitRequest"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "3965e916a1b63555fe0137c5b11cae0f2764f313a9b9c08bc6d6256461cce248"
+    },
+    {
+      "minerva_module_id": "TOL-REQUEST-STORE",
+      "minerva_path": "apps/RequestRegister/tools/abstract/AbstractTool_RequestStore.md",
+      "kind": "abstract_tool",
+      "source_refs": [
+        "TOL-REQUEST-STORE"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/RequestRegister/tools/abstract/AbstractTool_RequestStore.py",
+        "symbol": "AbstractTool_RequestStore"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "8a5718651c37f6742ce2e2e8c2c759e3ec3f723d02ea4550dad570258f5d8f4a"
+    },
+    {
+      "minerva_module_id": "CTL-REQUEST-STORE",
+      "minerva_path": "apps/RequestRegister/tools/concrete/Tool_SqliteImplementationOfRequestStore.md",
+      "kind": "concrete_tool",
+      "source_refs": [
+        "TOL-REQUEST-STORE"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/RequestRegister/tools/concrete/Tool_SqliteRequestStore.py",
+        "symbol": "Tool_SqliteRequestStore"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "70c787c7a66a770158aea95d01bba2902a7ed75ace7ea7350d0505e456f9705a"
+    },
+    {
+      "minerva_module_id": "UC-REQUEST-SUBMIT",
+      "minerva_path": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.md",
+      "kind": "use_case",
+      "source_refs": [
+        "UC-REQUEST-SUBMIT"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/RequestRegister/usecases/Main/UseCase_SubmitRequest.py",
+        "symbol": "UseCase_SubmitRequest"
+      },
+      "realization_mode": "preserved_reference_implementation",
+      "sha256": "6bb3c5a15fd0200c6b5729ffcc8751d0c327215b82efac275e9afafdba0460fa"
+    }
+  ],
+  "coverage": {
+    "minerva_code_modules": 7,
+    "realized_modules": 7,
+    "complete": true
+  }
+}

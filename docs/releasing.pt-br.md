@@ -1,34 +1,44 @@
-# Preparar uma distribuição Vulcan Ecosystem
+# Preparação de uma entrega do Vulcan Ecosystem
 
-[English](releasing.md) · [Início](../README.pt-br.md)
+[English](releasing.md) · [Início](../README.pt-br.md) · [Guia de agentes](../AGENTS.md)
 
-## Finalizar a edição
+Este procedimento valida a distribuição do repositório para a edição indicada por `VERSION`, atualmente Stable-v1.0.0. Ele atualiza essa edição estável no próprio lugar conforme autorizado; não cria outra edição nem autoriza publicação remota.
 
-Selecione Alpha-v0.1.0. Conclua fontes, tradução, exemplos, recursos e evidências. Execute os comandos do manual de edição e os testes de scripts da raiz. Registre resultados reais e limites; uma configuração de CI não demonstra sua execução. Inspecione imagens alteradas. Mantenha ambientes e temporários fora da árvore a distribuir.
+## 1. Finalizar e verificar
 
-## Gerar o inventário único
-
-CONTENT-SHA256.json é o inventário ativo da distribuição. Registra algoritmo SHA-256, vulcan_edition igual a docs/CITATION.cff, escopo, exclusão de si mesmo, caminho POSIX, tamanho em bytes e hash. Abrange todos os arquivos versionados destinados à entrega. Os snapshots de fontes e seus mapas registram proveniência e não substituem esse inventário.
-
-Prepare explicitamente as adições, mudanças e remoções no índice Git. O gerador lê os caminhos do índice e os bytes atuais sem normalização de fim de linha. Gere o inventário por último:
+Preserve as árvores completas de origem Minerva e suas identidades Atlas. Confirme que cada módulo Minerva executável ou testável tem um destino de realização, que projetos de ferramentas concretas são realizados por adaptadores, que Boundary continua sendo um adaptador de interação e que a evidência de runtime declara seu escopo e limites.
 
 ```bash
+python -m pip install -r scripts/requirements-dev.txt
 python scripts/check_repository.py
 python -m pytest scripts/tests
-python scripts/content_inventory.py --write
-python scripts/content_inventory.py --check
-git add -- CONTENT-SHA256.json
+python -m pip install -e "versioning/Stable-v1.0.0"
+python versioning/Stable-v1.0.0/run_examples.py
+python versioning/Stable-v1.0.0/scripts/validate_ecosystem.py
+python -m pytest versioning/Stable-v1.0.0/tests
 ```
 
-Confirme que os bytes correspondem aos blobs preparados e crie o commit local. Não coloque no próprio inventário seu hash, o hash do ZIP final ou o identificador do commit que o contém.
+Se fontes de arte mudarem, instale `assets/requirements-artwork.txt`, regenere com `assets/sources/render_images.py` e inspecione as imagens derivadas.
 
-## Empacotar e auditar
+## 2. Gerar por último o inventário de bytes exatos
+
+`CONTENT-SHA256.json` cobre todos os arquivos de entrega presentes e não ignorados reportados pelo Git, exceto ele próprio. Inclui arquivos não rastreados preparados intencionalmente e registra caminhos POSIX relativos, tamanhos exatos e valores SHA-256.
 
 ```bash
-python scripts/build_distribution.py --output /absolute/path/OlympusProject_VulcanEcosystem_Alpha-v0.1.0.zip
-python scripts/check_archive.py /absolute/path/OlympusProject_VulcanEcosystem_Alpha-v0.1.0.zip
+python scripts/content_inventory.py --write
+python scripts/content_inventory.py --check
+git status --short
 ```
 
-O gerador exige conteúdo versionado limpo, inventário válido e ausência de caches versionados. O ZIP contém um repositório em OlympusProject_VulcanEcosystem/, sem .git. Extraia o ZIP em diretório vazio e execute scripts/check_archive.py contra essa raiz antes de instalar dependências ou criar caches. O auditor usa a biblioteca padrão e detecta arquivos ausentes, adicionais, duplicados e alterados.
+Revise todas as mudanças e garanta que caches, bancos de dados, saídas temporárias e ambientes locais continuem ignorados. O histórico de release pertence à edição e aos registros de lançamento; não há changelog separado.
 
-Mantenha externamente um recibo com commit, hash e tamanho do ZIP e resultados da auditoria. Para testar a edição isolada, copie somente versioning/Alpha-v0.1.0/ e use um ambiente externo. Publicação no GitHub depende de uma ação específica; preparar e entregar o ZIP não cria push, tag ou release remoto.
+## 3. Construir uma distribuição commitada somente com autorização
+
+Depois de um commit local autorizado separadamente deixar a árvore limpa:
+
+```bash
+python scripts/build_distribution.py --output /absolute/path/OlympusProject_VulcanEcosystem_Stable-v1.0.0.zip
+python scripts/check_archive.py /absolute/path/OlympusProject_VulcanEcosystem_Stable-v1.0.0.zip
+```
+
+Mantenha externos o recibo e o hash do ZIP. Uma verificação, arquivo ou commit local bem-sucedido não autoriza push, tag, release nem alegações de execução hospedada.

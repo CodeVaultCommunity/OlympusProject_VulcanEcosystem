@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codevaultcommunity.github.io/vulcan/schemas/knowledge-graph-1.0.0.json",
+  "title": "Vulcan knowledge graph",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "model_version", "project_id", "source_graph_format", "nodes", "edges"],
+  "properties": {
+    "format": {"const": "vulcan-knowledge-graph/1.0.0"},
+    "model_version": {"const": "Stable-v1.0.0"},
+    "project_id": {"type": "string", "minLength": 1},
+    "source_graph_format": {"type": "string", "minLength": 1},
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind"],
+        "properties": {"id": {"type": "string"}, "kind": {"type": "string"}}
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "target", "relation"],
+        "properties": {
+          "source": {"type": "string"},
+          "target": {"type": "string"},
+          "relation": {"type": "string"}
+        }
+      }
+    }
+  }
+}
+

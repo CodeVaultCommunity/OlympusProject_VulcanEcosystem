@@ -1,0 +1,217 @@
+{
+  "format": "vulcan-realization/1.0.0",
+  "model_version": "Stable-v1.0.0",
+  "project_id": "MINERVA-TASKBOARD",
+  "generated_by": "vulcan-ecosystem/1.0.0",
+  "source": {
+    "minerva_format": "minerva-project/1.0.0",
+    "minerva_model_version": "Stable-v1.0.0",
+    "semantic_authority": "distributed_markdown_modules",
+    "atlas_document_id": "DOC-TASK-BOARD",
+    "atlas_revision": "3",
+    "atlas_semantic_sha256": "5a111a98cebb832e38f0bf5ec517d0eadc62bf65afb0abdca9c530cb6398cae6"
+  },
+  "modules": [
+    {
+      "minerva_module_id": "BND-TASK-ILLUSTRATION",
+      "minerva_path": "apps/TaskBoard/boundaries/Boundary_ChannelIndependentInteractionIllustration.md",
+      "kind": "boundary",
+      "source_refs": [
+        "BND-TASK-ILLUSTRATION"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/TaskBoard/boundaries/Boundary_ChannelIndependentInteractionIllustration.py",
+        "symbol": "Boundary_ChannelIndependentInteractionIllustration"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "4bf9c95250fff386c7352f5cf848919092f862df0d61bb7310272bb195a1a71c"
+    },
+    {
+      "minerva_module_id": "CMP-TASKBOARD",
+      "minerva_path": "apps/TaskBoard/composition/AppComposition.md",
+      "kind": "composition",
+      "source_refs": [
+        "TOL-TASK-STORE"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/TaskBoard/composition/AppComposition.py",
+        "symbol": "AppComposition"
+      },
+      "realization_mode": "preserved_reference_implementation",
+      "sha256": "3c8d4a0fdae58e7cf595a8b6527b597fc9ad28cabcc4138935548fe932016639"
+    },
+    {
+      "minerva_module_id": "ENT-TASK",
+      "minerva_path": "apps/TaskBoard/entities/Entity_Task.md",
+      "kind": "entity",
+      "source_refs": [
+        "ENT-TASK"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/TaskBoard/entities/Entity_Task.py",
+        "symbol": "Entity_Task"
+      },
+      "realization_mode": "preserved_reference_implementation",
+      "sha256": "61b3737770fe2f1d447934f912755ab759b8bb2f20a18a9fde187d727bed51a9"
+    },
+    {
+      "minerva_module_id": "TST-TASK-COMPLETE",
+      "minerva_path": "apps/TaskBoard/tests/BehavioralTest_CompleteTask.md",
+      "kind": "behavioral_test",
+      "source_refs": [
+        "UC-TASK-COMPLETE",
+        "AC-TASK-COMPLETE-AUTH",
+        "AC-TASK-COMPLETE-SUCCESS",
+        "AC-TASK-COMPLETE-MISSING",
+        "AC-TASK-COMPLETE-INVALID",
+        "AC-TASK-COMPLETE-ALREADY",
+        "AC-TASK-COMPLETE-CONFLICT",
+        "AC-TASK-COMPLETE-UNKNOWN"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/TaskBoard/tests/Test_CompleteTask.py",
+        "symbol": "Test_CompleteTask"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "f104b3e76630027a9446cb1d02bbac46e30027005761b10d894ccff352671674"
+    },
+    {
+      "minerva_module_id": "TST-TASK-CREATE",
+      "minerva_path": "apps/TaskBoard/tests/BehavioralTest_CreateTask.md",
+      "kind": "behavioral_test",
+      "source_refs": [
+        "UC-TASK-CREATE",
+        "AC-TASK-CREATE-AUTH",
+        "AC-TASK-CREATE-SUCCESS",
+        "AC-TASK-CREATE-INVALID",
+        "AC-TASK-CREATE-DUPLICATE",
+        "AC-TASK-CREATE-UNKNOWN"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/TaskBoard/tests/Test_CreateTask.py",
+        "symbol": "Test_CreateTask"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "4871fd52fbd11322242ada0540a87475c8d08701d46fdfb59a166af1ec3939ad"
+    },
+    {
+      "minerva_module_id": "TST-TASK-LIST",
+      "minerva_path": "apps/TaskBoard/tests/BehavioralTest_ListTasks.md",
+      "kind": "behavioral_test",
+      "source_refs": [
+        "UC-TASK-LIST",
+        "AC-TASK-LIST-AUTH",
+        "AC-TASK-LIST-CONTENT",
+        "AC-TASK-LIST-EMPTY",
+        "AC-TASK-LIST-INTEGRITY"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/TaskBoard/tests/Test_ListTasks.py",
+        "symbol": "Test_ListTasks"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "8635bf962617da6e6d05c7cec1d5b8c8f015cdda55828b8f29330f9e0b8e47c0"
+    },
+    {
+      "minerva_module_id": "TOL-TASK-STORE",
+      "minerva_path": "apps/TaskBoard/tools/abstract/AbstractTool_TaskStore.md",
+      "kind": "abstract_tool",
+      "source_refs": [
+        "TOL-TASK-STORE"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/TaskBoard/tools/abstract/AbstractTool_TaskStore.py",
+        "symbol": "AbstractTool_TaskStore"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "8b434df05607a61eff896be910cdca6d424e31af7e625289c6fb3c0ad062a527"
+    },
+    {
+      "minerva_module_id": "CTL-TASK-STORE",
+      "minerva_path": "apps/TaskBoard/tools/concrete/Tool_SqliteImplementationOfTaskStore.md",
+      "kind": "concrete_tool",
+      "source_refs": [
+        "TOL-TASK-STORE"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/TaskBoard/tools/concrete/Tool_SqliteTaskStore.py",
+        "symbol": "Tool_SqliteTaskStore"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "ff79244f61cfc61edd31276c08a6174c0c319ff9619c7abfe688ce751bd07c65"
+    },
+    {
+      "minerva_module_id": "UC-TASK-COMPLETE",
+      "minerva_path": "apps/TaskBoard/usecases/Main/UseCase_CompleteTask.md",
+      "kind": "use_case",
+      "source_refs": [
+        "UC-TASK-COMPLETE"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/TaskBoard/usecases/Main/UseCase_CompleteTask.py",
+        "symbol": "UseCase_CompleteTask"
+      },
+      "realization_mode": "preserved_reference_implementation",
+      "sha256": "c7a0ed546e30110febedb9951fb2a0dc2e5e8bc952e6829dca7cbc63f13e6fa1"
+    },
+    {
+      "minerva_module_id": "UC-TASK-CREATE",
+      "minerva_path": "apps/TaskBoard/usecases/Main/UseCase_CreateTask.md",
+      "kind": "use_case",
+      "source_refs": [
+        "UC-TASK-CREATE"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/TaskBoard/usecases/Main/UseCase_CreateTask.py",
+        "symbol": "UseCase_CreateTask"
+      },
+      "realization_mode": "preserved_reference_implementation",
+      "sha256": "b83189fc9ef12eea19ee2cd3687c48a06dacc7d29c231ba8148a2c494d419b53"
+    },
+    {
+      "minerva_module_id": "UC-TASK-LIST",
+      "minerva_path": "apps/TaskBoard/usecases/Main/UseCase_ListTasks.md",
+      "kind": "use_case",
+      "source_refs": [
+        "UC-TASK-LIST"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/TaskBoard/usecases/Main/UseCase_ListTasks.py",
+        "symbol": "UseCase_ListTasks"
+      },
+      "realization_mode": "preserved_reference_implementation",
+      "sha256": "7ffee751eae0a08288517231a3a9353415d965f38f76e3d7b885bf148cac4bb7"
+    },
+    {
+      "minerva_module_id": "TYP-TASK-STATUS",
+      "minerva_path": "shared/types/Type_TaskStatus.md",
+      "kind": "type",
+      "source_refs": [
+        "TYP-TASK-STATUS"
+      ],
+      "target": {
+        "language": "python",
+        "path": "apps/TaskBoard/types/Type_TaskStatus.py",
+        "symbol": "Type_TaskStatus"
+      },
+      "realization_mode": "generated_from_minerva",
+      "sha256": "ccd47b6470b6583cd9afff7b8d24aa2b0a76cf81352ba164a79a3e560dfa2841"
+    }
+  ],
+  "coverage": {
+    "minerva_code_modules": 12,
+    "realized_modules": 12,
+    "complete": true
+  }
+}

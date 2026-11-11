@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codevaultcommunity.github.io/vulcan/schemas/realization-1.0.0.json",
+  "title": "Vulcan realization ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "model_version", "project_id", "generated_by", "source", "modules", "coverage"],
+  "properties": {
+    "format": {"const": "vulcan-realization/1.0.0"},
+    "model_version": {"const": "Stable-v1.0.0"},
+    "project_id": {"type": "string", "minLength": 1},
+    "generated_by": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minerva_format", "minerva_model_version", "semantic_authority", "atlas_document_id", "atlas_revision", "atlas_semantic_sha256"],
+      "properties": {
+        "minerva_format": {"const": "minerva-project/1.0.0"},
+        "minerva_model_version": {"const": "Stable-v1.0.0"},
+        "semantic_authority": {"const": "distributed_markdown_modules"},
+        "atlas_document_id": {"type": "string", "minLength": 1},
+        "atlas_revision": {"type": "string", "minLength": 1},
+        "atlas_semantic_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "modules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["minerva_module_id", "minerva_path", "kind", "source_refs", "target", "realization_mode", "sha256"],
+        "properties": {
+          "minerva_module_id": {"type": "string", "minLength": 1},
+          "minerva_path": {"type": "string", "pattern": "^[^/].*\\.md$"},
+          "kind": {"type": "string", "minLength": 1},
+          "source_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+          "target": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["language", "path", "symbol"],
+            "properties": {
+              "language": {"const": "python"},
+              "path": {"type": "string", "pattern": "^[^/].*\\.py$"},
+              "symbol": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"}
+            }
+          },
+          "realization_mode": {"enum": ["generated_from_minerva", "preserved_reference_implementation"]},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minerva_code_modules", "realized_modules", "complete"],
+      "properties": {
+        "minerva_code_modules": {"type": "integer", "minimum": 0},
+        "realized_modules": {"type": "integer", "minimum": 0},
+        "complete": {"const": true}
+      }
+    }
+  }
+}
+
